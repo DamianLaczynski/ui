@@ -18,6 +18,7 @@ export const ALL_SHOWCASE_COMPONENTS: ShowcaseComponent[] = [
   { id: 'checkbox', name: 'Checkbox', icon: 'checkbox_checked' },
   { id: 'color', name: 'Color', icon: 'color' },
   { id: 'command-palette', name: 'Command Palette', icon: 'keyboard' },
+  { id: 'context-menu', name: 'Context Menu', icon: 'cursor_click' },
   { id: 'data-grid', name: 'Data Grid', icon: 'table' },
   { id: 'date', name: 'Date', icon: 'calendar' },
   { id: 'datetime', name: 'Datetime', icon: 'calendar_clock' },

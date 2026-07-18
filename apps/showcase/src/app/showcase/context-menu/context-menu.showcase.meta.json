@@ -1,0 +1,155 @@
+{
+  "slug": "context-menu",
+  "title": "Context Menu",
+  "description": "Context menu opens a menu surface at the pointer on right-click. It reuses the same menu list model, keyboard behavior, and submenu flows as ui-menu for consistent command surfaces.",
+  "intro": "Apply `uiContextMenu` to any host element and pass `uiContextMenuItems` or `uiContextMenuSections`. The directive anchors the overlay to the cursor, closes on outside interaction or Escape, and emits the selected action through `contextMenuItemClick`.",
+  "importCode": "import { ContextMenuDirective, type MenuItem, type MenuSection } from 'ui';",
+  "containerClass": "context-menu-doc",
+  "snippets": {
+    "basicCode": "context-menu-basic-demo.ts",
+    "sectionsCode": "context-menu-sections-demo.ts",
+    "submenuCode": "context-menu-submenu-demo.ts"
+  },
+  "featureSections": [
+    {
+      "id": "basic",
+      "title": "Basic right-click surface",
+      "description": "Start with a single host surface and a short action list. This is the most common pattern for canvases, cards, and file rows.",
+      "codeKey": "basicCode",
+      "componentKey": "basic"
+    },
+    {
+      "id": "sections",
+      "title": "Sections and shortcuts",
+      "description": "Use grouped sections when the command set is larger or when desktop-style grouping improves scanning speed.",
+      "codeKey": "sectionsCode",
+      "componentKey": "sections"
+    },
+    {
+      "id": "submenu",
+      "title": "Nested submenu branches",
+      "description": "Submenus reuse the same nested menu behavior as ui-menu, which keeps export, share, and format trees consistent across trigger types.",
+      "codeKey": "submenuCode",
+      "componentKey": "submenu"
+    }
+  ],
+  "accessibility": [
+    {
+      "title": "Pointer and keyboard behavior",
+      "body": "The menu opens on the native `contextmenu` event and prevents the browser menu when actions are configured. By default, context menu does not show a focus ring on the first row after a right-click. Keyboard navigation still works: arrow keys move through items, Enter activates, and Escape dismisses."
+    },
+    {
+      "title": "Naming and structure",
+      "body": "Provide `uiContextMenuAriaLabel` when multiple context menus on the page need distinct accessible names. Keep action lists short and mirror the labels users already expect from row overflow menus."
+    },
+    {
+      "title": "Context menu versus overflow menu",
+      "body": "Use `ui-menu` when the action entry point should stay visible, such as a kebab button in a dense table row. Use `uiContextMenu` when right-click is the primary or secondary affordance on a larger surface."
+    }
+  ],
+  "apiSections": [
+    {
+      "title": "ContextMenuDirective - <code>[uiContextMenu]</code>",
+      "lead": "Standalone directive that opens a cursor-anchored menu overlay from the native context menu interaction. It reuses `MenuItem` and `MenuSection` models from the menu package surface.",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "Inputs",
+          "columns": ["Name", "Type", "Default", "Description"],
+          "columnKinds": ["code", "type", "default", "text"],
+          "rows": [
+            [
+              "uiContextMenuItems",
+              "InputSignal<MenuItem[]>",
+              "[]",
+              "Flat list of menu actions when sections are not used."
+            ],
+            [
+              "uiContextMenuSections",
+              "InputSignal<MenuSection[]>",
+              "[]",
+              "Grouped menu sections with optional headers and dividers."
+            ],
+            [
+              "uiContextMenuDisabled",
+              "InputSignal<boolean>",
+              "false",
+              "Disables opening the custom context menu."
+            ],
+            [
+              "uiContextMenuMaxHeight",
+              "InputSignal<string>",
+              "'250px'",
+              "Maximum height of the menu list before scrolling."
+            ],
+            [
+              "uiContextMenuSize",
+              "InputSignal<'small' | 'medium' | 'large'>",
+              "'medium'",
+              "Menu list density."
+            ],
+            [
+              "uiContextMenuVariant",
+              "InputSignal<Variant>",
+              "'secondary'",
+              "Menu surface variant passed through to `ui-menu-list`."
+            ],
+            [
+              "uiContextMenuAppearance",
+              "InputSignal<Appearance>",
+              "'subtle'",
+              "Menu surface appearance passed through to `ui-menu-list`."
+            ],
+            [
+              "uiContextMenuItemVariant",
+              "InputSignal<Variant>",
+              "'secondary'",
+              "Default variant for row actions."
+            ],
+            [
+              "uiContextMenuItemAppearance",
+              "InputSignal<Appearance>",
+              "'subtle'",
+              "Default appearance for row actions."
+            ],
+            [
+              "uiContextMenuAriaLabel",
+              "InputSignal<string | undefined>",
+              "undefined",
+              "Accessible name for the opened menu surface."
+            ],
+            [
+              "uiContextMenuAutoFocusFirstItem",
+              "InputSignal<boolean>",
+              "false",
+              "When true, focuses the first action immediately and shows the focus ring. Keep false for pointer-first context menus."
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Outputs",
+          "columns": ["Name", "Type", "Description"],
+          "columnKinds": ["code", "type", "text"],
+          "rows": [
+            [
+              "contextMenuItemClick",
+              "OutputEmitterRef<MenuItem>",
+              "Emits when the user selects an action. The overlay closes after emission."
+            ],
+            ["contextMenuOpened", "OutputEmitterRef<void>", "Emits after the overlay is attached."],
+            ["contextMenuClosed", "OutputEmitterRef<void>", "Emits after the overlay is dismissed."]
+          ]
+        },
+        {
+          "type": "notes",
+          "title": "Notes",
+          "paragraphs": [
+            "At least one item or section is required. When the menu has no content, the native browser context menu is preserved.",
+            "Submenu items use the same `submenuItems` model as `ui-menu` and open connected overlays from the active row trigger."
+          ]
+        }
+      ]
+    }
+  ]
+}

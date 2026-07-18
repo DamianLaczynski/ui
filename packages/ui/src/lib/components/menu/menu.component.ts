@@ -13,6 +13,7 @@ import {
   inject,
   PLATFORM_ID,
   NgZone,
+  forwardRef,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Overlay, OverlayModule } from '@angular/cdk/overlay';
@@ -38,7 +39,7 @@ export type MenuTriggerVariant = 'dropdown' | 'split' | 'button';
 @Component({
   selector: 'ui-menu',
   templateUrl: './menu.component.html',
-  imports: [OverlayModule, IconComponent, MenuListComponent],
+  imports: [OverlayModule, IconComponent, forwardRef(() => MenuListComponent)],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.menu-trigger-host]':

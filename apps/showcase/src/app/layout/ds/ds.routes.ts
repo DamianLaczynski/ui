@@ -203,6 +203,10 @@ import {
 } from '@showcase/drawer/drawer.showcase.doc';
 import { KBD_DOC_ASSET_PATHS, KBD_DOC_PAGE_CONFIG } from '@showcase/kbd/kbd.showcase.doc';
 import {
+  CONTEXT_MENU_DOC_ASSET_PATHS,
+  CONTEXT_MENU_DOC_PAGE_CONFIG,
+} from '@showcase/context-menu/context-menu.showcase.doc';
+import {
   POPOVER_DOC_ASSET_PATHS,
   POPOVER_DOC_PAGE_CONFIG,
 } from '@showcase/popover/popover.showcase.doc';
@@ -325,6 +329,14 @@ export const dsRoutes: Routes = [
     data: {
       config: COMMAND_PALETTE_DOC_PAGE_CONFIG,
       assetPaths: COMMAND_PALETTE_DOC_ASSET_PATHS,
+    },
+  },
+  {
+    path: 'context-menu',
+    component: ShowcaseDocPageComponent,
+    data: {
+      config: CONTEXT_MENU_DOC_PAGE_CONFIG,
+      assetPaths: CONTEXT_MENU_DOC_ASSET_PATHS,
     },
   },
   {
