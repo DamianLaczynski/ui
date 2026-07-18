@@ -66,6 +66,7 @@ export const ALL_SHOWCASE_COMPONENTS: ShowcaseComponent[] = [
   { id: 'time', name: 'Time', icon: 'clock' },
   { id: 'time-picker', name: 'Time Picker', icon: 'clock' },
   { id: 'time-span', name: 'Time Span', icon: 'timer' },
+  { id: 'timeline', name: 'Timeline', icon: 'timeline' },
   { id: 'toast', name: 'Toast', icon: 'alert' },
   { id: 'toolbar', name: 'Toolbar', icon: 'navigation' },
   { id: 'tooltip', name: 'Tooltip', icon: 'info' },

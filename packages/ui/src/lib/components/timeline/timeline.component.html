@@ -1,0 +1,18 @@
+<div [class]="timelineClasses()">
+  @if (useProjectedItems()) {
+    <ng-content />
+  } @else {
+    @for (item of displayItems(); track trackById($index, item)) {
+      <ui-timeline-item
+        [title]="item.title"
+        [timestamp]="item.timestamp ?? ''"
+        [description]="item.description ?? ''"
+        [meta]="item.meta ?? ''"
+        [icon]="item.icon"
+        [variant]="item.variant ?? 'secondary'"
+        [pending]="item.pending ?? false"
+        [size]="size()"
+      />
+    }
+  }
+</div>

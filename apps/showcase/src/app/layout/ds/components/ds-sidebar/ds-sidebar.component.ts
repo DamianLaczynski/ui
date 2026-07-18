@@ -112,6 +112,7 @@ export class DsSidebarComponent {
     { id: 'table-of-content', label: 'Table of Content', icon: 'list' },
     { id: 'tabs', label: 'Tabs', icon: 'tabs' },
     { id: 'tag', label: 'Tag', icon: 'tag' },
+    { id: 'timeline', label: 'Timeline', icon: 'timeline' },
     { id: 'tel', label: 'Tel', icon: 'call' },
     { id: 'text', label: 'Text', icon: 'text_align_left' },
     { id: 'textarea', label: 'Textarea', icon: 'text_field' },

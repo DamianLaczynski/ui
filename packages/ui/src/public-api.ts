@@ -60,6 +60,7 @@ export * from './lib/components/table-of-content';
 export * from './lib/components/tabs';
 export * from './lib/components/tag';
 export * from './lib/components/time-picker';
+export * from './lib/components/timeline';
 export * from './lib/components/toast';
 export * from './lib/components/toolbar';
 export * from './lib/components/tooltip';
