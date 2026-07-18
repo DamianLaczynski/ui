@@ -95,7 +95,13 @@ export class MenuComponent implements OnDestroy {
 
   isSplit = computed(() => this.triggerVariant() === 'split');
   hasMenuItems = computed(() => this.menuItems().length > 0);
-
+  isIconOnlyDropdown = computed(
+    () =>
+      this.triggerVariant() === 'dropdown' &&
+      !!this.icon() &&
+      !this.text()?.trim() &&
+      !this.shortcut()?.trim(),
+  );
   private baseButtonClasses = computed(() => {
     const c = [
       'button',
@@ -111,6 +117,7 @@ export class MenuComponent implements OnDestroy {
 
   triggerClasses = computed(() => {
     const c = ['menu-trigger', ...this.baseButtonClasses()];
+    if (this.isIconOnlyDropdown()) c.push('menu-trigger--icon-only');
     if (this.isMenuOpen()) c.push('menu-trigger--open');
     return c.join(' ');
   });

@@ -5,15 +5,13 @@
     role="menu"
     tabindex="-1"
     cdkTrapFocus
-    cdkTrapFocusAutoCapture
+    [cdkTrapFocusAutoCapture]="autoFocusFirstItem()"
     (keydown)="onMenuKeydown($event)"
   >
     @for (section of allSections(); track trackBySectionIndex($index); let sectionIndex = $index) {
       <div [class]="getSectionClasses(section, sectionIndex)">
         @if (section.header) {
-          <div [class]="getSectionHeaderClasses()">
-            <div class="menu__section-header-text">{{ section.header }}</div>
-          </div>
+          <ui-nav-section-header [label]="section.header" />
         }
         @for (item of section.items; track trackByItemId($index, item); let itemIndex = $index) {
           <ui-menu
