@@ -121,13 +121,29 @@
               "'horizontal'",
               "Direction of the rendered option list."
             ],
-            ["variant", "InputSignal<Variant>", "'secondary'", "Semantic styling variant."],
-            ["appearance", "InputSignal<Appearance>", "'outline'", "Button appearance token."],
+            [
+              "variant",
+              "InputSignal<Variant>",
+              "'primary'",
+              "Semantic styling variant applied to the active option."
+            ],
+            [
+              "appearance",
+              "InputSignal<Appearance>",
+              "'subtle'",
+              "Appearance token applied to the active option."
+            ],
             [
               "shape",
               "InputSignal<Shape>",
               "'rounded'",
               "Corner treatment of the rendered buttons."
+            ],
+            [
+              "layout",
+              "InputSignal<'segmented' | 'separate'>",
+              "'segmented'",
+              "Segmented merges options into one track; separate keeps spaced standalone buttons."
             ]
           ]
         },

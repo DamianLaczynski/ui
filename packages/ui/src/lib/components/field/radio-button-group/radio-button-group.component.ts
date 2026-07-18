@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { ButtonComponent } from '../../button';
 import { FieldComponent } from '../field/field.component';
-import { Orientation, Variant, Appearance, Shape } from '../../utils';
+import { Orientation, Variant, Appearance, Shape, SegmentLayout } from '../../utils';
 import { IconName } from '../../icon';
 
 export interface RadioButtonItem {
@@ -34,15 +34,19 @@ export class RadioButtonGroupComponent extends FieldComponent implements Control
 
   items = input<RadioButtonItem[]>([]);
   orientation = input<Orientation>('horizontal');
-  variant = input<Variant>('secondary');
-  appearance = input<Appearance>('outline');
+  variant = input<Variant>('primary');
+  appearance = input<Appearance>('subtle');
   shape = input<Shape>('rounded');
+  layout = input<SegmentLayout>('segmented');
 
   override get wrapperClasses(): string {
     const classes = ['radio-button-group'];
     classes.push(`radio-button-group--${this.orientation()}`);
     classes.push(`radio-button-group--${this.size()}`);
     classes.push(`radio-button-group--${this.shape()}`);
+    classes.push(`radio-button-group--${this.variant()}`);
+    classes.push(`radio-button-group--${this.appearance()}`);
+    classes.push(`radio-button-group--${this.layout()}`);
     if (this.disabled()) {
       classes.push('radio-button-group--disabled');
     }
@@ -56,17 +60,9 @@ export class RadioButtonGroupComponent extends FieldComponent implements Control
     return this.value === itemValue;
   }
 
-  getItemVariant(itemValue: unknown): Variant {
-    return this.isSelected(itemValue) ? this.variant() : 'secondary';
-  }
-
   getItemAppearance(itemValue: unknown): Appearance {
     if (!this.isSelected(itemValue)) {
-      return 'subtle';
-    }
-
-    if (this.variant() === 'secondary' && this.appearance() === 'subtle') {
-      return 'outline';
+      return this.layout() === 'separate' ? 'subtle' : 'transparent';
     }
 
     return this.appearance();
