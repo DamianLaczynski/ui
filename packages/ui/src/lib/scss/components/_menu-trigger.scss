@@ -1,5 +1,27 @@
+@use 'sass:map';
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
+
+$menu-trigger-icon-only-sizes: (
+  'small': (
+    min-width: 52px,
+    min-height: 24px,
+    padding: 3px 8px,
+    gap: $spacing-1,
+  ),
+  'medium': (
+    min-width: 64px,
+    min-height: 32px,
+    padding: 5px 10px,
+    gap: $spacing-1,
+  ),
+  'large': (
+    min-width: 78px,
+    min-height: 40px,
+    padding: 8px 12px,
+    gap: $spacing-1_5,
+  ),
+);
 
 .menu-trigger-host {
   display: inline-flex;
@@ -34,10 +56,30 @@
 
 .menu-trigger,
 .menu-trigger-split__dropdown {
-  ui-icon:last-child {
+  ui-icon {
     display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  ui-icon:last-child {
     @include transition(transform, $duration-fast, $easing-decelerate-mid);
     transform: rotate(0deg);
+  }
+}
+
+.menu-trigger.menu-trigger--icon-only.button {
+  width: auto;
+  height: auto;
+  justify-content: center;
+  box-sizing: border-box;
+
+  @each $size, $props in $menu-trigger-icon-only-sizes {
+    &.button--#{$size} {
+      min-width: map.get($props, min-width);
+      min-height: map.get($props, min-height);
+      padding: map.get($props, padding);
+      gap: map.get($props, gap);
+    }
   }
 }
 

@@ -2,7 +2,7 @@
   "slug": "menu",
   "title": "Menu",
   "description": "Menu provides dropdown, split-button, and plain button triggers plus standalone menu lists with sections, shortcuts, submenus, and overlay behavior for dense command surfaces.",
-  "intro": "Use `ui-menu` for compact action menus, overflow controls, contextual actions, and split-button patterns. Use `ui-menu-list` when you need to render the list surface itself, for example in custom overlays or embedded command panels.",
+  "intro": "Use `ui-menu` for compact action menus, overflow controls, contextual actions, and split-button patterns. Use `ui-menu-list` when you need to render the list surface itself, for example in custom overlays or embedded command panels. For right-click surfaces, use `uiContextMenu` from the context menu directive, which reuses the same `MenuItem` and `MenuSection` models.",
   "importCode": "import { MenuComponent, MenuListComponent, type MenuItem, type MenuSection } from 'ui';",
   "containerClass": "menu-doc",
   "snippets": {
