@@ -47,6 +47,7 @@ export * from './lib/components/menu';
 export * from './lib/components/nav';
 export * from './lib/components/node';
 export * from './lib/components/pagination';
+export * from './lib/components/popover';
 export * from './lib/components/progress-bar';
 export * from './lib/components/rating';
 export * from './lib/components/scroll-container';

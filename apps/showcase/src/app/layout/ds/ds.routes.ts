@@ -199,6 +199,10 @@ import {
 } from '@showcase/drawer/drawer.showcase.doc';
 import { KBD_DOC_ASSET_PATHS, KBD_DOC_PAGE_CONFIG } from '@showcase/kbd/kbd.showcase.doc';
 import {
+  POPOVER_DOC_ASSET_PATHS,
+  POPOVER_DOC_PAGE_CONFIG,
+} from '@showcase/popover/popover.showcase.doc';
+import {
   TOOLTIP_DOC_ASSET_PATHS,
   TOOLTIP_DOC_PAGE_CONFIG,
 } from '@showcase/tooltip/tooltip.showcase.doc';
@@ -341,6 +345,14 @@ export const dsRoutes: Routes = [
     data: {
       config: PAGINATION_DOC_PAGE_CONFIG,
       assetPaths: PAGINATION_DOC_ASSET_PATHS,
+    },
+  },
+  {
+    path: 'popover',
+    component: ShowcaseDocPageComponent,
+    data: {
+      config: POPOVER_DOC_PAGE_CONFIG,
+      assetPaths: POPOVER_DOC_ASSET_PATHS,
     },
   },
   {

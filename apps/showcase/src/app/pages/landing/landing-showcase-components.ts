@@ -41,6 +41,7 @@ export const ALL_SHOWCASE_COMPONENTS: ShowcaseComponent[] = [
   { id: 'node', name: 'Node', icon: 'circle' },
   { id: 'number', name: 'Number', icon: 'number_row' },
   { id: 'pagination', name: 'Pagination', icon: 'page_fit' },
+  { id: 'popover', name: 'Popover', icon: 'panel_top_expand' },
   { id: 'password', name: 'Password', icon: 'password' },
   { id: 'progress-bar', name: 'Progress Bar', icon: 'spacebar' },
   { id: 'radio-button-group', name: 'Radio Group', icon: 'checkmark_circle' },
