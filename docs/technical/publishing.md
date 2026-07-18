@@ -36,16 +36,19 @@ Follow [Semantic Versioning](https://semver.org/):
 - **Minor** — new features, backward-compatible API additions
 - **Major** — breaking API changes
 
-Update `CHANGELOG.md` before every publish.
+Update `CHANGELOG.md` and `.github/release-notes/vX.Y.Z.md` before every publish. See [github-releases.md](github-releases.md) for the full GitHub Release workflow.
 
 ## Checklist
 
 1. All CI checks pass locally (`npm run lint`, `npm test`, `npm run build`)
 2. `CHANGELOG.md` updated with the release notes
-3. `npm run build:lib` succeeds
-4. Version bumped (manually or via `publish:lib:*` script)
-5. `npm run publish:lib`
-6. Tag the release in git (optional but recommended)
+3. `.github/release-notes/vX.Y.Z.md` created or updated (GitHub Release body)
+4. `npm run build:lib` succeeds
+5. Version bumped (manually or via `publish:lib:*` script)
+6. Merge release PR to `main`
+7. Create and push git tag: `git tag -a vX.Y.Z -m "Release @laczynski/ui X.Y.Z"` → `git push origin vX.Y.Z`
+8. Verify GitHub Release was created (`.github/workflows/release.yml` or `npm run release:github`)
+9. `npm run publish:lib`
 
 ## npm authentication
 

@@ -1,0 +1,42 @@
+name: Sync GitHub Releases
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create missing GitHub Releases from release notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          for notes_file in .github/release-notes/v*.md; do
+            [ -f "$notes_file" ] || continue
+
+            tag=$(basename "$notes_file" .md)
+
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "Release $tag already exists — skipping."
+              continue
+            fi
+
+            if ! git rev-parse "$tag^{commit}" >/dev/null 2>&1; then
+              echo "Tag $tag not found in repository — skipping."
+              continue
+            fi
+
+            echo "Creating release $tag..."
+            gh release create "$tag" \
+              --title "$tag" \
+              --notes-file "$notes_file"
+          done

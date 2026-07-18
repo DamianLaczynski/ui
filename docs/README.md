@@ -53,6 +53,7 @@ Run, configure, and troubleshoot the toolchain. Start with [technical/README.md]
 | [ci.md](technical/ci.md) | GitHub Actions workflow and local reproduction |
 | [docs-generation.md](technical/docs-generation.md) | How showcase docs are generated into `public/docs/` |
 | [publishing.md](technical/publishing.md) | npm publish workflow for `@laczynski/ui` |
+| [github-releases.md](technical/github-releases.md) | GitHub Release notes for each version |
 
 ## Documentation layers
 
