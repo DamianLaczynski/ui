@@ -1,6 +1,6 @@
 {
   "name": "@laczynski/ui",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Enterprise-grade components built with Fluent 2 Design System for modern Angular applications",
   "main": "./fesm2022/ui.mjs",
   "types": "./index.d.ts",

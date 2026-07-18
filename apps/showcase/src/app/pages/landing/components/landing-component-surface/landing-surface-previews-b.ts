@@ -55,6 +55,10 @@ import {
   UrlComponent,
   MenuComponent,
   MenuItem,
+  ContextMenuDirective,
+  PopoverDirective,
+  TimelineComponent,
+  type TimelineItem,
   errorState,
   loadedState,
   loadingState,
@@ -1394,4 +1398,87 @@ export class LspTreeNodePreviewComponent {
 })
 export class LspUrlPreviewComponent {
   protected value = 'https://northridge.io/docs/billing/webhooks';
+}
+
+@Component({
+  selector: 'app-lsp-context-menu',
+  standalone: true,
+  imports: [ContextMenuDirective],
+  template: `
+    <div
+      uiContextMenu
+      [uiContextMenuItems]="menuItems"
+      uiContextMenuAriaLabel="Canvas actions"
+      style="display:flex;flex-direction:column;gap:0.35rem;justify-content:center;min-height:6.5rem;padding:0.875rem;border:1px dashed var(--color-neutral-stroke-rest);border-radius:0.75rem;background:var(--color-neutral-background2-rest);cursor:context-menu"
+    >
+      <div style="font-size:0.8125rem;font-weight:600">Design canvas</div>
+      <div style="font-size:0.75rem;color:var(--color-neutral-foreground2-rest)">
+        Right-click to open actions
+      </div>
+    </div>
+  `,
+})
+export class LspContextMenuPreviewComponent {
+  protected readonly menuItems: MenuItem[] = [
+    { id: 'open', label: 'Open', icon: 'open' },
+    { id: 'duplicate', label: 'Duplicate', icon: 'document_copy' },
+    { id: 'rename', label: 'Rename', icon: 'edit' },
+  ];
+}
+
+@Component({
+  selector: 'app-lsp-popover',
+  standalone: true,
+  imports: [ButtonComponent, PopoverDirective],
+  template: `
+    <div
+      style="display:flex;align-items:center;justify-content:center;min-height:6.5rem;width:100%"
+    >
+      <ui-button
+        type="button"
+        variant="secondary"
+        appearance="outline"
+        icon="panel_top_expand"
+        [uiPopover]="panelTpl"
+        uiPopoverAriaLabel="Assignee preview"
+        uiPopoverPosition="bottom"
+        uiPopoverSize="small"
+      >
+        Assign reviewer
+      </ui-button>
+    </div>
+    <ng-template #panelTpl>
+      <div class="popover-panel">
+        <div class="popover-panel__header">
+          <div class="popover-panel__title">Assign reviewer</div>
+          <div class="popover-panel__description">Route this draft to legal before launch.</div>
+        </div>
+      </div>
+    </ng-template>
+  `,
+})
+export class LspPopoverPreviewComponent {}
+
+@Component({
+  selector: 'app-lsp-timeline',
+  standalone: true,
+  imports: [TimelineComponent],
+  template: ` <ui-timeline [items]="items" ariaLabel="Release activity" size="small" /> `,
+})
+export class LspTimelinePreviewComponent {
+  protected readonly items: TimelineItem[] = [
+    {
+      id: 'draft',
+      title: 'Draft saved',
+      timestamp: '09:12',
+      description: 'Campaign brief updated.',
+    },
+    {
+      id: 'approved',
+      title: 'Approved',
+      timestamp: '14:05',
+      variant: 'success',
+      icon: 'checkmark_circle',
+    },
+  ];
 }
