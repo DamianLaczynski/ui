@@ -14,6 +14,7 @@
 | [ci.md](ci.md) | Understand GitHub Actions, reproduce CI locally, or debug a failing pipeline job |
 | [docs-generation.md](docs-generation.md) | How showcase docs are generated into `public/docs/` |
 | [publishing.md](publishing.md) | Publish `@laczynski/ui` to npm |
+| [github-releases.md](github-releases.md) | Create GitHub Release notes for each version |
 
 ## Start here by task
 
@@ -21,7 +22,8 @@
 | ---- | -------- |
 | PR failed on GitHub | [ci.md](ci.md) |
 | Docs not updating after showcase changes | [docs-generation.md](docs-generation.md) |
-| Publish a new library version | [publishing.md](publishing.md) |
+| Publish a new library version | [publishing.md](publishing.md) + [github-releases.md](github-releases.md) |
+| Backfill missing GitHub Releases | [github-releases.md](github-releases.md) → **Sync GitHub Releases** workflow |
 | First clone — run locally | [`AGENTS.md`](../../AGENTS.md) → `npm install` → `npm start` |
 
 ## Relationship to other docs
