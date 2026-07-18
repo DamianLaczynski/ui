@@ -82,6 +82,7 @@ export class DsSidebarComponent {
     { id: 'node', label: 'Node', icon: 'circle' },
     { id: 'number', label: 'Number', icon: 'number_row' },
     { id: 'pagination', label: 'Pagination', icon: 'page_fit' },
+    { id: 'popover', label: 'Popover', icon: 'panel_top_expand' },
     { id: 'password', label: 'Password', icon: 'password' },
     { id: 'progress-bar', label: 'Progress Bar', icon: 'spacebar' },
     { id: 'radio-button-group', label: 'Radio Button Group', icon: 'checkmark_circle' },
