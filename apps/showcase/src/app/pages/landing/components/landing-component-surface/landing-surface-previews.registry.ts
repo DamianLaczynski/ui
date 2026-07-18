@@ -68,6 +68,9 @@ import {
   LspTreePreviewComponent,
   LspTreeNodePreviewComponent,
   LspUrlPreviewComponent,
+  LspContextMenuPreviewComponent,
+  LspPopoverPreviewComponent,
+  LspTimelinePreviewComponent,
 } from './landing-surface-previews-b';
 
 export const LANDING_SURFACE_PREVIEW_COMPONENTS: Record<string, Type<unknown>> = {
@@ -82,6 +85,7 @@ export const LANDING_SURFACE_PREVIEW_COMPONENTS: Record<string, Type<unknown>> =
   checkbox: LspCheckboxPreviewComponent,
   color: LspColorPreviewComponent,
   'command-palette': LspCommandPalettePreviewComponent,
+  'context-menu': LspContextMenuPreviewComponent,
   'data-grid': DataGridBasicPresetDemoComponent,
   date: LspDatePreviewComponent,
   datetime: LspDatetimePreviewComponent,
@@ -105,6 +109,7 @@ export const LANDING_SURFACE_PREVIEW_COMPONENTS: Record<string, Type<unknown>> =
   node: LspNodePreviewComponent,
   number: LspNumberPreviewComponent,
   pagination: LspPaginationPreviewComponent,
+  popover: LspPopoverPreviewComponent,
   password: LspPasswordPreviewComponent,
   'progress-bar': LspProgressBarPreviewComponent,
   'radio-button-group': LspRadioButtonGroupPreviewComponent,
@@ -130,6 +135,7 @@ export const LANDING_SURFACE_PREVIEW_COMPONENTS: Record<string, Type<unknown>> =
   time: LspTimePreviewComponent,
   'time-picker': LspTimePickerPreviewComponent,
   'time-span': LspTimeSpanPreviewComponent,
+  timeline: LspTimelinePreviewComponent,
   toast: LspToastPreviewComponent,
   toolbar: LspToolbarPreviewComponent,
   tooltip: LspTooltipPreviewComponent,
