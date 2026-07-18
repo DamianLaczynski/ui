@@ -90,6 +90,8 @@ const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
         placeholder="Search actions, projects, teammates..."
         emptyText="No workspace commands found"
         [maxResults]="8"
+        [enableGlobalShortcut]="true"
+        globalShortcut="mod+k"
         (commandExecuted)="onExecuted($event)"
       />
     </div>
