@@ -1,7 +1,7 @@
 {
   "slug": "text",
   "title": "Text Input",
-  "description": "Text Input is the default single-line field for names, titles, IDs, and short freeform values. It supports shared field labeling, helper and error text, validation, clear affordances, and multiple Fluent input variants.",
+  "description": "Text Input is the default single-line field for names, titles, IDs, and short freeform values. It supports shared field labeling, helper and error text, validation, clear affordances, and multiple field surface variants.",
   "intro": "Text Input builds on the shared field foundation, so it inherits label positioning, helper and error messaging, validation hooks, disabled and readonly states, and accessible naming. Use it for short single-line values rather than long-form content.",
   "importCode": "import { TextComponent } from 'ui';",
   "containerClass": "text-doc",

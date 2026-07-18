@@ -1,6 +1,6 @@
 # @laczynski/ui
 
-Enterprise-grade Angular components built on the [Fluent 2](https://fluent2.microsoft.design/) design language for modern applications.
+Enterprise-grade Angular components with a **Fluent-inspired** design language for modern applications.
 
 ## Requirements
 
@@ -35,6 +35,10 @@ Full guides, examples, and API details: [https://ui.laczynski.dev/](https://ui.l
 
 Import symbols from `@laczynski/ui` in your Angular application; see the docs for module setup and per-component usage.
 
+## Disclaimer
+
+This package is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Icons use `@fluentui/svg-icons` (MIT). See the repository [`docs/legal-notice.md`](https://github.com/damianlaczynski/Ui/blob/main/docs/legal-notice.md).
+
 ## License
 
-Published as **@laczynski/ui** under the [MIT License](https://opensource.org/licenses/MIT). Full text: [`LICENSE`](https://github.com/DamianLaczynski/ui/blob/main/LICENSE) in the repository root.
+Published as **@laczynski/ui** under the [MIT License](https://opensource.org/licenses/MIT). Full text: [`LICENSE`](https://github.com/damianlaczynski/ui/blob/main/LICENSE) in the repository root.

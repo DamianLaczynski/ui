@@ -9,7 +9,7 @@ status: active
 
 > **Layer L1 — Standards.** Default visual rules for components. Showcase docs and component APIs define overrides.
 
-Based on the [Fluent 2](https://fluent2.microsoft.design/) design language. Shared types live in `packages/ui/src/lib/components/utils.ts`.
+Inspired by the visual principles of Microsoft's [Fluent 2](https://fluent2.microsoft.design/) design language. This library is not an official Microsoft product. Shared types live in `packages/ui/src/lib/components/utils.ts`.
 
 ---
 

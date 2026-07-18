@@ -79,7 +79,7 @@ See [accessibility.md](../quality/accessibility.md) for full expectations.
 ## Icons
 
 - Use `IconName` type from the icon component.
-- Add new icons via `scripts/generate-icon-sprite.mjs` (Fluent SVG source).
+- Add new icons via `scripts/generate-icon-sprite.mjs` (`@fluentui/svg-icons` source).
 - Run `npm run icons:build` after changing the icon set.
 
 ## i18n

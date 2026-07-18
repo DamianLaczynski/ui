@@ -15,7 +15,7 @@ export const GETTING_STARTED_PAGE_CONFIG: GuideDocPageConfig = {
           type: 'list',
           items: [
             'Teams building an internal design system on top of Angular components',
-            'Projects that need consistent Fluent 2 styling and accessibility defaults',
+            'Projects that need consistent Fluent-inspired styling and accessibility defaults',
             'Developers who want fast setup without giving up TypeScript safety',
           ],
         },
@@ -88,6 +88,17 @@ export class ExampleComponent {}`,
             'Test keyboard navigation and focus states before release.',
             'Document your internal usage pattern in one page for the team.',
           ],
+        },
+      ],
+    },
+    {
+      id: 'legal-notice',
+      title: 'Legal notice',
+      blocks: [
+        {
+          type: 'note',
+          content:
+            '@laczynski/ui is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Fluent, Fluent UI, and Microsoft are trademarks of Microsoft Corporation. Icons use @fluentui/svg-icons (MIT License).',
         },
       ],
     },

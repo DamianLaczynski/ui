@@ -30,7 +30,7 @@ const THEME_VARIANT_KEY = 'theme-variant';
 const THEME_VARIANTS: ThemeVariantOption[] = [
   {
     id: ThemeVariant.Fluent,
-    label: 'Fluent',
+    label: 'Core',
     previewPrimary: '#0078d4',
     previewSecondary: '#106ebe',
   },

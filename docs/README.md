@@ -28,7 +28,8 @@ Cross-cutting quality expectations. Start with [quality/README.md](quality/READM
 | [README.md](quality/README.md) | Entry point — when to read each quality doc |
 | [accessibility.md](quality/accessibility.md) | Keyboard, focus, labels, ARIA |
 | [internationalization.md](quality/internationalization.md) | Translation tokens and copy conventions |
-| [theming.md](quality/theming.md) | Light/dark themes, CSS variables, Fluent 2 alignment |
+| [theming.md](quality/theming.md) | Light/dark themes, CSS variables, Fluent-inspired alignment |
+| [legal-notice.md](legal-notice.md) | Trademark disclaimer and third-party attribution |
 
 ## Guides (`guides/`)
 

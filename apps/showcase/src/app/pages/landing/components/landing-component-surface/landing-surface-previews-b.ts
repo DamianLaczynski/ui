@@ -840,8 +840,8 @@ export class LspSwitchPreviewComponent {
             font-family: inherit;
           "
         >
-          Tokens, theming, and accessibility expectations appear inline without leaving Fluent
-          layouts.
+          Tokens, theming, and accessibility expectations appear inline without leaving the design
+          system surface.
         </p>
       </div>
     </div>
@@ -892,7 +892,7 @@ export class LspTabsPreviewComponent {
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
       <ui-tag text="Angular 21" />
-      <ui-tag text="Fluent 2" variant="primary" />
+      <ui-tag text="Fluent-inspired" variant="primary" />
       <ui-tag text="WCAG 2.2 AA" variant="success" />
     </div>
   `,

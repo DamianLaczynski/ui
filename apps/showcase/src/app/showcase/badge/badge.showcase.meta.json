@@ -1,7 +1,7 @@
 {
   "slug": "badge",
   "title": "Badge",
-  "description": "Badge is a compact non-interactive status surface for counts, semantic state, or short metadata. Variant and appearance mirror other Fluent primitives, while size, shape, and optional icons help the same component fit dense lists, cards, and workspace chrome.",
+  "description": "Badge is a compact non-interactive status surface for counts, semantic state, or short metadata. Variant and appearance mirror other design-system primitives, while size, shape, and optional icons help the same component fit dense lists, cards, and workspace chrome.",
   "intro": "Use badge for short status, count, or category metadata that should stay lightweight. It is best for labels like draft, live, unread, or 99+. For anything clickable or dismissible, use tag or button instead.",
   "importCode": "import { BadgeComponent } from 'ui';",
   "containerClass": "badge-doc",
@@ -107,7 +107,7 @@
               "icon",
               "InputSignal<IconName | undefined>",
               "undefined",
-              "Optional Fluent icon shown before or after the text."
+              "Optional sprite icon shown before or after the text."
             ],
             [
               "iconPosition",

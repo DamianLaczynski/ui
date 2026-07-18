@@ -1,7 +1,7 @@
 {
   "slug": "avatar",
   "title": "Avatar",
-  "description": "Compact identity surface: photo, initials, generated initials from a full name, or a named icon. Variant and appearance align with Fluent tokens; size and shape tune density for lists versus profile headers.",
+  "description": "Compact identity surface: photo, initials, generated initials from a full name, or a named icon. Variant and appearance align with theme tokens; size and shape tune density for lists versus profile headers.",
   "intro": "Supply `image` when you have a URL, `initials` for explicit letters, or `name` to derive up to two characters. Without those, set `icon` or accept the default person glyph. `loading` swaps content for a spinner while `ariaLabel` or `name` feeds the required accessible name on the `img` role host.",
   "importCode": "import { AvatarComponent } from 'ui';",
   "containerClass": "avatar-doc",
@@ -31,7 +31,7 @@
     {
       "id": "layout",
       "title": "Size and shape",
-      "description": "`size` maps to Fluent density steps; `shape` trades rounded rectangles for circles or squares so lists and cards stay visually aligned.",
+      "description": "`size` maps to design-system density steps; `shape` trades rounded rectangles for circles or squares so lists and cards stay visually aligned.",
       "codeKey": "layoutCode",
       "componentKey": "layout"
     },
@@ -108,7 +108,7 @@
               "icon",
               "InputSignal<IconName | undefined>",
               "undefined",
-              "Fluent icon when no image or initials render."
+              "Sprite icon when no image or initials render."
             ],
             [
               "disabled",

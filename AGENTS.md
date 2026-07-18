@@ -4,7 +4,7 @@
 
 ## Repository shape
 
-- `packages/ui` — publishable Angular component library (`@laczynski/ui`), Fluent 2 design language.
+- `packages/ui` — publishable Angular component library (`@laczynski/ui`), Fluent-inspired design language.
 - `apps/showcase` — documentation site and live component examples (`ui-showcase`).
 - `apps/starter` — sample application shell (not registered in `angular.json`).
 - `scripts/` — build-time generators (docs Markdown, icon sprite, sitemap).
@@ -87,7 +87,7 @@ Three layers — see `docs/README.md`:
 - If you add or change a public component API, update `public-api.ts`, showcase meta, examples, and run `npm run docs:build`.
 - If you change shared types (`Variant`, `Appearance`, etc.), check all components that consume them.
 - If you change SCSS tokens or theme variables, check light/dark rendering in showcase.
-- If you add icons, update the Fluent icon set usage and run `npm run icons:build`.
+- If you add icons, update the `@fluentui/svg-icons` sprite usage and run `npm run icons:build`.
 
 ## Working agreements
 

@@ -1,7 +1,7 @@
 {
   "slug": "icon",
   "title": "Icon",
-  "description": "Icon renders Fluent SVG symbols from the generated sprite with size, variant, rotation, and accessibility options. Use it for decorative chrome, semantic status glyphs, and compositional UI elements such as buttons, badges, nav items, and menus.",
+  "description": "Icon renders SVG symbols from the generated @fluentui/svg-icons sprite with size, variant, rotation, and accessibility options. Use it for decorative chrome, semantic status glyphs, and compositional UI elements such as buttons, badges, nav items, and menus.",
   "intro": "The icon component resolves symbols from the generated sprite and falls back across size and variant combinations when needed. For most product UI, icons stay decorative and inherit color from surrounding content. The key practical need in this showcase is the browser with search, because the icon catalog is large enough that static previews alone are not useful.",
   "importCode": "import { IconComponent, type IconName, ALL_ICON_NAMES } from 'ui';",
   "containerClass": "icon-doc",
@@ -66,7 +66,7 @@
   "apiSections": [
     {
       "title": "IconComponent - <code>ui-icon</code>",
-      "lead": "Sprite-backed Fluent icon renderer with size, variant, rotation, locale, direction, and accessibility support.",
+      "lead": "Sprite-backed icon renderer with size, variant, rotation, locale, direction, and accessibility support.",
       "blocks": [
         {
           "type": "table",
