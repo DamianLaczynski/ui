@@ -32,11 +32,7 @@ import { KbdComponent, MessageBarComponent, TagComponent } from 'ui';
           @for (item of shortcuts; track item.label) {
             <div style="display:flex;justify-content:space-between;gap:1rem;align-items:center">
               <span style="font-size:0.875rem">{{ item.label }}</span>
-              <div style="display:flex;gap:0.375rem;align-items:center;flex-wrap:wrap">
-                @for (key of item.keys; track key) {
-                  <ui-kbd [text]="key" appearance="filled" />
-                }
-              </div>
+              <ui-kbd [keys]="item.keys" appearance="filled" />
             </div>
           }
         </div>
@@ -57,8 +53,7 @@ import { KbdComponent, MessageBarComponent, TagComponent } from 'ui';
           <span style="font-size:0.8125rem;color:var(--color-neutral-foreground2-rest)">
             Open command palette with
           </span>
-          <ui-kbd text="Ctrl" appearance="filled" />
-          <ui-kbd text="K" appearance="filled" />
+          <ui-kbd [keys]="['Ctrl', 'K']" appearance="filled" />
         </div>
       </div>
     </div>

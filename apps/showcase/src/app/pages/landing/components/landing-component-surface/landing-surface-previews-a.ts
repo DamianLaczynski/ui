@@ -806,18 +806,13 @@ export class LspIconPreviewComponent {
   template: `
     <div style="display:flex;flex-direction:column;gap:0.85rem;width:100%;min-width:0">
       <div style="display:flex;flex-wrap:wrap;gap:0.45rem;align-items:center">
-        <ui-kbd text="⌘" size="small" />
-        <ui-kbd text="K" size="small" appearance="filled" />
+        <ui-kbd [keys]="['⌘', 'K']" size="small" appearance="filled" />
         <span style="font-size:0.8125rem;color:var(--color-neutral-foreground2-rest)"
           >Open palette</span
         >
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:0.45rem;align-items:center">
-        <ui-kbd text="Ctrl" />
-        <span style="font-size:0.75rem;color:var(--color-neutral-foreground3-rest)">+</span>
-        <ui-kbd text="Shift" appearance="filled" />
-        <span style="font-size:0.75rem;color:var(--color-neutral-foreground3-rest)">+</span>
-        <ui-kbd text="P" />
+        <ui-kbd [keys]="['Ctrl', 'Shift', 'P']" appearance="filled" />
         <span style="font-size:0.8125rem;color:var(--color-neutral-foreground2-rest)"
           >Command palette (Win)</span
         >
