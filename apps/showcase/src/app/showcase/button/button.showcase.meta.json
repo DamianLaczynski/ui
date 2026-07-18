@@ -13,6 +13,7 @@
     "iconOnlyCode": "button-icon-only-demo.ts",
     "sizesCode": "button-sizes-demo.ts",
     "statesCode": "button-states-demo.ts",
+    "badgeCode": "button-badge-demo.ts",
     "otherCode": "button-other-demo.ts"
   },
   "featureSections": [
@@ -64,6 +65,13 @@
       "description": "Show async work in progress, block duplicate submits while loading, or disable actions the user cannot take yet.",
       "codeKey": "statesCode",
       "componentKey": "states"
+    },
+    {
+      "id": "badge",
+      "title": "Badge overlay",
+      "description": "Attach compact count or status badges to labeled or icon-only buttons for inbox totals, alerts, and cart quantities without custom positioning.",
+      "codeKey": "badgeCode",
+      "componentKey": "badge"
     },
     {
       "id": "layout-selectable",
@@ -193,6 +201,43 @@
               "InputSignal<boolean>",
               "false",
               "Shows an inline spinner, ignores further clicks until cleared, and hides the leading icon while active."
+            ],
+            [
+              "badge",
+              "InputSignal<string | undefined>",
+              "undefined",
+              "Optional overlay badge text such as unread counts. Renders a corner badge anchored to the button."
+            ],
+            [
+              "badgeVariant",
+              "InputSignal<Variant>",
+              "'danger'",
+              "Semantic color for the overlay badge."
+            ],
+            [
+              "badgeAppearance",
+              "InputSignal<Appearance>",
+              "'filled'",
+              "Surface style for the overlay badge."
+            ],
+            ["badgeShape", "InputSignal<Shape>", "'circular'", "Shape of the overlay badge."],
+            [
+              "badgePosition",
+              "InputSignal<AnchorPosition>",
+              "'top-end'",
+              "Corner placement for the overlay badge."
+            ],
+            [
+              "badgeAriaLabel",
+              "InputSignal<string | undefined>",
+              "undefined",
+              "Accessible name for the badge when the count alone is not descriptive enough."
+            ],
+            [
+              "hideBadgeWhenLoading",
+              "InputSignal<boolean>",
+              "true",
+              "Hides the overlay badge while the button is in a loading state."
             ]
           ]
         },
@@ -221,7 +266,8 @@
           "title": "Related mechanisms",
           "items": [
             "<code>IconComponent</code> - renders the optional glyph from <code>icon</code>; it is skipped during loading so progress feedback stays clear.",
-            "<code>SpinnerComponent</code> - displays the busy indicator whenever <code>loading</code> is true."
+            "<code>SpinnerComponent</code> - displays the busy indicator whenever <code>loading</code> is true.",
+            "<code>BadgeComponent</code> - renders the optional corner overlay when <code>badge</code> is set."
           ]
         }
       ]
