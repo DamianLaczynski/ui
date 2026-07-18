@@ -14,7 +14,7 @@ import { ComponentPortal } from '@angular/cdk/portal';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-import { MenuListComponent } from '../menu/menu-list';
+import { MenuListComponent } from '../menu/menu-list/menu-list.component';
 import { MenuItem, MenuSection } from '../menu/models/menu-item.model';
 import { Appearance, Size, Variant } from '../utils';
 import { UiI18nService } from '../../i18n';
