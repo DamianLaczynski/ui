@@ -89,7 +89,54 @@
               "''",
               "Optional empty-results supporting text."
             ],
-            ["maxResults", "InputSignal<number>", "10", "Maximum number of visible matches."]
+            ["maxResults", "InputSignal<number>", "10", "Maximum number of visible matches."],
+            [
+              "groupLabels",
+              "InputSignal<Record<string, string>>",
+              "{}",
+              "Optional display labels for command groups keyed by group id."
+            ],
+            [
+              "size",
+              "InputSignal<Size>",
+              "'medium'",
+              "Result row size, aligned with nav/node tokens."
+            ],
+            ["searchSize", "InputSignal<Size>", "'large'", "Search field size."],
+            ["variant", "InputSignal<Variant>", "'primary'", "Result row color variant."],
+            ["appearance", "InputSignal<Appearance>", "'subtle'", "Result row visual appearance."],
+            ["shape", "InputSignal<Shape>", "'rounded'", "Result row border radius style."],
+            [
+              "showSelectionIndicator",
+              "InputSignal<boolean>",
+              "true",
+              "Shows the vertical selection indicator used by nav items."
+            ],
+            [
+              "indicatorPosition",
+              "InputSignal<Orientation>",
+              "'vertical'",
+              "Selection indicator position."
+            ],
+            ["showFooter", "InputSignal<boolean>", "true", "Shows keyboard hint footer."],
+            [
+              "autoScrollToSelected",
+              "InputSignal<boolean>",
+              "true",
+              "Keeps the active command scrolled into view."
+            ],
+            [
+              "enableGlobalShortcut",
+              "InputSignal<boolean>",
+              "false",
+              "Registers a document-level shortcut to open or close the palette."
+            ],
+            [
+              "globalShortcut",
+              "InputSignal<string>",
+              "'mod+k'",
+              "Shortcut pattern. Use <code>mod</code> for Ctrl on Windows/Linux and Cmd on macOS."
+            ]
           ]
         },
         {
@@ -106,7 +153,7 @@
             ["closed", "OutputEmitterRef<void>", "Emits when the palette closes."],
             [
               "CommandPaletteItem",
-              "{ id, label, description?, icon?, keywords?, action, disabled?, group? }",
+              "{ id, label, description?, icon?, keywords?, shortcut?, action, disabled?, group? }",
               "Command contract used for search, rendering, grouping, and execution."
             ],
             [

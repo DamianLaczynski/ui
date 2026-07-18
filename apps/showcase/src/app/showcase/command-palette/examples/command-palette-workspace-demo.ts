@@ -68,9 +68,7 @@ const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:0.5rem">
-          <ui-kbd text="Ctrl" />
-          <span>+</span>
-          <ui-kbd text="K" />
+          <ui-kbd [keys]="['Ctrl', 'K']" />
         </div>
       </div>
 
@@ -90,6 +88,8 @@ const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
         placeholder="Search actions, projects, teammates..."
         emptyText="No workspace commands found"
         [maxResults]="8"
+        [enableGlobalShortcut]="true"
+        globalShortcut="mod+k"
         (commandExecuted)="onExecuted($event)"
       />
     </div>

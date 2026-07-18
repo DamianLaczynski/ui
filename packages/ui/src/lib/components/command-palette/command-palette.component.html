@@ -15,17 +15,19 @@
         cdkTrapFocusAutoCapture
         (animationend)="onSurfaceAnimationEnd($event)"
       >
-        <div class="command-palette__body">
-          <div class="command-palette__search">
+        <div class="command-palette__body" #paletteBody>
+          <div class="command-palette__search" #searchHost>
             <ui-search
               inputVariant="filled-gray"
               [placeholder]="getPlaceholderText()"
-              [size]="'large'"
+              [size]="searchSize()"
               [(ngModel)]="_searchQuery"
               [ngModelOptions]="{ standalone: true }"
               (ngModelChange)="onSearchChange($event)"
             />
           </div>
+
+          <ui-divider orientation="horizontal" />
 
           <div
             class="command-palette__results"
@@ -37,8 +39,8 @@
               @for (group of groupedItems(); track trackByGroupId($index, group)) {
                 @if (group.items.length > 0) {
                   @if (group.label) {
-                    <div class="command-palette__group-header" [id]="groupHeaderId(group)">
-                      {{ group.label }}
+                    <div [id]="groupHeaderId(group)">
+                      <ui-nav-section-header [label]="group.label" />
                     </div>
                   }
 
@@ -48,40 +50,57 @@
                     [attr.aria-labelledby]="group.label ? groupHeaderId(group) : null"
                   >
                     @for (item of group.items; track trackByItemId($index, item)) {
-                      <button
-                        type="button"
-                        role="option"
-                        [id]="itemId(item)"
-                        class="command-palette__item"
-                        [class.command-palette__item--disabled]="item.disabled"
-                        [disabled]="item.disabled"
-                        [attr.aria-selected]="isItemSelected(item)"
-                        [attr.aria-disabled]="item.disabled || null"
-                        (click)="onItemClick(item)"
-                        (focus)="onItemFocus(item)"
-                        [attr.aria-label]="item.description || item.label"
-                      >
-                        @if (item.icon) {
-                          <div class="command-palette__item-icon">
-                            <ui-icon [icon]="item.icon" [size]="'medium'" />
-                          </div>
-                        }
+                      <div class="command-palette__item-row">
+                        <div [class]="getItemNodeClasses(item)">
+                          <div class="node__wrapper">
+                            @if (showSelectionIndicator() && isItemSelected(item)) {
+                              <div class="node__indicator"></div>
+                            }
 
-                        <div class="command-palette__item-content">
-                          <div class="command-palette__item-label">{{ item.label }}</div>
-                          @if (item.description) {
-                            <div class="command-palette__item-description">
-                              {{ item.description }}
-                            </div>
-                          }
+                            <button
+                              type="button"
+                              role="option"
+                              [id]="itemId(item)"
+                              class="node__content node__content--button"
+                              [disabled]="item.disabled"
+                              [attr.aria-selected]="isItemSelected(item)"
+                              [attr.aria-disabled]="item.disabled || null"
+                              (click)="onItemClick(item)"
+                              (focus)="onItemFocus(item)"
+                              [attr.aria-label]="item.description || item.label"
+                            >
+                              @if (item.icon) {
+                                <span class="node__icon">
+                                  @if (isItemSelected(item)) {
+                                    <ui-icon [icon]="item.icon" [size]="size()" variant="filled" />
+                                  } @else {
+                                    <ui-icon [icon]="item.icon" [size]="size()" variant="regular" />
+                                  }
+                                </span>
+                              }
+
+                              <span class="command-palette__item-text">
+                                <span class="node__label">{{ item.label }}</span>
+                                @if (item.description) {
+                                  <span class="command-palette__item-description">
+                                    {{ item.description }}
+                                  </span>
+                                }
+                              </span>
+
+                              @if (item.shortcut) {
+                                <span class="command-palette__item-shortcut">{{
+                                  item.shortcut
+                                }}</span>
+                              } @else if (item.disabled) {
+                                <span class="command-palette__item-status" aria-hidden="true">
+                                  <ui-icon icon="lock_closed" [size]="size()" />
+                                </span>
+                              }
+                            </button>
+                          </div>
                         </div>
-
-                        @if (item.disabled) {
-                          <div class="command-palette__item-status">
-                            <ui-icon icon="lock_closed" [size]="'medium'" aria-hidden="true" />
-                          </div>
-                        }
-                      </button>
+                      </div>
                     }
                   </div>
                 }
@@ -95,6 +114,27 @@
               />
             }
           </div>
+
+          @if (showFooter()) {
+            <ui-divider orientation="horizontal" />
+            <div class="command-palette__footer" aria-hidden="true">
+              <div class="command-palette__footer-hints">
+                <span class="command-palette__footer-hint">
+                  <ui-kbd text="↑" [size]="'small'" />
+                  <ui-kbd text="↓" [size]="'small'" />
+                  <span>{{ getNavigateHintText() }}</span>
+                </span>
+                <span class="command-palette__footer-hint">
+                  <ui-kbd text="Enter" [size]="'small'" />
+                  <span>{{ getSelectHintText() }}</span>
+                </span>
+                <span class="command-palette__footer-hint">
+                  <ui-kbd text="Esc" [size]="'small'" />
+                  <span>{{ getCloseHintText() }}</span>
+                </span>
+              </div>
+            </div>
+          }
         </div>
       </div>
     </div>
