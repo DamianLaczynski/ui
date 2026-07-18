@@ -68,7 +68,9 @@ const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:0.5rem">
-          <ui-kbd [keys]="['Ctrl', 'K']" />
+          <ui-kbd text="Ctrl" />
+          <span>+</span>
+          <ui-kbd text="K" />
         </div>
       </div>
 
