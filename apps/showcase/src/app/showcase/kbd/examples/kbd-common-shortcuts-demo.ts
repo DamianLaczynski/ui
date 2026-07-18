@@ -12,11 +12,7 @@ import { KbdComponent } from 'ui';
           style="display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:0.75rem 0.875rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:0.875rem;background:var(--color-neutral-background-rest)"
         >
           <span style="font-size:0.875rem">{{ shortcut.label }}</span>
-          <div style="display:flex;gap:0.375rem;align-items:center;flex-wrap:wrap">
-            @for (key of shortcut.keys; track key) {
-              <ui-kbd [text]="key" appearance="filled" />
-            }
-          </div>
+          <ui-kbd [keys]="shortcut.keys" appearance="filled" />
         </div>
       }
     </div>

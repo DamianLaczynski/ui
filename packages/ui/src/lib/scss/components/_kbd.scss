@@ -5,73 +5,130 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
+$kbd-height-small: 20px;
+$kbd-height-medium: 22px;
+$kbd-height-large: 28px;
+
 .kbd {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: $font-family-mono;
-  font-weight: $font-weight-medium;
-  line-height: 1;
+  flex-shrink: 0;
+  font-family: $font-family-base;
+  font-weight: $font-weight-semibold;
   text-align: center;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   white-space: nowrap;
-  vertical-align: text-bottom;
+  vertical-align: middle;
   user-select: none;
   box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
-  border-radius: $border-radius-400;
+  border-bottom-width: 2px;
+  border-radius: $border-radius-200;
+  color: var(--color-neutral-foreground2-rest);
 
   &--small {
-    min-height: 20px;
-    padding-block: $spacing-0_5;
-    padding-inline: $spacing-1;
-    font-size: $font-size-100;
+    min-width: $kbd-height-small;
+    height: $kbd-height-small;
+    padding-inline: $spacing-1_5;
+    font-size: $font-size-200;
+    line-height: $kbd-height-small;
   }
 
   &--medium {
-    min-height: 22px;
-    padding-block: $spacing-0_5;
-    padding-inline: $spacing-1;
+    min-width: $kbd-height-medium;
+    height: $kbd-height-medium;
+    padding-inline: $spacing-1_5;
     font-size: $font-size-200;
+    line-height: $kbd-height-medium;
   }
 
   &--large {
-    min-height: 26px;
-    padding-block: $spacing-1;
-    padding-inline: $spacing-1_5;
+    min-width: $kbd-height-large;
+    height: $kbd-height-large;
+    padding-inline: $spacing-2;
     font-size: $font-size-300;
+    line-height: $kbd-height-large;
+    border-radius: $border-radius-400;
   }
 
   &--default {
-    background: var(--color-neutral-background-rest);
+    background: var(--color-neutral-background2-rest);
     border-color: var(--color-neutral-stroke-rest);
-    color: var(--color-neutral-foreground2-rest);
+    border-bottom-color: var(--color-neutral-stroke-accessible);
+    box-shadow: none;
   }
 
   &--filled {
-    background: var(--color-neutral-background2-rest);
+    background: var(--color-neutral-background-rest);
     border-color: var(--color-neutral-stroke-rest);
-    color: var(--color-neutral-foreground2-rest);
+    border-bottom-color: var(--color-neutral-stroke-accessible);
+    color: var(--color-neutral-foreground-rest);
+    box-shadow: $elevation-2;
   }
 
   @include respond-to(small) {
     &.kbd--small {
-      min-height: 18px;
-      padding-block: $spacing-0_5;
-      padding-inline: $spacing-0_5;
+      min-width: 18px;
+      height: 18px;
+      padding-inline: $spacing-1;
       font-size: $font-size-100;
+      line-height: 18px;
     }
 
     &.kbd--medium {
-      min-height: 20px;
-      font-size: $font-size-100;
+      min-width: 20px;
+      height: 20px;
+      padding-inline: $spacing-1;
+      font-size: $font-size-200;
+      line-height: 20px;
     }
 
     &.kbd--large {
-      min-height: 24px;
+      min-width: 24px;
+      height: 24px;
       padding-inline: $spacing-1_5;
       font-size: $font-size-200;
+      line-height: 24px;
+    }
+  }
+}
+
+.kbd-sequence {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $spacing-1;
+  vertical-align: middle;
+
+  &__separator {
+    flex-shrink: 0;
+    color: var(--color-neutral-foreground3-rest);
+    font-family: $font-family-base;
+    font-weight: $font-weight-regular;
+    line-height: 1;
+    user-select: none;
+  }
+
+  &--small .kbd-sequence__separator {
+    font-size: $font-size-100;
+  }
+
+  &--medium .kbd-sequence__separator {
+    font-size: $font-size-200;
+  }
+
+  &--large .kbd-sequence__separator {
+    font-size: $font-size-200;
+  }
+
+  @include respond-to(small) {
+    gap: $spacing-0_5;
+
+    &.kbd-sequence--small .kbd-sequence__separator,
+    &.kbd-sequence--medium .kbd-sequence__separator {
+      font-size: $font-size-100;
     }
   }
 }

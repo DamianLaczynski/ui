@@ -1,1 +1,12 @@
-<kbd [class]="kbdClasses()" [attr.aria-label]="ariaLabelText()"> {{ text() }} </kbd>
+@if (isSequence()) {
+  <span [class]="sequenceClasses()" role="group" [attr.aria-label]="ariaLabelText()">
+    @for (key of keys(); track $index; let isLast = $last) {
+      <kbd [class]="kbdClasses()" aria-hidden="true">{{ key }}</kbd>
+      @if (!isLast) {
+        <span class="kbd-sequence__separator" aria-hidden="true">{{ separator() }}</span>
+      }
+    }
+  </span>
+} @else {
+  <kbd [class]="kbdClasses()" [attr.aria-label]="ariaLabelText()">{{ text() }}</kbd>
+}
