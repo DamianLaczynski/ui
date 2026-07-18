@@ -50,6 +50,7 @@ export class DsSidebarComponent {
     { id: 'checkbox', label: 'Checkbox', icon: 'checkbox_checked' },
     { id: 'color', label: 'Color', icon: 'color' },
     { id: 'command-palette', label: 'Command Palette', icon: 'keyboard' },
+    { id: 'context-menu', label: 'Context Menu', icon: 'cursor_click' },
     { id: 'data-grid', label: 'Data Grid', icon: 'table' },
     {
       id: 'date-and-time',

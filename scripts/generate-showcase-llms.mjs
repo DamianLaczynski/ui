@@ -17,6 +17,7 @@ const showcases = [
   loadShowcaseMeta({ slug: 'card' }),
   loadShowcaseMeta({ slug: 'carousel' }),
   loadShowcaseMeta({ slug: 'command-palette' }),
+  loadShowcaseMeta({ slug: 'context-menu' }),
   loadShowcaseMeta({ slug: 'data-grid' }),
   loadShowcaseMeta({ slug: 'checkbox', showcaseDir: 'field/checkbox' }),
   loadShowcaseMeta({ slug: 'color', showcaseDir: 'field/color' }),
