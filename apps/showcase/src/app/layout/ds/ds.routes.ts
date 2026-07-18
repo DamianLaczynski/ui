@@ -165,6 +165,10 @@ import {
   STEPPER_DOC_ASSET_PATHS,
   STEPPER_DOC_PAGE_CONFIG,
 } from '@showcase/field/stepper/stepper.showcase.doc';
+import {
+  TIMELINE_DOC_ASSET_PATHS,
+  TIMELINE_DOC_PAGE_CONFIG,
+} from '@showcase/timeline/timeline.showcase.doc';
 import { TOAST_DOC_ASSET_PATHS, TOAST_DOC_PAGE_CONFIG } from '@showcase/toast/toast.showcase.doc';
 import { TOTP_DOC_ASSET_PATHS, TOTP_DOC_PAGE_CONFIG } from '@showcase/field/totp/totp.showcase.doc';
 import { TREE_DOC_ASSET_PATHS, TREE_DOC_PAGE_CONFIG } from '@showcase/tree/tree.showcase.doc';
@@ -202,6 +206,10 @@ import {
   CONTEXT_MENU_DOC_ASSET_PATHS,
   CONTEXT_MENU_DOC_PAGE_CONFIG,
 } from '@showcase/context-menu/context-menu.showcase.doc';
+import {
+  POPOVER_DOC_ASSET_PATHS,
+  POPOVER_DOC_PAGE_CONFIG,
+} from '@showcase/popover/popover.showcase.doc';
 import {
   TOOLTIP_DOC_ASSET_PATHS,
   TOOLTIP_DOC_PAGE_CONFIG,
@@ -353,6 +361,14 @@ export const dsRoutes: Routes = [
     data: {
       config: PAGINATION_DOC_PAGE_CONFIG,
       assetPaths: PAGINATION_DOC_ASSET_PATHS,
+    },
+  },
+  {
+    path: 'popover',
+    component: ShowcaseDocPageComponent,
+    data: {
+      config: POPOVER_DOC_PAGE_CONFIG,
+      assetPaths: POPOVER_DOC_ASSET_PATHS,
     },
   },
   {
@@ -713,6 +729,14 @@ export const dsRoutes: Routes = [
     data: {
       config: WEEK_DOC_PAGE_CONFIG,
       assetPaths: WEEK_DOC_ASSET_PATHS,
+    },
+  },
+  {
+    path: 'timeline',
+    component: ShowcaseDocPageComponent,
+    data: {
+      config: TIMELINE_DOC_PAGE_CONFIG,
+      assetPaths: TIMELINE_DOC_ASSET_PATHS,
     },
   },
   {

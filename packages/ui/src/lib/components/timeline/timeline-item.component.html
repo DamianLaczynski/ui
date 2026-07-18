@@ -1,0 +1,31 @@
+<article [class]="itemClasses()">
+  <div class="timeline-item__rail" aria-hidden="true">
+    <div class="timeline-item__marker">
+      @if (icon()) {
+        <ui-icon [icon]="icon()!" [size]="size()" variant="filled" />
+      }
+    </div>
+    <div class="timeline-item__line"></div>
+  </div>
+
+  <div class="timeline-item__content">
+    <div class="timeline-item__header">
+      <h3 class="timeline-item__title">{{ title() }}</h3>
+      @if (timestamp()) {
+        <time class="timeline-item__timestamp">{{ timestamp() }}</time>
+      }
+    </div>
+
+    @if (meta()) {
+      <div class="timeline-item__meta">{{ meta() }}</div>
+    }
+
+    @if (description()) {
+      <p class="timeline-item__description">{{ description() }}</p>
+    }
+
+    <div class="timeline-item__body">
+      <ng-content />
+    </div>
+  </div>
+</article>

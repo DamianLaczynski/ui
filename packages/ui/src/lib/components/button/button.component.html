@@ -1,30 +1,49 @@
-<button
-  [type]="type()"
-  [class]="buttonClasses()"
-  [disabled]="disabled()"
-  [attr.tabindex]="tabIndex()"
-  [attr.role]="role()"
-  [attr.aria-label]="ariaLabel()"
-  [attr.aria-pressed]="
-    role() === 'radio' || role() === 'menuitem'
-      ? null
-      : selectable()
-        ? selected()
-          ? 'true'
-          : 'false'
-        : null
-  "
-  [attr.aria-checked]="role() === 'radio' ? (ariaChecked() ?? selected()) : null"
-  (click)="onClick($event)"
->
-  @if (loading()) {
-    <ui-spinner [size]="spinnerSize()" [variant]="variant()" />
-  }
-  @if (icon() && !loading()) {
-    <ui-icon [icon]="icon()" [size]="size()" [variant]="selected() ? 'filled' : 'regular'" />
-  }
-  @if (text()) {
-    <span class="button__text">{{ text() }}</span>
-  }
-  <span #contentSlot class="button__content"><ng-content></ng-content></span>
-</button>
+@if (showBadge()) {
+  <span class="button-anchor" [class.button-anchor--full-width]="fullWidth()">
+    <ng-container *ngTemplateOutlet="buttonTemplate" />
+    <ui-badge
+      [class]="badgeClasses()"
+      [text]="badge()!"
+      [variant]="badgeVariant()"
+      [appearance]="badgeAppearance()"
+      [shape]="badgeShape()"
+      [size]="badgeSize()"
+      [ariaLabel]="badgeAriaLabel() || badge()!"
+    />
+  </span>
+} @else {
+  <ng-container *ngTemplateOutlet="buttonTemplate" />
+}
+
+<ng-template #buttonTemplate>
+  <button
+    [type]="type()"
+    [class]="buttonClasses()"
+    [disabled]="disabled()"
+    [attr.tabindex]="tabIndex()"
+    [attr.role]="role()"
+    [attr.aria-label]="ariaLabel()"
+    [attr.aria-pressed]="
+      role() === 'radio' || role() === 'menuitem'
+        ? null
+        : selectable()
+          ? selected()
+            ? 'true'
+            : 'false'
+          : null
+    "
+    [attr.aria-checked]="role() === 'radio' ? (ariaChecked() ?? selected()) : null"
+    (click)="onClick($event)"
+  >
+    @if (loading()) {
+      <ui-spinner [size]="spinnerSize()" [variant]="variant()" />
+    }
+    @if (icon() && !loading()) {
+      <ui-icon [icon]="icon()" [size]="size()" [variant]="selected() ? 'filled' : 'regular'" />
+    }
+    @if (text()) {
+      <span class="button__text">{{ text() }}</span>
+    }
+    <span #contentSlot class="button__content"><ng-content></ng-content></span>
+  </button>
+</ng-template>

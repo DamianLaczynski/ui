@@ -25,6 +25,18 @@
   min-width: 120px;
   @include overlay-surface-enter($duration-fast, $easing-decelerate-mid, top center);
 
+  &--suppress-focus-ring {
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    .button:focus,
+    .button:focus-visible {
+      outline: none;
+    }
+  }
+
   // =============================================================================
   // Section
   // =============================================================================
@@ -38,33 +50,10 @@
     &--not-first {
       margin-top: $spacing-0_5; // 2px
     }
-  }
 
-  &__section-header {
-    display: flex;
-    align-self: stretch;
-    align-items: center;
-    min-width: 0;
-    padding: $spacing-2 $spacing-4 $spacing-1;
-    margin-bottom: $spacing-0_5;
-    background: transparent;
-
-    &--disabled {
-      .menu__section-header-text {
-        color: var(--color-neutral-foreground-disabled);
-      }
-    }
-
-    &-text {
-      flex: 1 1 0;
-      min-width: 0;
-      color: var(--color-neutral-foreground3-rest);
-      font-size: $font-size-200;
-      font-family: $font-family-base;
-      font-weight: $font-weight-semibold;
-      line-height: $line-height-200;
-      letter-spacing: 0.04em;
-      word-wrap: break-word;
+    ui-nav-section-header {
+      display: block;
+      align-self: stretch;
     }
   }
 

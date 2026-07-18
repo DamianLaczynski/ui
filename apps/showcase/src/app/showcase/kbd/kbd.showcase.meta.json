@@ -10,7 +10,8 @@
     "sizeAppearanceCode": "kbd-size-appearance-demo.ts",
     "commonShortcutsCode": "kbd-common-shortcuts-demo.ts",
     "navigationCode": "kbd-navigation-demo.ts",
-    "commandHelpCode": "kbd-command-help-demo.ts"
+    "commandHelpCode": "kbd-command-help-demo.ts",
+    "combinationsCode": "kbd-combinations-demo.ts"
   },
   "featureSections": [
     {
@@ -47,6 +48,13 @@
       "description": "A practical `kbd` example should show shortcut help in context with surrounding copy and supporting UI, not only a naked matrix of keycaps.",
       "codeKey": "commandHelpCode",
       "componentKey": "commandHelp"
+    },
+    {
+      "id": "combinations",
+      "title": "Key combinations",
+      "description": "Pass a `keys` array to render chord shortcuts such as Ctrl+K with consistent separators and one accessible shortcut label.",
+      "codeKey": "combinationsCode",
+      "componentKey": "combinations"
     }
   ],
   "accessibility": [
@@ -72,9 +80,21 @@
           "rows": [
             [
               "text",
+              "InputSignal<string | undefined>",
+              "undefined",
+              "Visible keyboard token for a single keycap. Use when `keys` is not set."
+            ],
+            [
+              "keys",
+              "InputSignal<string[]>",
+              "[]",
+              "Ordered key tokens for chord shortcuts such as `['Ctrl', 'K']`. Renders separators between keycaps."
+            ],
+            [
+              "separator",
               "InputSignal<string>",
-              "required",
-              "Visible keyboard token shown inside the keycap."
+              "'+'",
+              "Separator shown between keys in a combination."
             ],
             ["size", "InputSignal<Size>", "'medium'", "Controls the visual density of the keycap."],
             [
@@ -82,13 +102,19 @@
               "InputSignal<'default' | 'filled'>",
               "'default'",
               "Switches between the plain and filled keycap styles."
+            ],
+            [
+              "ariaLabel",
+              "InputSignal<string | undefined>",
+              "undefined",
+              "Optional accessible name override for a single key or a full shortcut sequence."
             ]
           ]
         },
         {
           "type": "notes",
           "paragraphs": [
-            "The component is presentational only. Combine multiple `ui-kbd` instances when you need chord shortcuts such as `Ctrl` + `S`.",
+            "Use `keys` for chord shortcuts such as `['Ctrl', 'S']`. Single-key hints can still use `text`.",
             "Use concise key text. If the token is longer, make sure the surrounding layout still reads clearly."
           ],
           "title": "Notes"

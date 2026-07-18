@@ -1,0 +1,145 @@
+{
+  "slug": "popover",
+  "title": "Popover",
+  "description": "Popover anchors compact, interactive panels to an existing trigger. Use it for filters, pickers, share sheets, and quick workflows that need more room than a tooltip but less weight than a dialog.",
+  "intro": "Popover is exposed as a standalone directive on a trigger element. Pass an `ng-template` with the panel body, toggle it on click by default, and optionally control open state from the parent.",
+  "importCode": "import { PopoverDirective } from 'ui';",
+  "containerClass": "popover-doc",
+  "snippets": {
+    "filtersCode": "popover-filters-demo.ts",
+    "placementCode": "popover-placement-demo.ts",
+    "assigneeCode": "popover-assignee-demo.ts",
+    "columnPickerCode": "popover-column-picker-demo.ts",
+    "shareCode": "popover-share-demo.ts"
+  },
+  "featureSections": [
+    {
+      "id": "filters",
+      "title": "Filter panel on a board",
+      "description": "A common production pattern is a filter trigger on a dense list or board. The popover hosts switch rows, helper copy, and confirm actions without navigating away.",
+      "codeKey": "filtersCode",
+      "componentKey": "filters"
+    },
+    {
+      "id": "placement",
+      "title": "Placement with fallback",
+      "description": "Choose the preferred side for the anchored panel. The overlay falls back when viewport space is limited and keeps the arrow aligned with the side that actually rendered.",
+      "codeKey": "placementCode",
+      "componentKey": "placement"
+    },
+    {
+      "id": "assignee",
+      "title": "Assignee picker",
+      "description": "Issue workflows often need search, avatars, and secondary actions in a compact anchored panel. This is a better popover fit than a tooltip or full dialog.",
+      "codeKey": "assigneeCode",
+      "componentKey": "assignee"
+    },
+    {
+      "id": "column-picker",
+      "title": "Controlled column picker",
+      "description": "Bind `uiPopoverOpen` when the parent owns the open state. Column toggles work well as switch rows with labels aligned on the right.",
+      "codeKey": "columnPickerCode",
+      "componentKey": "columnPicker"
+    },
+    {
+      "id": "share",
+      "title": "Share and access",
+      "description": "Share popovers usually combine invites, link access, and a short list of people who already have permissions—without turning into a second dialog.",
+      "codeKey": "shareCode",
+      "componentKey": "share"
+    }
+  ],
+  "accessibility": [
+    {
+      "title": "Trigger semantics",
+      "body": "The trigger receives `aria-haspopup=\"dialog\"`, `aria-expanded`, and `aria-controls` while open. Provide `uiPopoverAriaLabel` when the panel heading is not obvious from the trigger alone."
+    },
+    {
+      "title": "Keyboard and dismissal",
+      "body": "Popover panels close on `Escape` and outside pointer interaction. Keep essential instructions visible outside the popover when users must understand the trigger before opening it.\n\n| Key / input | Action |\n| --- | --- |\n| Click trigger | Toggles the popover when `uiPopoverTrigger` is `click` |\n| Escape | Closes the open popover |\n| Outside click | Closes the open popover |"
+    },
+    {
+      "title": "Popover versus tooltip",
+      "body": "Use tooltip for short, non-interactive hints. Use popover when the surface needs buttons, inputs, or richer supporting content that users may interact with."
+    }
+  ],
+  "apiSections": [
+    {
+      "title": "PopoverDirective - <code>[uiPopover]</code>",
+      "lead": "Standalone directive that anchors a CDK overlay popover to an existing trigger element. It supports click or hover activation, preferred placement with viewport fallback, optional arrow rendering, and a two-way open model.",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "Inputs",
+          "columns": ["Name", "Type", "Default", "Description"],
+          "columnKinds": ["code", "type", "default", "text"],
+          "rows": [
+            [
+              "uiPopover",
+              "InputSignal<TemplateRef<unknown>>",
+              null,
+              "Required template with the popover body content."
+            ],
+            [
+              "uiPopoverOpen",
+              "ModelSignal<boolean>",
+              "false",
+              "Two-way bound open state for controlled usage."
+            ],
+            [
+              "uiPopoverPosition",
+              "InputSignal<'top' | 'bottom' | 'left' | 'right'>",
+              "'bottom'",
+              "Preferred placement for the anchored panel."
+            ],
+            [
+              "uiPopoverTrigger",
+              "InputSignal<'click' | 'hover'>",
+              "'click'",
+              "Activation mode for opening the popover."
+            ],
+            ["uiPopoverDisabled", "InputSignal<boolean>", "false", "Disables opening the popover."],
+            [
+              "uiPopoverWithArrow",
+              "InputSignal<boolean>",
+              "true",
+              "Shows the pointer arrow on the anchored surface."
+            ],
+            [
+              "uiPopoverSize",
+              "InputSignal<'small' | 'medium' | 'large'>",
+              "'medium'",
+              "Controls the max width of the popover surface."
+            ],
+            [
+              "uiPopoverAriaLabel",
+              "InputSignal<string | undefined>",
+              "undefined",
+              "Accessible name for the dialog surface when needed."
+            ],
+            [
+              "uiPopoverShowDelay",
+              "InputSignal<number>",
+              "0",
+              "Delay in milliseconds before opening on hover."
+            ],
+            [
+              "uiPopoverHideDelay",
+              "InputSignal<number>",
+              "120",
+              "Delay in milliseconds before closing on hover leave."
+            ]
+          ]
+        },
+        {
+          "type": "notes",
+          "paragraphs": [
+            "Structure panel content with header, body, and footer sections when the surface includes confirm/cancel actions or grouped controls.",
+            "Popover overlays use pointer events, unlike tooltip overlays, so buttons and inputs inside the panel remain interactive."
+          ],
+          "title": "Notes"
+        }
+      ]
+    }
+  ]
+}

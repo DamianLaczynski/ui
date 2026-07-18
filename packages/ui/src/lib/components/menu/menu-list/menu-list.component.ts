@@ -18,12 +18,18 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { MenuItem, MenuSection } from '../models/menu-item.model';
 import { MenuComponent, MenuTriggerVariant } from '../menu.component';
 import { DividerComponent } from '../../divider/divider.component';
+import { NavSectionHeaderComponent } from '../../nav/nav-section-header.component';
 import { Variant, Size, Appearance } from '../../utils';
 
 @Component({
   selector: 'ui-menu-list',
   templateUrl: './menu-list.component.html',
-  imports: [A11yModule, forwardRef(() => MenuComponent), DividerComponent],
+  imports: [
+    A11yModule,
+    forwardRef(() => MenuComponent),
+    DividerComponent,
+    NavSectionHeaderComponent,
+  ],
   styles: [
     `
       :host {
@@ -75,18 +81,31 @@ export class MenuListComponent implements AfterViewInit {
   appearance = input<Appearance>('subtle');
   menuItemVariant = input<Variant>('secondary');
   menuItemAppearance = input<Appearance>('subtle');
+  autoFocusFirstItem = input(true);
 
   itemClick = output<MenuItem>();
   submenuClick = output<MenuItem>();
   closed = output<void>();
 
   focusedItemFlatIndex = signal<number>(-1);
+  keyboardNavActive = signal(false);
 
   hasContent = computed(() => this.sections().length > 0 || this.items().length > 0);
 
-  menuClasses = computed(
-    () => `menu menu--${this.size()} menu--${this.variant()} menu--${this.appearance()}`,
-  );
+  menuClasses = computed(() => {
+    const classes = [
+      'menu',
+      `menu--${this.size()}`,
+      `menu--${this.variant()}`,
+      `menu--${this.appearance()}`,
+    ];
+
+    if (!this.autoFocusFirstItem() && !this.keyboardNavActive()) {
+      classes.push('menu--suppress-focus-ring');
+    }
+
+    return classes.join(' ');
+  });
 
   allSections = computed(() => {
     if (this.items().length > 0 && this.sections().length === 0) {
@@ -106,16 +125,30 @@ export class MenuListComponent implements AfterViewInit {
 
   constructor() {
     effect(() => {
-      if (this.visible() && this.hasContent() && this.focusedItemFlatIndex() === -1) {
+      if (
+        this.autoFocusFirstItem() &&
+        this.visible() &&
+        this.hasContent() &&
+        this.focusedItemFlatIndex() === -1
+      ) {
         this.focusedItemFlatIndex.set(this.getFirstFocusableFlatIndex());
       }
     });
   }
 
   ngAfterViewInit(): void {
-    if (this.visible() && this.hasContent()) {
-      setTimeout(() => this.focusItemByFlatIndex(this.getFirstFocusableFlatIndex()), 0);
+    if (!this.visible() || !this.hasContent()) {
+      return;
     }
+
+    setTimeout(() => {
+      if (this.autoFocusFirstItem()) {
+        this.focusItemByFlatIndex(this.getFirstFocusableFlatIndex());
+        return;
+      }
+
+      this.focusMenuContainer(true);
+    }, 0);
   }
 
   getSectionClasses(section: MenuSection, index: number): string {
@@ -126,14 +159,14 @@ export class MenuListComponent implements AfterViewInit {
     return classes.join(' ');
   }
 
-  getSectionHeaderClasses(): string {
-    return 'menu__section-header';
-  }
-
   onMenuKeydown(event: KeyboardEvent): void {
     const key = event.key;
     const flatItems = this.flatItems();
     if (flatItems.length === 0) return;
+
+    if (!this.keyboardNavActive()) {
+      this.keyboardNavActive.set(true);
+    }
 
     const current = this.focusedItemFlatIndex();
     const move = (direction: 1 | -1) => {
@@ -250,6 +283,20 @@ export class MenuListComponent implements AfterViewInit {
     return 0;
   }
 
+  private focusMenuContainer(invisible = false): void {
+    const el = this.menuContainer?.nativeElement;
+    if (!el) {
+      return;
+    }
+
+    if (invisible) {
+      el.focus({ preventScroll: true } as FocusOptions);
+      return;
+    }
+
+    el.focus();
+  }
+
   private focusItemByFlatIndex(flatIndex: number): void {
     if (flatIndex < 0) return;
     const flatItems = this.flatItems();
@@ -260,8 +307,8 @@ export class MenuListComponent implements AfterViewInit {
       const el = ref?.nativeElement;
       if (el?.focus) {
         el.focus();
-      } else if (this.menuContainer?.nativeElement) {
-        this.menuContainer.nativeElement.focus();
+      } else {
+        this.focusMenuContainer();
       }
     });
   }

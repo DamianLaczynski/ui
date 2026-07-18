@@ -28,6 +28,9 @@ export type SegmentLayout = 'segmented' | 'separate';
 // Content Position - position of labels, icons relative to content
 export type ContentPosition = 'before' | 'after' | 'above' | 'below' | 'none';
 
+// Anchor Position - corner placement for overlays such as badges on buttons
+export type AnchorPosition = 'top-start' | 'top-end' | 'bottom-start' | 'bottom-end';
+
 // Alignment - for dividers, text alignment
 export type Alignment = 'start' | 'center' | 'end';
 

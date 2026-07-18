@@ -8,6 +8,10 @@
 
 @use '../utils/variables' as *;
 
+$badge-icon-size-small: 16px;
+$badge-icon-size-medium: 20px;
+$badge-icon-size-large: 24px;
+
 // ==========================================================================
 // Base Badge
 // ==========================================================================
@@ -16,41 +20,27 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: $spacing-1;
   font-weight: $font-weight-semibold;
   overflow: hidden;
   box-sizing: border-box;
   border-radius: $border-radius-400;
 
   &__icon {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  &__icon-svg {
-    display: block;
-  }
-
-  &__text-offset {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding-left: 2px;
-    padding-right: 2px;
+    flex-shrink: 0;
+    line-height: 0;
+    color: inherit;
   }
 
   &__text {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    flex-shrink: 0;
     text-align: center;
-    word-wrap: break-word;
     color: inherit;
     white-space: nowrap;
-  }
-
-  .badge__icon {
-    color: inherit;
   }
 }
 
@@ -62,15 +52,15 @@
   height: 24px;
   min-width: 24px;
   padding: 0 $spacing-1;
-  gap: 0;
 
-  .badge__text-offset {
-    min-height: 100%;
+  .badge__icon {
+    width: $badge-icon-size-small;
+    height: $badge-icon-size-small;
   }
 
   .badge__text {
     font-size: $font-size-200;
-    line-height: $line-height-200;
+    line-height: $badge-icon-size-small;
   }
 }
 
@@ -78,15 +68,15 @@
   height: 28px;
   min-width: 28px;
   padding: 0 $spacing-1_5;
-  gap: 0;
 
-  .badge__text-offset {
-    min-height: 100%;
+  .badge__icon {
+    width: $badge-icon-size-medium;
+    height: $badge-icon-size-medium;
   }
 
   .badge__text {
     font-size: $font-size-200;
-    line-height: $line-height-200;
+    line-height: $badge-icon-size-medium;
   }
 }
 
@@ -94,15 +84,15 @@
   height: 32px;
   min-width: 32px;
   padding: 0 $spacing-2;
-  gap: 2px;
 
-  .badge__text-offset {
-    min-height: 100%;
+  .badge__icon {
+    width: $badge-icon-size-large;
+    height: $badge-icon-size-large;
   }
 
   .badge__text {
     font-size: $font-size-300;
-    line-height: $line-height-300;
+    line-height: $badge-icon-size-large;
   }
 }
 

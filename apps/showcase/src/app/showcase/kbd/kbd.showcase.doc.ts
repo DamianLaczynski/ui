@@ -4,6 +4,7 @@ import {
   ShowcaseDocPageConfig,
 } from '@shared/components/showcase-doc-page/showcase-doc-page.models';
 import { KbdBasicDemoComponent } from './examples/kbd-basic-demo';
+import { KbdCombinationsDemoComponent } from './examples/kbd-combinations-demo';
 import { KbdCommandHelpDemoComponent } from './examples/kbd-command-help-demo';
 import { KbdCommonShortcutsDemoComponent } from './examples/kbd-common-shortcuts-demo';
 import { KbdNavigationDemoComponent } from './examples/kbd-navigation-demo';
@@ -18,6 +19,7 @@ const componentMap = {
   commonShortcuts: KbdCommonShortcutsDemoComponent,
   navigation: KbdNavigationDemoComponent,
   commandHelp: KbdCommandHelpDemoComponent,
+  combinations: KbdCombinationsDemoComponent,
 } as const;
 
 export const KBD_DOC_ASSET_PATHS: ShowcaseDocAssetPaths = {

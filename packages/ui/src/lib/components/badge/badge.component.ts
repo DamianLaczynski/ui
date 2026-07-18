@@ -10,7 +10,8 @@ import { IconComponent, IconName } from '../icon';
   styles: [
     `
       :host {
-        height: min-content;
+        display: inline-flex;
+        vertical-align: middle;
       }
     `,
   ],

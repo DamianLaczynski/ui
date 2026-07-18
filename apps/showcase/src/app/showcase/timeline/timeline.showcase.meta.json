@@ -1,0 +1,128 @@
+{
+  "slug": "timeline",
+  "title": "Timeline",
+  "description": "Timeline displays chronological activity, audit events, and process updates along a vertical or horizontal axis with semantic markers, timestamps, and optional custom content.",
+  "intro": "Use `ui-timeline` with an `items` array for data-driven feeds, or compose `ui-timeline-item` children when a row needs tags, buttons, or richer custom content. Each item supports title, timestamp, meta, description, icon markers, variants, and a pending state.",
+  "importCode": "import { TimelineComponent, TimelineItemComponent, type TimelineItem } from 'ui';",
+  "containerClass": "timeline-doc",
+  "snippets": {
+    "basicCode": "timeline-basic-demo.ts",
+    "variantsCode": "timeline-variants-demo.ts",
+    "auditCode": "timeline-audit-demo.ts",
+    "compositionCode": "timeline-composition-demo.ts"
+  },
+  "featureSections": [
+    {
+      "id": "basic",
+      "title": "Activity feed",
+      "description": "A compact release activity feed with title, timestamp, actor meta, and supporting description text.",
+      "codeKey": "basicCode",
+      "componentKey": "basic"
+    },
+    {
+      "id": "variants",
+      "title": "Semantic variants and pending state",
+      "description": "Use variants to communicate status. The pending state renders a dashed marker for in-progress steps.",
+      "codeKey": "variantsCode",
+      "componentKey": "variants"
+    },
+    {
+      "id": "audit",
+      "title": "Audit trail",
+      "description": "A realistic enterprise audit trail with actor metadata, icons, and mixed event severities.",
+      "codeKey": "auditCode",
+      "componentKey": "audit"
+    },
+    {
+      "id": "composition",
+      "title": "Custom row content",
+      "description": "Project tags, buttons, and other supporting UI inside a timeline row through `ui-timeline-item` content projection.",
+      "codeKey": "compositionCode",
+      "componentKey": "composition"
+    }
+  ],
+  "accessibility": [
+    {
+      "title": "Structure",
+      "body": "The timeline renders as a list with one list item per event. Provide `ariaLabel` when multiple timelines appear on the same page."
+    },
+    {
+      "title": "Timestamps and headings",
+      "body": "Each event title is rendered as a heading level 3 inside its row. Timestamps use a `time` element for clearer scanning, even when the value is a relative label like `Pending`."
+    },
+    {
+      "title": "Decorative rail",
+      "body": "Markers and connector lines are marked `aria-hidden` so screen readers focus on the textual event content."
+    }
+  ],
+  "apiSections": [
+    {
+      "title": "TimelineComponent - <code>ui-timeline</code>",
+      "lead": "Container for chronological events. Pass `items` for data-driven rendering or project `ui-timeline-item` children for composed rows.",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "Inputs",
+          "columns": ["Name", "Type", "Default", "Description"],
+          "columnKinds": ["code", "type", "default", "text"],
+          "rows": [
+            [
+              "items",
+              "InputSignal<TimelineItem[]>",
+              "[]",
+              "Data-driven timeline entries. When empty, projected `ui-timeline-item` children are rendered."
+            ],
+            [
+              "orientation",
+              "InputSignal<'vertical' | 'horizontal'>",
+              "'vertical'",
+              "Layout direction for the timeline axis."
+            ],
+            ["size", "InputSignal<Size>", "'medium'", "Shared size for rendered items."],
+            [
+              "reverse",
+              "InputSignal<boolean>",
+              "false",
+              "Reverses the order of `items` before rendering."
+            ],
+            ["ariaLabel", "InputSignal<string>", "''", "Accessible name for the timeline list."]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TimelineItemComponent - <code>ui-timeline-item</code>",
+      "lead": "Single timeline row with marker, connector line, textual content, and optional projected body content.",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "Inputs",
+          "columns": ["Name", "Type", "Default", "Description"],
+          "columnKinds": ["code", "type", "default", "text"],
+          "rows": [
+            ["title", "InputSignal<string>", null, "Required event title."],
+            [
+              "timestamp",
+              "InputSignal<string>",
+              "''",
+              "Time or relative label shown on the right."
+            ],
+            ["description", "InputSignal<string>", "''", "Supporting event copy."],
+            ["meta", "InputSignal<string>", "''", "Secondary metadata such as actor or channel."],
+            ["icon", "InputSignal<IconName | undefined>", "undefined", "Optional icon marker."],
+            ["variant", "InputSignal<Variant>", "'secondary'", "Semantic marker styling."],
+            ["pending", "InputSignal<boolean>", "false", "Renders a dashed in-progress marker."],
+            ["size", "InputSignal<Size>", "'medium'", "Row density and marker scale."]
+          ]
+        },
+        {
+          "type": "notes",
+          "title": "TimelineItem model",
+          "paragraphs": [
+            "The `TimelineItem` interface mirrors the component inputs and adds a required `id` field for stable tracking in data-driven mode."
+          ]
+        }
+      ]
+    }
+  ]
+}
