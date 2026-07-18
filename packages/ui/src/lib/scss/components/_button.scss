@@ -263,8 +263,10 @@
 }
 
 @mixin icon-only-selector {
-  &:has(ui-icon):not(:has(.button__text)):has(.button__content:empty),
-  &:has(ui-spinner):not(:has(.button__text)):has(.button__content:empty) {
+  &:has(ui-icon):not(:has(.button__text)):has(.button__content:empty):not(.menu-trigger--icon-only),
+  &:has(ui-spinner):not(:has(.button__text)):has(.button__content:empty):not(
+      .menu-trigger--icon-only
+    ) {
     @content;
   }
 }
@@ -342,6 +344,52 @@ $button-sizes: (
 
   @include icon-only-selector {
     width: 100%;
+  }
+}
+
+.button-anchor {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: fit-content;
+  max-width: 100%;
+
+  &--full-width {
+    width: 100%;
+  }
+}
+
+.button__badge {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+
+  .badge {
+    box-shadow: 0 0 0 2px var(--color-neutral-background-rest);
+  }
+
+  &--top-end {
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+  }
+
+  &--top-start {
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -40%);
+  }
+
+  &--bottom-end {
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 40%);
+  }
+
+  &--bottom-start {
+    bottom: 0;
+    left: 0;
+    transform: translate(-40%, -40%);
   }
 }
 

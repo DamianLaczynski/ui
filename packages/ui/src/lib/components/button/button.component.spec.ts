@@ -27,9 +27,9 @@ describe('ButtonComponent', () => {
 
     fixture = TestBed.createComponent(ButtonComponent);
     component = fixture.componentInstance;
+    fixture.detectChanges();
     buttonElement = fixture.debugElement.query(By.css('button'));
     nativeButton = buttonElement.nativeElement;
-    fixture.detectChanges();
   });
 
   describe('Component Initialization', () => {
@@ -665,6 +665,49 @@ describe('ButtonComponent', () => {
       fixture.detectChanges();
       nativeButton.click();
       expect(clickCount).toBe(2);
+    });
+  });
+
+  describe('Badge overlay', () => {
+    it('should not render badge when badge input is unset', () => {
+      expect(fixture.debugElement.query(By.css('.button__badge'))).toBeNull();
+      expect(fixture.debugElement.query(By.css('.button-anchor'))).toBeNull();
+    });
+
+    it('should render badge when badge input is set', () => {
+      fixture.componentRef.setInput('badge', '3');
+      fixture.detectChanges();
+
+      const badge = fixture.debugElement.query(By.css('.button__badge'));
+      expect(badge).toBeTruthy();
+      expect(badge.nativeElement.textContent).toContain('3');
+      expect(fixture.debugElement.query(By.css('.button-anchor'))).toBeTruthy();
+    });
+
+    it('should hide badge while loading when hideBadgeWhenLoading is true', () => {
+      fixture.componentRef.setInput('badge', '2');
+      fixture.componentRef.setInput('loading', true);
+      fixture.detectChanges();
+
+      expect(fixture.debugElement.query(By.css('.button__badge'))).toBeNull();
+    });
+
+    it('should apply badge position class', () => {
+      fixture.componentRef.setInput('badge', '1');
+      fixture.componentRef.setInput('badgePosition', 'bottom-start');
+      fixture.detectChanges();
+
+      const badge = fixture.debugElement.query(By.css('.button__badge'));
+      expect(badge.nativeElement.classList.contains('button__badge--bottom-start')).toBe(true);
+    });
+
+    it('should pass badge variant to badge component', () => {
+      fixture.componentRef.setInput('badge', '9');
+      fixture.componentRef.setInput('badgeVariant', 'success');
+      fixture.detectChanges();
+
+      const badge = fixture.debugElement.query(By.css('.badge--success'));
+      expect(badge).toBeTruthy();
     });
   });
 

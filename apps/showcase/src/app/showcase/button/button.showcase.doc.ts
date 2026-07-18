@@ -7,6 +7,7 @@ import { ButtonAppearanceVariantExampleComponent } from './examples/button-appea
 import { ButtonBasicExampleComponent } from './examples/button-basic-demo';
 import { ButtonIconOnlyExampleComponent } from './examples/button-icon-only-demo';
 import { ButtonIconsExampleComponent } from './examples/button-icons-demo';
+import { ButtonBadgeDemoComponent } from './examples/button-badge-demo';
 import { ButtonOtherExampleComponent } from './examples/button-other-demo';
 import { ButtonShapesExampleComponent } from './examples/button-shapes-demo';
 import { ButtonSizesExampleComponent } from './examples/button-sizes-demo';
@@ -24,6 +25,7 @@ const componentMap = {
   sizes: ButtonSizesExampleComponent,
   states: ButtonStatesExampleComponent,
   other: ButtonOtherExampleComponent,
+  badge: ButtonBadgeDemoComponent,
 } as const;
 
 export const BUTTON_DOC_ASSET_PATHS: ShowcaseDocAssetPaths = {

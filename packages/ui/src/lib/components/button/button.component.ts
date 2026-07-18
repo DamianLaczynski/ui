@@ -8,14 +8,24 @@ import {
   ElementRef,
   inject,
 } from '@angular/core';
-import { Variant, Appearance, Size, Shape, ExtendedSize, ButtonType } from '../utils';
+import { CommonModule } from '@angular/common';
+import {
+  Variant,
+  Appearance,
+  Size,
+  Shape,
+  ExtendedSize,
+  ButtonType,
+  AnchorPosition,
+} from '../utils';
 import { IconComponent, IconName } from '../icon';
 import { SpinnerComponent } from '../spinner';
+import { BadgeComponent } from '../badge';
 
 @Component({
   selector: 'ui-button',
   templateUrl: './button.component.html',
-  imports: [IconComponent, SpinnerComponent],
+  imports: [CommonModule, IconComponent, SpinnerComponent, BadgeComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[attr.tabindex]': '"-1"',
@@ -45,6 +55,14 @@ export class ButtonComponent {
   disabled = model<boolean>(false);
   loading = input<boolean>(false);
 
+  badge = input<string | undefined>(undefined);
+  badgeVariant = input<Variant>('danger');
+  badgeAppearance = input<Appearance>('filled');
+  badgeShape = input<Shape>('circular');
+  badgePosition = input<AnchorPosition>('top-end');
+  badgeAriaLabel = input<string | undefined>(undefined);
+  hideBadgeWhenLoading = input<boolean>(true);
+
   click = output<MouseEvent>();
 
   spinnerSize = computed<ExtendedSize>(() => {
@@ -55,6 +73,26 @@ export class ButtonComponent {
     };
     return sizeMap[this.size()] ?? 'small';
   });
+
+  showBadge = computed(() => {
+    if (this.hideBadgeWhenLoading() && this.loading()) {
+      return false;
+    }
+
+    const value = this.badge();
+    return value !== undefined && value !== null && value !== '';
+  });
+
+  badgeSize = computed<Size>(() => {
+    const sizeMap: Record<Size, Size> = {
+      small: 'small',
+      medium: 'small',
+      large: 'medium',
+    };
+    return sizeMap[this.size()] ?? 'small';
+  });
+
+  badgeClasses = computed(() => `button__badge button__badge--${this.badgePosition()}`);
 
   buttonClasses = computed(() => {
     const classes = ['button'];
