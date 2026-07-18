@@ -38,10 +38,15 @@ interface FilterOption {
           uiPopoverAriaLabel="Issue filters"
           uiPopoverPosition="bottom"
           uiPopoverSize="medium"
-          [badge]="activeFilterCount() > 0 ? activeFilterCount().toString() : undefined"
-          badgeVariant="primary"
         >
           Filters
+          @if (activeFilterCount() > 0) {
+            <span
+              style="margin-left:0.375rem;padding:0.125rem 0.4375rem;border-radius:999px;background:var(--color-brand-background-rest);color:var(--color-brand-foreground-rest);font-size:0.6875rem;font-weight:600;line-height:1"
+            >
+              {{ activeFilterCount() }}
+            </span>
+          }
         </ui-button>
       </div>
 
