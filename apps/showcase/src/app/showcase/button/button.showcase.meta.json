@@ -41,7 +41,7 @@
     {
       "id": "icons",
       "title": "Icons",
-      "description": "Add a leading Fluent icon so actions are scannable; the icon hides while loading so the spinner stays visible.",
+      "description": "Add a leading sprite icon so actions are scannable; the icon hides while loading so the spinner stays visible.",
       "codeKey": "iconsCode",
       "componentKey": "icons"
     },
@@ -134,7 +134,7 @@
               "icon",
               "InputSignal<IconName | undefined>",
               "undefined",
-              "Renders an optional leading Fluent icon before the label; it is omitted while loading so the spinner is unobstructed."
+              "Renders an optional leading sprite icon before the label; it is omitted while loading so the spinner is unobstructed."
             ],
             [
               "text",

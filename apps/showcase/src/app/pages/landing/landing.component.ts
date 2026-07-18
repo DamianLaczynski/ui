@@ -52,7 +52,7 @@ export class LandingComponent {
       id: 'stability',
       title: 'Core stability',
       timeframe: 'Q1 2026',
-      summary: 'Foundation for Fluent tokens, docs structure and baseline accessibility.',
+      summary: 'Foundation for theme tokens, docs structure and baseline accessibility.',
       status: 'done',
     },
     {

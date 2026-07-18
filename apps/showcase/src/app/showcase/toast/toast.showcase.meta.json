@@ -133,7 +133,7 @@
               "showIcon",
               "InputSignal<boolean>",
               "true",
-              "Controls the leading Fluent icon derived from variant."
+              "Controls the leading sprite icon derived from variant."
             ],
             [
               "showProgress",

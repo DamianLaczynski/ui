@@ -9,7 +9,7 @@ status: active
 
 ## Design language
 
-The library implements the [Fluent 2](https://fluent2.microsoft.design/) design language. Visual tokens are defined in SCSS and exposed as CSS custom properties.
+The library uses a Fluent-inspired visual language. Visual tokens are defined in SCSS and exposed as CSS custom properties.
 
 ## Theme modes
 
@@ -37,7 +37,7 @@ Components use BEM modifiers for variants, appearances, sizes, and states:
 - Add new colors as theme tokens in `_variables.scss` — not as inline hex in component SCSS.
 - Test both light and dark themes before merging visual changes.
 - Use semantic token names (`--color-brand-primary`) not raw color names (`--blue-500`).
-- Fluent icon colors inherit from the component's current color context.
+- Sprite icon colors inherit from the component's current color context.
 
 ## Consumer setup
 

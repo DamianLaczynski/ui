@@ -102,6 +102,17 @@ export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
       ],
     },
     {
+      id: 'legal-notice',
+      title: 'Legal notice',
+      blocks: [
+        {
+          type: 'note',
+          content:
+            '@laczynski/ui is an independent open-source project and is not affiliated with Microsoft Corporation. Fluent and Microsoft are trademarks of Microsoft Corporation.',
+        },
+      ],
+    },
+    {
       id: 'related-pages',
       title: 'Related pages',
       blocks: [

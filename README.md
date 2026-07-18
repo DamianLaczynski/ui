@@ -1,12 +1,14 @@
 # @laczynski/ui
 
-Enterprise-grade Angular component library based on the [Fluent 2](https://fluent2.microsoft.design/) design language.
+Enterprise-grade Angular component library with a **Fluent-inspired** design language.
 
 **Documentation:** [ui.laczynski.dev](https://ui.laczynski.dev/) · **npm:** [`@laczynski/ui`](https://www.npmjs.com/package/@laczynski/ui)
 
 ## Overview
 
 This monorepo contains the publishable library (`@laczynski/ui`), a live documentation showcase, and the tooling used to build, test, and ship both. The library provides 60+ standalone Angular components — layout, forms, data display, overlays, and primitives — with light/dark theming, i18n support, and accessibility built in.
+
+Visual styling is inspired by [Fluent 2](https://fluent2.microsoft.design/) design principles. This is an independent project and not an official Microsoft product.
 
 ## Repository structure
 
@@ -62,6 +64,7 @@ npm start
 | Library users | [ui.laczynski.dev](https://ui.laczynski.dev/) |
 | Contributors & agents | [`AGENTS.md`](AGENTS.md) → [`docs/README.md`](docs/README.md) |
 | Release process | [`CHANGELOG.md`](CHANGELOG.md) · [`docs/technical/github-releases.md`](docs/technical/github-releases.md) |
+| Legal notice | [`docs/legal-notice.md`](docs/legal-notice.md) |
 
 ## What's in the package
 
@@ -74,6 +77,10 @@ npm start
 **Overlays & commands** — calendar, command palette, context menu, dialog, menu, popover, time picker.
 
 **Primitives** — avatar, button, divider, icon, kbd.
+
+## Disclaimer
+
+@laczynski/ui is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Fluent, Fluent UI, and Microsoft are trademarks of Microsoft Corporation. See [`docs/legal-notice.md`](docs/legal-notice.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## License
 

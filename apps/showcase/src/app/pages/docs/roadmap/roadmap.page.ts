@@ -46,7 +46,7 @@ export const ROADMAP_PAGE_CONFIG: GuideDocPageConfig = {
               statusTone: 'planned',
               items: [
                 'Data-heavy patterns: richer tables, filtering and state containers.',
-                'Animation and motion presets aligned with Fluent guidance.',
+                'Animation and motion presets aligned with Fluent-inspired guidance.',
                 'Stronger layout primitives for dashboards and enterprise forms.',
               ],
             },

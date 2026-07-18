@@ -27,7 +27,7 @@ Root `package.json` defines npm scripts for build, test, lint, docs generation, 
 | ------ | ------- |
 | `components/` | UI components — one folder per component |
 | `components/field/` | Form field inputs and shared field utilities |
-| `components/icon/` | Icon component and generated Fluent sprite |
+| `components/icon/` | Icon component and generated sprite from `@fluentui/svg-icons` |
 | `scss/` | 7-1 SCSS architecture (variables, mixins, component blocks) |
 | `api/` | Shared API utilities |
 | `i18n/` | Translation helpers and tokens |

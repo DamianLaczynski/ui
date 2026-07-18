@@ -23,7 +23,7 @@ const GUIDE_PAGES: { slug: string; desc: string; config: GuideDocPageConfig }[] 
   },
   {
     slug: 'installation',
-    desc: 'Package install, Angular config, Fluent assets and SSR notes.',
+    desc: 'Package install, Angular config, icon assets and SSR notes.',
     config: INSTALLATION_PAGE_CONFIG,
   },
   {
