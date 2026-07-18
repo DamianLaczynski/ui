@@ -17,7 +17,7 @@
 - Showcase documentation: read `docs/guides/showcase-guidelines.md`.
 - Visual or behavioral consistency: read `docs/standards/design-standards.md` and `docs/standards/component-behaviors.md`.
 - Accessibility or i18n: read `docs/quality/README.md`.
-- CI, docs generation, or npm publish: read `docs/technical/README.md`.
+- CI, docs generation, npm publish, or GitHub Releases: read `docs/technical/README.md`.
 
 ## Commands
 
@@ -83,6 +83,7 @@ Three layers — see `docs/README.md`:
 
 ## Change coupling checklist
 
+- If you prepare a release, update `CHANGELOG.md`, `.github/release-notes/vX.Y.Z.md`, push the tag, and verify the GitHub Release — see `docs/technical/github-releases.md`.
 - If you add or change a public component API, update `public-api.ts`, showcase meta, examples, and run `npm run docs:build`.
 - If you change shared types (`Variant`, `Appearance`, etc.), check all components that consume them.
 - If you change SCSS tokens or theme variables, check light/dark rendering in showcase.

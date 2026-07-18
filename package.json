@@ -36,7 +36,8 @@
     "publish:lib": "cd dist/ui && npm publish --access public",
     "publish:lib:patch": "cd packages/ui && npm version patch && cd ../.. && npm run build:lib && npm run publish:lib",
     "publish:lib:minor": "cd packages/ui && npm version minor && cd ../.. && npm run build:lib && npm run publish:lib",
-    "publish:lib:major": "cd packages/ui && npm version major && cd ../.. && npm run build:lib && npm run publish:lib"
+    "publish:lib:major": "cd packages/ui && npm version major && cd ../.. && npm run build:lib && npm run publish:lib",
+    "release:github": "node scripts/create-github-releases.mjs"
   },
   "private": true,
   "lint-staged": {
