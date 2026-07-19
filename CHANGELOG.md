@@ -11,6 +11,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
+## [1.2.3] - 2026-07-19
+
+### Fixed
+
+- Repository metadata points to `damianlaczynski/Ui` for npm provenance
+
 ## [1.2.2] - 2026-07-19
 
 ### Fixed
