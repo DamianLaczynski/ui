@@ -35,47 +35,6 @@
       "collapseTitle": "Zwin",
       "closeTitle": "Zamknij"
     },
-    "dataGrid": {
-      "loadingTitle": "Ladowanie...",
-      "emptyTitle": "Brak danych",
-      "emptyDescription": "Brak danych do wyswietlenia.",
-      "errorTitle": "Blad",
-      "errorDescription": "Wystapil blad",
-      "loadDataError": "Nie udalo sie zaladowac danych",
-      "stateErrorTitle": "Blad ladowania danych",
-      "stateErrorDescription": "Wystapil blad podczas ladowania tabeli danych.",
-      "collapseRowAriaLabel": "Zwin wiersz",
-      "expandRowAriaLabel": "Rozwin wiersz",
-      "rowDetailsAriaLabel": "Szczegoly wiersza {{rowId}}",
-      "sortButtonAriaLabelSorted": "{{column}} posortowana {{direction}}",
-      "sortButtonAriaLabelSortable": "{{column}} mozliwa do sortowania",
-      "resizeColumnAriaLabel": "Zmien rozmiar kolumny {{column}}",
-      "sortDirection": {
-        "asc": "rosnaco",
-        "desc": "malejaco"
-      },
-      "filter": {
-        "placeholder": "Filtruj {{column}}...",
-        "betweenAnd": "i",
-        "rangeEndPlaceholder": "Do",
-        "operators": {
-          "contains": "Zawiera",
-          "doesNotContain": "Nie zawiera",
-          "startsWith": "Zaczyna sie od",
-          "endsWith": "Konczy sie na",
-          "equals": "Rowna sie",
-          "doesNotEqual": "Nie rowna sie",
-          "notEquals": "Nie rowna sie",
-          "lessThan": "Mniejsze niz",
-          "greaterThan": "Wieksze niz",
-          "lessOrEqual": "Mniejsze lub rowne",
-          "greaterOrEqual": "Wieksze lub rowne",
-          "between": "Pomiedzy",
-          "isNull": "Jest puste",
-          "isNotNull": "Nie jest puste"
-        }
-      }
-    },
     "avatar": {
       "defaultAriaLabel": "Awatar"
     },

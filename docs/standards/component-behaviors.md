@@ -122,17 +122,15 @@ All field components under `components/field/` share these conventions:
 
 | Component | When to use |
 | --------- | ----------- |
-| `ui-data-grid` | Tabular data with sorting, filtering, pagination, virtualization |
 | `ui-pagination` | Standalone page navigation |
+| `ui-scroll-container` | Virtualized or paginated lists with server-driven loading |
 | `ui-tree` / `ui-tree-node` | Hierarchical data |
 | `ui-timeline` | Chronological events |
 
 **Rules:**
 
-- Data grid supports server-driven and client-side modes — document which mode in the showcase.
+- Server-driven tabular data: use [@query-grid/ui](https://github.com/damianlaczynski/QueryGrid) (`<qg-ui-data-grid>`) — not part of this library.
 - Pagination defaults to page size options consistent with the design system.
-- Sort indicators appear in column headers.
-- Row selection uses checkboxes or click-to-select — document the mode per component.
 - Loading indicator appears in the data area, not over the entire page chrome.
 
 ---

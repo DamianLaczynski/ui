@@ -41,7 +41,7 @@ Field inputs go under `packages/ui/src/lib/components/field/<type>/` and follow 
 
 ### Naming
 
-- Selector: `ui-<kebab-case>` (e.g. `ui-button`, `ui-data-grid`).
+- Selector: `ui-<kebab-case>` (e.g. `ui-button`, `ui-dialog`).
 - Class: `<Name>Component` (e.g. `ButtonComponent`).
 - Files: `<name>.component.ts`, `<name>.component.html`, `<name>.component.spec.ts`.
 - Keep identifiers in English.
