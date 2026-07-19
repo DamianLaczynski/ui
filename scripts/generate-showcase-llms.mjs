@@ -19,7 +19,6 @@ const showcases = [
   loadShowcaseMeta({ slug: 'command-palette' }),
   loadShowcaseMeta({ slug: 'context-menu' }),
   loadShowcaseMeta({ slug: 'popover' }),
-  loadShowcaseMeta({ slug: 'data-grid' }),
   loadShowcaseMeta({ slug: 'checkbox', showcaseDir: 'field/checkbox' }),
   loadShowcaseMeta({ slug: 'color', showcaseDir: 'field/color' }),
   loadShowcaseMeta({ slug: 'date', showcaseDir: 'field/date' }),

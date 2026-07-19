@@ -1,5 +1,4 @@
 import { Type } from '@angular/core';
-import { DataGridBasicPresetDemoComponent } from '@showcase/data-grid/examples/data-grid-basic-preset-demo';
 import {
   LspAccordionPreviewComponent,
   LspAvatarPreviewComponent,
@@ -86,7 +85,6 @@ export const LANDING_SURFACE_PREVIEW_COMPONENTS: Record<string, Type<unknown>> =
   color: LspColorPreviewComponent,
   'command-palette': LspCommandPalettePreviewComponent,
   'context-menu': LspContextMenuPreviewComponent,
-  'data-grid': DataGridBasicPresetDemoComponent,
   date: LspDatePreviewComponent,
   datetime: LspDatetimePreviewComponent,
   month: LspMonthPreviewComponent,
