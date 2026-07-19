@@ -11,6 +11,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
+## [1.2.1] - 2026-07-19
+
+### Changed
+
+- CI: tag `v*` triggers npm publish to npmjs.com via trusted publishing (OIDC) and creates GitHub Release
+
 ## [1.2.0] - 2026-07-18
 
 ### Added
