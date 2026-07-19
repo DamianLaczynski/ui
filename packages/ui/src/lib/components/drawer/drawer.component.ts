@@ -18,7 +18,6 @@ import { QuickAction } from '../utils';
 import { ButtonComponent } from '../button/button.component';
 import { IconComponent } from '../icon/icon.component';
 import { UiI18nService } from '../../i18n';
-
 export type DrawerBackdrop = 'static' | 'dynamic';
 export type DrawerPosition = 'left' | 'right' | 'top' | 'bottom';
 export type DrawerType = 'overlay' | 'inline';
@@ -62,7 +61,6 @@ export class DrawerComponent {
 
   //Inputs
   title = input<string>('');
-  bodyText = input<string>('');
   position = input<DrawerPosition>('right');
   backdrop = input<DrawerBackdrop>('dynamic');
   closable = input<boolean>(true);

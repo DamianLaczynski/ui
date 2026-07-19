@@ -15,13 +15,15 @@ import { ButtonComponent, DrawerComponent, QuickAction, SwitchComponent, TextCom
 
       <ui-drawer
         title="Automation settings"
-        bodyText="Adjust the automation label and notification behavior without leaving the workflow page."
         position="right"
         size="large"
         [(visible)]="visible"
         [primaryAction]="saveAction()"
         [secondaryAction]="cancelAction()"
       >
+        <p>
+          Adjust the automation label and notification behavior without leaving the workflow page.
+        </p>
         <div style="display:flex;flex-direction:column;gap:1rem">
           <ui-text
             label="Automation label"

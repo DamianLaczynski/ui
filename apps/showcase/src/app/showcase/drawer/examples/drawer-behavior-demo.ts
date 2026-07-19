@@ -17,30 +17,39 @@ import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
 
       <ui-drawer
         title="Standard behavior"
-        bodyText="This drawer closes on backdrop click and Escape."
         backdrop="dynamic"
         [(visible)]="dynamicVisible"
         [primaryAction]="closeDynamicAction()"
-      />
+      >
+        <p>This drawer closes on backdrop click and Escape.</p>
+      </ui-drawer>
 
       <ui-drawer
         title="Static backdrop"
-        bodyText="Backdrop clicks are ignored here, so users must close with the close button or footer actions."
         backdrop="static"
         [(visible)]="staticVisible"
         [primaryAction]="closeStaticAction()"
-      />
+      >
+        <p>
+          Backdrop clicks are ignored here, so users must close with the close button or footer
+          actions.
+        </p>
+      </ui-drawer>
 
       <ui-drawer
         title="Blocking review required"
-        bodyText="Alert mode disables Escape and backdrop dismissal. Use it only when the task really demands that level of interruption."
         backdrop="static"
         modalType="alert"
         [closable]="true"
         [(visible)]="alertVisible"
         [primaryAction]="resolveAlertAction()"
         [secondaryAction]="dismissAlertAction()"
-      />
+      >
+        <p>
+          Alert mode disables Escape and backdrop dismissal. Use it only when the task really
+          demands that level of interruption.
+        </p>
+      </ui-drawer>
     </div>
   `,
 })

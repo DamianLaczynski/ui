@@ -128,11 +128,15 @@ import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
 
       <ui-drawer
         title="Overlay panel"
-        bodyText="Overlay mode pauses the chrome behind the panel and is ideal for confirmations, multi-step edits, or transient forms."
         type="overlay"
         [(visible)]="overlayVisible"
         [primaryAction]="closeOverlayAction()"
-      />
+      >
+        <p>
+          Overlay mode pauses the chrome behind the panel and is ideal for confirmations, multi-step
+          edits, or transient forms.
+        </p>
+      </ui-drawer>
     </div>
   `,
 })

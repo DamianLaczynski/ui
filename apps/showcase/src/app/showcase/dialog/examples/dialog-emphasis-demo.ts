@@ -2,31 +2,34 @@ import { Component, model, signal } from '@angular/core';
 import { ButtonComponent, DialogComponent, QuickAction } from 'ui';
 
 @Component({
-  selector: 'app-dialog-basic-example',
+  selector: 'app-dialog-emphasis-example',
   standalone: true,
   imports: [ButtonComponent, DialogComponent],
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
-      <ui-button variant="primary" (click)="visible.set(true)">Delete project</ui-button>
+      <ui-button variant="danger" appearance="outline" (click)="visible.set(true)">
+        Delete role
+      </ui-button>
       <ui-dialog
-        title="Delete this project?"
+        title="Delete role"
         [(visible)]="visible"
         [primaryAction]="primaryAction()"
         [secondaryAction]="secondaryAction()"
       >
         <p>
-          All automation rules and scheduled exports for this project will be removed. This action
-          cannot be undone.
+          Delete role <strong>{{ roleName }}</strong
+          >? Users will lose permissions granted only through this role.
         </p>
       </ui-dialog>
     </div>
   `,
 })
-export class DialogBasicExampleComponent {
+export class DialogEmphasisExampleComponent {
   protected readonly visible = model(false);
+  protected readonly roleName = 'Billing administrators';
 
   protected readonly primaryAction = signal<QuickAction>({
-    label: 'Delete project',
+    label: 'Delete',
     variant: 'danger',
     action: () => this.visible.set(false),
   });

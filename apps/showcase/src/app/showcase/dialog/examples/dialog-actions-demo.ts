@@ -17,12 +17,13 @@ import { ButtonComponent, DialogComponent, QuickAction } from 'ui';
       </div>
       <ui-dialog
         title="Send the report"
-        bodyText="Choose whether the report should be shared now, scheduled, or saved as a draft."
         [(visible)]="visible"
         [primaryAction]="sendNowAction()"
         [secondaryAction]="saveDraftAction()"
         [additionalActions]="additionalActions()"
-      />
+      >
+        <p>Choose whether the report should be shared now, scheduled, or saved as a draft.</p>
+      </ui-dialog>
     </div>
   `,
 })

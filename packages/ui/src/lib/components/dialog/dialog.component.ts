@@ -15,7 +15,6 @@ import { QuickAction } from '../utils';
 import { ButtonComponent } from '../button/button.component';
 import { IconComponent } from '../icon/icon.component';
 import { UiI18nService } from '../../i18n';
-
 export type DialogBackdrop = 'static' | 'dynamic';
 
 @Component({
@@ -40,7 +39,6 @@ export class DialogComponent {
 
   //Inputs
   title = input<string>('');
-  bodyText = input<string>('');
   backdrop = input<DialogBackdrop>('dynamic');
   closable = input<boolean>(true);
   fullscreen = input<boolean>(false);
