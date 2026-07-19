@@ -1,9 +1,7 @@
-import { Component, OnInit, OnDestroy, input, output, model, inject } from '@angular/core';
-import { ControlValueAccessor, NgControl, AbstractControl } from '@angular/forms';
+import { Component, OnInit, input, output, model } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
 import { ContentPosition, InputVariant, Size } from '../../utils';
-import { getValidationErrorMessage, shouldShowValidationError } from './validation-helper';
 
 export type FieldType =
   | 'text'
@@ -45,9 +43,7 @@ export type FieldType =
   ],
   imports: [CommonModule],
 })
-export class FieldComponent implements ControlValueAccessor, OnInit, OnDestroy {
-  protected ngControl = inject(NgControl, { optional: true, skipSelf: true });
-
+export class FieldComponent implements ControlValueAccessor, OnInit {
   fieldType = input<FieldType>('text');
   inputVariant = input<InputVariant>('filled');
   label = input<string>('');
@@ -65,7 +61,6 @@ export class FieldComponent implements ControlValueAccessor, OnInit, OnDestroy {
   showClearButton = input<boolean>(true);
   ariaLabel = input<string>('');
   ariaDescribedBy = input<string>('');
-  autoValidation = input<boolean>(true);
 
   change = output<any>();
   focus = output<FocusEvent>();
@@ -75,10 +70,6 @@ export class FieldComponent implements ControlValueAccessor, OnInit, OnDestroy {
 
   value: any = '';
   protected _isFocused = false;
-
-  private _statusChangesSubscription?: Subscription;
-  private _valueChangesSubscription?: Subscription;
-  private _manualErrorText: string | null = null;
 
   protected onChange = (value: any) => {};
   protected onTouched = () => {};
@@ -143,22 +134,6 @@ export class FieldComponent implements ControlValueAccessor, OnInit, OnDestroy {
         this.id.set(this.generateFieldId());
       }
     }
-
-    if (this.ngControl) {
-      if (this.autoValidation()) {
-        this.setupAutoValidation();
-      }
-    }
-
-    const initialErrorText = this.errorText();
-    if (initialErrorText && initialErrorText.trim().length > 0) {
-      this._manualErrorText = initialErrorText;
-    }
-  }
-
-  ngOnDestroy(): void {
-    this._statusChangesSubscription?.unsubscribe();
-    this._valueChangesSubscription?.unsubscribe();
   }
 
   onInputChange(event: Event): void {
@@ -177,11 +152,6 @@ export class FieldComponent implements ControlValueAccessor, OnInit, OnDestroy {
     this._isFocused = false;
     this.onTouched();
     this.blur.emit(event);
-
-    const control = this.ngControl?.control;
-    if (control) {
-      this.updateValidationError(control);
-    }
   }
 
   onKeyUp(event: KeyboardEvent): void {
@@ -271,52 +241,5 @@ export class FieldComponent implements ControlValueAccessor, OnInit, OnDestroy {
 
     const fallback = this.label()?.trim();
     return fallback || null;
-  }
-
-  private setupAutoValidation(): void {
-    const control = this.ngControl?.control;
-    if (!control) {
-      return;
-    }
-
-    this.updateValidationError(control);
-
-    this._statusChangesSubscription = control.statusChanges.subscribe(() => {
-      this.updateValidationError(control);
-    });
-
-    this._valueChangesSubscription = control.valueChanges.subscribe(() => {
-      this.updateValidationError(control);
-    });
-  }
-
-  private updateValidationError(control: AbstractControl): void {
-    if (!this.autoValidation()) {
-      return;
-    }
-
-    const currentErrorText = this.errorText();
-
-    if (this._manualErrorText !== null && currentErrorText === this._manualErrorText) {
-      return;
-    }
-
-    if (shouldShowValidationError(control)) {
-      const errorMessage = getValidationErrorMessage(
-        control.errors,
-        control,
-        this.label() || undefined,
-      );
-
-      if (currentErrorText !== errorMessage) {
-        this.errorText.set(errorMessage);
-      }
-    } else {
-      if (this._manualErrorText === null || currentErrorText !== this._manualErrorText) {
-        if (currentErrorText && currentErrorText.trim().length > 0) {
-          this.errorText.set('');
-        }
-      }
-    }
   }
 }

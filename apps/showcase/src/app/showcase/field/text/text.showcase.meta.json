@@ -60,7 +60,7 @@
     },
     {
       "title": "Descriptions, errors, and validation",
-      "body": "Helper text and error text are wired into `aria-describedby`. When an error is present, helper text is suppressed and the error message becomes the active description.\n\n| State | Attribute |\n| --- | --- |\n| helper or error text | `aria-describedby` |\n| visible error | `aria-invalid=\"true\"` |\n| required field | native `required` |\n\nWith `autoValidation`, Angular form control errors can populate the field message automatically."
+      "body": "Helper text and error text are wired into `aria-describedby`. When an error is present, helper text is suppressed and the error message becomes the active description.\n\n| State | Attribute |\n| --- | --- |\n| helper or error text | `aria-describedby` |\n| visible error | `aria-invalid=\"true\"` |\n| required field | native `required` |\n\nSet `errorText` from your form layer when a control is invalid."
     }
   ],
   "apiSections": [
@@ -159,12 +159,6 @@
               "InputSignal<string>",
               "''",
               "Appends extra descriptive ids to the computed `aria-describedby` value."
-            ],
-            [
-              "autoValidation",
-              "InputSignal<boolean>",
-              "true",
-              "Enables inherited automatic validation error handling from `FieldComponent`."
             ]
           ]
         },

@@ -497,12 +497,6 @@ export class DropdownComponent extends FieldComponent implements OnDestroy {
       this.selectedValues.set(newSelected);
       this.selectionChange.emit(item.value);
 
-      // Mark control as touched and update validity
-      if (this.ngControl?.control) {
-        this.ngControl.control.markAsTouched();
-        this.ngControl.control.updateValueAndValidity();
-      }
-
       if (closeOnSelect) {
         this.scheduleCloseDropdown(false);
       }
@@ -515,12 +509,6 @@ export class DropdownComponent extends FieldComponent implements OnDestroy {
       }
       this.selectedValues.set(newSelected);
       this.selectionChange.emit(Array.from(newSelected));
-
-      // Mark control as touched and update validity
-      if (this.ngControl?.control) {
-        this.ngControl.control.markAsTouched();
-        this.ngControl.control.updateValueAndValidity();
-      }
     }
   }
 
