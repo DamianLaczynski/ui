@@ -1,0 +1,85 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate version
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          PKG_VERSION=$(node -p "require('./packages/ui/package.json').version")
+          if [ "$PKG_VERSION" != "$VERSION" ]; then
+            echo "::error::packages/ui version ($PKG_VERSION) does not match tag ($VERSION)"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - name: Test
+        run: |
+          npm ci
+          npm run lint
+          npm run build:lib
+          npx ng test ui-showcase --watch=false
+          npx tsc -p packages/ui/tsconfig.spec.json --noEmit
+          npx ng test ui --watch=false
+
+      - name: Publish to npmjs.com
+        working-directory: dist/ui
+        run: |
+          npm install -g npm@latest
+          VERSION="${GITHUB_REF_NAME#v}"
+          if [[ "$VERSION" == *-* ]]; then
+            NPM_TAG=preview
+          else
+            NPM_TAG=latest
+          fi
+          npm publish --access public --tag "$NPM_TAG" --provenance
+
+      - name: Extract release notes
+        id: notes
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          if node scripts/extract-changelog.mjs "$VERSION" > release-notes.md 2>/dev/null; then
+            echo "source=changelog" >> "$GITHUB_OUTPUT"
+          elif [ -f ".github/release-notes/${GITHUB_REF_NAME}.md" ]; then
+            echo "source=file" >> "$GITHUB_OUTPUT"
+          else
+            echo "source=generated" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: GitHub Release (from CHANGELOG)
+        if: steps.notes.outputs.source == 'changelog'
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          body_path: release-notes.md
+
+      - name: GitHub Release (from release notes file)
+        if: steps.notes.outputs.source == 'file'
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          body_path: .github/release-notes/${{ github.ref_name }}.md
+
+      - name: GitHub Release (auto-generated)
+        if: steps.notes.outputs.source == 'generated'
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          generate_release_notes: true
