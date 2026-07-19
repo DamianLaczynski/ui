@@ -6,6 +6,7 @@ import {
   computed,
   TemplateRef,
   ChangeDetectionStrategy,
+  OnInit,
 } from '@angular/core';
 import { ChevronPosition, Size, Shape, Appearance, Orientation } from '../utils';
 import { TreeNode, TreeNodeComponent } from '../tree';
@@ -26,13 +27,20 @@ import { IconName } from '../icon';
     `,
   ],
 })
-export class AccordionComponent {
+export class AccordionComponent implements OnInit {
   label = input.required<string>();
   size = input<Size>('medium');
   chevronPosition = input<ChevronPosition>('before');
   disabled = input<boolean>(false);
+  defaultExpanded = input<boolean>(false);
   expanded = signal<boolean>(false);
   icon = input<IconName | undefined>(undefined);
+
+  ngOnInit(): void {
+    if (this.defaultExpanded()) {
+      this.expanded.set(true);
+    }
+  }
 
   // Visual Configuration
   showSelectionIndicator = input<boolean>(false);
