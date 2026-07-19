@@ -155,8 +155,7 @@ export class ColorComponent extends FieldComponent implements OnDestroy {
     });
   }
 
-  override ngOnDestroy(): void {
-    super.ngOnDestroy();
+  ngOnDestroy(): void {
     this.overlayHandle?.destroy();
   }
 

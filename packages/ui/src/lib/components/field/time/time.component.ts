@@ -102,7 +102,7 @@ export class TimeComponent extends FieldComponent implements OnDestroy {
     });
   }
 
-  override ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.breakpointSub?.unsubscribe();
     this.overlayHandle?.destroy();
   }

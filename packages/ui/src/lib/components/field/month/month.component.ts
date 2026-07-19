@@ -98,10 +98,9 @@ export class MonthComponent extends FieldComponent implements OnDestroy {
     });
   }
 
-  override ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.breakpointSub?.unsubscribe();
     this.overlayService.ngOnDestroy();
-    super.ngOnDestroy();
   }
 
   togglePanel(): void {

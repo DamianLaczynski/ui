@@ -166,7 +166,7 @@ export class TimeSpanComponent extends FieldComponent implements OnDestroy {
     super();
   }
 
-  override ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.overlayHandle?.destroy();
   }
 

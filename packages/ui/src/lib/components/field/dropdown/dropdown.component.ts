@@ -349,7 +349,7 @@ export class DropdownComponent extends FieldComponent implements OnDestroy {
       });
   }
 
-  override ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.isDestroyed = true;
     if (this.closeDropdownScheduled !== undefined) {
       clearTimeout(this.closeDropdownScheduled);
