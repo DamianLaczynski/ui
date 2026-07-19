@@ -7,6 +7,7 @@
   "containerClass": "dialog-doc",
   "snippets": {
     "basicCode": "dialog-basic-demo.ts",
+    "emphasisCode": "dialog-emphasis-demo.ts",
     "customContentCode": "dialog-custom-content-demo.ts",
     "sizesCode": "dialog-sizes-demo.ts",
     "staticCode": "dialog-static-demo.ts",
@@ -20,6 +21,13 @@
       "description": "Use a short title, a brief consequence statement, and clear primary versus secondary actions when the user is making a simple blocking decision.",
       "codeKey": "basicCode",
       "componentKey": "basic"
+    },
+    {
+      "id": "emphasis",
+      "title": "Body copy with emphasis",
+      "description": "Project body copy into the dialog and use standard markup when a confirmation needs emphasized dynamic values.",
+      "codeKey": "emphasisCode",
+      "componentKey": "emphasis"
     },
     {
       "id": "custom-content",
@@ -87,12 +95,6 @@
               "InputSignal<string>",
               "''",
               "Visible heading used for the dialog title and for `aria-labelledby` when present."
-            ],
-            [
-              "bodyText",
-              "InputSignal<string>",
-              "''",
-              "Plain body copy shown above projected content when you only need a simple explanatory paragraph."
             ],
             [
               "backdrop",
@@ -171,7 +173,7 @@
         {
           "type": "notes",
           "paragraphs": [
-            "Projected content renders inside the dialog body below <code class=\"showcase-doc__api-code\">bodyText</code>, so you can add forms, summaries, or small custom layouts.",
+            "Project body copy, forms, summaries, and custom layouts through the default slot inside the dialog body.",
             "The component traps focus with Angular CDK while visible, and listens for Escape on the document when <code class=\"showcase-doc__api-code\">closable</code> is true."
           ],
           "title": "Notes"

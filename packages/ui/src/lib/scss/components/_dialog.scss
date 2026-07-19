@@ -129,22 +129,36 @@
     overflow-x: hidden;
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
-
-    @include respond-to(small) {
-      padding: $spacing-4;
-      padding-top: $spacing-2;
-    }
-  }
-
-  &__text {
-    align-self: stretch;
     color: var(--color-neutral-foreground-rest);
     font-size: $font-size-300;
     font-family: $font-family-base;
     font-weight: $font-weight-regular;
     line-height: $line-height-300;
+
+    @include respond-to(small) {
+      padding: $spacing-4;
+      padding-top: $spacing-2;
+    }
+
+    p {
+      align-self: stretch;
+      margin: 0;
+      word-wrap: break-word;
+    }
+
+    strong {
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__text {
+    align-self: stretch;
     word-wrap: break-word;
     margin: 0;
+  }
+
+  &__text-strong {
+    font-weight: $font-weight-semibold;
   }
 
   &__footer {

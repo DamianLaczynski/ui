@@ -42,10 +42,6 @@
 
       <!-- Body -->
       <div [class]="bodyClasses()">
-        @if (bodyText()) {
-          <p class="drawer__text">{{ bodyText() }}</p>
-        }
-
         <ng-content></ng-content>
       </div>
 

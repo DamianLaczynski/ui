@@ -89,12 +89,6 @@
               "Visible heading used as the drawer title and `aria-labelledby` target when present."
             ],
             [
-              "bodyText",
-              "InputSignal<string>",
-              "''",
-              "Optional plain body copy shown before projected content."
-            ],
-            [
               "position",
               "InputSignal<'left' | 'right' | 'top' | 'bottom'>",
               "'right'",
@@ -188,7 +182,7 @@
         {
           "type": "notes",
           "paragraphs": [
-            "Projected content renders in the body after <code class=\"showcase-doc__api-code\">bodyText</code>, so drawers can host forms, summaries, lists, or other structured layouts.",
+            "Project body copy, forms, summaries, lists, and other structured layouts through the default slot inside the drawer body.",
             "Overlay modal drawers trap focus with Angular CDK while visible. Inline drawers do not behave as full modal dialogs."
           ],
           "title": "Notes"

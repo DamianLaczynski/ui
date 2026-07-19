@@ -10,13 +10,17 @@ import { ButtonComponent, DialogComponent, QuickAction } from 'ui';
       <ui-button variant="danger" (click)="visible.set(true)">Open blocking dialog</ui-button>
       <ui-dialog
         title="Choose how to handle this conflict"
-        bodyText="This import contains duplicate customer IDs. You must resolve the conflict before continuing."
         backdrop="static"
         [closable]="false"
         [(visible)]="visible"
         [primaryAction]="mergeAction()"
         [secondaryAction]="cancelImportAction()"
-      />
+      >
+        <p>
+          This import contains duplicate customer IDs. You must resolve the conflict before
+          continuing.
+        </p>
+      </ui-dialog>
     </div>
   `,
 })

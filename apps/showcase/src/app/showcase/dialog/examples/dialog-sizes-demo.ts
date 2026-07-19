@@ -13,19 +13,24 @@ import { ButtonComponent, DialogComponent, QuickAction } from 'ui';
 
       <ui-dialog
         title="Small review"
-        bodyText="Use a small width when the task is short and the decision is narrow."
         width="20rem"
         [(visible)]="smallVisible"
         [primaryAction]="okAction()"
-      />
+      >
+        <p>Use a small width when the task is short and the decision is narrow.</p>
+      </ui-dialog>
 
       <ui-dialog
         title="Standard edit surface"
-        bodyText="Medium width is a solid default for richer copy, small forms, and straightforward review tasks."
         width="38rem"
         [(visible)]="mediumVisible"
         [primaryAction]="okAction()"
-      />
+      >
+        <p>
+          Medium width is a solid default for richer copy, small forms, and straightforward review
+          tasks.
+        </p>
+      </ui-dialog>
 
       <ui-dialog
         title="Fullscreen editing flow"
