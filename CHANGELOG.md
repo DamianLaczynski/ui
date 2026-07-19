@@ -11,6 +11,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
+## [1.3.0-preview.0] - 2026-07-18
+
+Pre-release preview of the 1.3.0 dialog/drawer body copy changes. Install with `npm install @laczynski/ui@preview`.
+
+### Changed
+
+- **Field** — removed `autoValidation` input; fields render `helpText` / `errorText` only (breaking).
+- **Dialog** / **Drawer** — body copy is composition-first through projected content; `bodyText` and `bodyContent` inputs removed (breaking).
+- Dialog and drawer bodies apply default body typography to projected copy (`p`, `strong`).
+
 ## [1.2.0] - 2026-07-18
 
 ### Added
