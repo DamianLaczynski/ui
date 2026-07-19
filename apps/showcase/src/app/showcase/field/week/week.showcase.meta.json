@@ -190,12 +190,6 @@
               "InputSignal<string>",
               "''",
               "Appends extra descriptive ids to the computed `aria-describedby` value."
-            ],
-            [
-              "autoValidation",
-              "InputSignal<boolean>",
-              "true",
-              "Enables inherited automatic validation error handling from `FieldComponent`."
             ]
           ]
         },

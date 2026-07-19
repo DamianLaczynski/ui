@@ -93,6 +93,15 @@ export function getValidationErrorMessage(
       }
       return `${fieldLabel} is invalid`;
 
+    case 'passwordMismatch':
+      return 'Passwords do not match.';
+
+    case 'passwordPolicy':
+      if (typeof errorValue === 'string') {
+        return errorValue;
+      }
+      return `${fieldLabel} does not meet password policy requirements`;
+
     case 'custom':
       // If error has a message property, use it
       if (errorValue && typeof errorValue === 'object' && 'message' in errorValue) {
@@ -101,6 +110,9 @@ export function getValidationErrorMessage(
       return `${fieldLabel} is invalid`;
 
     default:
+      if (typeof errorValue === 'string') {
+        return errorValue;
+      }
       // For custom validators, check if they provide a message
       if (errorValue && typeof errorValue === 'object' && 'message' in errorValue) {
         return errorValue.message as string;

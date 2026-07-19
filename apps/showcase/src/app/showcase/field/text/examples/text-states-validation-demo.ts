@@ -7,7 +7,12 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
-import { ButtonComponent, TextComponent } from 'ui';
+import {
+  ButtonComponent,
+  TextComponent,
+  getValidationErrorMessage,
+  shouldShowValidationError,
+} from 'ui';
 
 @Component({
   selector: 'app-text-states-validation-example',
@@ -25,12 +30,11 @@ import { ButtonComponent, TextComponent } from 'ui';
           <p
             style="margin:0;font-size:0.8125rem;line-height:1.5;color:var(--color-neutral-foreground2-rest)"
           >
-            Blurring a field surfaces its error when it stays invalid.
+            Bind <code>errorText</code> from your form control in the application layer.
             <strong style="font-weight:600;color:var(--color-neutral-foreground-rest)">
               Save draft
             </strong>
-            marks every control touched so min length, pattern and required appear together (like
-            production forms).
+            marks every control touched so required, min length and pattern appear together.
           </p>
         </div>
 
@@ -40,6 +44,7 @@ import { ButtonComponent, TextComponent } from 'ui';
           [required]="true"
           autocomplete="email"
           formControlName="inviteEmail"
+          [errorText]="fieldError(draftForm.controls.inviteEmail, 'Invite email')"
         />
 
         <ui-text
@@ -47,6 +52,7 @@ import { ButtonComponent, TextComponent } from 'ui';
           placeholder="SAVE-10NOW"
           helpText="Optional. If filled, must look like PREFIX-SUFFIX (letters/digits around a hyphen)."
           formControlName="coupon"
+          [errorText]="fieldError(draftForm.controls.coupon, 'Coupon code')"
         />
 
         <ui-text
@@ -54,6 +60,7 @@ import { ButtonComponent, TextComponent } from 'ui';
           placeholder="min four chars"
           helpText="At least 4 characters."
           formControlName="projectCode"
+          [errorText]="fieldError(draftForm.controls.projectCode, 'Project code')"
         />
 
         <ui-text
@@ -62,6 +69,7 @@ import { ButtonComponent, TextComponent } from 'ui';
           [required]="true"
           helpText="Required; at least 2 characters."
           formControlName="slotName"
+          [errorText]="fieldError(draftForm.controls.slotName, 'Display slot name')"
         />
 
         <div
@@ -70,9 +78,8 @@ import { ButtonComponent, TextComponent } from 'ui';
           <ui-text
             label="Workspace subdomain"
             placeholder="finance-apac"
-            helpText="autoValidation false: mocked API conflict via manual errorText only."
+            helpText="Mocked API conflict via manual errorText."
             formControlName="subdomain"
-            [autoValidation]="false"
             [(errorText)]="manualError"
           />
           <button
@@ -183,6 +190,14 @@ export class TextStatesValidationExampleComponent {
       nonNullable: true,
     }),
   });
+
+  protected fieldError(control: AbstractControl, label: string): string {
+    if (!shouldShowValidationError(control)) {
+      return '';
+    }
+
+    return getValidationErrorMessage(control.errors, control, label);
+  }
 
   protected toggleManualError(): void {
     this.manualError = this.manualError.trim()
