@@ -27,16 +27,6 @@ Triggers: push to `main`.
 
 Builds the showcase with `npm run build:gh-pages` and deploys to GitHub Pages at `https://ui.laczynski.dev/`.
 
-### Publish
-
-File: `.github/workflows/publish.yml`
-
-Triggers: push tags `v*`.
-
-Runs tests, builds the library, publishes `@laczynski/ui` to npmjs.com (OIDC + provenance), and creates a GitHub Release.
-
-Details: [publishing.md](publishing.md).
-
 ## Reproduce locally
 
 Before pushing, run the same checks:

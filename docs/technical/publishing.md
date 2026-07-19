@@ -1,80 +1,32 @@
 # Publishing
 
-> Scope: releasing `@laczynski/ui` to npm.
+> Scope: how to publish `@laczynski/ui` to npm.
 
-## Registry
+## Package
 
-| Package         | Registry                           |
-| --------------- | ---------------------------------- |
-| `@laczynski/ui` | [npmjs.com](https://www.npmjs.com) |
-
-Publish on tag push `v*` via [publish.yml](../../.github/workflows/publish.yml) (trusted publishing / OIDC).
-
-## Where the version lives
-
-| Location                    | Field       |
-| --------------------------- | ----------- |
-| `packages/ui/package.json`  | `"version"` |
-
-## Release checklist
-
-1. Bump `"version"` in `packages/ui/package.json`.
-2. Update `CHANGELOG.md` (`## [x.y.z]` section).
-3. Verify locally:
-
-   ```bash
-   npm run lint
-   npm run build:lib
-   npm test
-   npm run test:ui-showcase
-   ```
-
-4. Merge to `main`, then tag and push:
-
-   ```bash
-   git tag v1.3.0
-   git push origin v1.3.0
-   ```
-
-   [publish.yml](../../.github/workflows/publish.yml) runs tests, builds the library, publishes to npmjs.com, and creates a GitHub Release (from `CHANGELOG.md`, or `.github/release-notes/vX.Y.Z.md` as fallback).
-
-Prerelease tags (`v*-*`) publish npm with dist-tag `preview`.
-
-## One-time setup
-
-### npm trusted publishing
-
-npmjs.com → `@laczynski/ui` → **Settings** → **Trusted Publisher** → **GitHub Actions**:
-
-| Field                | Value              |
-| -------------------- | ------------------ |
-| Organization or user | `DamianLaczynski`  |
-| Repository           | `angular-ui`       |
-| Workflow filename    | `publish.yml`      |
-| Environment          | *(leave empty)*    |
-
-No `NPM_TOKEN` secret — CI uses OIDC (npm CLI ≥ 11.5.1).
-
-### GitHub repository settings
-
-Actions enabled; workflow permissions allow OIDC (`id-token: write` is set in the workflow).
-
-## Build output
-
+- Name: `@laczynski/ui`
 - Source: `packages/ui/`
-- Build: `npm run build:lib` → `dist/ui/`
-- CI publishes from `dist/ui/` after build
+- Build output: `dist/ui/`
+- Public API: `packages/ui/src/public-api.ts`
 
-## Optional: local publish
-
-Trusted publishing works in CI only:
+## Build before publish
 
 ```bash
 npm run build:lib
-cd dist/ui && npm publish --access public
 ```
 
-For preview versions: add `--tag preview`.
+This runs `ng build ui` via ng-packagr, producing the distributable package in `dist/ui/`.
+
+Icon sprite is built automatically via the `prebuild:lib` hook.
+
+## Publish commands
+
+| Command | What it does |
+| ------- | ------------ |
+| `npm run publish:lib` | Publishes `dist/ui/` to npm (requires login) |
+| `npm run publish:lib:patch` | Bumps patch version in `packages/ui/package.json`, builds, publishes |
+| `npm run publish:lib:minor` | Bumps minor version, builds, publishes |
+| `npm run publish:lib:major` | Bumps major version, builds, publishes |
 
 ## Versioning
 
@@ -83,3 +35,21 @@ Follow [Semantic Versioning](https://semver.org/):
 - **Patch** — bug fixes, no API changes
 - **Minor** — new features, backward-compatible API additions
 - **Major** — breaking API changes
+
+Update `CHANGELOG.md` and `.github/release-notes/vX.Y.Z.md` before every publish. See [github-releases.md](github-releases.md) for the full GitHub Release workflow.
+
+## Checklist
+
+1. All CI checks pass locally (`npm run lint`, `npm test`, `npm run build`)
+2. `CHANGELOG.md` updated with the release notes
+3. `.github/release-notes/vX.Y.Z.md` created or updated (GitHub Release body)
+4. `npm run build:lib` succeeds
+5. Version bumped (manually or via `publish:lib:*` script)
+6. Merge release PR to `main`
+7. Create and push git tag: `git tag -a vX.Y.Z -m "Release @laczynski/ui X.Y.Z"` → `git push origin vX.Y.Z`
+8. Verify GitHub Release was created (`.github/workflows/release.yml` or `npm run release:github`)
+9. `npm run publish:lib`
+
+## npm authentication
+
+Requires `npm login` with publish access to the `@laczynski` scope. CI does not auto-publish — publishing is a manual step.

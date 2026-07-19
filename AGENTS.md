@@ -40,8 +40,8 @@
 
 ### Publish
 
-- Publish: push a `v*` tag after bumping `packages/ui/package.json` — see `docs/technical/publishing.md` (CI publishes to npm + creates GitHub Release).
-- Local publish fallback: `npm run publish:lib` (after `npm run build:lib`).
+- Publish to npm: `npm run publish:lib` (after `npm run build:lib`)
+- Version bump + publish: `npm run publish:lib:patch` / `minor` / `major`
 
 `docs:build`, `icons:build`, and `showcase:crawl-discovery` run automatically via `prestart` / `prebuild` hooks.
 
@@ -83,7 +83,7 @@ Three layers — see `docs/README.md`:
 
 ## Change coupling checklist
 
-- If you prepare a release, update `CHANGELOG.md`, bump `packages/ui/package.json`, push the tag — see `docs/technical/publishing.md`.
+- If you prepare a release, update `CHANGELOG.md`, `.github/release-notes/vX.Y.Z.md`, push the tag, and verify the GitHub Release — see `docs/technical/github-releases.md`.
 - If you add or change a public component API, update `public-api.ts`, showcase meta, examples, and run `npm run docs:build`.
 - If you change shared types (`Variant`, `Appearance`, etc.), check all components that consume them.
 - If you change SCSS tokens or theme variables, check light/dark rendering in showcase.
