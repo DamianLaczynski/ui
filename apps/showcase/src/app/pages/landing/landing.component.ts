@@ -45,7 +45,7 @@ export class LandingComponent {
 
   readonly version = environment.libraryVersion;
   readonly currentYear = new Date().getFullYear();
-  readonly githubUrl = 'https://github.com/DamianLaczynski/ui';
+  readonly githubUrl = 'https://github.com/damianlaczynski/Ui';
   readonly npmUrl = 'https://www.npmjs.com/';
   readonly roadmapPreview: RoadmapPreviewItem[] = [
     {
