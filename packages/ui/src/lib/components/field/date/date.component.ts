@@ -100,10 +100,9 @@ export class DateComponent extends FieldComponent implements OnDestroy {
     });
   }
 
-  override ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.breakpointSub?.unsubscribe();
     this.overlayService.ngOnDestroy();
-    super.ngOnDestroy();
   }
 
   togglePanel(): void {

@@ -8,7 +8,6 @@ export * from './lib/components/card';
 export * from './lib/components/carousel';
 export * from './lib/components/command-palette';
 export * from './lib/components/context-menu';
-export * from './lib/components/data-grid';
 export * from './lib/components/dialog';
 export * from './lib/components/divider';
 export * from './lib/components/drawer';

@@ -11,6 +11,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
+## [1.3.0] - 2026-07-21
+
+### Added
+
+- **Accordion** — `defaultExpanded` input to control initial expanded state.
+
+### Changed
+
+- **Angular** — peer dependencies upgraded to Angular 21.2 (`@angular/core`, `@angular/common` ^21.2.18; `@angular/cdk` ^21.2.14).
+- **Field** — removed `autoValidation` input; fields render `helpText` / `errorText` only (breaking).
+- **Dialog** / **Drawer** — body copy is composition-first through projected content; `bodyText` and `bodyContent` inputs removed (breaking).
+- Dialog and drawer bodies apply default body typography to projected copy (`p`, `strong`).
+
+### Removed
+
+- **Data Grid** — removed `ui-data-grid` from the library; use `@query-grid/ui` instead (breaking).
+
+### Fixed
+
+- **Menu** — use `forwardRef` for `MenuComponent` `ViewChildren` to resolve circular reference.
+
 ## [1.2.3] - 2026-07-19
 
 ### Fixed

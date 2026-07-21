@@ -3,6 +3,7 @@ import {
   ShowcaseDocAssetPaths,
   ShowcaseDocPageConfig,
 } from '@shared/components/showcase-doc-page/showcase-doc-page.models';
+import { DialogEmphasisExampleComponent } from './examples/dialog-emphasis-demo';
 import { DialogActionsExampleComponent } from './examples/dialog-actions-demo';
 import { DialogBasicExampleComponent } from './examples/dialog-basic-demo';
 import { DialogCustomContentExampleComponent } from './examples/dialog-custom-content-demo';
@@ -15,6 +16,7 @@ const dialogMeta = meta as ShowcaseDocMeta;
 
 const componentMap = {
   basic: DialogBasicExampleComponent,
+  emphasis: DialogEmphasisExampleComponent,
   customContent: DialogCustomContentExampleComponent,
   sizes: DialogSizesExampleComponent,
   static: DialogStaticExampleComponent,

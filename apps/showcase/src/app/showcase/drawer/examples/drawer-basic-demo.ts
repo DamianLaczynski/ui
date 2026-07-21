@@ -10,11 +10,11 @@ import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
       <ui-button variant="primary" (click)="visible.set(true)">Open drawer</ui-button>
       <ui-drawer
         title="Customer notes"
-        bodyText="Review the latest support notes without leaving the account page."
         [(visible)]="visible"
         [primaryAction]="primaryAction()"
         [secondaryAction]="secondaryAction()"
       >
+        <p>Review the latest support notes without leaving the account page.</p>
         <div style="display:flex;flex-direction:column;gap:0.75rem">
           <div
             style="padding:0.875rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:0.75rem"

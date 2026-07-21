@@ -21,10 +21,6 @@ import {
   COMMAND_PALETTE_DOC_ASSET_PATHS,
   COMMAND_PALETTE_DOC_PAGE_CONFIG,
 } from '@showcase/command-palette/command-palette.showcase.doc';
-import {
-  DATA_GRID_DOC_ASSET_PATHS,
-  DATA_GRID_DOC_PAGE_CONFIG,
-} from '@showcase/data-grid/data-grid.showcase.doc';
 import { TIME_DOC_ASSET_PATHS, TIME_DOC_PAGE_CONFIG } from '@showcase/time/time.showcase.doc';
 import {
   TIME_PICKER_DOC_ASSET_PATHS,
@@ -337,14 +333,6 @@ export const dsRoutes: Routes = [
     data: {
       config: CONTEXT_MENU_DOC_PAGE_CONFIG,
       assetPaths: CONTEXT_MENU_DOC_ASSET_PATHS,
-    },
-  },
-  {
-    path: 'data-grid',
-    component: ShowcaseDocPageComponent,
-    data: {
-      config: DATA_GRID_DOC_PAGE_CONFIG,
-      assetPaths: DATA_GRID_DOC_ASSET_PATHS,
     },
   },
   {

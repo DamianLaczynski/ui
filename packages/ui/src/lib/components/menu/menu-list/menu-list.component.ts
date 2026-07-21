@@ -69,7 +69,7 @@ import { Variant, Size, Appearance } from '../../utils';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuListComponent implements AfterViewInit {
-  @ViewChildren(MenuComponent) menuComponents!: QueryList<MenuComponent>;
+  @ViewChildren(forwardRef(() => MenuComponent)) menuComponents!: QueryList<MenuComponent>;
   @ViewChild('menuContainer') menuContainer!: ElementRef<HTMLElement>;
 
   sections = input<MenuSection[]>([]);

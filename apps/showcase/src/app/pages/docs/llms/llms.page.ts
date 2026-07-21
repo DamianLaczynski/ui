@@ -69,7 +69,7 @@ export const LLMS_PAGE_CONFIG: GuideDocPageConfig = {
         {
           type: 'list',
           items: [
-            '`/docs/components/{component}.md` - e.g. `/docs/components/button.md`, `/docs/components/data-grid.md`',
+            '`/docs/components/{component}.md` - e.g. `/docs/components/button.md`, `/docs/components/pagination.md`',
             '`/docs/components/snippets/{slug}/...` - raw TypeScript example files copied alongside the Markdown',
           ],
         },

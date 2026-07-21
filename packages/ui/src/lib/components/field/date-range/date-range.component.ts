@@ -144,7 +144,7 @@ export class DateRangeComponent extends FieldComponent implements OnDestroy {
     });
   }
 
-  override ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.overlayHandle?.destroy();
   }
 

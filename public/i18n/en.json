@@ -38,47 +38,6 @@
       "collapseTitle": "Collapse",
       "closeTitle": "Close"
     },
-    "dataGrid": {
-      "loadingTitle": "Loading...",
-      "emptyTitle": "No data available",
-      "emptyDescription": "There is no data to display.",
-      "errorTitle": "Error",
-      "errorDescription": "An error occurred",
-      "loadDataError": "Failed to load data",
-      "stateErrorTitle": "Error loading data",
-      "stateErrorDescription": "An error occurred while loading the data grid.",
-      "collapseRowAriaLabel": "Collapse row",
-      "expandRowAriaLabel": "Expand row",
-      "rowDetailsAriaLabel": "Details for row {{rowId}}",
-      "sortButtonAriaLabelSorted": "{{column}} sorted {{direction}}",
-      "sortButtonAriaLabelSortable": "{{column}} sortable",
-      "resizeColumnAriaLabel": "Resize column {{column}}",
-      "sortDirection": {
-        "asc": "ascending",
-        "desc": "descending"
-      },
-      "filter": {
-        "placeholder": "Filter {{column}}...",
-        "betweenAnd": "and",
-        "rangeEndPlaceholder": "To",
-        "operators": {
-          "contains": "Contains",
-          "doesNotContain": "Does not contain",
-          "startsWith": "Starts with",
-          "endsWith": "Ends with",
-          "equals": "Equals",
-          "doesNotEqual": "Does not equal",
-          "notEquals": "Does not equal",
-          "lessThan": "Less than",
-          "greaterThan": "Greater than",
-          "lessOrEqual": "Less than or equal to",
-          "greaterOrEqual": "Greater than or equal to",
-          "between": "Between",
-          "isNull": "Is null",
-          "isNotNull": "Is not null"
-        }
-      }
-    },
     "avatar": {
       "defaultAriaLabel": "Avatar"
     },

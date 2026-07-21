@@ -36,10 +36,6 @@
 
         <!-- Body -->
         <div [class]="bodyClasses()">
-          @if (bodyText()) {
-            <p class="dialog__text">{{ bodyText() }}</p>
-          }
-
           <ng-content></ng-content>
         </div>
 

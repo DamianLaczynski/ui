@@ -18,12 +18,13 @@ import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
 
       <ui-drawer
         title="Report options"
-        bodyText="Choose how the report should be handled after generation."
         [(visible)]="visible"
         [primaryAction]="primaryAction()"
         [secondaryAction]="secondaryAction()"
         [additionalActions]="additionalActions()"
-      />
+      >
+        <p>Choose how the report should be handled after generation.</p>
+      </ui-drawer>
     </div>
   `,
 })

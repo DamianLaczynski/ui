@@ -126,7 +126,7 @@ export class DatetimeComponent extends FieldComponent implements OnDestroy {
     });
   }
 
-  override ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.breakpointSub?.unsubscribe();
     this.overlayHandle?.destroy();
   }

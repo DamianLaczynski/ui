@@ -406,11 +406,15 @@ export class LspDateRangePreviewComponent {
     >
     <ui-dialog
       title="Rename production API key?"
-      bodyText="Partners embed this label in audit logs. Changing it updates documentation links within five minutes."
       [(visible)]="visible"
       [primaryAction]="primaryAction()"
       [secondaryAction]="secondaryAction()"
-    />
+    >
+      <p>
+        Partners embed this label in audit logs. Changing it updates documentation links within five
+        minutes.
+      </p>
+    </ui-dialog>
   `,
 })
 export class LspDialogPreviewComponent {
@@ -540,10 +544,11 @@ export class LspDropdownPreviewComponent {
     <ui-drawer
       title="Discard unpublished playbook edits?"
       type="overlay"
-      bodyText="Four collaborators rely on this draft during rollout rehearsal tomorrow afternoon."
       [(visible)]="overlayVisible"
       [primaryAction]="overlayDone()"
-    />
+    >
+      <p>Four collaborators rely on this draft during rollout rehearsal tomorrow afternoon.</p>
+    </ui-drawer>
   `,
 })
 export class LspDrawerPreviewComponent {
