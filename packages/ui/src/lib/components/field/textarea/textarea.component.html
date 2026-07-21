@@ -13,7 +13,7 @@
   [size]="size()"
   [inputVariant]="inputVariant()"
 >
-  <div class="input-wrapper" [class]="wrapperClasses">
+  <div class="input-wrapper" [class]="textareaWrapperClasses">
     <textarea
       #textareaElement
       class="input"
@@ -34,7 +34,6 @@
       (focus)="onFocus($event)"
       (keyup)="onKeyUp($event)"
       (keydown)="onKeyDown($event)"
-      >{{ value }}</textarea
-    >
+      >{{ value }}</textarea>
   </div>
 </ui-field>

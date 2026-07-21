@@ -165,7 +165,7 @@
 
   input:not(.input--color-native),
   input.input:not(.input--color-native),
-  .input:not(.input--color-native) {
+  .input:not(.input--color-native):where(:not(textarea)) {
     border-top-left-radius: $border-radius-400;
     border-bottom-left-radius: $border-radius-400;
     min-height: 0;
@@ -197,6 +197,21 @@
 
     &:hover {
       background-color: var(--color-neutral-background-hover);
+    }
+  }
+
+  &--filled-lighter {
+    background-color: var(--color-neutral-background-rest);
+    border: 1px solid transparent;
+    @include transition-colors($duration-fast);
+
+    &:hover {
+      background-color: var(--color-neutral-background-rest);
+      border-color: var(--color-neutral-stroke-hover);
+    }
+
+    &:focus-within {
+      border-color: var(--color-neutral-stroke-pressed);
     }
   }
 
@@ -381,33 +396,86 @@
   }
 }
 
-// Textarea-specific styles
-.input-wrapper {
+// Textarea-specific styles — Fluent 2 Textarea
+.input-wrapper--textarea {
+  min-height: unset;
+  align-items: stretch;
+  vertical-align: top;
+  padding-bottom: 2px;
+
   textarea.input {
-    resize: vertical;
-    border-radius: $border-radius-400;
+    resize: none;
+    border-radius: 0;
     box-sizing: border-box;
     width: 100%;
+    min-width: 0;
+    flex: 1 1 auto;
+    font-family: $font-family-base;
     scrollbar-width: thin;
   }
 }
 
-.input-wrapper--small textarea.input {
-  padding: $spacing-1 $spacing-2;
+.input-wrapper--textarea.input-wrapper--small textarea.input {
+  min-height: $spacing-10;
+  max-height: 200px;
+  padding: $spacing-vertical-xs calc(#{$spacing-2} + #{$spacing-0_5});
   font-size: $font-size-200;
   line-height: $line-height-200;
 }
 
-.input-wrapper--medium textarea.input {
+.input-wrapper--textarea.input-wrapper--medium textarea.input {
+  min-height: $spacing-13;
+  max-height: 260px;
   padding: $spacing-1_5 $spacing-3;
   font-size: $font-size-300;
   line-height: $line-height-300;
 }
 
-.input-wrapper--large textarea.input {
-  padding: $spacing-2 $spacing-4;
+.input-wrapper--textarea.input-wrapper--large textarea.input {
+  min-height: $spacing-16;
+  max-height: 320px;
+  padding: $spacing-vertical-s calc(#{$spacing-3} + #{$spacing-0_5});
   font-size: $font-size-400;
   line-height: $line-height-400;
+}
+
+.input-wrapper--textarea.input-wrapper--resize-horizontal,
+.input-wrapper--textarea.input-wrapper--resize-both {
+  width: fit-content;
+  max-width: 100%;
+
+  textarea.input {
+    flex: none;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.input-wrapper--textarea.input-wrapper--small.input-wrapper--resize-horizontal textarea.input,
+.input-wrapper--textarea.input-wrapper--small.input-wrapper--resize-both textarea.input {
+  min-width: 14rem;
+}
+
+.input-wrapper--textarea.input-wrapper--medium.input-wrapper--resize-horizontal textarea.input,
+.input-wrapper--textarea.input-wrapper--medium.input-wrapper--resize-both textarea.input {
+  min-width: 18rem;
+}
+
+.input-wrapper--textarea.input-wrapper--large.input-wrapper--resize-horizontal textarea.input,
+.input-wrapper--textarea.input-wrapper--large.input-wrapper--resize-both textarea.input {
+  min-width: 22rem;
+}
+
+.input-wrapper--textarea.input-wrapper--resize-vertical textarea.input {
+  resize: vertical;
+}
+
+.input-wrapper--textarea.input-wrapper--resize-horizontal textarea.input {
+  resize: horizontal;
+}
+
+.input-wrapper--textarea.input-wrapper--resize-both textarea.input {
+  resize: both;
 }
 .field__actions {
   display: inline-flex;
