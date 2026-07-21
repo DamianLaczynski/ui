@@ -105,7 +105,6 @@ export class DsSidebarComponent {
         { id: 'empty-state', label: 'Empty State', icon: 'document_dismiss' },
         { id: 'error-state', label: 'Error State', icon: 'error_circle' },
         { id: 'loading-state', label: 'Loading State', icon: 'arrow_sync' },
-        { id: 'state-container', label: 'State Container', icon: 'database' },
       ],
     },
     { id: 'stepper', label: 'Stepper', icon: 'timeline' },
