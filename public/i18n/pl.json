@@ -24,11 +24,6 @@
       "loadDataError": "Nie udalo sie zaladowac danych",
       "loadMoreError": "Nie udalo sie zaladowac kolejnych danych"
     },
-    "stateContainer": {
-      "loadingTitle": "Ladowanie",
-      "errorTitle": "Blad",
-      "emptyTitle": "Brak danych"
-    },
     "draggablePanel": {
       "title": "Panel",
       "expandTitle": "Rozwin",

@@ -55,7 +55,6 @@ export const ALL_SHOWCASE_COMPONENTS: ShowcaseComponent[] = [
   { id: 'range', name: 'Range', icon: 'arrow_bidirectional_left_right' },
   { id: 'spinner', name: 'Spinner', icon: 'replay' },
   { id: 'splitter', name: 'Splitter', icon: 'split_vertical' },
-  { id: 'state-container', name: 'State Container', icon: 'database' },
   { id: 'stepper', name: 'Stepper', icon: 'timeline' },
   { id: 'switch', name: 'Switch', icon: 'tap_single' },
   { id: 'table-of-content', name: 'Table of Content', icon: 'list' },
