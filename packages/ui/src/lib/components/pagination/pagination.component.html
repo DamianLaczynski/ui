@@ -92,7 +92,7 @@
     config().pageSizeOptions!.length > 0
   ) {
     <div class="pagination__page-size">
-      <ui-dropdown
+      <ui-select
         [items]="pageSizeItems()"
         [size]="size()"
         [ngModel]="config().pageSize"

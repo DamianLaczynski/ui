@@ -23,7 +23,7 @@ Full guides, examples, and API details: [https://ui.laczynski.dev/](https://ui.l
 
 **Data & feedback:** badge, card, empty state, error state, loading state, message bar, pagination, progress bar, rating, skeleton, spinner, tag, timeline, toast, tooltip.
 
-**Forms & input:** checkbox, color, date, datetime, date range, dropdown, email, file, month, number, password, radio, radio button group, search, slider, stepper, switch, text, textarea, tel, time, time span, TOTP, URL, week, plus shared field utilities and validation helpers.
+**Forms & input:** checkbox, color, date, datetime, date range, select, email, file, month, number, password, radio, radio button group, search, slider, stepper, switch, text, textarea, tel, time, time span, TOTP, URL, week, plus shared field utilities and validation helpers.
 
 **Overlays & commands:** calendar, command palette, context menu, dialog, menu, popover, time picker.
 

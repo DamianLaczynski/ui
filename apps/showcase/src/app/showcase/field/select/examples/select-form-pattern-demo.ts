@@ -1,30 +1,30 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, DropdownComponent, type DropdownItem } from 'ui';
+import { ButtonComponent, SelectComponent, type SelectItem } from 'ui';
 
-const ownerItems: DropdownItem[] = [
+const ownerItems: SelectItem[] = [
   { value: 'ava', label: 'Ava Lopez' },
   { value: 'nina', label: 'Nina Woods' },
   { value: 'zoe', label: 'Zoe Patel' },
   { value: 'theo', label: 'Theo Murphy' },
 ];
 
-const reviewerItems: DropdownItem[] = [
+const reviewerItems: SelectItem[] = [
   { value: 'legal', label: 'Legal' },
   { value: 'ops', label: 'Operations' },
   { value: 'security', label: 'Security' },
   { value: 'support', label: 'Support' },
 ];
 
-const releaseItems: DropdownItem[] = [
+const releaseItems: SelectItem[] = [
   { value: 'patch', label: 'Patch release' },
   { value: 'minor', label: 'Minor release' },
   { value: 'major', label: 'Major release' },
 ];
 
 @Component({
-  selector: 'app-dropdown-form-pattern-example',
-  imports: [ReactiveFormsModule, ButtonComponent, DropdownComponent],
+  selector: 'app-select-form-pattern-example',
+  imports: [ReactiveFormsModule, ButtonComponent, SelectComponent],
   template: `
     <form
       [formGroup]="form"
@@ -40,7 +40,7 @@ const releaseItems: DropdownItem[] = [
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem">
-        <ui-dropdown
+        <ui-select
           label="Release owner"
           placeholder="Select owner"
           helpText="Required before the handoff can be submitted."
@@ -51,7 +51,7 @@ const releaseItems: DropdownItem[] = [
           formControlName="owner"
         />
 
-        <ui-dropdown
+        <ui-select
           label="Release type"
           placeholder="Choose release type"
           [items]="releaseItems"
@@ -59,7 +59,7 @@ const releaseItems: DropdownItem[] = [
         />
       </div>
 
-      <ui-dropdown
+      <ui-select
         label="Required reviewers"
         placeholder="Choose one or more reviewers"
         [items]="reviewerItems"
@@ -121,7 +121,7 @@ const releaseItems: DropdownItem[] = [
     </form>
   `,
 })
-export class DropdownFormPatternExampleComponent {
+export class SelectFormPatternExampleComponent {
   protected readonly ownerItems = ownerItems;
   protected readonly reviewerItems = reviewerItems;
   protected readonly releaseItems = releaseItems;

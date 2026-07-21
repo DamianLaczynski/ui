@@ -2,8 +2,8 @@ import { Component, ElementRef, computed, effect, signal, viewChild } from '@ang
 import { FormsModule } from '@angular/forms';
 import {
   ALL_ICON_NAMES,
-  DropdownComponent,
-  DropdownItem,
+  SelectComponent,
+  SelectItem,
   IconComponent,
   IconName,
   SearchComponent,
@@ -13,11 +13,11 @@ import {
 const ICON_BROWSER_BATCH_SIZE = 120;
 const variants = ['regular', 'filled'] as const;
 const sizes: Size[] = ['small', 'medium', 'large'];
-const sizeItems: DropdownItem[] = sizes.map(size => ({
+const sizeItems: SelectItem[] = sizes.map(size => ({
   value: size,
   label: size[0].toUpperCase() + size.slice(1),
 }));
-const variantItems: DropdownItem[] = variants.map(variant => ({
+const variantItems: SelectItem[] = variants.map(variant => ({
   value: variant,
   label: variant[0].toUpperCase() + variant.slice(1),
 }));
@@ -25,7 +25,7 @@ const variantItems: DropdownItem[] = variants.map(variant => ({
 @Component({
   selector: 'app-icon-browser-demo',
   standalone: true,
-  imports: [FormsModule, DropdownComponent, IconComponent, SearchComponent],
+  imports: [FormsModule, SelectComponent, IconComponent, SearchComponent],
   host: {
     style: 'display:block;width:100%;',
   },
@@ -48,7 +48,7 @@ const variantItems: DropdownItem[] = variants.map(variant => ({
           </div>
 
           <div style="min-width:0;">
-            <ui-dropdown
+            <ui-select
               label="Size"
               placeholder="Choose size"
               [items]="sizeItems"
@@ -59,7 +59,7 @@ const variantItems: DropdownItem[] = variants.map(variant => ({
           </div>
 
           <div style="min-width:0;">
-            <ui-dropdown
+            <ui-select
               label="Variant"
               placeholder="Choose variant"
               [items]="variantItems"

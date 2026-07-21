@@ -123,12 +123,13 @@
           "tb": "TB"
         }
       },
-      "dropdown": {
-        "compactAriaLabel": "Filtruj",
+      "select": {
         "placeholder": "Wybierz...",
         "searchPlaceholder": "Szukaj...",
         "clearSelectionAriaLabel": "Wyczysc wybor",
-        "toggleMenuAriaLabel": "Przelacz menu"
+        "toggleMenuAriaLabel": "Przelacz menu",
+        "emptyItems": "Brak elementów do wyświetlenia",
+        "noMatchingItems": "Brak pasujących opcji"
       },
       "totp": {
         "groupAriaLabel": "Kod weryfikacyjny",

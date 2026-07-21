@@ -21,7 +21,7 @@ import {
   DialogComponent,
   DividerComponent,
   DrawerComponent,
-  DropdownComponent,
+  SelectComponent,
   EmailComponent,
   EmptyStateComponent,
   ErrorStateComponent,
@@ -41,7 +41,7 @@ import {
 import {
   LSP_BREADCRUMB_FULL,
   LSP_COMMAND_ITEMS_BASE,
-  LSP_DROPDOWN_ITEMS,
+  LSP_SELECT_ITEMS,
   LSP_MENU_ITEMS,
 } from './landing-surface-previews.shared';
 
@@ -468,11 +468,11 @@ export class LspDividerPreviewComponent {
 }
 
 @Component({
-  selector: 'app-lsp-dropdown',
+  selector: 'app-lsp-select',
   standalone: true,
-  imports: [FormsModule, DropdownComponent],
+  imports: [FormsModule, SelectComponent],
   template: `
-    <ui-dropdown
+    <ui-select
       label="Primary notification route"
       placeholder="Choose environment"
       [items]="items"
@@ -482,8 +482,8 @@ export class LspDividerPreviewComponent {
     />
   `,
 })
-export class LspDropdownPreviewComponent {
-  protected readonly items = LSP_DROPDOWN_ITEMS;
+export class LspSelectPreviewComponent {
+  protected readonly items = LSP_SELECT_ITEMS;
   protected selected = 'staging';
 }
 

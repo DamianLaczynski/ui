@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DropdownComponent, type DropdownItem } from 'ui';
+import { SelectComponent, type SelectItem } from 'ui';
 
-const statusItems: DropdownItem[] = [
+const statusItems: SelectItem[] = [
   { value: 'backlog', label: 'Backlog' },
   { value: 'ready', label: 'Ready for review' },
   { value: 'active', label: 'In progress' },
@@ -11,14 +11,14 @@ const statusItems: DropdownItem[] = [
 ];
 
 @Component({
-  selector: 'app-dropdown-basic-example',
-  imports: [FormsModule, DropdownComponent],
+  selector: 'app-select-basic-example',
+  imports: [FormsModule, SelectComponent],
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:42rem"
     >
       <div style="flex:1 1 18rem;min-width:16rem;max-width:22rem">
-        <ui-dropdown
+        <ui-select
           label="Task status"
           placeholder="Choose a status"
           helpText="Use a short, stable set of labels that maps cleanly to downstream workflows."
@@ -45,7 +45,7 @@ const statusItems: DropdownItem[] = [
     </div>
   `,
 })
-export class DropdownBasicExampleComponent {
+export class SelectBasicExampleComponent {
   protected readonly statusItems = statusItems;
   protected selectedStatus = 'active';
 

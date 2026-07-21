@@ -1,19 +1,17 @@
 {
-  "slug": "dropdown",
-  "title": "Dropdown",
-  "description": "Dropdown handles single and multi-select choices from predefined options. It supports searchable lists, clear actions, compact trigger mode, async data sources, custom item templates, and shared field states for denser form and filter workflows.",
-  "intro": "Dropdown is appropriate when users choose from a bounded set rather than entering freeform text. In addition to standard field variants and validation, it covers multi-select tags, compact filter triggers, server-backed search, and custom item presentation without forcing consumers to build the overlay behavior themselves.",
-  "importCode": "import { DropdownComponent } from 'ui';",
-  "containerClass": "dropdown-doc",
+  "slug": "select",
+  "title": "Select",
+  "description": "Select handles single and multi-select choices from predefined options. It supports searchable lists, clear actions, custom item templates, and shared field states for form and filter workflows.",
+  "intro": "Select is appropriate when users choose from a bounded set rather than entering freeform text. It covers multi-select with comma-separated trigger text, client-side search, custom item presentation, and reactive forms integration without async data loading complexity.",
+  "importCode": "import { SelectComponent } from 'ui';",
+  "containerClass": "select-doc",
   "snippets": {
-    "basicCode": "dropdown-basic-demo.ts",
-    "variantsStatesCode": "dropdown-variants-states-demo.ts",
-    "multiTagsCode": "dropdown-multi-tags-demo.ts",
-    "searchClearCode": "dropdown-search-clear-demo.ts",
-    "compactPanelCode": "dropdown-compact-panel-demo.ts",
-    "asyncDataCode": "dropdown-async-data-demo.ts",
-    "customTemplateCode": "dropdown-custom-template-demo.ts",
-    "formPatternCode": "dropdown-form-pattern-demo.ts"
+    "basicCode": "select-basic-demo.ts",
+    "variantsStatesCode": "select-variants-states-demo.ts",
+    "multiCode": "select-multi-demo.ts",
+    "searchClearCode": "select-search-clear-demo.ts",
+    "customTemplateCode": "select-custom-template-demo.ts",
+    "formPatternCode": "select-form-pattern-demo.ts"
   },
   "featureSections": [
     {
@@ -26,16 +24,16 @@
     {
       "id": "variants-states",
       "title": "Variants, sizes, and field states",
-      "description": "Dropdown inherits the shared field shell, so visual variants, density, required styling, readonly, and disabled states should look consistent with the rest of the form system.",
+      "description": "Select inherits the shared field shell, so visual variants, density, required styling, readonly, and disabled states should look consistent with the rest of the form system.",
       "codeKey": "variantsStatesCode",
       "componentKey": "variantsStates"
     },
     {
-      "id": "multi-tags",
-      "title": "Multi-select with tags",
-      "description": "Use multi mode when the list represents a set of filters or recipients. Selected items stay visible as tags and can be removed without reopening the panel.",
-      "codeKey": "multiTagsCode",
-      "componentKey": "multiTags"
+      "id": "multi",
+      "title": "Multi-select",
+      "description": "Use multi mode when the list represents a set of filters or recipients. Selected labels appear as comma-separated text in the trigger to avoid wrapping issues.",
+      "codeKey": "multiCode",
+      "componentKey": "multi"
     },
     {
       "id": "search-clear",
@@ -45,30 +43,16 @@
       "componentKey": "searchClear"
     },
     {
-      "id": "compact-panel",
-      "title": "Compact trigger and panel sizing",
-      "description": "Compact mode turns the control into a lightweight toolbar or table filter trigger. Fixed or bounded panel widths keep dense filter UI predictable instead of stretching to arbitrary content.",
-      "codeKey": "compactPanelCode",
-      "componentKey": "compactPanel"
-    },
-    {
-      "id": "async-data",
-      "title": "Async data source and paged search",
-      "description": "When the option set is large or remote, bind a data source so filtering and paging happen outside the component. Search then behaves like a query input instead of an in-memory filter.",
-      "codeKey": "asyncDataCode",
-      "componentKey": "asyncData"
-    },
-    {
       "id": "custom-template",
       "title": "Custom item template",
-      "description": "Some dropdown choices need more than a single label. A projected item template can add secondary metadata or richer layout while the component still owns keyboard, focus, and selection behavior.",
+      "description": "Some select choices need more than a single label. A projected item template can add secondary metadata or richer layout while the component still owns keyboard, focus, and selection behavior.",
       "codeKey": "customTemplateCode",
       "componentKey": "customTemplate"
     },
     {
       "id": "form-pattern",
       "title": "Form composition",
-      "description": "Show dropdown as part of a real workflow, mixing single and multi-select fields with actions and a compact state summary so the example is reusable instead of purely illustrative.",
+      "description": "Show select as part of a real workflow, mixing single and multi-select fields with actions and a compact state summary so the example is reusable instead of purely illustrative.",
       "codeKey": "formPatternCode",
       "componentKey": "formPattern"
     }
@@ -76,21 +60,21 @@
   "accessibility": [
     {
       "title": "Accessible name and role",
-      "body": "The standard trigger uses `ariaLabel` when provided and otherwise falls back to the visible `label`. Compact mode also needs an explicit accessible name because the trigger is just an icon button.\n\n| Mode / input | Exposed semantics |\n| --- | --- |\n| `single` | `combobox` trigger controlling a `listbox` |\n| `multi` | `listbox` trigger with `aria-multiselectable=\"true\"` |\n| `ariaLabel` | explicit accessible name override |\n| visible `label` | default accessible name fallback |"
+      "body": "The trigger uses `ariaLabel` when provided and otherwise falls back to the visible `label`.\n\n| Mode / input | Exposed semantics |\n| --- | --- |\n| `single` | `combobox` trigger controlling a `listbox` |\n| `multi` | `listbox` trigger with `aria-multiselectable=\"true\"` |\n| `ariaLabel` | explicit accessible name override |\n| visible `label` | default accessible name fallback |"
     },
     {
       "title": "Keyboard model",
-      "body": "Disabled items are skipped during navigation, and typeahead moves focus to the next matching option.\n\n| Key | Action |\n| --- | --- |\n| `ArrowDown` / `ArrowUp` | opens the panel and moves through selectable items |\n| `Home` / `End` | jumps to the first or last selectable item |\n| `PageUp` / `PageDown` | moves through longer lists in larger steps |\n| `Enter` / `Space` | selects the active option |\n| `Escape` | closes the panel and returns focus to the trigger |\n| `Tab` | leaves the control and closes the panel |\n| printable characters | runs typeahead search against option labels |"
+      "body": "Disabled items are skipped during navigation.\n\n| Key | Action |\n| --- | --- |\n| `ArrowDown` / `ArrowUp` | opens the panel and moves highlight through selectable items |\n| `Home` / `End` | jumps to the first or last selectable item |\n| `PageUp` / `PageDown` | moves through longer lists in larger steps |\n| `Enter` / `Space` | selects the highlighted option |\n| `Escape` | closes the panel and returns focus to the trigger |\n| `Tab` | leaves the control and closes the panel |"
     },
     {
       "title": "Active descendant and selection state",
-      "body": "The component tracks the active option through `aria-activedescendant`. In multi-select mode, the visible tags are only a sighted summary; the authoritative accessibility state remains on the trigger and list options.\n\n| Input / state | Attribute |\n| --- | --- |\n| active option | `aria-activedescendant` |\n| open state | `aria-expanded` |\n| controlled panel | `aria-controls` |\n| selected option | `aria-selected` on each option |\n| disabled option | `aria-disabled` on each option |"
+      "body": "The component tracks the active option through `aria-activedescendant`. In multi-select mode, the trigger text is a sighted summary; the authoritative accessibility state remains on the trigger and list options.\n\n| Input / state | Attribute |\n| --- | --- |\n| active option | `aria-activedescendant` |\n| open state | `aria-expanded` |\n| controlled panel | `aria-controls` |\n| selected option | `aria-selected` on each option |\n| disabled option | `aria-disabled` on each option |"
     }
   ],
   "apiSections": [
     {
-      "title": "DropdownComponent - <code>ui-dropdown</code>",
-      "lead": "Standalone dropdown field built on the shared <code class=\"showcase-doc__api-code\">FieldComponent</code>. It supports single and multi-select flows, projected item templates, compact filter mode, and async option loading while integrating with Angular forms through <code class=\"showcase-doc__api-code\">ControlValueAccessor</code>.",
+      "title": "SelectComponent - <code>ui-select</code>",
+      "lead": "Standalone select field built on the shared <code class=\"showcase-doc__api-code\">FieldComponent</code>. It supports single and multi-select flows, projected item templates, and integrates with Angular forms through <code class=\"showcase-doc__api-code\">ControlValueAccessor</code>.",
       "blocks": [
         {
           "type": "table",
@@ -100,21 +84,15 @@
           "rows": [
             [
               "items",
-              "InputSignal<DropdownItem[]>",
+              "InputSignal<SelectItem[]>",
               "[]",
-              "Static option list used for local filtering and as the base item set when no async data source is supplied."
-            ],
-            [
-              "dataSource",
-              "InputSignal<(params) => Observable<QueryResult<DropdownItem>>>",
-              "undefined",
-              "Optional async source used for paged loading and server-side search."
+              "Static option list used for rendering and client-side search filtering."
             ],
             [
               "mode",
               "InputSignal<'single' | 'multi'>",
               "'single'",
-              "Controls whether the component stores one value or a selectable set with tags and checkboxes."
+              "Controls whether the component stores one value or a selectable set with checkboxes."
             ],
             [
               "searchable",
@@ -132,49 +110,7 @@
               "maxHeight",
               "InputSignal<string>",
               "'300px'",
-              "Maximum panel height before the internal scroll container takes over."
-            ],
-            [
-              "compact",
-              "InputSignal<boolean>",
-              "false",
-              "Renders the trigger as a compact button instead of the full field shell."
-            ],
-            [
-              "compactIcon",
-              "InputSignal<IconName>",
-              "'filter'",
-              "Default icon for compact mode when no selected item icon overrides it."
-            ],
-            [
-              "pageSize",
-              "InputSignal<number>",
-              "20",
-              "Page size used by the internal scroll container for static and async loading."
-            ],
-            [
-              "searchDebounceMs",
-              "InputSignal<number>",
-              "300",
-              "Debounce applied before forwarding search text to the async data source."
-            ],
-            [
-              "minPanelWidth",
-              "InputSignal<number | undefined>",
-              "undefined",
-              "Optional lower bound for the overlay panel width when `panelWidth` is not fixed."
-            ],
-            [
-              "maxPanelWidth",
-              "InputSignal<number>",
-              "400",
-              "Upper bound for the overlay panel width when sizing from the trigger."
-            ],
-            [
-              "panelWidth",
-              "InputSignal<number | undefined>",
-              "undefined",
-              "Fixed overlay width. When set, it overrides the adaptive min/max sizing behavior."
+              "Maximum panel height before the option list scrolls."
             ]
           ]
         },
@@ -315,7 +251,7 @@
           "type": "notes",
           "paragraphs": [
             "Projected item content is supported through an <code class=\"showcase-doc__api-code\">ng-template</code> named <code class=\"showcase-doc__api-code\">itemTemplate</code>.",
-            "Multi-select uses tags in the trigger and checkboxes in the panel; single-select uses a checkmark in the panel and plain text in the trigger.",
+            "Multi-select uses comma-separated labels in the trigger and checkboxes in the panel; single-select uses a checkmark in the panel.",
             "The component implements <code class=\"showcase-doc__api-code\">ControlValueAccessor</code>, so it works with <code class=\"showcase-doc__api-code\">ngModel</code> and reactive forms."
           ],
           "title": "Notes"
@@ -324,9 +260,8 @@
           "type": "list",
           "title": "Related mechanisms",
           "items": [
-            "<code>DropdownHelper.loadSelectedItems()</code> - utility for preloading selected async items when you only start with value ids.",
-            "<code>ScrollContainerComponent</code> - powers paging and lazy loading inside the dropdown panel.",
-            "<code>FieldComponent</code> - shared base for labels, helper text, error text, validation sync, and aria wiring."
+            "<code>FieldComponent</code> - shared base for labels, helper text, error text, validation sync, and aria wiring.",
+            "<code>NodeComponent</code> - default option row renderer when no custom template is provided."
           ]
         }
       ]

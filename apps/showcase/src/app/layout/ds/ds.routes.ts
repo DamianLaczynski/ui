@@ -45,9 +45,9 @@ import {
   DATE_RANGE_DOC_PAGE_CONFIG,
 } from '@showcase/field/date-range/date-range.showcase.doc';
 import {
-  DROPDOWN_DOC_ASSET_PATHS,
-  DROPDOWN_DOC_PAGE_CONFIG,
-} from '@showcase/field/dropdown/dropdown.showcase.doc';
+  SELECT_DOC_ASSET_PATHS,
+  SELECT_DOC_PAGE_CONFIG,
+} from '@showcase/field/select/select.showcase.doc';
 import {
   NUMBER_DOC_ASSET_PATHS,
   NUMBER_DOC_PAGE_CONFIG,
@@ -444,11 +444,11 @@ export const dsRoutes: Routes = [
     },
   },
   {
-    path: 'dropdown',
+    path: 'select',
     component: ShowcaseDocPageComponent,
     data: {
-      config: DROPDOWN_DOC_PAGE_CONFIG,
-      assetPaths: DROPDOWN_DOC_ASSET_PATHS,
+      config: SELECT_DOC_PAGE_CONFIG,
+      assetPaths: SELECT_DOC_ASSET_PATHS,
     },
   },
   {

@@ -72,7 +72,7 @@ npm start
 
 **Data & feedback** — badge, card, data grid, empty/error/loading states, message bar, pagination, progress bar, rating, skeleton, spinner, tag, timeline, toast, tooltip.
 
-**Forms & input** — checkbox, color, date, datetime, date range, dropdown, email, file, number, password, radio, search, slider, stepper, switch, text, textarea, tel, time, TOTP, URL, week.
+**Forms & input** — checkbox, color, date, datetime, date range, select, email, file, number, password, radio, search, slider, stepper, switch, text, textarea, tel, time, TOTP, URL, week.
 
 **Overlays & commands** — calendar, command palette, context menu, dialog, menu, popover, time picker.
 

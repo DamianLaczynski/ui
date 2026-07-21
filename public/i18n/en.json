@@ -129,12 +129,13 @@
           "tb": "TB"
         }
       },
-      "dropdown": {
-        "compactAriaLabel": "Filter",
+      "select": {
         "placeholder": "Select...",
         "searchPlaceholder": "Search...",
         "clearSelectionAriaLabel": "Clear selection",
-        "toggleMenuAriaLabel": "Toggle menu"
+        "toggleMenuAriaLabel": "Toggle menu",
+        "emptyItems": "No items to display",
+        "noMatchingItems": "No matching options"
       },
       "totp": {
         "groupAriaLabel": "Verification code",

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DropdownComponent, IconComponent, type DropdownItem } from 'ui';
+import { IconComponent, SelectComponent, type SelectItem } from 'ui';
 
-type EnvironmentItem = DropdownItem & {
+type EnvironmentItem = SelectItem & {
   data: {
     region: string;
     note: string;
@@ -37,14 +37,14 @@ const environmentItems: EnvironmentItem[] = [
 ];
 
 @Component({
-  selector: 'app-dropdown-custom-template-example',
-  imports: [FormsModule, DropdownComponent, IconComponent],
+  selector: 'app-select-custom-template-example',
+  imports: [FormsModule, SelectComponent, IconComponent],
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:46rem"
     >
       <div style="flex:1 1 20rem;min-width:18rem;max-width:26rem">
-        <ui-dropdown
+        <ui-select
           label="Deployment environment"
           placeholder="Choose environment"
           [items]="environmentItems"
@@ -82,7 +82,7 @@ const environmentItems: EnvironmentItem[] = [
               }
             </div>
           </ng-template>
-        </ui-dropdown>
+        </ui-select>
       </div>
 
       <div
@@ -107,7 +107,7 @@ const environmentItems: EnvironmentItem[] = [
     </div>
   `,
 })
-export class DropdownCustomTemplateExampleComponent {
+export class SelectCustomTemplateExampleComponent {
   protected readonly environmentItems = environmentItems;
   protected selectedEnvironment: string | number = 'prod-eu';
 

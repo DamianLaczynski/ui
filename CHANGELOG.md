@@ -11,6 +11,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
+## [2.0.0-preview] - 2026-07-21
+
+### Added
+
+- **Select** — `ui-select` field component replacing `ui-dropdown`, with client-side search, clear action, custom `#itemTemplate`, and multi-select that renders selected labels as comma-separated trigger text.
+
+### Changed
+
+- **Select** — keyboard model uses highlight-then-confirm: arrow keys move focus; Enter/Space selects the active option (breaking vs. previous dropdown arrow behavior).
+- **Pagination** — page size selector now uses `ui-select`.
+
+### Removed
+
+- **Dropdown** — `ui-dropdown`, `DropdownComponent`, `DropdownItem`, and `DropdownHelper` removed in favor of **Select** (breaking).
+- **Select** — removed `dataSource`, async paging, `compact` trigger mode, tag-based multi display, typeahead, and `minPanelWidth` / `maxPanelWidth` / `panelWidth` inputs (breaking).
+
 ## [1.3.0] - 2026-07-21
 
 ### Added

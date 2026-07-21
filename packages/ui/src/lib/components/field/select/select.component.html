@@ -1,0 +1,135 @@
+<ui-field
+  [fieldType]="'select'"
+  [label]="label()"
+  [placeholder]="placeholder()"
+  [helpText]="helpText()"
+  [(errorText)]="errorText"
+  [required]="required()"
+  [disabled]="disabled()"
+  [readonly]="readonly()"
+  [autocomplete]="autocomplete()"
+  [id]="id()"
+  [name]="name()"
+  [size]="size()"
+  [inputVariant]="inputVariant()"
+>
+  <div class="input-wrapper" [class]="wrapperClasses">
+    <div
+      #triggerElement
+      class="input select-trigger"
+      [attr.role]="mode() === 'multi' ? 'listbox' : 'combobox'"
+      [attr.tabindex]="getTabIndex()"
+      [attr.aria-expanded]="isOpen()"
+      [attr.aria-haspopup]="'listbox'"
+      [attr.aria-controls]="getListboxId()"
+      [attr.aria-activedescendant]="activeDescendant()"
+      [attr.aria-autocomplete]="mode() === 'single' ? 'list' : null"
+      [attr.aria-multiselectable]="mode() === 'multi' ? 'true' : null"
+      [attr.aria-label]="ariaLabel() || label()"
+      [attr.aria-labelledby]="id() ? id() + '-label' : null"
+      (click)="!disabled() && !readonly() ? toggleDropdown() : null; $event.stopPropagation()"
+      (focus)="onFocus($event)"
+      (keydown)="onKeyDown($event)"
+    >
+      <span class="select-display-text" [class.select-placeholder]="selectedValues().size === 0">
+        {{ displayText() }}
+      </span>
+
+      @if (!disabled() && !readonly()) {
+        @if (clearable() && selectedValues().size > 0) {
+          <ui-action-button
+            [icon]="'dismiss'"
+            [size]="size()"
+            [ariaLabel]="getClearSelectionAriaLabel()"
+            (click)="clearSelection()"
+          />
+        }
+
+        <ui-action-button
+          class="select-trigger__chevron"
+          [class.select-trigger__chevron--open]="isOpen()"
+          [icon]="'chevron_down'"
+          [size]="size()"
+          [ariaLabel]="getToggleMenuAriaLabel()"
+          (click)="toggleDropdown()"
+        />
+      }
+    </div>
+  </div>
+</ui-field>
+
+<ng-template #panelTemplate>
+  <div
+    [id]="getListboxId()"
+    role="listbox"
+    class="select-panel"
+    [class.select-panel--small]="size() === 'small'"
+    [class.select-panel--medium]="size() === 'medium'"
+    [class.select-panel--large]="size() === 'large'"
+    [style.max-height]="maxHeight()"
+    [attr.aria-activedescendant]="activeDescendant()"
+    [attr.tabindex]="0"
+    (keydown)="onKeyDown($event)"
+    cdkTrapFocus
+  >
+    @if (searchable()) {
+      <div class="select-panel__search">
+        <ui-search
+          [size]="size()"
+          inputVariant="filled-gray"
+          [placeholder]="getSearchPlaceholderText()"
+          (input)="onSearchInput($event)"
+          (click)="$event.stopPropagation()"
+        />
+      </div>
+    }
+
+    <div class="select-panel__list">
+      @if (availableItems().length === 0) {
+        <ui-empty-state [icon]="panelEmptyIcon()" [description]="panelEmptyDescription()" />
+      } @else {
+        @for (item of availableItems(); track item.value) {
+          <ui-node
+            [id]="getItemId(item)"
+            role="option"
+            [attr.aria-selected]="isItemSelected(item)"
+            [attr.aria-disabled]="item.disabled ? 'true' : null"
+            [class.select-panel__item--active]="isItemActive(item)"
+            [node]="itemToNode(item)"
+            [size]="size()"
+            [asButton]="true"
+            [selectOnClick]="false"
+            [showSelectionIndicator]="false"
+            (nodeClick)="selectItem(item)"
+            (mouseenter)="onItemMouseEnter()"
+          >
+            @if (itemTemplate(); as customTemplate) {
+              <ng-template #content>
+                <ng-container
+                  *ngTemplateOutlet="
+                    customTemplate;
+                    context: { $implicit: item, selected: isItemSelected(item) }
+                  "
+                ></ng-container>
+              </ng-template>
+            }
+            <ng-template #before>
+              <span class="select-panel__option-leading" aria-hidden="true">
+                @if (shouldShowCheckbox(item)) {
+                  <ui-checkbox
+                    size="medium"
+                    [ngModel]="isItemSelected(item)"
+                    (ngModelChange)="selectItem(item)"
+                    (click)="$event.stopPropagation()"
+                  />
+                } @else if (isItemSelected(item)) {
+                  <ui-icon [icon]="'checkmark'" [size]="size()" />
+                }
+              </span>
+            </ng-template>
+          </ui-node>
+        }
+      }
+    </div>
+  </div>
+</ng-template>
