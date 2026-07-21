@@ -7,6 +7,7 @@ import { TextareaBasicDemoComponent } from './examples/textarea-basic-demo';
 import { TextareaFeedbackPanelDemoComponent } from './examples/textarea-feedback-panel-demo';
 import { TextareaFormDemoComponent } from './examples/textarea-form-demo';
 import { TextareaLayoutDemoComponent } from './examples/textarea-layout-demo';
+import { TextareaResizeDemoComponent } from './examples/textarea-resize-demo';
 import { TextareaStatesDemoComponent } from './examples/textarea-states-demo';
 import { TextareaValidationDemoComponent } from './examples/textarea-validation-demo';
 import meta from './textarea.showcase.meta.json';
@@ -16,6 +17,7 @@ const textareaMeta = meta as ShowcaseDocMeta;
 const componentMap = {
   basic: TextareaBasicDemoComponent,
   layout: TextareaLayoutDemoComponent,
+  resize: TextareaResizeDemoComponent,
   states: TextareaStatesDemoComponent,
   validation: TextareaValidationDemoComponent,
   form: TextareaFormDemoComponent,
