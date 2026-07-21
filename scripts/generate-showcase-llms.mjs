@@ -56,7 +56,6 @@ const showcases = [
   loadShowcaseMeta({ slug: 'stepper', showcaseDir: 'field/stepper' }),
   loadShowcaseMeta({ slug: 'spinner' }),
   loadShowcaseMeta({ slug: 'splitter' }),
-  loadShowcaseMeta({ slug: 'state-container' }),
   loadShowcaseMeta({ slug: 'switch', showcaseDir: 'field/switch' }),
   loadShowcaseMeta({ slug: 'tag' }),
   loadShowcaseMeta({ slug: 'tabs' }),

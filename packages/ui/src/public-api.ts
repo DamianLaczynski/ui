@@ -56,7 +56,6 @@ export * from './lib/components/skeleton';
 export * from './lib/components/speed-dial';
 export * from './lib/components/spinner';
 export * from './lib/components/splitter';
-export * from './lib/components/state-container';
 export * from './lib/components/table-of-content';
 export * from './lib/components/tabs';
 export * from './lib/components/tag';
@@ -71,6 +70,5 @@ export * from './lib/components/utils';
 export * from './lib/i18n';
 
 export * from './lib/api';
-export * from './lib/state';
 
 export * from './lib/components/field/field/validation-helper';

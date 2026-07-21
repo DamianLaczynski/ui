@@ -27,11 +27,6 @@
       "loadDataError": "Failed to load data",
       "loadMoreError": "Failed to load more data"
     },
-    "stateContainer": {
-      "loadingTitle": "Loading",
-      "errorTitle": "Error",
-      "emptyTitle": "No data"
-    },
     "draggablePanel": {
       "title": "Panel",
       "expandTitle": "Expand",

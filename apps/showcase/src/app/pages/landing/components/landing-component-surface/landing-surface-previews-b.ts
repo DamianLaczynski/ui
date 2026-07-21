@@ -1,4 +1,4 @@
-import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { delay, of } from 'rxjs';
 import {
@@ -30,7 +30,6 @@ import {
   SplitterPanelDirective,
   SplitterPanel,
   SplitterResizeEvent,
-  StateContainerComponent,
   Step,
   StepperComponent,
   SwitchComponent,
@@ -59,10 +58,6 @@ import {
   PopoverDirective,
   TimelineComponent,
   type TimelineItem,
-  errorState,
-  loadedState,
-  loadingState,
-  State,
 } from 'ui';
 import { LSP_SPEED_DIAL_ITEMS } from './landing-surface-previews.shared';
 
@@ -71,23 +66,6 @@ interface LspScrollRow {
   label: string;
   icon: UiNode['icon'];
 }
-
-interface LspSegmentRow {
-  id: number;
-  name: string;
-}
-
-const LSP_SEGMENT_ROWS: LspSegmentRow[] = [
-  { id: 1, name: 'Enterprise · EU regulated' },
-  { id: 2, name: 'Self-serve startups' },
-];
-
-const LSP_STATE_CYCLE: State<LspSegmentRow[]>[] = [
-  loadingState(loadedState(LSP_SEGMENT_ROWS)),
-  loadedState(LSP_SEGMENT_ROWS),
-  loadedState([]),
-  errorState('Upstream reconciliation stalled.'),
-];
 
 @Component({
   selector: 'app-lsp-nav',
@@ -628,54 +606,6 @@ export class LspSplitterPreviewComponent {
   ]);
 
   protected onResize(_event: SplitterResizeEvent): void {}
-}
-
-@Component({
-  selector: 'app-lsp-state-container',
-  standalone: true,
-  imports: [StateContainerComponent],
-  template: `
-    <div
-      style="display:flex;flex-direction:column;width:100%;min-width:0;min-height:15rem;box-sizing:border-box"
-    >
-      <ui-state-container
-        [style.flex]="'1 1 auto'"
-        [style.width]="'100%'"
-        [style.min-height]="'14rem'"
-        [state]="demoState()"
-        loadingTitle="Refreshing segments"
-        loadingDescription="Pulling live cohort assignments…"
-        errorTitle="Segments unavailable"
-        emptyTitle="No segments yet"
-        emptyDescription="Create a segment to populate this grid."
-      >
-        <div
-          style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.5rem;width:100%;min-height:11rem;align-content:start"
-        >
-          @for (row of demoState().data ?? []; track row.id) {
-            <div
-              style="padding:0.5rem 0.65rem;border-radius:0.5rem;border:1px solid var(--color-neutral-stroke-rest);background:var(--color-neutral-background2-rest);font-size:0.8125rem;line-height:1.45;color:var(--color-neutral-foreground-rest)"
-            >
-              {{ row.name }}
-            </div>
-          }
-        </div>
-      </ui-state-container>
-    </div>
-  `,
-})
-export class LspStateContainerPreviewComponent {
-  private readonly destroyRef = inject(DestroyRef);
-  protected readonly demoState = signal<State<LspSegmentRow[]>>(loadedState(LSP_SEGMENT_ROWS));
-  private cycleIndex = -1;
-
-  constructor() {
-    const id = window.setInterval(() => {
-      this.cycleIndex = (this.cycleIndex + 1) % LSP_STATE_CYCLE.length;
-      this.demoState.set(LSP_STATE_CYCLE[this.cycleIndex]);
-    }, 3000);
-    this.destroyRef.onDestroy(() => clearInterval(id));
-  }
 }
 
 interface LspStepperWizardStep extends Step {

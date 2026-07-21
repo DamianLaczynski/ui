@@ -114,10 +114,6 @@ import {
   PROGRESS_BAR_DOC_PAGE_CONFIG,
 } from '@showcase/progress-bar/progress-bar.showcase.doc';
 import {
-  STATE_CONTAINER_DOC_ASSET_PATHS,
-  STATE_CONTAINER_DOC_PAGE_CONFIG,
-} from '@showcase/state-container/state-container.showcase.doc';
-import {
   SLIDER_DOC_ASSET_PATHS,
   SLIDER_DOC_PAGE_CONFIG,
 } from '@showcase/field/slider/slider.showcase.doc';
@@ -397,14 +393,6 @@ export const dsRoutes: Routes = [
     data: {
       config: MESSAGE_BAR_DOC_PAGE_CONFIG,
       assetPaths: MESSAGE_BAR_DOC_ASSET_PATHS,
-    },
-  },
-  {
-    path: 'state-container',
-    component: ShowcaseDocPageComponent,
-    data: {
-      config: STATE_CONTAINER_DOC_PAGE_CONFIG,
-      assetPaths: STATE_CONTAINER_DOC_ASSET_PATHS,
     },
   },
   {

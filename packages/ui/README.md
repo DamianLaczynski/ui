@@ -21,7 +21,7 @@ Full guides, examples, and API details: [https://ui.laczynski.dev/](https://ui.l
 
 **Layout & navigation:** accordion, breadcrumb, carousel, drawer, nav, scroll container / panel, splitter, table of content, tabs, toolbar, tree, tree node.
 
-**Data & feedback:** badge, card, data grid, empty state, error state, loading state, message bar, pagination, progress bar, rating, skeleton, spinner, state container, tag, timeline, toast, tooltip.
+**Data & feedback:** badge, card, empty state, error state, loading state, message bar, pagination, progress bar, rating, skeleton, spinner, tag, timeline, toast, tooltip.
 
 **Forms & input:** checkbox, color, date, datetime, date range, select, email, file, month, number, password, radio, radio button group, search, slider, stepper, switch, text, textarea, tel, time, time span, TOTP, URL, week, plus shared field utilities and validation helpers.
 
