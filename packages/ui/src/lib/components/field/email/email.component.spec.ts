@@ -31,7 +31,7 @@ describe('EmailComponent', () => {
     fixture.componentRef.setInput('labelPosition', 'after');
     fixture.detectChanges();
 
-    const label = fixture.nativeElement.querySelector('.input-label--after');
+    const label = fixture.nativeElement.querySelector('.field-label--after');
     expect(label?.textContent?.trim()).toBe('Email');
   });
 

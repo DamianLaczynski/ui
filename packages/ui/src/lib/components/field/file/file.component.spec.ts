@@ -26,7 +26,7 @@ describe('FileComponent', () => {
     fixture.componentRef.setInput('labelPosition', 'before');
     fixture.detectChanges();
 
-    const label = fixture.nativeElement.querySelector('.input-label--before');
+    const label = fixture.nativeElement.querySelector('.field-label--before');
     expect(label?.textContent?.trim()).toBe('Upload');
   });
 
