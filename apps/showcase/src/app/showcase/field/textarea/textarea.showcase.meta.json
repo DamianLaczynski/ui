@@ -8,6 +8,7 @@
   "snippets": {
     "basicCode": "textarea-basic-demo.ts",
     "layoutCode": "textarea-layout-demo.ts",
+    "resizeCode": "textarea-resize-demo.ts",
     "statesCode": "textarea-states-demo.ts",
     "validationCode": "textarea-validation-demo.ts",
     "formCode": "textarea-form-demo.ts",
@@ -27,6 +28,13 @@
       "description": "Textarea follows the same field density model as the rest of the system, while `rows` controls how much writing space is visible before scrolling is needed.",
       "codeKey": "layoutCode",
       "componentKey": "layout"
+    },
+    {
+      "id": "resize",
+      "title": "Resize behavior",
+      "description": "By default, textareas are not resizable and overflow scrolls inside the field. Use `resize` when people should control how much content they see at once.",
+      "codeKey": "resizeCode",
+      "componentKey": "resize"
     },
     {
       "id": "states",
@@ -69,6 +77,10 @@
     {
       "title": "Rows and visible space",
       "body": "`rows` affects the visible writing area only. It does not limit content length, so if the flow needs length rules or character guidance, pair the textarea with helper text or form validation."
+    },
+    {
+      "title": "Resize control",
+      "body": "`resize` maps to the native CSS resize behavior. The default is `none`, matching Fluent 2. Enable `vertical`, `horizontal`, or `both` only when users benefit from adjusting the visible writing area themselves."
     }
   ],
   "apiSections": [
@@ -83,7 +95,13 @@
           "columnKinds": ["code", "type", "default", "text"],
           "rows": [
             ["rows", "InputSignal<number>", "4", "Initial number of visible text rows."],
-            ["cols", "InputSignal<number | null>", "null", "Optional native column hint."]
+            ["cols", "InputSignal<number | null>", "null", "Optional native column hint."],
+            [
+              "resize",
+              "InputSignal<TextareaResize>",
+              "'none'",
+              "Controls native resize behavior. Fluent 2 defaults to non-resizable fields."
+            ]
           ]
         },
         {
