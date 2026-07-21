@@ -26,7 +26,7 @@ export const ALL_SHOWCASE_COMPONENTS: ShowcaseComponent[] = [
   { id: 'date-range', name: 'Date Range', icon: 'calendar_month' },
   { id: 'dialog', name: 'Dialog', icon: 'window' },
   { id: 'divider', name: 'Divider', icon: 'divider_tall' },
-  { id: 'dropdown', name: 'Dropdown', icon: 'apps_list' },
+  { id: 'select', name: 'Select', icon: 'apps_list' },
   { id: 'drawer', name: 'Drawer', icon: 'panel_left' },
   { id: 'email', name: 'Email', icon: 'mail' },
   { id: 'empty-state', name: 'Empty State', icon: 'document_dismiss' },

@@ -25,7 +25,7 @@ const showcases = [
   loadShowcaseMeta({ slug: 'date-range', showcaseDir: 'field/date-range' }),
   loadShowcaseMeta({ slug: 'datetime', showcaseDir: 'field/datetime' }),
   loadShowcaseMeta({ slug: 'divider' }),
-  loadShowcaseMeta({ slug: 'dropdown', showcaseDir: 'field/dropdown' }),
+  loadShowcaseMeta({ slug: 'select', showcaseDir: 'field/select' }),
   loadShowcaseMeta({ slug: 'drawer' }),
   loadShowcaseMeta({ slug: 'dialog' }),
   loadShowcaseMeta({ slug: 'empty-state' }),

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DropdownComponent, type DropdownItem } from 'ui';
+import { SelectComponent, type SelectItem } from 'ui';
 
-const countryItems: DropdownItem[] = [
+const countryItems: SelectItem[] = [
   { value: 'pl', label: 'Poland' },
   { value: 'de', label: 'Germany' },
   { value: 'fr', label: 'France' },
@@ -14,7 +14,7 @@ const countryItems: DropdownItem[] = [
   { value: 'uk', label: 'United Kingdom', disabled: true },
 ];
 
-const reviewerItems: DropdownItem[] = [
+const reviewerItems: SelectItem[] = [
   { value: 'ava', label: 'Ava Lopez' },
   { value: 'miles', label: 'Miles Carter' },
   { value: 'zoe', label: 'Zoe Patel' },
@@ -23,12 +23,12 @@ const reviewerItems: DropdownItem[] = [
 ];
 
 @Component({
-  selector: 'app-dropdown-search-clear-example',
-  imports: [FormsModule, DropdownComponent],
+  selector: 'app-select-search-clear-example',
+  imports: [FormsModule, SelectComponent],
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:38rem">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem">
-        <ui-dropdown
+        <ui-select
           label="Shipping country"
           placeholder="Search countries"
           helpText="Client-side search filters the static item list."
@@ -39,7 +39,7 @@ const reviewerItems: DropdownItem[] = [
           [ngModelOptions]="{ standalone: true }"
         />
 
-        <ui-dropdown
+        <ui-select
           label="Reviewers"
           placeholder="Search people"
           [items]="reviewerItems"
@@ -82,7 +82,7 @@ const reviewerItems: DropdownItem[] = [
     </div>
   `,
 })
-export class DropdownSearchClearExampleComponent {
+export class SelectSearchClearExampleComponent {
   protected readonly countryItems = countryItems;
   protected readonly reviewerItems = reviewerItems;
   protected selectedCountry = 'pl';

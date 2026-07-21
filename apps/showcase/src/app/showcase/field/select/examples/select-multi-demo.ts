@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, DropdownComponent, type DropdownItem } from 'ui';
+import { ButtonComponent, SelectComponent, type SelectItem } from 'ui';
 
-const channelItems: DropdownItem[] = [
+const channelItems: SelectItem[] = [
   { value: 'email', label: 'Email', icon: 'mail' },
   { value: 'teams', label: 'Teams', icon: 'chat' },
   { value: 'sms', label: 'SMS', icon: 'phone' },
@@ -11,14 +11,14 @@ const channelItems: DropdownItem[] = [
 ];
 
 @Component({
-  selector: 'app-dropdown-multi-tags-example',
-  imports: [FormsModule, ButtonComponent, DropdownComponent],
+  selector: 'app-select-multi-example',
+  imports: [FormsModule, ButtonComponent, SelectComponent],
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:30rem">
-      <ui-dropdown
+      <ui-select
         label="Notification channels"
         placeholder="Select one or more channels"
-        helpText="Multi mode keeps the list open and turns selections into removable tags."
+        helpText="Multi mode keeps the list open and shows selected labels as comma-separated text in the trigger."
         [items]="channelItems"
         mode="multi"
         [searchable]="true"
@@ -55,7 +55,7 @@ const channelItems: DropdownItem[] = [
     </div>
   `,
 })
-export class DropdownMultiTagsExampleComponent {
+export class SelectMultiExampleComponent {
   protected readonly channelItems = channelItems;
   protected selectedChannels: Array<string | number> = ['email', 'teams'];
 

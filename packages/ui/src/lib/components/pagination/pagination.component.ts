@@ -3,7 +3,7 @@ import { Component, computed, input, output, ChangeDetectionStrategy, inject } f
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../button/button.component';
 import { IconComponent } from '../icon/icon.component';
-import { DropdownComponent, DropdownItem } from '../field/dropdown/dropdown.component';
+import { SelectComponent, SelectItem } from '../field/select/select.component';
 import { Size, Variant } from '../utils';
 import { UiI18nService } from '../../i18n';
 
@@ -23,7 +23,7 @@ export interface PaginationConfig {
 @Component({
   selector: 'ui-pagination',
   templateUrl: './pagination.component.html',
-  imports: [FormsModule, ButtonComponent, IconComponent, DropdownComponent],
+  imports: [FormsModule, ButtonComponent, IconComponent, SelectComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PaginationComponent {
@@ -186,7 +186,7 @@ export class PaginationComponent {
     this.pageSizeChange.emit(size);
   }
 
-  pageSizeItems = computed<DropdownItem[]>(() => {
+  pageSizeItems = computed<SelectItem[]>(() => {
     const options = this.config().pageSizeOptions || [];
     return options.map(option => ({
       value: option,

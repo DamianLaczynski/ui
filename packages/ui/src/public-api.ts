@@ -18,7 +18,7 @@ export * from './lib/components/field/color';
 export * from './lib/components/field/date';
 export * from './lib/components/field/datetime';
 export * from './lib/components/field/date-range';
-export * from './lib/components/field/dropdown';
+export * from './lib/components/field/select';
 export * from './lib/components/field/email';
 export * from './lib/components/field/file';
 export * from './lib/components/field/month';

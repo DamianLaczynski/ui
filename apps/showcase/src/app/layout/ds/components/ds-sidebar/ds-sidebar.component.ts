@@ -71,7 +71,7 @@ export class DsSidebarComponent {
     { id: 'dialog', label: 'Dialog', icon: 'window' },
     { id: 'divider', label: 'Divider', icon: 'divider_tall' },
     { id: 'drawer', label: 'Drawer', icon: 'panel_left' },
-    { id: 'dropdown', label: 'Dropdown', icon: 'apps_list' },
+    { id: 'select', label: 'Select', icon: 'apps_list' },
     { id: 'email', label: 'Email', icon: 'mail' },
     { id: 'file', label: 'File', icon: 'document' },
     { id: 'icon', label: 'Icon', icon: 'star' },

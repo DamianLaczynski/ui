@@ -12,7 +12,7 @@ export const LANDING_SURFACE_INPUTS_PLACEMENT: LandingSurfaceTilePlacement = {
 
 const INPUT_SLOT_PLACEMENT: Record<string, LandingSurfaceTilePlacement> = {
   'radio-button-group': { colSpan: 3, rowSpan: 1 },
-  dropdown: { colSpan: 2, rowSpan: 1 },
+  select: { colSpan: 2, rowSpan: 1 },
   search: { colSpan: 2, rowSpan: 1 },
   'time-picker': { colSpan: 2, rowSpan: 2 },
   textarea: { colSpan: 2, rowSpan: 1 },
@@ -65,7 +65,7 @@ export function landingSurfaceNonFieldExplicitCell(
 
 export const LANDING_SURFACE_INPUT_RENDER_ORDER: readonly string[] = [
   'radio-button-group',
-  'dropdown',
+  'select',
   'checkbox',
   'time-picker',
   'textarea',
@@ -95,7 +95,7 @@ export const LANDING_SURFACE_INPUTS_DISPLAY_ORDER = LANDING_SURFACE_INPUT_RENDER
 
 const INPUT_EXPLICIT_GRID: Record<string, LandingSurfaceInputExplicitCell> = {
   'radio-button-group': { gridColumn: '1 / 5', gridRow: '1 / 2' },
-  dropdown: { gridColumn: '5 / 7', gridRow: '1 / 2' },
+  select: { gridColumn: '5 / 7', gridRow: '1 / 2' },
   checkbox: { gridColumn: '1 / 3', gridRow: '2 / 3' },
   textarea: { gridColumn: '3 / 7', gridRow: '2 / 3' },
   'time-picker': { gridColumn: '5 / 7', gridRow: '3 / 5' },
@@ -137,7 +137,7 @@ export const LANDING_SURFACE_FIELD_IDS = new Set([
   'month',
   'week',
   'date-range',
-  'dropdown',
+  'select',
   'email',
   'file',
   'number',

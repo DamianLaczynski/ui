@@ -1,0 +1,137 @@
+// =============================================================================
+// Select Component Styles (Fluent 2 Design System)
+// =============================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/functions' as *;
+
+.select-trigger {
+  display: flex !important;
+  align-items: center;
+  gap: $spacing-1;
+  cursor: pointer;
+  user-select: none;
+  padding-right: $spacing-2 !important;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.select-trigger__chevron ui-icon {
+  display: inline-flex;
+  @include transition(transform, $duration-fast, $easing-decelerate-mid);
+  transform: rotate(0deg);
+}
+
+.select-trigger__chevron--open ui-icon {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .select-trigger__chevron ui-icon {
+    transition: none;
+  }
+}
+
+.select-display-text {
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.select-placeholder {
+  color: var(--color-neutral-foreground2-rest);
+  opacity: 0.8;
+}
+
+.select-panel {
+  background: var(--color-neutral-background-rest);
+  border: 1px solid var(--color-neutral-stroke-rest);
+  border-radius: $border-radius-400;
+  box-shadow:
+    0px 0px 2px rgba(0, 0, 0, 0.12),
+    0px 8px 16px rgba(0, 0, 0, 0.14);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  @include overlay-surface-enter($duration-fast, $easing-decelerate-mid, top center);
+
+  &__search {
+    padding: $spacing-2;
+    flex-shrink: 0;
+  }
+
+  &__list {
+    padding: $spacing-1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__option-leading {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    min-width: 20px;
+    box-sizing: border-box;
+
+    ui-checkbox .input-control {
+      flex: 0 0 auto;
+      width: auto;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &--small .select-panel__option-leading {
+    width: 16px;
+    min-width: 16px;
+  }
+
+  &--large .select-panel__option-leading {
+    width: 24px;
+    min-width: 24px;
+  }
+
+  ui-node {
+    .node__label {
+      color: var(--color-neutral-foreground-rest);
+      font-weight: $font-weight-regular;
+    }
+
+    &.select-panel__item--active .node__content {
+      outline: 2px solid var(--color-focus-border);
+      outline-offset: -2px;
+      border-radius: $border-radius-400;
+    }
+
+    .node__content:focus-visible {
+      outline: 2px solid var(--color-focus-border);
+      outline-offset: -2px;
+      border-radius: $border-radius-400;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .select-panel {
+    animation: none !important;
+    transform: none;
+  }
+}
