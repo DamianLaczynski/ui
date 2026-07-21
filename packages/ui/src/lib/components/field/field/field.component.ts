@@ -2,6 +2,7 @@ import { Component, OnInit, input, output, model } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContentPosition, InputVariant, Size } from '../../utils';
+import { IconComponent } from '../../icon/icon.component';
 
 export type FieldType =
   | 'text'
@@ -41,9 +42,11 @@ export type FieldType =
       }
     `,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, IconComponent],
 })
 export class FieldComponent implements ControlValueAccessor, OnInit {
+  protected readonly messageIconSizePx = 12;
+
   fieldType = input<FieldType>('text');
   inputVariant = input<InputVariant>('filled');
   label = input<string>('');
@@ -105,14 +108,14 @@ export class FieldComponent implements ControlValueAccessor, OnInit {
   }
 
   get labelClasses(): string {
-    const classes = [`input-label--${this.size()}`];
+    const classes = [`field-label--${this.size()}`];
 
     if (this.disabled()) {
-      classes.push('input-label--disabled');
+      classes.push('field-label--disabled');
     }
 
     if (this.required()) {
-      classes.push('input-label--required');
+      classes.push('field-label--required');
     }
 
     return classes.join(' ');

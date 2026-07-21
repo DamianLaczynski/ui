@@ -70,7 +70,7 @@ describe('FieldComponent', () => {
     fixture.detectChanges();
 
     const label = fixture.nativeElement.querySelector('label');
-    const help = fixture.nativeElement.querySelector('.input-label--help');
+    const help = fixture.nativeElement.querySelector('.field-message--help');
 
     expect(label?.id).toBe('field-template-label');
     expect(help?.id).toBe('field-template-help');
@@ -78,9 +78,32 @@ describe('FieldComponent', () => {
     fixture.componentRef.setInput('errorText', 'Template error');
     fixture.detectChanges();
 
-    const error = fixture.nativeElement.querySelector('.input-label--error');
+    const error = fixture.nativeElement.querySelector('.field-message--error');
     expect(error?.id).toBe('field-template-error');
-    expect(error?.getAttribute('role')).toBe('status');
+    expect(error?.getAttribute('role')).toBe('alert');
+    expect(error?.querySelector('ui-icon')).toBeTruthy();
+    expect(error?.querySelector('.field-message__text')?.textContent?.trim()).toBe(
+      'Template error',
+    );
+  });
+
+  it('should render info icon for help text and error icon for validation text', () => {
+    fixture.componentRef.setInput('id', 'field-icons');
+    fixture.componentRef.setInput('helpText', 'Helpful text');
+    fixture.detectChanges();
+
+    const help = fixture.nativeElement.querySelector('.field-message--help');
+    const helpIcon = help?.querySelector('ui-icon');
+    expect(helpIcon).toBeTruthy();
+    expect(help?.querySelector('.field-message__text')?.textContent?.trim()).toBe('Helpful text');
+
+    fixture.componentRef.setInput('errorText', 'Invalid value');
+    fixture.detectChanges();
+
+    const error = fixture.nativeElement.querySelector('.field-message--error');
+    const errorIcon = error?.querySelector('ui-icon');
+    expect(errorIcon).toBeTruthy();
+    expect(error?.querySelector('.field-message__text')?.textContent?.trim()).toBe('Invalid value');
   });
 
   it('should compute aria-label from explicit ariaLabel first, then fallback to label', () => {
@@ -110,9 +133,9 @@ describe('FieldComponent', () => {
     fixture.componentRef.setInput('labelPosition', 'before');
     fixture.detectChanges();
 
-    const beforeLabel = fixture.nativeElement.querySelector('.input-label--before');
+    const beforeLabel = fixture.nativeElement.querySelector('.field-label--before');
     const aboveLabel = fixture.nativeElement.querySelector(
-      '.input-container > .input-label:not(.input-label--before):not(.input-label--after):not(.input-label--below)',
+      '.input-container > .field-label:not(.field-label--before):not(.field-label--after):not(.field-label--below)',
     );
 
     expect(beforeLabel?.textContent?.trim()).toBe('Before label');
@@ -125,7 +148,7 @@ describe('FieldComponent', () => {
     fixture.componentRef.setInput('labelPosition', 'below');
     fixture.detectChanges();
 
-    const belowLabel = fixture.nativeElement.querySelector('.input-label--below');
+    const belowLabel = fixture.nativeElement.querySelector('.field-label--below');
     const inputMain = fixture.nativeElement.querySelector('.input-main');
 
     expect(belowLabel?.textContent?.trim()).toBe('Below label');

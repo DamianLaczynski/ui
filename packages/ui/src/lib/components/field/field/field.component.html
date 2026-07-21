@@ -1,6 +1,9 @@
-<div class="input-container">
+<div
+  class="input-container"
+  [class.input-container--inline]="labelPosition() === 'before' || labelPosition() === 'after'"
+>
   @if (label() && labelPosition() === 'above') {
-    <label [for]="id()" [id]="getLabelElementId()" class="input-label" [ngClass]="labelClasses">
+    <label [for]="id()" [id]="getLabelElementId()" class="field-label" [ngClass]="labelClasses">
       {{ label() }}
     </label>
   }
@@ -13,7 +16,7 @@
       <label
         [for]="id()"
         [id]="getLabelElementId()"
-        class="input-label input-label--inline input-label--before"
+        class="field-label field-label--inline field-label--before"
         [ngClass]="labelClasses"
       >
         {{ label() }}
@@ -28,7 +31,7 @@
       <label
         [for]="id()"
         [id]="getLabelElementId()"
-        class="input-label input-label--inline input-label--after"
+        class="field-label field-label--inline field-label--after"
         [ngClass]="labelClasses"
       >
         {{ label() }}
@@ -40,35 +43,43 @@
     <label
       [for]="id()"
       [id]="getLabelElementId()"
-      class="input-label input-label--below"
+      class="field-label field-label--below"
       [ngClass]="labelClasses"
     >
       {{ label() }}
     </label>
   }
 
-  <!-- Help Text -->
   @if (helpText() && !errorText()) {
     <span
       [id]="getHelpTextElementId()"
-      class="input-label input-label--help"
-      [ngClass]="labelClasses"
+      class="field-message field-message--help"
       aria-live="polite"
     >
-      {{ helpText() }}
+      <ui-icon
+        class="field-message__icon"
+        icon="info"
+        [sizePx]="messageIconSizePx"
+        variant="regular"
+      />
+      <span class="field-message__text">{{ helpText() }}</span>
     </span>
   }
 
-  <!-- Error Text -->
   @if (errorText()) {
     <span
       [id]="getErrorTextElementId()"
-      class="input-label input-label--error"
-      [ngClass]="labelClasses"
+      class="field-message field-message--error"
       aria-live="polite"
-      role="status"
+      role="alert"
     >
-      {{ errorText() }}
+      <ui-icon
+        class="field-message__icon"
+        icon="error_circle"
+        [sizePx]="messageIconSizePx"
+        variant="filled"
+      />
+      <span class="field-message__text">{{ errorText() }}</span>
     </span>
   }
 </div>

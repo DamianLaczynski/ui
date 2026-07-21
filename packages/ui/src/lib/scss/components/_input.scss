@@ -5,75 +5,74 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
-// Label styles
-.input-label {
+// Field label — Fluent 2 Field label slot
+.field-label {
   display: inline-flex;
-  align-items: flex-end;
-  gap: $spacing-1;
-  font-family: $font-family-base;
-  color: var(--color-neutral-foreground-rest);
-  word-wrap: break-word;
-  margin-bottom: $spacing-1;
+  align-items: center;
+  align-self: stretch;
   box-sizing: border-box;
+  color: var(--color-neutral-foreground-rest);
+  cursor: inherit;
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+  max-height: max-content;
+  max-width: max-content;
+  user-select: none;
+  word-wrap: break-word;
 
-  // Size variants
   &--small {
     font-size: $font-size-200;
     line-height: $line-height-200;
-    font-weight: $font-weight-regular;
-    padding-block: $spacing-0_5;
-    padding-inline: $spacing-1;
-  }
-
-  &--small-bold {
-    font-size: $font-size-200;
-    line-height: $line-height-200;
-    font-weight: $font-weight-semibold;
-    padding-block: $spacing-0_5;
-    padding-inline: $spacing-1;
+    padding-block: $spacing-vertical-xxs;
   }
 
   &--medium {
     font-size: $font-size-300;
     line-height: $line-height-300;
-    font-weight: $font-weight-regular;
-    padding-block: $spacing-1;
-    padding-inline: $spacing-1_5;
-  }
-
-  &--medium-bold {
-    font-size: $font-size-300;
-    line-height: $line-height-300;
-    font-weight: $font-weight-semibold;
-    padding-block: $spacing-1;
-    padding-inline: $spacing-1_5;
+    padding-block: $spacing-vertical-xxs;
   }
 
   &--large {
     font-size: $font-size-400;
-    line-height: $line-height-400;
     font-weight: $font-weight-semibold;
-    padding-block: $spacing-1_5;
-    padding-inline: $spacing-2;
+    line-height: $line-height-400;
+    padding-block: 1px;
   }
 
-  // Disabled state
   &--disabled {
     color: var(--color-neutral-foreground-disabled);
   }
 
-  // Required indicator
   &--required::after {
-    content: ' *';
     color: var(--color-shared-red-foreground);
+    content: '*' / '';
+    margin-inline-start: $spacing-horizontal-xs;
+  }
+}
+
+// Field message — Fluent 2 hint / validation message (caption1)
+.field-message {
+  align-items: center;
+  color: var(--color-neutral-foreground3-rest);
+  display: flex;
+  font-family: $font-family-base;
+  font-size: $font-size-200;
+  font-weight: $font-weight-regular;
+  gap: $spacing-horizontal-xs;
+  line-height: $line-height-200;
+  word-wrap: break-word;
+
+  &__icon {
+    color: inherit;
+    flex-shrink: 0;
+    margin-top: 1px;
   }
 
-  // Help state
-  &--help {
-    color: var(--color-neutral-foreground2-rest);
+  &__text {
+    flex: 1;
+    min-width: 0;
   }
 
-  // Error state
   &--error {
     color: var(--color-shared-red-foreground);
   }
@@ -83,7 +82,12 @@
 .input-container {
   display: flex;
   flex-direction: column;
+  gap: $spacing-vertical-xxs;
   width: 100%;
+
+  &:has(.field-message) {
+    gap: $spacing-vertical-s;
+  }
 }
 
 .input-main {
@@ -94,7 +98,7 @@
   &--inline {
     flex-direction: row;
     align-items: center;
-    gap: $spacing-2;
+    gap: $spacing-horizontal-m;
   }
 }
 
@@ -103,28 +107,33 @@
   min-width: 0;
 }
 
-.input-label {
+.field-label {
   &--inline {
-    margin-bottom: 0;
+    flex-shrink: 0;
+    margin-block: 0;
+    padding-block: $spacing-vertical-xs;
   }
 
   &--before,
   &--after {
     align-items: center;
-  }
-
-  &--before {
-    margin-right: $spacing-2;
-  }
-
-  &--after {
-    margin-left: $spacing-2;
+    align-self: auto;
+    max-width: none;
   }
 
   &--below {
-    margin-top: $spacing-1;
-    margin-bottom: 0;
+    align-self: stretch;
+    margin-block-start: $spacing-vertical-m;
+    text-align: center;
   }
+}
+
+.field-label--inline.field-label--small {
+  padding-block: $spacing-vertical-xs;
+}
+
+.field-label--inline.field-label--large {
+  padding-block: 9px;
 }
 
 [dir='rtl'] {
@@ -134,15 +143,10 @@
     }
   }
 
-  .input-label {
-    &--before {
-      margin-right: 0;
-      margin-left: $spacing-2;
-    }
-
+  .field-label {
+    &--before,
     &--after {
-      margin-left: 0;
-      margin-right: $spacing-2;
+      margin-inline: 0;
     }
   }
 }
