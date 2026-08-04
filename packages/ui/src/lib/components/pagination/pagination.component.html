@@ -42,13 +42,9 @@
           track slot.kind === 'page' ? 'page-' + slot.value : slot.key
         ) {
           @if (slot.kind === 'ellipsis') {
-            <span
-              class="pagination__ellipsis"
-              [class.pagination__ellipsis--hidden]="slot.hidden"
-              aria-hidden="true"
-            >
-              ...
-            </span>
+            @if (!slot.hidden) {
+              <span class="pagination__ellipsis" aria-hidden="true">...</span>
+            }
           } @else {
             <ui-button
               [appearance]="getButtonAppearance(slot.value)"
