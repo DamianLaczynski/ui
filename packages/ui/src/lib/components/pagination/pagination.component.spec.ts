@@ -3,6 +3,9 @@ import { PaginationComponent, PaginationConfig } from './pagination.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+const pageValues = (slots: ReturnType<PaginationComponent['visiblePageSlots']>) =>
+  slots.filter(slot => slot.kind === 'page').map(slot => slot.value);
+
 describe('PaginationComponent', () => {
   let component: PaginationComponent;
   let fixture: ComponentFixture<PaginationComponent>;
@@ -184,8 +187,7 @@ describe('PaginationComponent', () => {
       fixture.componentRef.setInput('config', createBasicConfig());
       fixture.detectChanges();
 
-      component.onPageClick(-1);
-
+      // Ellipsis are no longer clickable page values
       expect(emittedPage).toBeUndefined();
     });
 
@@ -219,7 +221,7 @@ describe('PaginationComponent', () => {
     });
   });
 
-  describe('Visible Pages Calculation', () => {
+  describe('Visible Page Slots', () => {
     it('should show all pages when total is less than maxVisible', () => {
       fixture.componentRef.setInput(
         'config',
@@ -227,21 +229,31 @@ describe('PaginationComponent', () => {
       );
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages).toEqual([1, 2, 3]);
+      const slots = component.visiblePageSlots();
+      expect(pageValues(slots)).toEqual([1, 2, 3]);
     });
 
-    it('should show pages with ellipsis when total exceeds maxVisible', () => {
+    it('should keep a stable slot count when total exceeds maxVisible', () => {
       fixture.componentRef.setInput(
         'config',
         createBasicConfig({ currentPage: 1, totalPages: 20, maxVisiblePages: 5 }),
       );
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages[0]).toBe(1);
-      expect(pages[pages.length - 1]).toBe(20);
-      expect(pages).toContain(-1); // Contains ellipsis
+      const firstPageSlots = component.visiblePageSlots();
+      expect(firstPageSlots.length).toBe(9);
+
+      fixture.componentRef.setInput(
+        'config',
+        createBasicConfig({ currentPage: 10, totalPages: 20, maxVisiblePages: 5 }),
+      );
+      fixture.detectChanges();
+
+      const middlePageSlots = component.visiblePageSlots();
+      expect(middlePageSlots.length).toBe(9);
+      expect(pageValues(middlePageSlots)[0]).toBe(1);
+      expect(pageValues(middlePageSlots).at(-1)).toBe(20);
+      expect(middlePageSlots.some(slot => slot.kind === 'ellipsis')).toBe(true);
     });
 
     it('should center current page in visible range', () => {
@@ -251,12 +263,8 @@ describe('PaginationComponent', () => {
       );
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages).toContain(10);
-      // Should have pages around 10
-      const pageIndex = pages.indexOf(10);
-      expect(pageIndex).toBeGreaterThan(0);
-      expect(pageIndex).toBeLessThan(pages.length - 1);
+      const slots = component.visiblePageSlots();
+      expect(pageValues(slots)).toContain(10);
     });
 
     it('should adjust range when near the end', () => {
@@ -266,50 +274,52 @@ describe('PaginationComponent', () => {
       );
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages[0]).toBe(1);
-      expect(pages[pages.length - 1]).toBe(20);
-      expect(pages).toContain(19);
+      const slots = component.visiblePageSlots();
+      expect(pageValues(slots)[0]).toBe(1);
+      expect(pageValues(slots).at(-1)).toBe(20);
+      expect(pageValues(slots)).toContain(19);
     });
 
-    it('should show first page and ellipsis when not at start', () => {
+    it('should reserve leading ellipsis slot near the start', () => {
       fixture.componentRef.setInput(
         'config',
-        createBasicConfig({ currentPage: 10, totalPages: 20, maxVisiblePages: 3 }),
+        createBasicConfig({ currentPage: 1, totalPages: 20, maxVisiblePages: 3 }),
       );
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages[0]).toBe(1);
-      expect(pages[1]).toBe(-1); // Ellipsis
+      const slots = component.visiblePageSlots();
+      const leadingEllipsis = slots.find(slot => slot.kind === 'ellipsis' && slot.key === 'start');
+      expect(leadingEllipsis).toBeTruthy();
+      expect(leadingEllipsis?.kind === 'ellipsis' && leadingEllipsis.hidden).toBe(true);
     });
 
-    it('should show last page and ellipsis when not at end', () => {
+    it('should show trailing ellipsis when not at end', () => {
       fixture.componentRef.setInput(
         'config',
         createBasicConfig({ currentPage: 5, totalPages: 20, maxVisiblePages: 3 }),
       );
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages[pages.length - 1]).toBe(20);
-      expect(pages[pages.length - 2]).toBe(-1); // Ellipsis
+      const slots = component.visiblePageSlots();
+      const trailingEllipsis = slots.find(slot => slot.kind === 'ellipsis' && slot.key === 'end');
+      expect(trailingEllipsis).toBeTruthy();
+      expect(trailingEllipsis?.kind === 'ellipsis' && trailingEllipsis.hidden).toBe(false);
     });
 
     it('should return empty array when showPageNumbers is false', () => {
       fixture.componentRef.setInput('config', createBasicConfig({ showPageNumbers: false }));
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages).toEqual([]);
+      const slots = component.visiblePageSlots();
+      expect(slots).toEqual([]);
     });
 
     it('should handle single page correctly', () => {
       fixture.componentRef.setInput('config', createBasicConfig({ currentPage: 1, totalPages: 1 }));
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages).toEqual([1]);
+      const slots = component.visiblePageSlots();
+      expect(pageValues(slots)).toEqual([1]);
     });
   });
 
@@ -464,52 +474,17 @@ describe('PaginationComponent', () => {
   });
 
   describe('Button Appearance', () => {
-    it('should return filled appearance for current page', () => {
+    it('should mark the current page as selected in the template', () => {
       fixture.componentRef.setInput('config', createBasicConfig({ currentPage: 5 }));
       fixture.detectChanges();
 
-      expect(component.getButtonAppearance(5)).toBe('filled');
-    });
+      const currentPageButton = (
+        Array.from(
+          fixture.nativeElement.querySelectorAll('.pagination__button--page button'),
+        ) as HTMLButtonElement[]
+      ).find(button => button.textContent?.trim() === '5');
 
-    it('should return subtle appearance for other pages', () => {
-      fixture.componentRef.setInput('config', createBasicConfig({ currentPage: 5 }));
-      fixture.detectChanges();
-
-      expect(component.getButtonAppearance(3)).toBe('subtle');
-      expect(component.getButtonAppearance(7)).toBe('subtle');
-    });
-
-    it('should return primary variant for current page', () => {
-      fixture.componentRef.setInput('config', createBasicConfig({ currentPage: 5 }));
-      fixture.detectChanges();
-
-      expect(component.getButtonVariant(5)).toBe('primary');
-    });
-
-    it('should return secondary variant for other pages', () => {
-      fixture.componentRef.setInput('config', createBasicConfig({ currentPage: 5 }));
-      fixture.detectChanges();
-
-      expect(component.getButtonVariant(3)).toBe('secondary');
-      expect(component.getButtonVariant(7)).toBe('secondary');
-    });
-  });
-
-  describe('Ellipsis Detection', () => {
-    it('should identify ellipsis marker', () => {
-      fixture.componentRef.setInput('config', createBasicConfig());
-      fixture.detectChanges();
-
-      expect(component.isEllipsis(-1)).toBe(true);
-    });
-
-    it('should not identify regular page as ellipsis', () => {
-      fixture.componentRef.setInput('config', createBasicConfig());
-      fixture.detectChanges();
-
-      expect(component.isEllipsis(1)).toBe(false);
-      expect(component.isEllipsis(5)).toBe(false);
-      expect(component.isEllipsis(10)).toBe(false);
+      expect(currentPageButton?.classList.contains('button--selected')).toBe(true);
     });
   });
 
@@ -563,8 +538,8 @@ describe('PaginationComponent', () => {
 
       expect(component.canGoToNext()).toBe(true);
       expect(component.canGoToPrevious()).toBe(true);
-      const pages = component.visiblePages();
-      expect(pages).toContain(500);
+      const slots = component.visiblePageSlots();
+      expect(pageValues(slots)).toContain(500);
     });
 
     it('should handle page size larger than total items', () => {
@@ -585,10 +560,10 @@ describe('PaginationComponent', () => {
       );
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages.length).toBeGreaterThan(1); // Should still show first and last
-      expect(pages[0]).toBe(1);
-      expect(pages[pages.length - 1]).toBe(10);
+      const slots = component.visiblePageSlots();
+      expect(slots.length).toBeGreaterThan(1);
+      expect(pageValues(slots)[0]).toBe(1);
+      expect(pageValues(slots).at(-1)).toBe(10);
     });
 
     it('should handle undefined maxVisiblePages', () => {
@@ -598,8 +573,8 @@ describe('PaginationComponent', () => {
       fixture.componentRef.setInput('config', config);
       fixture.detectChanges();
 
-      const pages = component.visiblePages();
-      expect(pages.length).toBeGreaterThan(0);
+      const slots = component.visiblePageSlots();
+      expect(slots.length).toBeGreaterThan(0);
     });
   });
 
@@ -638,10 +613,13 @@ describe('PaginationComponent', () => {
       fixture.detectChanges();
 
       expect(component.infoText()).toBe('Showing 2451-2500 of 10000');
-      const pages = component.visiblePages();
-      expect(pages).toContain(50);
-      expect(pages[0]).toBe(1);
-      expect(pages[pages.length - 1]).toBe(200);
+      const slots = component.visiblePageSlots();
+      const values = slots
+        .filter((slot): slot is Extract<typeof slot, { kind: 'page' }> => slot.kind === 'page')
+        .map(slot => slot.value);
+      expect(values).toContain(50);
+      expect(values[0]).toBe(1);
+      expect(values.at(-1)).toBe(200);
     });
 
     it('should handle search results with few items', () => {
@@ -724,7 +702,7 @@ describe('PaginationComponent', () => {
 
       // Should still work with minimal config
       expect(component.canGoToNext()).toBe(true);
-      expect(component.visiblePages()).toEqual([]);
+      expect(component.visiblePageSlots()).toEqual([]);
     });
 
     it('should handle full-featured configuration', () => {
@@ -746,7 +724,7 @@ describe('PaginationComponent', () => {
       fixture.detectChanges();
 
       expect(component.infoText()).toBe('Showing 41-50 of 200');
-      expect(component.visiblePages().length).toBeGreaterThan(0);
+      expect(component.visiblePageSlots().length).toBeGreaterThan(0);
       expect(component.pageSizeItems().length).toBe(4);
       expect(component.canGoToFirst()).toBe(true);
       expect(component.canGoToLast()).toBe(true);

@@ -86,6 +86,10 @@
     user-select: none;
     pointer-events: none;
 
+    &--hidden {
+      visibility: hidden;
+    }
+
     .pagination--small & {
       min-width: 24px;
       height: 24px;

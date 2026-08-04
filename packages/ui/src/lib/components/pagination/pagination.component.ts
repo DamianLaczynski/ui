@@ -20,6 +20,9 @@ export interface PaginationConfig {
   showInfo?: boolean;
 }
 
+export type PaginationPageSlot =
+  { kind: 'page'; value: number } | { kind: 'ellipsis'; key: 'start' | 'end'; hidden: boolean };
+
 @Component({
   selector: 'ui-pagination',
   templateUrl: './pagination.component.html',
@@ -37,56 +40,49 @@ export class PaginationComponent {
   pageChange = output<number>();
   pageSizeChange = output<number>();
 
-  // Computed properties
-  visiblePages = computed(() => {
+  visiblePageSlots = computed<PaginationPageSlot[]>(() => {
     const cfg = this.config();
-    if (!cfg.showPageNumbers) {
+    if (!cfg.showPageNumbers || cfg.totalPages <= 0) {
       return [];
     }
 
     const current = cfg.currentPage;
     const total = cfg.totalPages;
-    const maxVisible = cfg.maxVisiblePages || 3;
-    const pages: number[] = [];
+    const windowSize = cfg.maxVisiblePages ?? 3;
 
-    if (total <= maxVisible) {
-      // Show all pages if total is less than max visible
-      for (let i = 1; i <= total; i++) {
-        pages.push(i);
-      }
-    } else {
-      // Calculate range to show
-      let start = Math.max(1, current - Math.floor(maxVisible / 2));
-      const end = Math.min(total, start + maxVisible - 1);
-
-      // Adjust start if we're near the end
-      if (end === total) {
-        start = Math.max(1, total - maxVisible + 1);
-      }
-
-      // Always show first page
-      if (start > 1) {
-        pages.push(1);
-        if (start > 2) {
-          pages.push(-1); // Ellipsis marker
-        }
-      }
-
-      // Show page range
-      for (let i = start; i <= end; i++) {
-        pages.push(i);
-      }
-
-      // Always show last page
-      if (end < total) {
-        if (end < total - 1) {
-          pages.push(-1); // Ellipsis marker
-        }
-        pages.push(total);
-      }
+    if (total <= windowSize + 2) {
+      return Array.from({ length: total }, (_, index) => ({
+        kind: 'page' as const,
+        value: index + 1,
+      }));
     }
 
-    return pages;
+    let windowStart = current - Math.floor(windowSize / 2);
+    let windowEnd = windowStart + windowSize - 1;
+
+    if (windowStart < 2) {
+      windowStart = 2;
+      windowEnd = windowStart + windowSize - 1;
+    }
+
+    if (windowEnd > total - 1) {
+      windowEnd = total - 1;
+      windowStart = windowEnd - windowSize + 1;
+    }
+
+    const slots: PaginationPageSlot[] = [
+      { kind: 'page', value: 1 },
+      { kind: 'ellipsis', key: 'start', hidden: windowStart <= 2 },
+    ];
+
+    for (let page = windowStart; page <= windowEnd; page++) {
+      slots.push({ kind: 'page', value: page });
+    }
+
+    slots.push({ kind: 'ellipsis', key: 'end', hidden: windowEnd >= total - 1 });
+    slots.push({ kind: 'page', value: total });
+
+    return slots;
   });
 
   canGoToFirst = computed(() => {
@@ -131,27 +127,15 @@ export class PaginationComponent {
   });
 
   getButtonAppearance(page: number): 'filled' | 'outline' | 'subtle' | 'transparent' {
-    const cfg = this.config();
-    if (page === cfg.currentPage) {
-      return 'filled';
-    }
-    return 'subtle';
+    return page === this.config().currentPage ? 'filled' : 'subtle';
   }
 
   getButtonVariant(page: number): Variant {
-    const cfg = this.config();
-    if (page === cfg.currentPage) {
-      return 'primary';
-    }
-    return 'secondary';
-  }
-
-  isEllipsis(page: number): boolean {
-    return page === -1;
+    return page === this.config().currentPage ? 'primary' : 'secondary';
   }
 
   onPageClick(page: number): void {
-    if (page === -1 || page === this.config().currentPage) {
+    if (page === this.config().currentPage) {
       return;
     }
     this.pageChange.emit(page);

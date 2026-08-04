@@ -198,7 +198,8 @@ export class MenuComponent implements OnDestroy {
   openMenu(): void {
     if (this.isMenuOpen() || !this.menuItems().length) return;
 
-    const triggerEl = this.menuTrigger.nativeElement;
+    const overlayTrigger = this.getOverlayTriggerElementRef();
+    const triggerEl = overlayTrigger.nativeElement;
     const triggerWidth = triggerEl.offsetWidth;
     const isSubmenu = this.openAsSubmenu();
     const positions = isSubmenu ? MENU_SUBMENU_POSITIONS : MENU_OVERLAY_POSITIONS;
@@ -218,7 +219,7 @@ export class MenuComponent implements OnDestroy {
       overlay: this.overlay,
       scrollDispatcher: this.scrollDispatcher,
       ngZone: this.ngZone,
-      trigger: this.menuTrigger,
+      trigger: overlayTrigger,
       template: this.menuTemplate,
       viewContainerRef: this.viewContainerRef,
       config: {
@@ -261,7 +262,17 @@ export class MenuComponent implements OnDestroy {
     this.closeMenu();
   }
 
+  getOverlayTriggerElementRef(): ElementRef<HTMLElement> {
+    if (this.isSplit() && this.splitDropdownPart) {
+      return this.splitDropdownPart;
+    }
+    return this.menuTrigger;
+  }
+
   getTriggerElementRef(): ElementRef<HTMLElement> | null {
+    if (this.isSplit() && this.hasMenuItems() && this.splitDropdownPart) {
+      return this.splitDropdownPart;
+    }
     if (this.isSplit() && this.splitPrimaryPart) {
       return this.splitPrimaryPart;
     }
