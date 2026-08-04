@@ -843,7 +843,7 @@ export class LspTabsPreviewComponent {
   changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
-      <ui-tag text="Angular 21" />
+      <ui-tag text="Angular 22" />
       <ui-tag text="Fluent-inspired" variant="primary" />
       <ui-tag text="WCAG 2.2 AA" variant="success" />
     </div>

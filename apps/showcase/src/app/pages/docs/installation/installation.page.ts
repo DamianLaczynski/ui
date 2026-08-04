@@ -20,8 +20,8 @@ export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
         {
           type: 'list',
           items: [
-            'Node.js 18+ (LTS recommended)',
-            'Angular 17+ project (standalone or module-based)',
+            'Node.js 22.22.3+ (Node 24 LTS recommended)',
+            'Angular 22+ project (standalone or module-based)',
             'Package manager: npm',
           ],
         },

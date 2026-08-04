@@ -50,7 +50,7 @@ export class DsComponent implements OnInit, OnDestroy, AfterViewInit {
   readonly themeBuilder = inject(ThemeBuilderService);
 
   readonly version = environment.libraryVersion;
-  readonly githubUrl = 'https://github.com/damianlaczynski/Ui';
+  readonly githubUrl = 'https://github.com/laczynski/Ui';
   readonly npmUrl = 'https://www.npmjs.com/';
 
   isDarkMode = computed(() => this.themeService.$themeMode() === ThemeMode.Dark);

@@ -37,8 +37,8 @@ Import symbols from `@laczynski/ui` in your Angular application; see the docs fo
 
 ## Disclaimer
 
-This package is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Icons use `@fluentui/svg-icons` (MIT). See the repository [`docs/legal-notice.md`](https://github.com/damianlaczynski/Ui/blob/main/docs/legal-notice.md).
+This package is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Icons use `@fluentui/svg-icons` (MIT). See the repository [`docs/legal-notice.md`](https://github.com/laczynski/Ui/blob/main/docs/legal-notice.md).
 
 ## License
 
-Published as **@laczynski/ui** under the [MIT License](https://opensource.org/licenses/MIT). Full text: [`LICENSE`](https://github.com/damianlaczynski/ui/blob/main/LICENSE) in the repository root.
+Published as **@laczynski/ui** under the [MIT License](https://opensource.org/licenses/MIT). Full text: [`LICENSE`](https://github.com/laczynski/Ui/blob/main/LICENSE) in the repository root.

@@ -7,5 +7,5 @@ export const environment = {
   appVersion: monorepoPackage.version,
   libraryVersion: uiPackage.version,
   apiUrl: 'http://localhost:5000',
-  githubRepoUrl: 'https://github.com/damianlaczynski/Ui/',
+  githubRepoUrl: 'https://github.com/laczynski/Ui/',
 };

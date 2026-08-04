@@ -48,7 +48,7 @@ npmjs.com → `@laczynski/ui` → **Settings** → **Trusted Publisher** → **G
 
 | Field                | Value              |
 | -------------------- | ------------------ |
-| Organization or user | `damianlaczynski` |
+| Organization or user | `laczynski` |
 | Repository           | `Ui`                |
 | Workflow filename    | `publish.yml`      |
 | Environment          | *(leave empty)*    |
