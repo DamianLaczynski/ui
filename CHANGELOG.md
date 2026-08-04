@@ -23,6 +23,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - **i18n** — upgraded `@ngx-translate/core` and `@ngx-translate/http-loader` to 18.0.
 - **Change detection** — migrated default-strategy components to Angular 22's `ChangeDetectionStrategy.Eager` compatibility mode; components already using `OnPush` retain that strategy.
 
+### Fixed
+
+- **Menu** — menu rows, including split buttons and nested submenu entries, now consistently fill the available overlay width.
+
 ## [2.0.0-preview] - 2026-07-21
 
 ### Added
