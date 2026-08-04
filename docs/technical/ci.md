@@ -17,7 +17,7 @@ Triggers: push and pull request to `main`.
 | `test-lib` | `npm ci` → `npm run build:lib` → typecheck specs → `ng test ui --watch=false` | — |
 | `build` | `npm ci` → `npm run build:lib` → `npm run build:ui-showcase` | `lint`, `test`, `test-lib` |
 
-All jobs use Node 20 with npm cache.
+All jobs use Node 24 with npm cache.
 
 ### Deploy
 

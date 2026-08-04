@@ -38,7 +38,7 @@ Full setup, styling, and per-component usage: [Getting started](https://ui.laczy
 ## Develop locally
 
 ```bash
-git clone https://github.com/damianlaczynski/Ui.git
+git clone https://github.com/laczynski/Ui.git
 cd Ui
 npm install
 npm start

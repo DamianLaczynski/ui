@@ -6,7 +6,7 @@
 
 ## Stack summary
 
-Angular 21 standalone components with strict TypeScript, ESLint, and Prettier. Styling uses SCSS with a 7-1 architecture and BEM methodology. Icons come from `@fluentui/svg-icons` via a generated sprite. State uses Angular signals (`input()`, `model()`, `output()`, `computed()`).
+Angular 22 standalone components with strict TypeScript, ESLint, and Prettier. Styling uses SCSS with a 7-1 architecture and BEM methodology. Icons come from `@fluentui/svg-icons` via a generated sprite. State uses Angular signals (`input()`, `model()`, `output()`, `computed()`).
 
 For dev server, lint, format, and test commands, see [`AGENTS.md`](../../AGENTS.md).
 

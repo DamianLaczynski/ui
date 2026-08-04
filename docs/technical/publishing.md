@@ -48,12 +48,14 @@ npmjs.com → `@laczynski/ui` → **Settings** → **Trusted Publisher** → **G
 
 | Field                | Value              |
 | -------------------- | ------------------ |
-| Organization or user | `damianlaczynski` |
+| Organization or user | `laczynski` |
 | Repository           | `Ui`                |
 | Workflow filename    | `publish.yml`      |
 | Environment          | *(leave empty)*    |
 
 No `NPM_TOKEN` secret — CI uses OIDC (npm CLI ≥ 11.5.1).
+
+The package manifest explicitly targets `https://registry.npmjs.org/`; publishing remains triggered only by a pushed `v*` tag.
 
 ### GitHub repository settings
 
