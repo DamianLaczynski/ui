@@ -37,21 +37,30 @@
     <!-- Page Numbers -->
     @if (config().showPageNumbers) {
       <div class="pagination__pages">
-        @for (page of visiblePages(); track $index) {
-          @if (isEllipsis(page)) {
-            <span class="pagination__ellipsis">...</span>
+        @for (
+          slot of visiblePageSlots();
+          track slot.kind === 'page' ? 'page-' + slot.value : slot.key
+        ) {
+          @if (slot.kind === 'ellipsis') {
+            <span
+              class="pagination__ellipsis"
+              [class.pagination__ellipsis--hidden]="slot.hidden"
+              aria-hidden="true"
+            >
+              ...
+            </span>
           } @else {
             <ui-button
-              [appearance]="getButtonAppearance(page)"
-              [variant]="getButtonVariant(page)"
+              [appearance]="getButtonAppearance(slot.value)"
+              [variant]="getButtonVariant(slot.value)"
               [size]="size()"
-              [selected]="page === config().currentPage"
-              (click)="onPageClick(page)"
-              [attr.aria-label]="getPageAriaLabel(page)"
-              [attr.aria-current]="page === config().currentPage ? 'page' : null"
+              [selected]="slot.value === config().currentPage"
+              (click)="onPageClick(slot.value)"
+              [attr.aria-label]="getPageAriaLabel(slot.value)"
+              [attr.aria-current]="slot.value === config().currentPage ? 'page' : null"
               class="pagination__button pagination__button--page"
             >
-              {{ page }}
+              {{ slot.value }}
             </ui-button>
           }
         }
