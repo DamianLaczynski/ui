@@ -11,11 +11,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
-## [2.0.0-preview.5] - 2026-08-04
+## [2.0.0-preview.6] - 2026-08-04
 
 ### Changed
 
 - **Angular** — upgraded the workspace, build tooling, CDK, and `@laczynski/ui` peer dependencies to Angular 22.1.
+- **Documentation** — updated both README files with Angular 22, CDK 22, and Node.js requirements.
 - **CI** — upgraded validation and Pages deployment workflows to Node 24, required by Angular CLI 22.
 - **Publishing** — aligned package repository metadata with the GitHub repository for npm provenance verification.
 - **Publishing** — publish every release to both npmjs.com and GitHub Packages.
