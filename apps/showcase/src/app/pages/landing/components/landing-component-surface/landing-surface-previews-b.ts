@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { delay, of } from 'rxjs';
 import {
@@ -71,6 +71,7 @@ interface LspScrollRow {
   selector: 'app-lsp-nav',
   standalone: true,
   imports: [NavComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <ui-nav [items]="items" [autoScrollToSelected]="false" /> `,
 })
 export class LspNavPreviewComponent {
@@ -96,6 +97,7 @@ export class LspNavPreviewComponent {
   selector: 'app-lsp-node',
   standalone: true,
   imports: [NodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.5rem;width:100%;min-width:0">
       <ui-node [node]="nodes.basic" appearance="subtle" />
@@ -156,6 +158,7 @@ export class LspNodePreviewComponent {
   selector: 'app-lsp-number',
   standalone: true,
   imports: [FormsModule, NumberComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-number label="Licensed seats" [(ngModel)]="value" [ngModelOptions]="{ standalone: true }" />
   `,
@@ -168,6 +171,7 @@ export class LspNumberPreviewComponent {
   selector: 'app-lsp-pagination',
   standalone: true,
   imports: [PaginationComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-pagination [config]="paginationConfig()" (pageChange)="currentPage.set($event)" />
   `,
@@ -197,6 +201,7 @@ export class LspPaginationPreviewComponent {
   selector: 'app-lsp-password',
   standalone: true,
   imports: [FormsModule, PasswordComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-password
       label="Workspace password"
@@ -213,6 +218,7 @@ export class LspPasswordPreviewComponent {
   selector: 'app-lsp-progress-bar',
   standalone: true,
   imports: [ProgressBarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.35rem;width:100%">
       <span style="font-size:0.75rem;color:var(--color-neutral-foreground2-rest)"
@@ -234,6 +240,7 @@ export class LspProgressBarPreviewComponent {}
   selector: 'app-lsp-radio-button-group',
   standalone: true,
   imports: [FormsModule, RadioButtonGroupComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%">
       <ui-radio-button-group
@@ -277,6 +284,7 @@ export class LspRadioButtonGroupPreviewComponent {
   selector: 'app-lsp-rating',
   standalone: true,
   imports: [RatingComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.35rem;width:100%">
       <span style="font-size:0.75rem;color:var(--color-neutral-foreground2-rest)"
@@ -299,6 +307,7 @@ export class LspRatingPreviewComponent {
   selector: 'app-lsp-scroll-container',
   standalone: true,
   imports: [ScrollContainerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-scroll-container
       [dataSource]="dataSource"
@@ -343,6 +352,7 @@ export class LspScrollContainerPreviewComponent {
   selector: 'app-lsp-scroll-panel',
   standalone: true,
   imports: [ScrollPanelComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-scroll-panel maxHeight="14rem" scrollbarBehavior="always" ariaLabel="Workspace activity">
       <div style="display:flex;flex-direction:column;gap:0.5rem">
@@ -378,6 +388,7 @@ export class LspScrollPanelPreviewComponent {
   selector: 'app-lsp-search',
   standalone: true,
   imports: [FormsModule, SearchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-search
       [(ngModel)]="query"
@@ -394,6 +405,7 @@ export class LspSearchPreviewComponent {
   selector: 'app-lsp-skeleton',
   standalone: true,
   imports: [SkeletonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="width:100%;max-width:20rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:0.75rem;padding:0.85rem;background:var(--color-neutral-background-rest);display:flex;flex-direction:column;gap:0.75rem"
@@ -420,6 +432,7 @@ export class LspSkeletonPreviewComponent {}
   selector: 'app-lsp-slider',
   standalone: true,
   imports: [FormsModule, SliderComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-slider
       label="Canary rollout"
@@ -438,6 +451,7 @@ export class LspSliderPreviewComponent {
   selector: 'app-lsp-speed-dial',
   standalone: true,
   imports: [SpeedDialComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;justify-content:center;padding:0.5rem">
       <ui-speed-dial
@@ -459,6 +473,7 @@ export class LspSpeedDialPreviewComponent {
   selector: 'app-lsp-range',
   standalone: true,
   imports: [FormsModule, RangeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1.25rem;width:100%">
       <ui-range
@@ -506,6 +521,7 @@ export class LspRangePreviewComponent {
   selector: 'app-lsp-spinner',
   standalone: true,
   imports: [SpinnerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;width:100%;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.85rem 1rem;align-items:start;box-sizing:border-box"
@@ -551,6 +567,7 @@ export class LspSpinnerPreviewComponent {}
   selector: 'app-lsp-splitter',
   standalone: true,
   imports: [SplitterComponent, SplitterPanelDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="height:14rem;border-radius:0.75rem;overflow:hidden;border:1px solid var(--color-neutral-stroke-rest)"
@@ -617,6 +634,7 @@ interface LspStepperWizardStep extends Step {
   selector: 'app-lsp-stepper',
   standalone: true,
   imports: [StepperComponent, CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%;min-width:0">
       <ui-stepper
@@ -690,6 +708,7 @@ export class LspStepperPreviewComponent {
   selector: 'app-lsp-switch',
   standalone: true,
   imports: [FormsModule, SwitchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.75rem;width:100%;align-items:start"
@@ -718,6 +737,7 @@ export class LspSwitchPreviewComponent {
   selector: 'app-lsp-table-of-content',
   standalone: true,
   imports: [TableOfContentComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:1rem;width:100%">
       <div style="flex:0 0 11rem">
@@ -783,6 +803,7 @@ export class LspTableOfContentPreviewComponent {}
   selector: 'app-lsp-tabs',
   standalone: true,
   imports: [TabsComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%">
       <ui-tabs
@@ -819,6 +840,7 @@ export class LspTabsPreviewComponent {
   selector: 'app-lsp-tag',
   standalone: true,
   imports: [TagComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
       <ui-tag text="Angular 21" />
@@ -833,6 +855,7 @@ export class LspTagPreviewComponent {}
   selector: 'app-lsp-tel',
   standalone: true,
   imports: [FormsModule, TelComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-tel
       label="Escalation hotline"
@@ -850,6 +873,7 @@ export class LspTelPreviewComponent {
   selector: 'app-lsp-text',
   standalone: true,
   imports: [FormsModule, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-text
       label="Workspace display name"
@@ -866,6 +890,7 @@ export class LspTextPreviewComponent {
   selector: 'app-lsp-textarea',
   standalone: true,
   imports: [FormsModule, TextareaComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-textarea
       label="Release notes · customer-facing"
@@ -884,6 +909,7 @@ export class LspTextareaPreviewComponent {
   selector: 'app-lsp-time',
   standalone: true,
   imports: [FormsModule, TimeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-time
       label="Maintenance starts"
@@ -900,6 +926,7 @@ export class LspTimePreviewComponent {
   selector: 'app-lsp-time-picker',
   standalone: true,
   imports: [TimePickerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-time-picker
       [value]="selectedTime"
@@ -919,6 +946,7 @@ export class LspTimePickerPreviewComponent {
   selector: 'app-lsp-time-span',
   standalone: true,
   imports: [FormsModule, TimeSpanComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-time-span
       label="Rollback SLA"
@@ -937,6 +965,7 @@ export class LspTimeSpanPreviewComponent {
   selector: 'app-lsp-toast',
   standalone: true,
   imports: [ToastComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-toast
       variant="success"
@@ -955,6 +984,7 @@ export class LspToastPreviewComponent {
   selector: 'app-lsp-toolbar',
   standalone: true,
   imports: [ToolbarComponent, MenuComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-toolbar [items]="toolbarItems" size="medium">
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.35rem;min-width:0">
@@ -1168,6 +1198,7 @@ export class LspToolbarPreviewComponent {
   selector: 'app-lsp-tooltip',
   standalone: true,
   imports: [ButtonComponent, TooltipDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;width:100%">
       <ui-button
@@ -1208,6 +1239,7 @@ export class LspTooltipPreviewComponent {}
   selector: 'app-lsp-totp',
   standalone: true,
   imports: [TotpComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <ui-totp label="Authenticator code" /> `,
 })
 export class LspTotpPreviewComponent {}
@@ -1216,6 +1248,7 @@ export class LspTotpPreviewComponent {}
   selector: 'app-lsp-tree',
   standalone: true,
   imports: [TreeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <ui-tree [nodes]="nodes" [showSelectionIndicator]="true" /> `,
 })
 export class LspTreePreviewComponent {
@@ -1278,6 +1311,7 @@ export class LspTreePreviewComponent {
   selector: 'app-lsp-tree-node',
   standalone: true,
   imports: [TreeNodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-tree-node [node]="node" [expandOnClick]="true" [showSelectionIndicator]="true" />
   `,
@@ -1322,6 +1356,7 @@ export class LspTreeNodePreviewComponent {
   selector: 'app-lsp-url',
   standalone: true,
   imports: [FormsModule, UrlComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-url label="Public docs URL" [(ngModel)]="value" [ngModelOptions]="{ standalone: true }" />
   `,
@@ -1334,6 +1369,7 @@ export class LspUrlPreviewComponent {
   selector: 'app-lsp-context-menu',
   standalone: true,
   imports: [ContextMenuDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       uiContextMenu
@@ -1360,6 +1396,7 @@ export class LspContextMenuPreviewComponent {
   selector: 'app-lsp-popover',
   standalone: true,
   imports: [ButtonComponent, PopoverDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;align-items:center;justify-content:center;min-height:6.5rem;width:100%"
@@ -1393,6 +1430,7 @@ export class LspPopoverPreviewComponent {}
   selector: 'app-lsp-timeline',
   standalone: true,
   imports: [TimelineComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <ui-timeline [items]="items" ariaLabel="Release activity" size="small" /> `,
 })
 export class LspTimelinePreviewComponent {

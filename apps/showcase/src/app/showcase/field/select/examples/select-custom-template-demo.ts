@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IconComponent, SelectComponent, type SelectItem } from 'ui';
 
@@ -39,6 +39,7 @@ const environmentItems: EnvironmentItem[] = [
 @Component({
   selector: 'app-select-custom-template-example',
   imports: [FormsModule, SelectComponent, IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:46rem"

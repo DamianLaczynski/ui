@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SwitchComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { SwitchComponent } from 'ui';
   selector: 'app-switch-label-positions-example',
   standalone: true,
   imports: [FormsModule, SwitchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem;width:100%;max-width:40rem"

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SkeletonComponent } from 'ui';
 
 @Component({
   selector: 'app-skeleton-list-shell-example',
   standalone: true,
   imports: [SkeletonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:36rem">
       @for (row of [1, 2, 3, 4]; track row) {

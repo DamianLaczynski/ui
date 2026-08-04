@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { DividerComponent, MessageBarComponent, TableOfContentComponent } from 'ui';
 
 @Component({
   selector: 'app-table-of-content-doc-layout-demo',
   standalone: true,
   imports: [DividerComponent, MessageBarComponent, TableOfContentComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:minmax(14rem,16rem) minmax(0,1fr);gap:1rem;width:100%;max-width:62rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

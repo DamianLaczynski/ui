@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TextComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { TextComponent } from 'ui';
   selector: 'app-text-label-clear-example',
   standalone: true,
   imports: [FormsModule, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:30rem">
       <ui-text

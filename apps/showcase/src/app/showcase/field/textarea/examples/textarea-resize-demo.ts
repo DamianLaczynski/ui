@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TextareaComponent } from 'ui';
 
 @Component({
   selector: 'app-textarea-resize-demo',
   standalone: true,
   imports: [TextareaComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1.5rem;width:100%;max-width:56rem">
       <div

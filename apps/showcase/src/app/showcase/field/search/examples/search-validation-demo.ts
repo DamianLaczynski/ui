@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, SearchComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, SearchComponent } from 'ui';
   selector: 'app-search-validation-demo',
   standalone: true,
   imports: [ButtonComponent, ReactiveFormsModule, SearchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="searchForm"

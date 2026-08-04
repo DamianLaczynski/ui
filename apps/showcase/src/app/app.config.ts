@@ -1,6 +1,6 @@
 import { ApplicationConfig, LOCALE_ID, inject, provideAppInitializer } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withXhr } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import localeEn from '@angular/common/locales/en';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
@@ -15,7 +15,7 @@ registerLocaleData(localeEn);
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withComponentInputBinding()),
-    provideHttpClient(),
+    provideHttpClient(withXhr()),
     provideTranslateService({
       lang: 'en',
       fallbackLang: 'en',

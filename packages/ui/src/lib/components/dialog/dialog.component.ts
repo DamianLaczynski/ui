@@ -8,6 +8,7 @@ import {
   computed,
   effect,
   signal,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { A11yModule } from '@angular/cdk/a11y';
@@ -21,6 +22,7 @@ export type DialogBackdrop = 'static' | 'dynamic';
   selector: 'ui-dialog',
   templateUrl: './dialog.component.html',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, A11yModule, ButtonComponent, IconComponent],
 })
 export class DialogComponent {

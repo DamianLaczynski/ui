@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TimePickerComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { TimePickerComponent } from 'ui';
   selector: 'app-time-picker-basic-demo',
   standalone: true,
   imports: [FormsModule, TimePickerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:26rem;">
       <ui-time-picker

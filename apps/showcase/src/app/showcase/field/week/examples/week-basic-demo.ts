@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, WeekComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, WeekComponent } from 'ui';
   selector: 'app-week-basic-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, WeekComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;max-width:22rem">
       <ui-week

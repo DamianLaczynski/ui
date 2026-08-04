@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CardComponent } from 'ui';
 
 @Component({
   selector: 'app-card-focus-mode-demo',
   standalone: true,
   imports: [ButtonComponent, CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:grid;gap:1rem;width:100%;">
       <ui-card appearance="outline" borderStyle="dashed" ariaLabel="Focus mode helper">

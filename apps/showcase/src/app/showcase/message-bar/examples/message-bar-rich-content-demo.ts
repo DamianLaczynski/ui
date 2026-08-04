@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, MessageBarComponent } from 'ui';
 
 @Component({
   selector: 'app-message-bar-rich-content-example',
   standalone: true,
   imports: [ButtonComponent, MessageBarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:46rem">
       <ui-message-bar

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SplitterComponent, SplitterPanelDirective, type SplitterPanel } from 'ui';
 
 @Component({
   selector: 'app-splitter-nested-workspace-demo',
   standalone: true,
   imports: [SplitterComponent, SplitterPanelDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:62rem">
       <div style="font-size:0.875rem;line-height:1.5;color:var(--color-neutral-foreground2-rest)">

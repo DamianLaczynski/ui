@@ -11,6 +11,7 @@ import {
   OnInit,
   OnChanges,
   SimpleChanges,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
@@ -30,6 +31,7 @@ import { UiI18nService } from '../../../i18n';
       multi: true,
     },
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

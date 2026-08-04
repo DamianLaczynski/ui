@@ -1,10 +1,11 @@
-import { Component, model, signal } from '@angular/core';
+import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
 
 @Component({
   selector: 'app-drawer-behavior-example',
   standalone: true,
   imports: [ButtonComponent, DrawerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
       <ui-button appearance="outline" (click)="dynamicVisible.set(true)"

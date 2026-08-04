@@ -1,5 +1,5 @@
 /// <reference types="vitest/globals" />
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
@@ -10,6 +10,7 @@ import type { MenuItem } from '../menu/models/menu-item.model';
 @Component({
   standalone: true,
   imports: [ContextMenuDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       uiContextMenu

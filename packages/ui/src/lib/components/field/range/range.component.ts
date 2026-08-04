@@ -7,6 +7,7 @@ import {
   model,
   signal,
   ViewChild,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -24,6 +25,7 @@ export type SliderRangeValue = NumericRange;
   selector: 'ui-range',
   imports: [CommonModule, FieldComponent],
   templateUrl: './range.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

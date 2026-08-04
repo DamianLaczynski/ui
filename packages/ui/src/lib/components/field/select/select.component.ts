@@ -15,6 +15,7 @@ import {
   TemplateRef,
   contentChild,
   NgZone,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { A11yModule } from '@angular/cdk/a11y';
@@ -65,6 +66,7 @@ export type SelectMode = 'single' | 'multi';
     '[style.display]': '"block"',
     '[class.select--focus-within]': 'isOpen() && isNavigating()',
   },
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

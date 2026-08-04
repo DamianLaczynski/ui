@@ -1,4 +1,4 @@
-import { Component, forwardRef, input } from '@angular/core';
+import { Component, forwardRef, input, ChangeDetectionStrategy } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FieldComponent } from '../field/field.component';
 
@@ -19,6 +19,7 @@ export type TextareaResize = 'none' | 'both' | 'horizontal' | 'vertical';
     class: 'ui-textarea',
     '[class.ui-textarea--resizable-inline]': 'resize() === "horizontal" || resize() === "both"',
   },
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

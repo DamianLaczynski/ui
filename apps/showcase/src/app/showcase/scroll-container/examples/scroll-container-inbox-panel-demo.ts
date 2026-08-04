@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { delay, of } from 'rxjs';
 import {
   ButtonComponent,
@@ -19,6 +19,7 @@ interface InboxItem {
   selector: 'app-scroll-container-inbox-panel-demo',
   standalone: true,
   imports: [ButtonComponent, MessageBarComponent, ScrollContainerComponent, SearchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:34rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

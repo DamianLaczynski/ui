@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, SwitchComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, SwitchComponent } from 'ui';
   selector: 'app-switch-helper-validation-example',
   standalone: true,
   imports: [FormsModule, ButtonComponent, SwitchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:32rem"

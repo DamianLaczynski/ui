@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BadgeComponent } from 'ui';
 
 @Component({
   selector: 'app-badge-basic-demo',
   standalone: true,
   imports: [BadgeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem">
       <div

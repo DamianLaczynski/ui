@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CardComponent, MessageBarComponent, TimePickerComponent } from 'ui';
 
 @Component({
   selector: 'app-time-picker-scheduling-panel-demo',
   standalone: true,
   imports: [ButtonComponent, CardComponent, MessageBarComponent, TimePickerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card appearance="filled-alternative" ariaLabel="Interview scheduling panel">
       <div

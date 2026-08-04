@@ -1,10 +1,11 @@
-import { Component, model, signal } from '@angular/core';
+import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, DialogComponent, QuickAction } from 'ui';
 
 @Component({
   selector: 'app-dialog-basic-example',
   standalone: true,
   imports: [ButtonComponent, DialogComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
       <ui-button variant="primary" (click)="visible.set(true)">Delete project</ui-button>

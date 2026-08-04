@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, MenuComponent, SearchComponent, type MenuItem } from 'ui';
 
 @Component({
   selector: 'app-menu-workspace-header-demo',
   standalone: true,
   imports: [ButtonComponent, MenuComponent, SearchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:56rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

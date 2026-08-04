@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BadgeComponent, ButtonComponent, IconComponent } from 'ui';
 
 @Component({
   selector: 'app-icon-semantic-demo',
   standalone: true,
   imports: [IconComponent, ButtonComponent, BadgeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <section
       style="display:grid;gap:1rem;max-width:48rem;padding:1.25rem;border:1px solid color-mix(in srgb,var(--color-neutral-stroke-rest) 70%,transparent);border-radius:1rem;background:color-mix(in srgb,var(--color-neutral-background-rest) 92%,white);"

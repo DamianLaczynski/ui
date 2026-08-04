@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RadioButtonGroupComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { RadioButtonGroupComponent } from 'ui';
   selector: 'app-radio-button-group-settings-panel-demo',
   standalone: true,
   imports: [ReactiveFormsModule, RadioButtonGroupComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:44rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

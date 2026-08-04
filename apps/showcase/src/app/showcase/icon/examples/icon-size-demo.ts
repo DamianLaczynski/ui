@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { IconComponent, Size } from 'ui';
 
 const sizes: Array<{ size: Size; label: string }> = [
@@ -11,6 +11,7 @@ const sizes: Array<{ size: Size; label: string }> = [
   selector: 'app-icon-size-demo',
   standalone: true,
   imports: [IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));max-width:44rem;"

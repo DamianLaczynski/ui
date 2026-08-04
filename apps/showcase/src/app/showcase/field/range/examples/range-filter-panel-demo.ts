@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NumericRange, RangeComponent, CheckboxComponent, ButtonComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { NumericRange, RangeComponent, CheckboxComponent, ButtonComponent } from
   selector: 'app-range-filter-panel-demo',
   standalone: true,
   imports: [FormsModule, RangeComponent, CheckboxComponent, ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <section
       style="display:grid;gap:1rem;max-width:52rem;padding:1.25rem;border:1px solid color-mix(in srgb,var(--color-neutral-stroke-rest) 70%,transparent);border-radius:1rem;background:color-mix(in srgb,var(--color-neutral-background-rest) 92%,white);"

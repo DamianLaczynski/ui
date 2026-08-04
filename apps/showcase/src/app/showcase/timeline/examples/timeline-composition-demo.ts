@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, TagComponent, TimelineComponent, TimelineItemComponent } from 'ui';
 
 @Component({
   selector: 'app-timeline-composition-demo',
   standalone: true,
   imports: [TimelineComponent, TimelineItemComponent, TagComponent, ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="width:100%;max-width:38rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

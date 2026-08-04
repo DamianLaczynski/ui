@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FileComponent } from 'ui';
 
 @Component({
   selector: 'app-file-filters-limits-demo',
   standalone: true,
   imports: [FileComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%">
       <div style="flex:1 1 16rem;min-width:15rem">

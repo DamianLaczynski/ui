@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DateComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { DateComponent } from 'ui';
   selector: 'app-date-constraints-demo',
   standalone: true,
   imports: [FormsModule, DateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;max-width:22rem">
       <ui-date

@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, ProgressBarComponent } from 'ui';
 
 @Component({
   selector: 'app-progress-bar-task-flow-example',
   standalone: true,
   imports: [ButtonComponent, ProgressBarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:38rem">
       <div

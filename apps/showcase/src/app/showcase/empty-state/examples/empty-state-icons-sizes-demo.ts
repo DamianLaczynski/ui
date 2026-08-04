@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CardComponent, EmptyStateComponent } from 'ui';
 
 @Component({
   selector: 'app-empty-state-icons-sizes-demo',
   standalone: true,
   imports: [CardComponent, EmptyStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;width:100%;max-width:54rem"

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Step, StepperComponent } from 'ui';
 
 @Component({
   selector: 'app-stepper-step-states-example',
   standalone: true,
   imports: [StepperComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="width:100%;max-width:52rem">
       <ui-stepper [steps]="steps" [activeStepIndex]="1" [clickable]="false" />

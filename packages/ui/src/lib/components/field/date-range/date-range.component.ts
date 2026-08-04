@@ -13,6 +13,7 @@ import {
   OnDestroy,
   inject,
   NgZone,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { A11yModule } from '@angular/cdk/a11y';
@@ -49,6 +50,7 @@ type RangeSelection = 'start' | 'end' | null;
       multi: true,
     },
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

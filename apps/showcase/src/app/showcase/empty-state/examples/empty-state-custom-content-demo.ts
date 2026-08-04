@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CardComponent, EmptyStateComponent } from 'ui';
 
 @Component({
   selector: 'app-empty-state-custom-content-demo',
   standalone: true,
   imports: [ButtonComponent, CardComponent, EmptyStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card
       appearance="filled"

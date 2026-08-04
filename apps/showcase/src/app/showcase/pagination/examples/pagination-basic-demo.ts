@@ -1,10 +1,11 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 import { PaginationComponent, PaginationConfig } from 'ui';
 
 @Component({
   selector: 'app-pagination-basic-example',
   standalone: true,
   imports: [PaginationComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:44rem"

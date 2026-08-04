@@ -1,4 +1,4 @@
-import { Component, OnInit, input, output, model } from '@angular/core';
+import { Component, OnInit, input, output, model, ChangeDetectionStrategy } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContentPosition, InputVariant, Size } from '../../utils';
@@ -42,6 +42,7 @@ export type FieldType =
       }
     `,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, IconComponent],
 })
 export class FieldComponent implements ControlValueAccessor, OnInit {

@@ -10,6 +10,7 @@ import {
   ViewChild,
   OnDestroy,
   inject,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -55,6 +56,7 @@ interface CalendarWeek {
     },
     DateFieldOverlayService,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

@@ -10,6 +10,7 @@ import {
   input,
   OnDestroy,
   inject,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -50,6 +51,7 @@ const MOBILE_BREAKPOINT = '(max-width: 768px)';
     },
     DateFieldOverlayService,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

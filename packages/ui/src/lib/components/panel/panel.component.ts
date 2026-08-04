@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { TabsComponent } from '../tabs/tabs.component';
 import { Node } from '../node/node.component';
@@ -26,6 +26,7 @@ import { Node } from '../node/node.component';
       </div>
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./panel.component.scss'],
 })
 export class PanelComponent {

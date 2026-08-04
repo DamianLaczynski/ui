@@ -8,6 +8,7 @@ import {
   signal,
   ViewChild,
   ElementRef,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -17,6 +18,7 @@ import { FieldComponent } from '../field/field.component';
   selector: 'ui-slider',
   imports: [CommonModule, FieldComponent],
   templateUrl: './slider.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

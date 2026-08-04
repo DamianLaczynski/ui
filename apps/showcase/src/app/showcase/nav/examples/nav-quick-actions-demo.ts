@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, TemplateRef, signal, viewChild } from '@angular/core';
+import { Component, TemplateRef, signal, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, NavComponent, type NavNode } from 'ui';
 
 @Component({
   selector: 'app-nav-quick-actions-demo',
   standalone: true,
   imports: [CommonModule, ButtonComponent, NavComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:46rem"

@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, ToastContainerComponent, ToastService } from 'ui';
 
 @Component({
   selector: 'app-toast-service-example',
   standalone: true,
   imports: [ButtonComponent, ToastContainerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%">
       <div

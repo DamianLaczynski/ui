@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -18,6 +18,7 @@ import {
   selector: 'app-text-states-validation-example',
   standalone: true,
   imports: [ReactiveFormsModule, ButtonComponent, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:34rem">
       <form

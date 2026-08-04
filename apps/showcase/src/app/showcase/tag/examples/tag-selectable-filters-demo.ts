@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TagComponent } from 'ui';
 
 @Component({
   selector: 'app-tag-selectable-filters-demo',
   standalone: true,
   imports: [TagComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:44rem">
       <div

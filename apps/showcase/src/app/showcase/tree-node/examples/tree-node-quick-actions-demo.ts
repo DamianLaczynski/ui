@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, TemplateRef, signal, viewChild } from '@angular/core';
+import { Component, TemplateRef, signal, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, TreeNodeComponent, type TreeNode } from 'ui';
 
 @Component({
   selector: 'app-tree-node-quick-actions-demo',
   standalone: true,
   imports: [CommonModule, ButtonComponent, TreeNodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:52rem"

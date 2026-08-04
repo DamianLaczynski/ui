@@ -1,4 +1,12 @@
-import { Component, forwardRef, input, ViewChildren, QueryList, inject } from '@angular/core';
+import {
+  Component,
+  forwardRef,
+  input,
+  ViewChildren,
+  QueryList,
+  inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { ButtonComponent } from '../../button';
@@ -19,6 +27,7 @@ export interface RadioButtonItem {
   selector: 'ui-radio-button-group',
   imports: [CommonModule, FieldComponent, ButtonComponent],
   templateUrl: './radio-button-group.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

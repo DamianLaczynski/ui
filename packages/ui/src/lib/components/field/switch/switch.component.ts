@@ -1,4 +1,11 @@
-import { Component, computed, forwardRef, OnInit, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  forwardRef,
+  OnInit,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FieldComponent } from '../field/field.component';
@@ -7,6 +14,7 @@ import { FieldComponent } from '../field/field.component';
   selector: 'ui-switch',
   imports: [CommonModule, FieldComponent],
   templateUrl: './switch.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

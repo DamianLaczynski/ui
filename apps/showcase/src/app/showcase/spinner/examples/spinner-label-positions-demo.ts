@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ContentPosition, SpinnerComponent } from 'ui';
 
 @Component({
   selector: 'app-spinner-label-positions-example',
   standalone: true,
   imports: [SpinnerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.25rem;align-items:center"

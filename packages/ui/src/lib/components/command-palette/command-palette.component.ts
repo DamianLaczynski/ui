@@ -11,6 +11,7 @@ import {
   ElementRef,
   viewChild,
   OnDestroy,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 
 import { A11yModule } from '@angular/cdk/a11y';
@@ -46,6 +47,7 @@ export interface CommandPaletteGroup {
 @Component({
   selector: 'ui-command-palette',
   templateUrl: './command-palette.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     A11yModule,
     FormsModule,

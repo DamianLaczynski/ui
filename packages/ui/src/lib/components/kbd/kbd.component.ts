@@ -1,4 +1,4 @@
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, inject, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { Size } from '../utils';
 import { UiI18nService } from '../../i18n';
@@ -8,6 +8,7 @@ import { UiI18nService } from '../../i18n';
   standalone: true,
   imports: [],
   templateUrl: './kbd.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

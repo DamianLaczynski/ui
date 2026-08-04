@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TextComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { TextComponent } from 'ui';
   selector: 'app-text-variants-example',
   standalone: true,
   imports: [FormsModule, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.875rem;width:100%;max-width:28rem">
       <ui-text

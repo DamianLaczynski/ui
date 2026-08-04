@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { MenuItem, SpeedDialComponent } from 'ui';
 
 @Component({
   selector: 'app-speed-dial-behavior-demo',
   standalone: true,
   imports: [SpeedDialComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <section
       style="display:grid;gap:1rem;max-width:56rem;padding:1.25rem;border:1px solid color-mix(in srgb,var(--color-neutral-stroke-rest) 70%,transparent);border-radius:1rem;background:color-mix(in srgb,var(--color-neutral-background-rest) 92%,white);"

@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 import { PaginationComponent, PaginationConfig } from 'ui';
 
 type ResultRow = {
@@ -17,6 +17,7 @@ const allRows: ResultRow[] = Array.from({ length: 57 }, (_, index) => ({
   selector: 'app-pagination-results-layout-example',
   standalone: true,
   imports: [PaginationComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:46rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

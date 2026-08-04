@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, ErrorStateComponent } from 'ui';
 
 @Component({
   selector: 'app-error-state-custom-content-demo',
   standalone: true,
   imports: [ButtonComponent, ErrorStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="width:100%;max-width:34rem;padding:1.5rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

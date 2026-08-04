@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ColorComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ColorComponent } from 'ui';
   selector: 'app-color-surface-options-example',
   standalone: true,
   imports: [FormsModule, ColorComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:34rem">
       <ui-color

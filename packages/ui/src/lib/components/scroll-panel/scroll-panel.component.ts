@@ -1,4 +1,12 @@
-import { Component, input, output, ElementRef, viewChild, afterNextRender } from '@angular/core';
+import {
+  Component,
+  input,
+  output,
+  ElementRef,
+  viewChild,
+  afterNextRender,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export type ScrollPanelOrientation = 'vertical' | 'horizontal' | 'both';
@@ -7,6 +15,7 @@ export type ScrollPanelBehavior = 'auto' | 'always' | 'never';
 @Component({
   selector: 'ui-scroll-panel',
   templateUrl: './scroll-panel.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule],
 })
 export class ScrollPanelComponent {

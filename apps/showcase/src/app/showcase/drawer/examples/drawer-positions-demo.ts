@@ -1,4 +1,4 @@
-import { Component, model, signal } from '@angular/core';
+import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
 
 const bodyStackStyle =
@@ -8,6 +8,7 @@ const bodyStackStyle =
   selector: 'app-drawer-positions-example',
   standalone: true,
   imports: [ButtonComponent, DrawerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
       <ui-button appearance="outline" (click)="leftVisible.set(true)">Left small</ui-button>

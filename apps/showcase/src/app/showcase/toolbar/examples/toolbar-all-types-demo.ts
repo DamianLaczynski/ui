@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BadgeComponent, ToolbarComponent, type ToolbarItem } from 'ui';
 
 @Component({
   selector: 'app-toolbar-all-types-demo',
   standalone: true,
   imports: [BadgeComponent, ToolbarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="width:100%;max-width:46rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

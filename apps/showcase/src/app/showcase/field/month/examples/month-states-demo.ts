@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MonthComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { MonthComponent } from 'ui';
   selector: 'app-month-states-demo',
   standalone: true,
   imports: [FormsModule, MonthComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;align-items:start"

@@ -1,4 +1,12 @@
-import { Component, ElementRef, computed, effect, signal, viewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  computed,
+  effect,
+  signal,
+  viewChild,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   ALL_ICON_NAMES,
@@ -29,6 +37,7 @@ const variantItems: SelectItem[] = variants.map(variant => ({
   host: {
     style: 'display:block;width:100%;',
   },
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <section style="display:grid;gap:1rem;width:100%;max-width:56rem;margin-inline:auto;">
       <div

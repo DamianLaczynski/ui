@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BadgeComponent, ButtonComponent, EmailComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { BadgeComponent, ButtonComponent, EmailComponent } from 'ui';
   selector: 'app-email-invite-panel-demo',
   standalone: true,
   imports: [BadgeComponent, ButtonComponent, EmailComponent, FormsModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;gap:1rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

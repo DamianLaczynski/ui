@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, ScrollPanelComponent } from 'ui';
 
 @Component({
   selector: 'app-scroll-panel-events-demo',
   standalone: true,
   imports: [ButtonComponent, ScrollPanelComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:30rem">
       <div

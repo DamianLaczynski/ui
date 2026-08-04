@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { EmailComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { EmailComponent } from 'ui';
   selector: 'app-email-layout-demo',
   standalone: true,
   imports: [EmailComponent, FormsModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:grid;gap:1rem">
       <div

@@ -1,6 +1,6 @@
 /// <reference types="vitest/globals" />
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component, DebugElement } from '@angular/core';
+import { Component, DebugElement, ChangeDetectionStrategy } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { ButtonComponent } from './button.component';
 import { IconComponent } from '../icon/icon.component';
@@ -10,6 +10,7 @@ import { IconName } from '../icon';
 @Component({
   standalone: true,
   imports: [ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: '<ui-button icon="star">Label</ui-button>',
 })
 class ButtonWithProjectedContentHost {}

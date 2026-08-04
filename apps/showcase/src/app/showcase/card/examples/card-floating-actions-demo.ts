@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CardComponent } from 'ui';
 
 @Component({
   selector: 'app-card-floating-actions-demo',
   standalone: true,
   imports: [ButtonComponent, CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem;width:100%;"

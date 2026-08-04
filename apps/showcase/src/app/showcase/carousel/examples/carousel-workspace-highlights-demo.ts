@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BadgeComponent, CarouselComponent, CarouselItem } from 'ui';
 
 @Component({
   selector: 'app-carousel-workspace-highlights-demo',
   standalone: true,
   imports: [CarouselComponent, BadgeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:grid;gap:1rem">
       <div

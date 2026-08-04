@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, TemplateRef, viewChild } from '@angular/core';
+import { Component, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { BadgeComponent, TreeNodeComponent, type TreeNode } from 'ui';
 
 interface FileTreeNode extends TreeNode<FileTreeNode> {
@@ -13,6 +13,7 @@ interface FileTreeNode extends TreeNode<FileTreeNode> {
   selector: 'app-tree-node-content-template-demo',
   standalone: true,
   imports: [CommonModule, BadgeComponent, TreeNodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="width:100%;max-width:28rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

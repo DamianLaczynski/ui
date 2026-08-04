@@ -1,4 +1,11 @@
-import { Component, TemplateRef, computed, model, viewChild } from '@angular/core';
+import {
+  Component,
+  TemplateRef,
+  computed,
+  model,
+  viewChild,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, PopoverDirective, SwitchComponent } from 'ui';
 
@@ -14,6 +21,7 @@ interface ColumnOption {
   selector: 'app-popover-column-picker-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, PopoverDirective, SwitchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:40rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

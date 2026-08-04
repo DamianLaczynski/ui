@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc/app",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "types": [],
     "composite": true,
     "paths": {

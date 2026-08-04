@@ -1,10 +1,11 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, MenuComponent, MenuItem } from 'ui';
 
 @Component({
   selector: 'app-showcase-doc-header',
   standalone: true,
   imports: [ButtonComponent, MenuComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <header class="showcase-doc__header">
       <div class="showcase-doc__header-top">

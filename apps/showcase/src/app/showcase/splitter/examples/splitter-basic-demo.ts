@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import {
   SplitterComponent,
   SplitterPanelDirective,
@@ -10,6 +10,7 @@ import {
   selector: 'app-splitter-basic-demo',
   standalone: true,
   imports: [SplitterComponent, SplitterPanelDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:56rem">
       <div

@@ -9,6 +9,7 @@ import {
   ViewChild,
   HostListener,
   inject,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
@@ -47,6 +48,7 @@ export type FileComponentMode = 'inline' | 'area';
       multi: true,
     },
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

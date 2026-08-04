@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, LoadingStateComponent } from 'ui';
 
 @Component({
   selector: 'app-loading-state-list-overlay-demo',
   standalone: true,
   imports: [ButtonComponent, LoadingStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:42rem">
       <div style="display:flex;justify-content:flex-start">

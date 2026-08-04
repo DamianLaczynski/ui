@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent, SwitchComponent } from 'ui';
 
@@ -9,6 +9,7 @@ const dashedCardStyle =
   selector: 'app-slider-settings-panel-example',
   standalone: true,
   imports: [FormsModule, SliderComponent, SwitchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:52rem;"

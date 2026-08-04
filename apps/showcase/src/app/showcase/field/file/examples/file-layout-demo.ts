@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FileComponent } from 'ui';
 
 @Component({
   selector: 'app-file-layout-demo',
   standalone: true,
   imports: [FileComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:46rem">
       <div

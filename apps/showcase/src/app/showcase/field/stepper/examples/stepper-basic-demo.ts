@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, Step, StepperComponent } from 'ui';
 
 @Component({
   selector: 'app-stepper-basic-example',
   standalone: true,
   imports: [ButtonComponent, StepperComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:48rem">
       <ui-stepper

@@ -1,5 +1,5 @@
 import { RouterLink } from '@angular/router';
-import { Component, computed, input, signal } from '@angular/core';
+import { Component, computed, input, signal, ChangeDetectionStrategy } from '@angular/core';
 import { BadgeComponent, ButtonComponent, TableOfContentComponent, type Variant } from 'ui';
 import { highlightTypeScript } from '@shared/utils/showcase/code-highlight.util';
 import {
@@ -20,6 +20,7 @@ import { ShowcaseDocHeaderComponent } from '../showcase-doc-header/showcase-doc-
     TableOfContentComponent,
     ShowcaseDocHeaderComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div class="showcase-doc-layout showcase-doc-layout--with-toc">
       <ui-table-of-content

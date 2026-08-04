@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   BadgeComponent,
@@ -22,6 +22,7 @@ import {
     StepperComponent,
     TextComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="box-sizing:border-box;width:100%;max-width:44rem;min-width:0;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:0.875rem;background:var(--color-neutral-background-rest)"

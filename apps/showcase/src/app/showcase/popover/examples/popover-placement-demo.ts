@@ -1,4 +1,4 @@
-import { Component, TemplateRef, model, viewChild } from '@angular/core';
+import { Component, TemplateRef, model, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   ButtonComponent,
@@ -12,6 +12,7 @@ import {
   selector: 'app-popover-placement-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, PopoverDirective, RadioButtonGroupComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1.25rem;width:100%;min-height:22rem;padding:1.5rem;border:1px dashed var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background2-rest)"

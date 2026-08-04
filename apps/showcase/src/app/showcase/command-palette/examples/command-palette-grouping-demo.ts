@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CommandPaletteComponent, type CommandPaletteItem } from 'ui';
 
 const GROUPED_ITEMS: CommandPaletteItem[] = [
@@ -53,6 +53,7 @@ const GROUPED_ITEMS: CommandPaletteItem[] = [
   selector: 'app-command-palette-grouping-demo',
   standalone: true,
   imports: [ButtonComponent, CommandPaletteComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:48rem"

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AvatarComponent, ButtonComponent } from 'ui';
 
 @Component({
   selector: 'app-avatar-workspace-strip-example',
   standalone: true,
   imports: [AvatarComponent, ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;justify-content:space-between;width:100%;max-width:42rem;padding:0.875rem 1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:0.75rem"

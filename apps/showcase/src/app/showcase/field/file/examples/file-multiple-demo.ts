@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, FileComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, FileComponent } from 'ui';
   selector: 'app-file-multiple-demo',
   standalone: true,
   imports: [ButtonComponent, FileComponent, FormsModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%">
       <div style="flex:1 1 22rem;min-width:18rem;max-width:34rem">

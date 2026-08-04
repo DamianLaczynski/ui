@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectComponent, type SelectItem } from 'ui';
 
@@ -11,6 +11,7 @@ const densityItems: SelectItem[] = [
 @Component({
   selector: 'app-select-variants-states-example',
   imports: [FormsModule, SelectComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:52rem">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem">

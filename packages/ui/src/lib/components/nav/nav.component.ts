@@ -7,6 +7,7 @@ import {
   inject,
   effect,
   OnDestroy,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TreeNode, TreeNodeComponent } from '../tree-node/tree-node.component';
@@ -33,6 +34,7 @@ export interface NavNode<T extends NavNode<T> = NavNode<any>> extends TreeNode<T
       overflow-x: hidden;
     }
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonModule, TreeNodeComponent, NavSectionHeaderComponent, DividerComponent],
 })
 export class NavComponent implements OnDestroy {

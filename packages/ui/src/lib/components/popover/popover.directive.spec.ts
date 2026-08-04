@@ -1,5 +1,5 @@
 /// <reference types="vitest/globals" />
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -8,6 +8,7 @@ import { PopoverDirective } from './popover.directive';
 @Component({
   standalone: true,
   imports: [PopoverDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <button type="button" [uiPopover]="contentTpl" [(uiPopoverOpen)]="open">Toggle</button>
     <ng-template #contentTpl>
@@ -54,9 +55,10 @@ describe('PopoverDirective', () => {
     expect(trigger.getAttribute('aria-expanded')).toBe('false');
   });
 
-  it('should render projected popover content when open', () => {
+  it('should render projected popover content when open', async () => {
     fixture.debugElement.query(By.css('button')).nativeElement.click();
     fixture.detectChanges();
+    await fixture.whenStable();
 
     expect(document.querySelector('.popover-test-content')?.textContent).toContain('Popover body');
   });

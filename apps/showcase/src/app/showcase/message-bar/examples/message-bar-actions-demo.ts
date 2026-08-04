@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { MessageBarComponent, QuickAction } from 'ui';
 
 @Component({
   selector: 'app-message-bar-actions-example',
   standalone: true,
   imports: [MessageBarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:46rem">
       @if (!dismissed()) {

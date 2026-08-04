@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, RatingComponent } from 'ui';
 
 @Component({
   selector: 'app-rating-listing-snapshot-example',
   standalone: true,
   imports: [ButtonComponent, RatingComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;width:100%;max-width:36rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:0.75rem"

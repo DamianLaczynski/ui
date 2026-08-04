@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, MenuComponent, NodeComponent, type MenuItem, type Node } from 'ui';
 
 @Component({
   selector: 'app-node-quick-actions-demo',
   standalone: true,
   imports: [ButtonComponent, MenuComponent, NodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:42rem">
       <div

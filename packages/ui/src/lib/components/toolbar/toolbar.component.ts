@@ -1,4 +1,4 @@
-import { Component, input, output, computed } from '@angular/core';
+import { Component, input, output, computed, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToolbarItem, ToolbarGroup } from './models/toolbar-item.model';
 import { ButtonComponent } from '../button/button.component';
@@ -9,6 +9,7 @@ import { MenuItem } from '../menu/models/menu-item.model';
 @Component({
   selector: 'ui-toolbar',
   templateUrl: './toolbar.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ButtonComponent, DividerComponent, MenuComponent],
 })
 export class ToolbarComponent {

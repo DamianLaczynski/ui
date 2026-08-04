@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NumberComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { NumberComponent } from 'ui';
   selector: 'app-number-states-validation-demo',
   standalone: true,
   imports: [ReactiveFormsModule, NumberComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;width:100%;max-width:48rem"

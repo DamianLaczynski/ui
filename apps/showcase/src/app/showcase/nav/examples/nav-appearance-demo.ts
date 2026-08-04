@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NavComponent, type NavNode } from 'ui';
 
 const items: NavNode[] = [
@@ -11,6 +11,7 @@ const items: NavNode[] = [
   selector: 'app-nav-appearance-demo',
   standalone: true,
   imports: [NavComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:20rem">
       <div

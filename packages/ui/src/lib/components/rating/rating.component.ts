@@ -1,4 +1,13 @@
-import { Component, computed, ElementRef, inject, input, output, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  ElementRef,
+  inject,
+  input,
+  output,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 import { IconComponent } from '../icon/icon.component';
 import { Size } from '../utils';
@@ -7,6 +16,7 @@ import { UiI18nService } from '../../i18n';
 @Component({
   selector: 'ui-rating',
   templateUrl: './rating.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [IconComponent],
 })
 export class RatingComponent {

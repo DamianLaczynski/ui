@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { KbdComponent, MessageBarComponent, TagComponent } from 'ui';
 
 @Component({
   selector: 'app-kbd-command-help-demo',
   standalone: true,
   imports: [KbdComponent, MessageBarComponent, TagComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start;max-width:48rem"
