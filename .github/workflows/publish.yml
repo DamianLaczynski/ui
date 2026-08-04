@@ -56,7 +56,14 @@ jobs:
         working-directory: dist/ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm publish --access public --registry=https://npm.pkg.github.com
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          if [[ "$VERSION" == *-* ]]; then
+            NPM_TAG=preview
+          else
+            NPM_TAG=latest
+          fi
+          npm publish --access public --tag "$NPM_TAG" --registry=https://npm.pkg.github.com
 
       - name: Extract release notes
         id: notes
