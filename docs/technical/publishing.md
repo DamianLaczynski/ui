@@ -55,6 +55,8 @@ npmjs.com → `@laczynski/ui` → **Settings** → **Trusted Publisher** → **G
 
 No `NPM_TOKEN` secret — CI uses OIDC (npm CLI ≥ 11.5.1).
 
+The package manifest explicitly targets `https://registry.npmjs.org/`; publishing remains triggered only by a pushed `v*` tag.
+
 ### GitHub repository settings
 
 Actions enabled; workflow permissions allow OIDC (`id-token: write` is set in the workflow).

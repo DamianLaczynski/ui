@@ -22,7 +22,8 @@
   },
   "homepage": "https://ui.laczynski.dev/",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "@angular/cdk": "^22.1.0",
