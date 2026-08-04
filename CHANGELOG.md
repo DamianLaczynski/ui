@@ -11,12 +11,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
-## [2.0.0-preview.0] - 2026-08-04
+## [2.0.0-preview.1] - 2026-08-04
 
 ### Changed
 
 - **Angular** — upgraded the workspace, build tooling, CDK, and `@laczynski/ui` peer dependencies to Angular 22.1.
 - **CI** — upgraded validation and Pages deployment workflows to Node 24, required by Angular CLI 22.
+- **Publishing** — aligned package repository metadata with the GitHub repository for npm provenance verification.
 - **i18n** — upgraded `@ngx-translate/core` and `@ngx-translate/http-loader` to 18.0.
 - **Change detection** — migrated default-strategy components to Angular 22's `ChangeDetectionStrategy.Eager` compatibility mode; components already using `OnPush` retain that strategy.
 
