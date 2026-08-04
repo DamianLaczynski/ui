@@ -30,37 +30,6 @@ import { Variant, Size, Appearance } from '../../utils';
     DividerComponent,
     NavSectionHeaderComponent,
   ],
-  styles: [
-    `
-      :host {
-        ::ng-deep ui-menu {
-          .button {
-            font-weight: 400;
-          }
-
-          .button:not(.menu-trigger-split__dropdown) {
-            justify-content: flex-start;
-            width: 100%;
-          }
-
-          .button:not(.menu-trigger-split__dropdown):not(:has(.menu-trigger__shortcut))
-            > *:last-child {
-            margin-left: auto;
-          }
-
-          .menu-trigger-host--split {
-            justify-content: flex-start;
-            width: 100%;
-          }
-
-          .menu-trigger-split {
-            justify-content: flex-start;
-            width: 100%;
-          }
-        }
-      }
-    `,
-  ],
   host: {
     '[style.max-height]': 'maxHeight()',
     '[style.overflow-y]': 'maxHeight() !== "auto" ? "auto" : "visible"',

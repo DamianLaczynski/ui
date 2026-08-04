@@ -64,4 +64,37 @@
   &__submenu-overlay {
     @include overlay-surface-enter($duration-fast, $easing-decelerate-mid, top left);
   }
+
+  // Menu rows always occupy the full overlay width. This is particularly
+  // important for split-menu items: without an explicit flex basis, the
+  // primary part only grows to its content width.
+  &__section > ui-menu.menu-trigger-host {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .menu-trigger,
+  .menu-trigger-split {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .menu-trigger {
+    font-weight: 400;
+
+    &:not(:has(.menu-trigger__shortcut)) > *:last-child {
+      margin-left: auto;
+    }
+  }
+
+  .menu-trigger-split__primary {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .menu-trigger-split__dropdown {
+    flex: 0 0 auto;
+  }
 }
