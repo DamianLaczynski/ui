@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   id-token: write
+  packages: write
 
 jobs:
   publish:
@@ -50,6 +51,12 @@ jobs:
             NPM_TAG=latest
           fi
           npm publish --access public --tag "$NPM_TAG" --provenance
+
+      - name: Publish to GitHub Packages
+        working-directory: dist/ui
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm publish --access public --registry=https://npm.pkg.github.com
 
       - name: Extract release notes
         id: notes

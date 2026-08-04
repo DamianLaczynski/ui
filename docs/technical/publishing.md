@@ -6,9 +6,9 @@
 
 | Package         | Registry                           |
 | --------------- | ---------------------------------- |
-| `@laczynski/ui` | [npmjs.com](https://www.npmjs.com) |
+| `@laczynski/ui` | [npmjs.com](https://www.npmjs.com) and [GitHub Packages](https://github.com/laczynski/Ui/packages) |
 
-Publish on tag push `v*` via [publish.yml](../../.github/workflows/publish.yml) (trusted publishing / OIDC).
+Publish on tag push `v*` via [publish.yml](../../.github/workflows/publish.yml). The workflow uses npm trusted publishing / OIDC for npmjs.com and `GITHUB_TOKEN` for GitHub Packages.
 
 ## Where the version lives
 
@@ -55,7 +55,7 @@ npmjs.com → `@laczynski/ui` → **Settings** → **Trusted Publisher** → **G
 
 No `NPM_TOKEN` secret — CI uses OIDC (npm CLI ≥ 11.5.1).
 
-The package manifest explicitly targets `https://registry.npmjs.org/`; publishing remains triggered only by a pushed `v*` tag.
+The package manifest explicitly targets `https://registry.npmjs.org/`; the release workflow also publishes the built artifact to `https://npm.pkg.github.com/`. Publishing remains triggered only by a pushed `v*` tag.
 
 ### GitHub repository settings
 
