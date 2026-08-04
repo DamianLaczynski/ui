@@ -4,8 +4,9 @@ Enterprise-grade Angular components with a **Fluent-inspired** design language f
 
 ## Requirements
 
-- **Angular** `^21.1.0` (`@angular/common`, `@angular/core`)
-- **Angular CDK** `^21.1.0` (`@angular/cdk`)
+- **Angular** `^22.1.0` (`@angular/common`, `@angular/core`)
+- **Angular CDK** `^22.1.0` (`@angular/cdk`)
+- **Node.js** `22.22.3+` (Node 24 LTS recommended for development)
 
 ## Install
 

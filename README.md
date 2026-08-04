@@ -27,7 +27,7 @@ Visual styling is inspired by [Fluent 2](https://fluent2.microsoft.design/) desi
 npm install @laczynski/ui
 ```
 
-Requires Angular `^21.1.0` and Angular CDK `^21.1.0`.
+Requires Angular `^22.1.0`, Angular CDK `^22.1.0`, and Node.js `22.22.3+` (Node 24 LTS recommended for development).
 
 ```typescript
 import { ButtonComponent } from '@laczynski/ui';
