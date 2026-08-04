@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Contributor documentation structure under `docs/` (guides, standards, quality, technical).
 - `AGENTS.md` — AI agent and contributor fast-start guide.
 
-## [2.0.0-preview.4] - 2026-08-04
+## [2.0.0-preview.5] - 2026-08-04
 
 ### Changed
 
