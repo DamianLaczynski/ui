@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { IconComponent, IconName } from 'ui';
 
 type IconVariant = 'regular' | 'filled';
@@ -15,6 +15,7 @@ const variants: { label: string; value: IconVariant }[] = [
   selector: 'app-icon-overview-demo',
   standalone: true,
   imports: [IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:grid;gap:1rem;max-width:56rem;">
       @for (variant of variants; track variant.value) {

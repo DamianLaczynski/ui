@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, SkeletonComponent } from 'ui';
 
 @Component({
   selector: 'app-skeleton-detail-panel-example',
   standalone: true,
   imports: [ButtonComponent, SkeletonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:40rem">
       <div

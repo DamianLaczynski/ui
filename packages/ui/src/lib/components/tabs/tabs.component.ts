@@ -1,4 +1,4 @@
-import { Component, input, output, signal, effect } from '@angular/core';
+import { Component, input, output, signal, effect, ChangeDetectionStrategy } from '@angular/core';
 
 import { Size, Appearance, Orientation, Variant, Shape } from '../utils';
 import { NodeComponent } from '../node/node.component';
@@ -21,6 +21,7 @@ export interface Tab<T = any> {
 @Component({
   selector: 'ui-tabs',
   imports: [NodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       [class]="tabsClasses()"

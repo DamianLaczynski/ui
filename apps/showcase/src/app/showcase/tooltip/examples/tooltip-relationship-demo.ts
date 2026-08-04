@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, TooltipDirective } from 'ui';
 
 @Component({
   selector: 'app-tooltip-relationship-example',
   standalone: true,
   imports: [ButtonComponent, TooltipDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.875rem;width:100%;max-width:34rem">
       <div

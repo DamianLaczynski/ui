@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AccordionComponent } from 'ui';
 
 @Component({
   selector: 'app-accordion-basic-example',
   standalone: true,
   imports: [AccordionComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:38rem">
       <ui-accordion label="What is included in the Pro plan?">

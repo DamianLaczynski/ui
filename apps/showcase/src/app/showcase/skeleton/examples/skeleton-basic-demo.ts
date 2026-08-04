@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SkeletonComponent } from 'ui';
 
 @Component({
   selector: 'app-skeleton-basic-example',
   standalone: true,
   imports: [SkeletonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:34rem">
       <ui-skeleton width="11rem" height="1.5rem" ariaLabel="Loading section title" />

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ToolbarComponent, type ToolbarItem } from 'ui';
 
 @Component({
   selector: 'app-toolbar-sizes-orientation-demo',
   standalone: true,
   imports: [ToolbarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:52rem"

@@ -1,10 +1,11 @@
-import { Component, inject, TemplateRef, viewChild } from '@angular/core';
+import { Component, inject, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, ToastService } from 'ui';
 
 @Component({
   selector: 'app-toast-actions-example',
   standalone: true,
   imports: [ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:32rem">
       <ng-template #invite>

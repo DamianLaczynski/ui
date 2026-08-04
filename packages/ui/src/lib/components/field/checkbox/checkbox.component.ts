@@ -7,6 +7,7 @@ import {
   model,
   OnInit,
   signal,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Shape } from '../../utils';
@@ -26,6 +27,7 @@ import { IconName } from '../../icon/generated/icon-name.type';
       }
     `,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

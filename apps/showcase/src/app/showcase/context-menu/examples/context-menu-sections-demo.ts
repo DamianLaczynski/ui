@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ContextMenuDirective, type MenuItem, type MenuSection } from 'ui';
 
 interface WorkspaceRow {
@@ -12,6 +12,7 @@ interface WorkspaceRow {
   selector: 'app-context-menu-sections-demo',
   standalone: true,
   imports: [ContextMenuDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:46rem">
       <div

@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, UrlSegment } from '@angular/router';
 import { NavComponent, NavNode } from 'ui';
 import { filter } from 'rxjs/operators';
@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-ds-sidebar',
   imports: [NavComponent, SearchComponent, FormsModule],
   templateUrl: './ds-sidebar.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
     class: 'ds-sidebar-host',
   },

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { IconComponent } from 'ui';
 
 @Component({
   selector: 'app-icon-variant-demo',
   standalone: true,
   imports: [IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));max-width:40rem;"

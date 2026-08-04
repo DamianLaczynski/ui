@@ -12,6 +12,7 @@ import {
   OnDestroy,
   inject,
   NgZone,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { A11yModule } from '@angular/cdk/a11y';
 import { Overlay, OverlayModule } from '@angular/cdk/overlay';
@@ -83,6 +84,7 @@ const MONTHS_PER_YEAR = 12;
   host: {
     '[style.display]': '"block"',
   },
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

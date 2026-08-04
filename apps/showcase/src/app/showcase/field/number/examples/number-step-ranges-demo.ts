@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, NumberComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, NumberComponent } from 'ui';
   selector: 'app-number-step-ranges-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, NumberComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:44rem">
       <div

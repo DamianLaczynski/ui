@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, SelectComponent, type SelectItem } from 'ui';
 
@@ -25,6 +25,7 @@ const releaseItems: SelectItem[] = [
 @Component({
   selector: 'app-select-form-pattern-example',
   imports: [ReactiveFormsModule, ButtonComponent, SelectComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="form"

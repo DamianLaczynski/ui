@@ -1,5 +1,5 @@
 /// <reference types="vitest/globals" />
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
@@ -8,6 +8,7 @@ import { CardAppearance, CardBorderStyle, CardComponent } from './card.component
 @Component({
   standalone: true,
   imports: [CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card focusMode="no-tab" ariaLabel="Focusable no-tab card">
       <button type="button" uiCardFooter id="no-tab-focus-target">Inner action</button>
@@ -19,6 +20,7 @@ class CardNoTabHostComponent {}
 @Component({
   standalone: true,
   imports: [CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card focusMode="tab-only" ariaLabel="Focusable tab-only card">
       <button type="button" uiCardFooter id="tab-only-focus-target">Inner action</button>
@@ -30,6 +32,7 @@ class CardTabOnlyHostComponent {}
 @Component({
   standalone: true,
   imports: [CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card focusMode="no-tab" ariaLabel="Focusable no-tab card with many actions">
       <button type="button" uiCardFooter id="no-tab-first">First action</button>
@@ -42,6 +45,7 @@ class CardNoTabManyActionsHostComponent {}
 @Component({
   standalone: true,
   imports: [CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card focusMode="tab-exit" ariaLabel="Focusable tab-exit card">
       <button type="button" uiCardFooter id="tab-exit-first">First action</button>

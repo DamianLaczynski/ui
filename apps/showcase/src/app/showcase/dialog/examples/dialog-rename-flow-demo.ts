@@ -1,4 +1,4 @@
-import { Component, model, signal } from '@angular/core';
+import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, DialogComponent, QuickAction, TextComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, DialogComponent, QuickAction, TextComponent } from 'ui
   selector: 'app-dialog-rename-flow-example',
   standalone: true,
   imports: [FormsModule, ButtonComponent, DialogComponent, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:24rem">
       <ui-button variant="primary" (click)="visible.set(true)">Rename workspace</ui-button>

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, DividerComponent } from 'ui';
 
 @Component({
   selector: 'app-divider-toolbar-grouping-example',
   standalone: true,
   imports: [ButtonComponent, DividerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;width:100%;max-width:40rem;padding:0.875rem 1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem"

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, TabsComponent, type Tab } from 'ui';
 
 @Component({
   selector: 'app-tabs-overflow-demo',
   standalone: true,
   imports: [ButtonComponent, TabsComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:42rem">
       <div

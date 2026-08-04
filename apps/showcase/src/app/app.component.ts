@@ -1,13 +1,13 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
 import { ToastContainerComponent, IconComponent } from 'ui';
 import { ScrollService } from '@shared/scroll/scroll.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  imports: [RouterOutlet, ToastContainerComponent, TranslateModule, IconComponent],
+  imports: [RouterOutlet, ToastContainerComponent, IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       .app-fab {

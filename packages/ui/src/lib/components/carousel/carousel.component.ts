@@ -8,6 +8,7 @@ import {
   TemplateRef,
   inject,
   DestroyRef,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 
@@ -18,6 +19,7 @@ import { UiI18nService } from '../../i18n';
 @Component({
   selector: 'ui-carousel',
   templateUrl: './carousel.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ButtonComponent, NgTemplateOutlet],
 })
 export class CarouselComponent {

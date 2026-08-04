@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TotpComponent } from 'ui';
 
 @Component({
   selector: 'app-totp-appearance-demo',
   standalone: true,
   imports: [TotpComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:44rem">
       <div

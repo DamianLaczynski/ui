@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { delay, of } from 'rxjs';
 import { ScrollContainerComponent, type ScrollContainerDataSource } from 'ui';
 
@@ -13,6 +13,7 @@ interface TemplateItem {
   selector: 'app-scroll-container-custom-template-demo',
   standalone: true,
   imports: [ScrollContainerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:34rem">
       <div style="font-size:0.875rem;line-height:1.5;color:var(--color-neutral-foreground2-rest)">

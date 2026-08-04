@@ -12,6 +12,7 @@ import {
   ViewContainerRef,
   TemplateRef,
   NgZone,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -55,6 +56,7 @@ interface ColorValue {
       multi: true,
     },
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, MessageBarComponent, TagComponent, TimeComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, MessageBarComponent, TagComponent, TimeComponent } fro
   selector: 'app-time-scheduling-panel-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, MessageBarComponent, TagComponent, TimeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start;max-width:48rem"

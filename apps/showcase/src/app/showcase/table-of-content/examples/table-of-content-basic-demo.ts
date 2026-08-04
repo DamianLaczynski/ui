@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TableOfContentComponent } from 'ui';
 
 @Component({
   selector: 'app-table-of-content-basic-demo',
   standalone: true,
   imports: [TableOfContentComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:58rem"

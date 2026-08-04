@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 import {
   ButtonComponent,
   CalendarComponent,
@@ -11,6 +11,7 @@ import {
   selector: 'app-calendar-booking-panel-demo',
   standalone: true,
   imports: [ButtonComponent, CalendarComponent, MessageBarComponent, TagComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:minmax(0,22rem) minmax(0,18rem);gap:1rem;align-items:start;max-width:44rem"

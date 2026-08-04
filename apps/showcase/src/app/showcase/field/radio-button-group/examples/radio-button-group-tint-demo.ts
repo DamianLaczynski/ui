@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RadioButtonGroupComponent, type RadioButtonItem, type Variant } from 'ui';
 
@@ -6,6 +6,7 @@ import { RadioButtonGroupComponent, type RadioButtonItem, type Variant } from 'u
   selector: 'app-radio-button-group-tint-demo',
   standalone: true,
   imports: [FormsModule, RadioButtonGroupComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:0.75rem;width:100%">
       @for (variant of variants; track variant) {

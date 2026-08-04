@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CarouselComponent, CarouselItem } from 'ui';
 
 @Component({
   selector: 'app-carousel-autoplay-demo',
   standalone: true,
   imports: [CarouselComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:grid;gap:1rem">
       <div

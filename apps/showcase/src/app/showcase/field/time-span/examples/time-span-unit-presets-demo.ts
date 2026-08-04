@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TimeSpanComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { TimeSpanComponent } from 'ui';
   selector: 'app-time-span-unit-presets-demo',
   standalone: true,
   imports: [FormsModule, TimeSpanComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem;align-items:start"

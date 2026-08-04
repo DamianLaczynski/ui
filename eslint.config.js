@@ -33,6 +33,10 @@ module.exports = [
         "error",
         { type: "element", prefix: ["app", "ui"], style: "kebab-case" },
       ],
+      // Angular 22 migration marks existing default-strategy components as Eager
+      // to preserve their runtime behavior. Review and convert them to the new
+      // OnPush default incrementally rather than blocking this compatibility release.
+      "@angular-eslint/prefer-on-push-component-change-detection": "off",
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": "off",
       "unused-imports/no-unused-imports": "error",

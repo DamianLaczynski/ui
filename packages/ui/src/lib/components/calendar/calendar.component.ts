@@ -1,5 +1,14 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, DestroyRef, computed, inject, input, output, signal } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  computed,
+  inject,
+  input,
+  output,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 import { ButtonComponent } from '../button/button.component';
 
@@ -32,6 +41,7 @@ export interface CalendarYear {
   selector: 'ui-calendar',
   imports: [ButtonComponent],
   templateUrl: './calendar.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

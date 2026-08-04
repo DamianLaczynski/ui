@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TabsComponent, type Tab } from 'ui';
 
 type BasicTab = Tab & {
@@ -9,6 +9,7 @@ type BasicTab = Tab & {
   selector: 'app-tabs-basic-demo',
   standalone: true,
   imports: [TabsComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:40rem">
       <ui-tabs

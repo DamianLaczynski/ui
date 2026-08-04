@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { BadgeComponent, Step, StepperComponent } from 'ui';
 
 @Component({
   selector: 'app-stepper-vertical-example',
   standalone: true,
   imports: [BadgeComponent, StepperComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;width:100%;max-width:46rem"

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CommandPaletteComponent, type CommandPaletteItem } from 'ui';
 
 const NAVIGATION_ITEMS: CommandPaletteItem[] = [
@@ -44,6 +44,7 @@ const NAVIGATION_ITEMS: CommandPaletteItem[] = [
   selector: 'app-command-palette-empty-results-demo',
   standalone: true,
   imports: [ButtonComponent, CommandPaletteComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:40rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

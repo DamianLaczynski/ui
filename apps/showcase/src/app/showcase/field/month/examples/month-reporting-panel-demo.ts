@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, MessageBarComponent, MonthComponent, TagComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, MessageBarComponent, MonthComponent, TagComponent } fr
   selector: 'app-month-reporting-panel-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, MessageBarComponent, MonthComponent, TagComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start;max-width:46rem"

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, FileComponent } from 'ui';
@@ -7,6 +7,7 @@ import { ButtonComponent, FileComponent } from 'ui';
   selector: 'app-file-states-validation-demo',
   standalone: true,
   imports: [ButtonComponent, FileComponent, FormsModule, ReactiveFormsModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:48rem">
       <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start">

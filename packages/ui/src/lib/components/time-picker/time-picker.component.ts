@@ -8,6 +8,7 @@ import {
   input,
   output,
   signal,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import type { RadioButtonItem } from '../field/radio-button-group/radio-button-group.component';
@@ -50,6 +51,7 @@ interface DragState {
   standalone: true,
   templateUrl: './time-picker.component.html',
   imports: [FormsModule, RadioButtonGroupComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

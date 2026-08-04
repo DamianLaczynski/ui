@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import {
   ButtonComponent,
   KbdComponent,
@@ -53,6 +53,7 @@ const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
   selector: 'app-command-palette-workspace-demo',
   standalone: true,
   imports: [ButtonComponent, KbdComponent, CommandPaletteComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:58rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

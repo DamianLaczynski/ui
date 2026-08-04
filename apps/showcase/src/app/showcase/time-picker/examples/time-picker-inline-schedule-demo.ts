@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CardComponent, TimePickerComponent } from 'ui';
 
 @Component({
   selector: 'app-time-picker-inline-schedule-demo',
   standalone: true,
   imports: [ButtonComponent, CardComponent, TimePickerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card appearance="outline" borderStyle="dashed" ariaLabel="Support handoff row">
       <div uiCardHeader style="display:grid;gap:0.25rem;">

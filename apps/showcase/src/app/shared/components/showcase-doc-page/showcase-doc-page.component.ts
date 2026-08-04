@@ -1,5 +1,5 @@
 import { NgComponentOutlet } from '@angular/common';
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal, ChangeDetectionStrategy } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { Tab, TableOfContentComponent, TabsComponent } from 'ui';
@@ -26,6 +26,7 @@ import {
     ShowcaseDocHeaderComponent,
     ShowcaseFeatureSectionComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div class="showcase-doc-layout showcase-doc-layout--with-toc">
       @for (tocTabId of [activeTabId()]; track tocTabId) {

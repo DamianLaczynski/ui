@@ -1,5 +1,5 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, inject, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToastComponent } from './toast.component';
 import { ToastMessage, ToastPosition } from './models/toast.model';
@@ -9,6 +9,7 @@ import { ToastService } from './services/toast.service';
   selector: 'ui-toast-container',
 
   imports: [ToastComponent, NgTemplateOutlet],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div [class]="containerClasses()">
       @for (toast of toasts(); track toast.id) {

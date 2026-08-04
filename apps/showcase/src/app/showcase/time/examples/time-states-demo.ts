@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TimeComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { TimeComponent } from 'ui';
   selector: 'app-time-states-demo',
   standalone: true,
   imports: [FormsModule, TimeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;align-items:start"

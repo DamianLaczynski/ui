@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {
   DividerComponent,
   SelectComponent,
@@ -12,6 +12,7 @@ import {
   selector: 'app-toolbar-editor-header-demo',
   standalone: true,
   imports: [DividerComponent, SelectComponent, TextComponent, ToolbarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;width:100%;max-width:58rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

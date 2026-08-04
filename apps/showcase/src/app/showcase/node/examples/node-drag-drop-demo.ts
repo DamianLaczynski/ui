@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, NodeComponent, type Node } from 'ui';
 
 @Component({
   selector: 'app-node-drag-drop-demo',
   standalone: true,
   imports: [ButtonComponent, NodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:40rem">
       <div

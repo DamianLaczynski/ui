@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NumericRange, RangeComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { NumericRange, RangeComponent } from 'ui';
   selector: 'app-range-states-demo',
   standalone: true,
   imports: [FormsModule, RangeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:40rem;">
       <ui-range

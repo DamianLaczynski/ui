@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TabsComponent, type Tab } from 'ui';
 
 type WorkspaceTab = Tab & {
@@ -12,6 +12,7 @@ type WorkspaceTab = Tab & {
   selector: 'app-tabs-workspace-panel-demo',
   standalone: true,
   imports: [TabsComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:44rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CarouselComponent, CarouselItem } from 'ui';
 
 @Component({
   selector: 'app-carousel-basic-demo',
   standalone: true,
   imports: [CarouselComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <ui-carousel [items]="heroSlides" (itemClick)="(0)" /> `,
 })
 export class CarouselBasicDemoComponent {

@@ -8,6 +8,7 @@ import {
   effect,
   inject,
   signal,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { CdkTrapFocus } from '@angular/cdk/a11y';
@@ -27,6 +28,7 @@ export type DrawerModalType = 'modal' | 'non-modal' | 'alert';
   selector: 'ui-drawer',
   templateUrl: './drawer.component.html',
   imports: [ButtonComponent, IconComponent, CdkTrapFocus],
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
     '[style.display]': '"block"',
     '[style.height]': 'type() === "inline" ? "100%" : null',

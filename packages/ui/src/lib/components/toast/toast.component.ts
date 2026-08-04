@@ -1,4 +1,4 @@
-import { Component, effect, input, model, output } from '@angular/core';
+import { Component, effect, input, model, output, ChangeDetectionStrategy } from '@angular/core';
 import { Variant, Appearance, Size } from '../utils';
 import { ToastPosition } from './models/toast.model';
 import { IconComponent } from '../icon/icon.component';
@@ -8,6 +8,7 @@ import { ButtonComponent } from '../button/button.component';
 @Component({
   selector: 'ui-toast',
   templateUrl: './toast.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [IconComponent, ButtonComponent],
 })
 export class ToastComponent {

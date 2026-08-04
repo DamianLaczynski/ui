@@ -1,5 +1,12 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, inject, InjectionToken, TemplateRef, WritableSignal } from '@angular/core';
+import {
+  Component,
+  inject,
+  InjectionToken,
+  TemplateRef,
+  WritableSignal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 import { PopoverPosition } from './popover-overlay.config';
 
@@ -41,6 +48,7 @@ export interface PopoverData {
       }
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, input, signal, Type } from '@angular/core';
+import { Component, computed, input, signal, Type, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ButtonComponent, IconComponent } from 'ui';
 import { ShowcaseComponent } from '../../landing-showcase-components';
@@ -19,6 +19,7 @@ import { LANDING_SURFACE_PREVIEW_COMPONENTS } from './landing-surface-previews.r
   standalone: true,
   imports: [CommonModule, RouterLink, ButtonComponent, IconComponent],
   templateUrl: './landing-component-surface.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './landing-component-surface.component.scss',
 })
 export class LandingComponentSurfaceComponent {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, TotpComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, TotpComponent } from 'ui';
   selector: 'app-totp-validation-demo',
   standalone: true,
   imports: [ButtonComponent, ReactiveFormsModule, TotpComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="verifyForm"

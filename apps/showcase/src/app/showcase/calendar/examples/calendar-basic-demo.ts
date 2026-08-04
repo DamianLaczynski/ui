@@ -1,10 +1,11 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CalendarComponent, CalendarDay } from 'ui';
 
 @Component({
   selector: 'app-calendar-basic-demo',
   standalone: true,
   imports: [ButtonComponent, CalendarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;max-width:22rem">
       <ui-calendar

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CheckboxComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { CheckboxComponent } from 'ui';
   selector: 'app-checkbox-states-example',
   standalone: true,
   imports: [FormsModule, CheckboxComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:36rem">
       <div

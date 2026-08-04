@@ -1,4 +1,4 @@
-import { Component, forwardRef, input, OnInit } from '@angular/core';
+import { Component, forwardRef, input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RadioComponent } from './radio.component';
@@ -19,6 +19,7 @@ export interface RadioItem {
   selector: 'ui-radio-group',
   imports: [CommonModule, FieldComponent, RadioComponent],
   templateUrl: './radio-group.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

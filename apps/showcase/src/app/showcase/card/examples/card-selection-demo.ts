@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, CardComponent, CardOnSelectionChangeEvent, CheckboxComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, CardComponent, CardOnSelectionChangeEvent, CheckboxCom
   selector: 'app-card-selection-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, CardComponent, CheckboxComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:grid;gap:1rem;width:100%;">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;">

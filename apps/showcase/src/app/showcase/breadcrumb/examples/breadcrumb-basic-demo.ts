@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { BreadcrumbComponent, type Breadcrumb } from 'ui';
 
 const FULL_PATH: Breadcrumb[] = [
@@ -12,6 +12,7 @@ const FULL_PATH: Breadcrumb[] = [
   selector: 'app-breadcrumb-basic-example',
   standalone: true,
   imports: [BreadcrumbComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:34rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

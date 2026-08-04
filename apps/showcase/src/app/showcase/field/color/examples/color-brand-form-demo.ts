@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ColorComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ColorComponent } from 'ui';
   selector: 'app-color-brand-form-example',
   standalone: true,
   imports: [ReactiveFormsModule, ColorComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:52rem"

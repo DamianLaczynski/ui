@@ -1,4 +1,4 @@
-import { Component, model, signal } from '@angular/core';
+import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, DrawerComponent, QuickAction, SwitchComponent, TextComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, DrawerComponent, QuickAction, SwitchComponent, TextCom
   selector: 'app-drawer-settings-panel-example',
   standalone: true,
   imports: [FormsModule, ButtonComponent, DrawerComponent, SwitchComponent, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%;max-width:26rem">
       <ui-button variant="primary" (click)="visible.set(true)">Open settings panel</ui-button>

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AvatarComponent, ButtonComponent, CardComponent } from 'ui';
 
 @Component({
   selector: 'app-card-composition-demo',
   standalone: true,
   imports: [AvatarComponent, ButtonComponent, CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem;width:100%;"

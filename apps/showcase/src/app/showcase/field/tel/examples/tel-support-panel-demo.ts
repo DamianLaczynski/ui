@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, TelComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, TelComponent } from 'ui';
   selector: 'app-tel-support-panel-demo',
   standalone: true,
   imports: [ButtonComponent, FormsModule, TelComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:42rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

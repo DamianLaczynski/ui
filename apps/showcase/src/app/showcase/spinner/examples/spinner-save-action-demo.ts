@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, SpinnerComponent } from 'ui';
 
 @Component({
   selector: 'app-spinner-save-action-example',
   standalone: true,
   imports: [ButtonComponent, SpinnerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem">
       <ui-button type="button" variant="primary" [disabled]="saving()" (click)="runSave()">

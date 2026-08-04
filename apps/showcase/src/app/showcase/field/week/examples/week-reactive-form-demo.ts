@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { ButtonComponent, MessageBarComponent, WeekComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, MessageBarComponent, WeekComponent } from 'ui';
   selector: 'app-week-reactive-form-demo',
   standalone: true,
   imports: [ReactiveFormsModule, ButtonComponent, MessageBarComponent, WeekComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;max-width:24rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

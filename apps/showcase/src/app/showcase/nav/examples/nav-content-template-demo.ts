@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, TemplateRef, viewChild } from '@angular/core';
+import { Component, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { NavComponent, type NavNode } from 'ui';
 
 @Component({
   selector: 'app-nav-content-template-demo',
   standalone: true,
   imports: [CommonModule, NavComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="width:100%;max-width:19rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

@@ -1,4 +1,4 @@
-import { Component, computed, input, signal } from '@angular/core';
+import { Component, computed, input, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent } from 'ui';
 import { highlightTypeScript } from '@shared/utils/showcase/code-highlight.util';
 
@@ -6,6 +6,7 @@ import { highlightTypeScript } from '@shared/utils/showcase/code-highlight.util'
   selector: 'app-showcase-feature-section',
   standalone: true,
   imports: [ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <section class="showcase-doc__example" [id]="id()">
       <div class="showcase-doc__example-header">

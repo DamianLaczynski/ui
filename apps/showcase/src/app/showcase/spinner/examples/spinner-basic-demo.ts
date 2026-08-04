@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SpinnerComponent } from 'ui';
 
 @Component({
   selector: 'app-spinner-basic-example',
   standalone: true,
   imports: [SpinnerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end">
       <div style="display:flex;flex-direction:column;gap:0.35rem;align-items:flex-start">

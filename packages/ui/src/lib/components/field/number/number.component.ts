@@ -1,4 +1,11 @@
-import { Component, input, forwardRef, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  input,
+  forwardRef,
+  ViewChild,
+  ElementRef,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FieldComponent } from '../field/field.component';
 import { ActionButtonComponent } from '../action-button.component';
@@ -7,6 +14,7 @@ import { ActionButtonComponent } from '../action-button.component';
   selector: 'ui-number',
   imports: [FieldComponent, ActionButtonComponent],
   templateUrl: './number.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

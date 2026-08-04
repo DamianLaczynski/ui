@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { RangeComponent, NumericRange } from 'ui';
@@ -18,6 +18,7 @@ function minimumGapValidator(gap: number): ValidatorFn {
   selector: 'app-range-reactive-form-demo',
   standalone: true,
   imports: [ReactiveFormsModule, RangeComponent, JsonPipe],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:grid;gap:1rem;width:100%;max-width:44rem;">
       <form [formGroup]="form" style="display:grid;gap:1rem;">

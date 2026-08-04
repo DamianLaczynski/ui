@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { CardComponent, EmptyStateComponent, type QuickAction } from 'ui';
 
 @Component({
   selector: 'app-empty-state-actions-demo',
   standalone: true,
   imports: [CardComponent, EmptyStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:54rem"

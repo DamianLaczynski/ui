@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ErrorStateComponent, type QuickAction } from 'ui';
 
 @Component({
   selector: 'app-error-state-actions-demo',
   standalone: true,
   imports: [ErrorStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:56rem"

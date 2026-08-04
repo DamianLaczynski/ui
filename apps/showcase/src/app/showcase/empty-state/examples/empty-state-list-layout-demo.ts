@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CardComponent, EmptyStateComponent, TextComponent } from 'ui';
 
 @Component({
   selector: 'app-empty-state-list-layout-demo',
   standalone: true,
   imports: [ButtonComponent, CardComponent, EmptyStateComponent, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card style="width:100%;max-width:60rem;" ariaLabel="Project list empty state card">
       <div uiCardBody style="display:grid;gap:1rem;">

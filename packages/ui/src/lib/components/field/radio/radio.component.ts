@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { IconComponent } from '../../icon';
 import { Size, ContentPosition } from '../../utils';
@@ -6,6 +6,7 @@ import { Size, ContentPosition } from '../../utils';
 @Component({
   selector: 'ui-radio',
   imports: [NgClass, IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './radio.component.html',
 })
 export class RadioComponent {

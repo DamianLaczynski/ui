@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ToolbarComponent, type MenuItem, type ToolbarItem } from 'ui';
 
 @Component({
   selector: 'app-toolbar-split-actions-demo',
   standalone: true,
   imports: [ToolbarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:52rem"

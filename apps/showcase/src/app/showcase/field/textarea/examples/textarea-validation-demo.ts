@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, TextareaComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, TextareaComponent } from 'ui';
   selector: 'app-textarea-validation-demo',
   standalone: true,
   imports: [ButtonComponent, ReactiveFormsModule, TextareaComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="feedbackForm"

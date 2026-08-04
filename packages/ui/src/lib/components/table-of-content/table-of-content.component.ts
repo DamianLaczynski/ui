@@ -9,6 +9,7 @@ import {
   afterNextRender,
   computed,
   DOCUMENT,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 
 import { TreeNodeComponent, TreeNode } from '../tree-node/tree-node.component';
@@ -26,6 +27,7 @@ export interface TocItem {
 @Component({
   selector: 'ui-table-of-content',
   imports: [TreeNodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './table-of-content.component.html',
 })
 export class TableOfContentComponent implements OnDestroy {

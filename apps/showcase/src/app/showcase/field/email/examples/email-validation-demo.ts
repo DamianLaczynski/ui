@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, EmailComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, EmailComponent } from 'ui';
   selector: 'app-email-validation-demo',
   standalone: true,
   imports: [EmailComponent, ButtonComponent, ReactiveFormsModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="inviteForm"

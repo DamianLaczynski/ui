@@ -11,6 +11,7 @@ import {
   TemplateRef,
   Directive,
   inject,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Orientation } from '../utils';
@@ -43,6 +44,7 @@ export interface SplitterResizeEvent {
   selector: 'ui-splitter',
 
   imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './splitter.component.html',
 })
 export class SplitterComponent {

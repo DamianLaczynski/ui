@@ -8,6 +8,7 @@ import {
   ElementRef,
   AfterViewInit,
   computed,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
@@ -34,6 +35,7 @@ import { environment } from '@environments/environment';
     DrawerComponent,
     IconComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './ds.component.html',
 })
 export class DsComponent implements OnInit, OnDestroy, AfterViewInit {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, DateComponent, MessageBarComponent, TagComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, DateComponent, MessageBarComponent, TagComponent } fro
   selector: 'app-date-booking-panel-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, DateComponent, MessageBarComponent, TagComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start;max-width:48rem"

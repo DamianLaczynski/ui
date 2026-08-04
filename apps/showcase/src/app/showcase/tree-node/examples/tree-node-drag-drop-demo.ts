@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, TreeNodeComponent, type TreeNode } from 'ui';
 
 @Component({
   selector: 'app-tree-node-drag-drop-demo',
   standalone: true,
   imports: [CommonModule, ButtonComponent, TreeNodeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:54rem"

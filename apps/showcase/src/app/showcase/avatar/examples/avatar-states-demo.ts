@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AvatarComponent } from 'ui';
 
 @Component({
   selector: 'app-avatar-states-example',
   standalone: true,
   imports: [AvatarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end">
       <div style="display:flex;flex-direction:column;gap:0.35rem;align-items:center">

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { delay, of } from 'rxjs';
 import {
   ButtonComponent,
@@ -17,6 +17,7 @@ interface EventItem {
   selector: 'app-scroll-container-events-demo',
   standalone: true,
   imports: [ButtonComponent, ScrollContainerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:30rem">
       <div

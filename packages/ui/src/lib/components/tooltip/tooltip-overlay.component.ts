@@ -1,4 +1,4 @@
-import { Component, inject, InjectionToken } from '@angular/core';
+import { Component, inject, InjectionToken, ChangeDetectionStrategy } from '@angular/core';
 
 export const TOOLTIP_DATA = new InjectionToken<TooltipData>('TOOLTIP_DATA');
 
@@ -28,6 +28,7 @@ export interface TooltipData {
       }
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

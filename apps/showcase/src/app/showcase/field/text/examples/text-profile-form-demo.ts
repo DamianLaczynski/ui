@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, TextComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, TextComponent } from 'ui';
   selector: 'app-text-profile-form-example',
   standalone: true,
   imports: [ReactiveFormsModule, ButtonComponent, TextComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="form"

@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, DatetimeComponent, MessageBarComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, DatetimeComponent, MessageBarComponent } from 'ui';
   selector: 'app-datetime-reactive-form-demo',
   standalone: true,
   imports: [ReactiveFormsModule, ButtonComponent, DatetimeComponent, MessageBarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-direction:column;gap:1rem;max-width:24rem;padding:1rem;border:1px solid var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background-rest)"

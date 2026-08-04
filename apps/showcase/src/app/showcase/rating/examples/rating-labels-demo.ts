@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RatingComponent } from 'ui';
 
 @Component({
   selector: 'app-rating-labels-example',
   standalone: true,
   imports: [RatingComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;max-width:26rem">
       <ui-rating

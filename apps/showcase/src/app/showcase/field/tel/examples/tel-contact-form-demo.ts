@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent, TelComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, TelComponent } from 'ui';
   selector: 'app-tel-contact-form-demo',
   standalone: true,
   imports: [ButtonComponent, ReactiveFormsModule, TelComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="contactForm"

@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ContextMenuDirective, type MenuItem } from 'ui';
 
 @Component({
   selector: 'app-context-menu-submenu-demo',
   standalone: true,
   imports: [ContextMenuDirective],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:42rem">
       <div

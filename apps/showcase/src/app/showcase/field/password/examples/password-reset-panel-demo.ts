@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent, PasswordComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, PasswordComponent } from 'ui';
   selector: 'app-password-reset-panel-demo',
   standalone: true,
   imports: [ButtonComponent, PasswordComponent, ReactiveFormsModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="resetForm"

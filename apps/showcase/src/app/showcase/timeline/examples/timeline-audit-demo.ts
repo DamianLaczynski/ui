@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TimelineComponent, type TimelineItem } from 'ui';
 
 @Component({
   selector: 'app-timeline-audit-demo',
   standalone: true,
   imports: [TimelineComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:42rem">
       <div

@@ -1,4 +1,12 @@
-import { Component, input, output, signal, computed, effect } from '@angular/core';
+import {
+  Component,
+  input,
+  output,
+  signal,
+  computed,
+  effect,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Size, Variant } from '../../utils';
 import { IconComponent } from '../../icon';
@@ -21,6 +29,7 @@ export interface Step {
   selector: 'ui-stepper',
 
   imports: [CommonModule, IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './stepper.component.html',
 })
 export class StepperComponent {

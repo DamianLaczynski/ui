@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectComponent, type SelectItem } from 'ui';
 
@@ -13,6 +13,7 @@ const statusItems: SelectItem[] = [
 @Component({
   selector: 'app-select-basic-example',
   imports: [FormsModule, SelectComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:42rem"

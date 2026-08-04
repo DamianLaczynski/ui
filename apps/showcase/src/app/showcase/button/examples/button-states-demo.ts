@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent } from 'ui';
 
 @Component({
   selector: 'app-button-states-example',
   standalone: true,
   imports: [ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem">
       <ui-button variant="primary" icon="save" (click)="save()" [loading]="loading()"

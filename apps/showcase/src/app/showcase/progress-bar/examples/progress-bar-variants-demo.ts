@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ProgressBarComponent } from 'ui';
 
 @Component({
   selector: 'app-progress-bar-variants-example',
   standalone: true,
   imports: [ProgressBarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.9rem;width:100%;max-width:32rem">
       <div style="display:flex;flex-direction:column;gap:0.4rem">

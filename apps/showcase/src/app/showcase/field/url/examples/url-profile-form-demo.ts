@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent, UrlComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, UrlComponent } from 'ui';
   selector: 'app-url-profile-form-demo',
   standalone: true,
   imports: [ButtonComponent, ReactiveFormsModule, UrlComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="profileForm"

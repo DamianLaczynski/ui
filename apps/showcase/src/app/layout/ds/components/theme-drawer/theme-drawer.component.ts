@@ -7,6 +7,7 @@ import {
   computed,
   signal,
   input,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ThemeBuilderService } from '@shared/theme/theme-builder.service';
@@ -19,6 +20,7 @@ import type { DrawerType, QuickAction } from 'ui';
   standalone: true,
   imports: [FormsModule, ColorComponent, SliderComponent, DrawerComponent, IconComponent],
   templateUrl: './theme-drawer.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./theme-drawer.component.scss'],
 })
 export class ThemeDrawerComponent {

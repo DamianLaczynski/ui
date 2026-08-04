@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ScrollPanelComponent } from 'ui';
 
 @Component({
   selector: 'app-scroll-panel-scrollbar-behavior-demo',
   standalone: true,
   imports: [ScrollPanelComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;width:100%;max-width:48rem"

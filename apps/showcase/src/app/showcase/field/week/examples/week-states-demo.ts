@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { WeekComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { WeekComponent } from 'ui';
   selector: 'app-week-states-demo',
   standalone: true,
   imports: [FormsModule, WeekComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;align-items:start"

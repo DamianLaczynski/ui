@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RatingComponent, Size } from 'ui';
 
 @Component({
   selector: 'app-rating-sizes-states-example',
   standalone: true,
   imports: [RatingComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1.25rem">
       <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end">

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TagComponent } from 'ui';
 
 type Token = {
@@ -11,6 +11,7 @@ type Token = {
   selector: 'app-tag-dismissible-demo',
   standalone: true,
   imports: [TagComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:44rem">
       <div

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent, RatingComponent, TextareaComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, RatingComponent, TextareaComponent } from 'ui';
   selector: 'app-rating-review-feedback-example',
   standalone: true,
   imports: [ReactiveFormsModule, ButtonComponent, RatingComponent, TextareaComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <form
       [formGroup]="form"

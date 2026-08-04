@@ -1,4 +1,4 @@
-import { Component, model, signal } from '@angular/core';
+import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   AccordionComponent,
@@ -49,6 +49,7 @@ import {
   selector: 'app-lsp-accordion',
   standalone: true,
   imports: [AccordionComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-accordion label="Usage alerts & spend caps">
       <p
@@ -71,6 +72,7 @@ export class LspAccordionPreviewComponent {}
   selector: 'app-lsp-avatar',
   standalone: true,
   imports: [AvatarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end">
       <ui-avatar image="https://i.pravatar.cc/150?img=12" name="River Chen" />
@@ -87,6 +89,7 @@ export class LspAvatarPreviewComponent {}
   selector: 'app-lsp-badge',
   standalone: true,
   imports: [BadgeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;width:100%">
       <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
@@ -108,6 +111,7 @@ export class LspBadgePreviewComponent {}
   selector: 'app-lsp-breadcrumb',
   standalone: true,
   imports: [BreadcrumbComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-breadcrumb
       [items]="path()"
@@ -135,6 +139,7 @@ export class LspBreadcrumbPreviewComponent {
   selector: 'app-lsp-button',
   standalone: true,
   imports: [ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;width:100%">
       <ui-button variant="primary" appearance="filled">Publish release</ui-button>
@@ -160,6 +165,7 @@ export class LspButtonPreviewComponent {}
   selector: 'app-lsp-calendar',
   standalone: true,
   imports: [CalendarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-calendar
       [currentMonth]="currentMonth()"
@@ -192,6 +198,7 @@ export class LspCalendarPreviewComponent {
   selector: 'app-lsp-card',
   standalone: true,
   imports: [ButtonComponent, CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-card appearance="filled" ariaLabel="Release readiness summary">
       <div uiCardHeader style="display:grid;gap:0.35rem">
@@ -223,6 +230,7 @@ export class LspCardPreviewComponent {}
   selector: 'app-lsp-carousel',
   standalone: true,
   imports: [CarouselComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <ui-carousel [items]="slides" /> `,
 })
 export class LspCarouselPreviewComponent {
@@ -255,6 +263,7 @@ export class LspCarouselPreviewComponent {
   selector: 'app-lsp-checkbox',
   standalone: true,
   imports: [FormsModule, CheckboxComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-checkbox
       labelPosition="after"
@@ -286,6 +295,7 @@ export class LspCheckboxPreviewComponent {
   selector: 'app-lsp-color',
   standalone: true,
   imports: [FormsModule, ColorComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-color
       label="Brand accent"
@@ -303,6 +313,7 @@ export class LspColorPreviewComponent {
   selector: 'app-lsp-command-palette',
   standalone: true,
   imports: [ButtonComponent, CommandPaletteComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-button type="button" variant="secondary" appearance="outline" (click)="visible.set(true)"
       >Command palette</ui-button
@@ -328,6 +339,7 @@ export class LspCommandPalettePreviewComponent {
   selector: 'app-lsp-date',
   standalone: true,
   imports: [FormsModule, DateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-date label="Go-live date" [(ngModel)]="goLive" [ngModelOptions]="{ standalone: true }" />
   `,
@@ -340,6 +352,7 @@ export class LspDatePreviewComponent {
   selector: 'app-lsp-datetime',
   standalone: true,
   imports: [FormsModule, DatetimeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-datetime
       label="Incident start"
@@ -356,6 +369,7 @@ export class LspDatetimePreviewComponent {
   selector: 'app-lsp-month',
   standalone: true,
   imports: [FormsModule, MonthComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-month label="Fiscal period" [(ngModel)]="fiscal" [ngModelOptions]="{ standalone: true }" />
   `,
@@ -368,6 +382,7 @@ export class LspMonthPreviewComponent {
   selector: 'app-lsp-week',
   standalone: true,
   imports: [FormsModule, WeekComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-week
       label="Reporting week"
@@ -384,6 +399,7 @@ export class LspWeekPreviewComponent {
   selector: 'app-lsp-date-range',
   standalone: true,
   imports: [FormsModule, DateRangeComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-date-range
       label="Invoice export window"
@@ -400,6 +416,7 @@ export class LspDateRangePreviewComponent {
   selector: 'app-lsp-dialog',
   standalone: true,
   imports: [ButtonComponent, DialogComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-button type="button" variant="secondary" appearance="outline" (click)="visible.set(true)"
       >Rename</ui-button
@@ -437,6 +454,7 @@ export class LspDialogPreviewComponent {
   selector: 'app-lsp-divider',
   standalone: true,
   imports: [DividerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;min-width:0">
       <ui-divider text="Overview section" alignment="start" />
@@ -471,6 +489,7 @@ export class LspDividerPreviewComponent {
   selector: 'app-lsp-select',
   standalone: true,
   imports: [FormsModule, SelectComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-select
       label="Primary notification route"
@@ -491,6 +510,7 @@ export class LspSelectPreviewComponent {
   selector: 'app-lsp-drawer',
   standalone: true,
   imports: [ButtonComponent, DrawerComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.5rem;width:100%;min-width:0">
       <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
@@ -572,6 +592,7 @@ export class LspDrawerPreviewComponent {
   selector: 'app-lsp-email',
   standalone: true,
   imports: [FormsModule, EmailComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-email
       label="Billing notifications"
@@ -589,6 +610,7 @@ export class LspEmailPreviewComponent {
   selector: 'app-lsp-empty-state',
   standalone: true,
   imports: [EmptyStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-empty-state
       title="No sandbox deployments yet"
@@ -610,6 +632,7 @@ export class LspEmptyStatePreviewComponent {
   selector: 'app-lsp-error-state',
   standalone: true,
   imports: [ErrorStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-error-state
       title="Balances refused to refresh"
@@ -632,6 +655,7 @@ export class LspErrorStatePreviewComponent {
   selector: 'app-lsp-file',
   standalone: true,
   imports: [FileComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <ui-file label="Attach signed invoice (PDF)" accept=".pdf" /> `,
 })
 export class LspFilePreviewComponent {}
@@ -640,6 +664,7 @@ export class LspFilePreviewComponent {}
   selector: 'app-lsp-icon',
   standalone: true,
   imports: [IconComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.5rem;width:100%;min-width:0">
       <span
@@ -808,6 +833,7 @@ export class LspIconPreviewComponent {
   selector: 'app-lsp-kbd',
   standalone: true,
   imports: [KbdComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.85rem;width:100%;min-width:0">
       <div style="display:flex;flex-wrap:wrap;gap:0.45rem;align-items:center">
@@ -846,6 +872,7 @@ export class LspKbdPreviewComponent {}
   selector: 'app-lsp-loading-state',
   standalone: true,
   imports: [LoadingStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-loading-state
       title="Normalizing ledger entries"
@@ -859,6 +886,7 @@ export class LspLoadingStatePreviewComponent {}
   selector: 'app-lsp-message-bar',
   standalone: true,
   imports: [MessageBarComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <ui-message-bar
       title="Customer billing portal moved"
@@ -874,6 +902,7 @@ export class LspMessageBarPreviewComponent {}
   selector: 'app-lsp-menu',
   standalone: true,
   imports: [MenuComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
       <ui-menu

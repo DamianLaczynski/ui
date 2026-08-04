@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { KbdComponent } from 'ui';
 
 @Component({
   selector: 'app-kbd-common-shortcuts-demo',
   standalone: true,
   imports: [KbdComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:0.75rem;max-width:28rem">
       @for (shortcut of shortcuts; track shortcut.label) {

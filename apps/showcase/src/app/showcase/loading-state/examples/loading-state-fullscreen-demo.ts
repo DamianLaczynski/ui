@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, LoadingStateComponent } from 'ui';
 
 @Component({
   selector: 'app-loading-state-fullscreen-demo',
   standalone: true,
   imports: [ButtonComponent, LoadingStateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%;max-width:52rem"

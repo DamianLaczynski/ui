@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, DateComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { ButtonComponent, DateComponent } from 'ui';
   selector: 'app-date-basic-demo',
   standalone: true,
   imports: [FormsModule, ButtonComponent, DateComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;max-width:22rem">
       <ui-date

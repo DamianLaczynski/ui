@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SwitchComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { SwitchComponent } from 'ui';
   selector: 'app-switch-preferences-form-example',
   standalone: true,
   imports: [ReactiveFormsModule, SwitchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div
       style="display:grid;grid-template-columns:minmax(0,1fr) minmax(12rem,16rem);gap:1rem;align-items:start;width:100%;max-width:42rem"

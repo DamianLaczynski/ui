@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from 'ui';
 
@@ -6,6 +6,7 @@ import { SearchComponent } from 'ui';
   selector: 'app-search-states-demo',
   standalone: true,
   imports: [FormsModule, SearchComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;width:100%">
       <div style="flex:1 1 16rem;min-width:15rem">

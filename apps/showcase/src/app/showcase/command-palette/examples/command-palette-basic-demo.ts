@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent, CommandPaletteComponent, type CommandPaletteItem } from 'ui';
 
 const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
@@ -48,6 +48,7 @@ const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
   selector: 'app-command-palette-basic-demo',
   standalone: true,
   imports: [ButtonComponent, CommandPaletteComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div style="display:flex;flex-direction:column;gap:1rem;width:100%;max-width:36rem">
       <div
