@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, ProgressBarComponent } from 'ui';
+import { ButtonComponent, ProgressBarComponent } from 'lui';
 
 @Component({
   selector: 'app-progress-bar-task-flow-example',

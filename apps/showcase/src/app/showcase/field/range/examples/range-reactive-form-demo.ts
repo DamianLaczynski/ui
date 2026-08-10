@@ -1,7 +1,7 @@
 import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
-import { RangeComponent, NumericRange } from 'ui';
+import { RangeComponent, NumericRange } from 'lui';
 
 function minimumGapValidator(gap: number): ValidatorFn {
   return control => {

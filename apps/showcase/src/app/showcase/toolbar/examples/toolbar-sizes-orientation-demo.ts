@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ToolbarComponent, type ToolbarItem } from 'ui';
+import { ToolbarComponent, type ToolbarItem } from 'lui';
 
 @Component({
   selector: 'app-toolbar-sizes-orientation-demo',

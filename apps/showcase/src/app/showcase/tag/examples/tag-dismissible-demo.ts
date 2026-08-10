@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TagComponent } from 'ui';
+import { TagComponent } from 'lui';
 
 type Token = {
   id: string;

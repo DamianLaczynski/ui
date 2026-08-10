@@ -1,6 +1,6 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, NumberComponent } from 'ui';
+import { ButtonComponent, NumberComponent } from 'lui';
 
 @Component({
   selector: 'app-number-step-ranges-demo',

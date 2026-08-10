@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { SplitterComponent, SplitterPanelDirective, type SplitterPanel } from 'ui';
+import { SplitterComponent, SplitterPanelDirective, type SplitterPanel } from 'lui';
 
 @Component({
   selector: 'app-splitter-nested-workspace-demo',

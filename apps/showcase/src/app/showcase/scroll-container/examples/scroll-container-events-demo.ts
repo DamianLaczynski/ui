@@ -5,7 +5,7 @@ import {
   ScrollContainerComponent,
   type Node,
   type ScrollContainerDataSource,
-} from 'ui';
+} from 'lui';
 
 interface EventItem {
   id: number;

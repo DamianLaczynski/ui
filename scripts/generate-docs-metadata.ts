@@ -71,7 +71,7 @@ const guidePaths = GUIDE_PAGES.map(g => ({
 const componentPaths = listComponentLlmsMarkdown();
 
 const llmsFullChunks = [
-  '# @laczynski/ui Showcase - Full Markdown URI list',
+  '# @laczynski/lui Showcase - Full Markdown URI list',
   '',
   'Generated during npm run docs:build. Paths are rooted at this site.',
   '',
@@ -96,7 +96,7 @@ writeFileSync(join(publicDir, 'llms-full.txt'), llmsFullChunks.join('\n') + '\n'
 const previewComponents = componentPaths.slice(0, 12);
 
 const llmsTxt = [
-  '# @laczynski/ui Showcase',
+  '# @laczynski/lui Showcase',
   '',
   'LLM-oriented documentation endpoints. Fetch Markdown instead of HTML when possible.',
   '',

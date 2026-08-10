@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, TabsComponent, type Tab } from 'ui';
+import { ButtonComponent, TabsComponent, type Tab } from 'lui';
 
 @Component({
   selector: 'app-tabs-overflow-demo',

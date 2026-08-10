@@ -3,7 +3,7 @@
   "title": "Range",
   "description": "Range exposes a dual-thumb numeric selection model for choosing lower and upper bounds within one field. Use it for filters, price bands, time windows, thresholds, and any workflow where users need a bounded interval instead of a single value.",
   "intro": "Range extends the shared field system and combines two coordinated native range inputs into one control. It supports min and max bounds, step snapping, formatted values, step markers, readonly and disabled states, helper and error text, and Angular forms integration.",
-  "importCode": "import { RangeComponent, type NumericRange } from 'ui';",
+  "importCode": "import { RangeComponent, type NumericRange } from 'lui';",
   "containerClass": "range-doc",
   "snippets": {
     "basicCode": "range-basic-demo.ts",

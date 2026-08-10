@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { AvatarComponent, Shape, Size } from 'ui';
+import { AvatarComponent, Shape, Size } from 'lui';
 
 @Component({
   selector: 'app-avatar-layout-example',

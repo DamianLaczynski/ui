@@ -1,4 +1,4 @@
-import type { Breadcrumb, CommandPaletteItem, MenuItem, SelectItem } from 'ui';
+import type { Breadcrumb, CommandPaletteItem, MenuItem, SelectItem } from 'lui';
 
 export const LSP_SELECT_ITEMS: SelectItem[] = [
   { value: 'production', label: 'Production', icon: 'rocket' },

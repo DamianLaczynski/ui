@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TextareaComponent } from 'ui';
+import { TextareaComponent } from 'lui';
 
 @Component({
   selector: 'app-textarea-layout-demo',

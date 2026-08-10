@@ -1,5 +1,5 @@
 import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
+import { ButtonComponent, DrawerComponent, QuickAction } from 'lui';
 
 const bodyStackStyle =
   'display:flex;flex-direction:column;gap:0.875rem;color:var(--color-neutral-foreground-rest);font-size:0.875rem;line-height:1.55';

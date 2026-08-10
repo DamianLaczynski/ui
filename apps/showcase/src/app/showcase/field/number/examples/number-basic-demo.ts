@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NumberComponent } from 'ui';
+import { NumberComponent } from 'lui';
 
 @Component({
   selector: 'app-number-basic-demo',

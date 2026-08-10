@@ -3,7 +3,7 @@
   "title": "Nav",
   "description": "Nav builds side navigation and hierarchical local rails on top of tree-node behavior. It supports semantic variants, appearances, sizes, shapes, section headers, dividers, deep nesting, content templates, and quick actions.",
   "intro": "Use `ui-nav` for sidebars, workspace rails, settings navigation, and other structured navigation surfaces where a flat menu is not enough. It manages rendering and tree behavior for navigation rows, while the surrounding app handles routing or state updates when a node is selected.",
-  "importCode": "import { NavComponent, type NavNode } from 'ui';",
+  "importCode": "import { NavComponent, type NavNode } from 'lui';",
   "containerClass": "nav-doc",
   "snippets": {
     "basicCode": "nav-basic-demo.ts",

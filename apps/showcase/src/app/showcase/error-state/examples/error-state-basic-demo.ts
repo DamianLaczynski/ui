@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ErrorStateComponent } from 'ui';
+import { ErrorStateComponent } from 'lui';
 
 @Component({
   selector: 'app-error-state-basic-demo',

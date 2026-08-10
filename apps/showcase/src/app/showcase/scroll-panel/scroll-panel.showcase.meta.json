@@ -3,7 +3,7 @@
   "title": "Scroll Panel",
   "description": "Scroll Panel provides a configurable scroll region with orientation, scrollbar visibility behavior, scroll events, and imperative scrolling methods for custom panel shells.",
   "intro": "Use `ui-scroll-panel` when you need a reusable scroll shell for custom layouts, panels, drawers, or card regions and do not want the higher-level data-loading behavior of `ui-scroll-container`.",
-  "importCode": "import { ScrollPanelComponent } from 'ui';",
+  "importCode": "import { ScrollPanelComponent } from 'lui';",
   "containerClass": "scroll-panel-doc",
   "snippets": {
     "basicCode": "scroll-panel-basic-demo.ts",

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, WeekComponent } from 'ui';
+import { ButtonComponent, WeekComponent } from 'lui';
 
 @Component({
   selector: 'app-week-basic-demo',

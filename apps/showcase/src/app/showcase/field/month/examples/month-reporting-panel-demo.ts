@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, MessageBarComponent, MonthComponent, TagComponent } from 'ui';
+import { ButtonComponent, MessageBarComponent, MonthComponent, TagComponent } from 'lui';
 
 @Component({
   selector: 'app-month-reporting-panel-demo',

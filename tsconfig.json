@@ -19,8 +19,8 @@
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
-      "ui": ["./packages/ui/src/public-api.ts"],
-      "ui/ngx-translate": ["./packages/ui/ngx-translate/public-api.ts"]
+      "lui": ["./packages/lui/src/public-api.ts"],
+      "lui/ngx-translate": ["./packages/lui/ngx-translate/public-api.ts"]
     }
   },
   "angularCompilerOptions": {
@@ -32,7 +32,7 @@
   },
   "references": [
     {
-      "path": "./packages/ui/tsconfig.lib.json"
+      "path": "./packages/lui/tsconfig.lib.json"
     },
     {
       "path": "./apps/showcase/tsconfig.app.json"

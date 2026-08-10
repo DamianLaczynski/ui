@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { AccordionComponent, ButtonComponent } from 'ui';
+import { AccordionComponent, ButtonComponent } from 'lui';
 
 @Component({
   selector: 'app-accordion-quick-actions-example',

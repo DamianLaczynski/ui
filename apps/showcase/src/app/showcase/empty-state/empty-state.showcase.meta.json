@@ -3,7 +3,7 @@
   "title": "Empty State",
   "description": "Empty State communicates that there is currently no content to show and helps the user understand what to do next through concise copy, optional icons, actions, and custom content.",
   "intro": "Use `ui-empty-state` for empty lists, first-run experiences, no-results states, and permission-related blanks. Focus on clear explanation and the next sensible step instead of decorative filler.",
-  "importCode": "import { EmptyStateComponent, type QuickAction } from 'ui';",
+  "importCode": "import { EmptyStateComponent, type QuickAction } from 'lui';",
   "containerClass": "empty-state-doc",
   "snippets": {
     "basicCode": "empty-state-basic-demo.ts",

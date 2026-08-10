@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { PasswordComponent } from 'ui';
+import { PasswordComponent } from 'lui';
 
 @Component({
   selector: 'app-password-autocomplete-demo',

@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ButtonComponent, CheckboxComponent } from 'ui';
+import { ButtonComponent, CheckboxComponent } from 'lui';
 
 @Component({
   selector: 'app-checkbox-permissions-panel-example',

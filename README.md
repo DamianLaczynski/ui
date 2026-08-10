@@ -1,12 +1,12 @@
-# @laczynski/ui
+# @laczynski/lui
 
 Enterprise-grade Angular component library with a **Fluent-inspired** design language.
 
-**Documentation:** [ui.laczynski.dev](https://ui.laczynski.dev/) · **npm:** [`@laczynski/ui`](https://www.npmjs.com/package/@laczynski/ui)
+**Documentation:** [ui.laczynski.dev](https://ui.laczynski.dev/) · **npm:** [`@laczynski/lui`](https://www.npmjs.com/package/@laczynski/lui)
 
 ## Overview
 
-This monorepo contains the publishable library (`@laczynski/ui`), a live documentation showcase, and the tooling used to build, test, and ship both. The library provides 60+ standalone Angular components — layout, forms, data display, overlays, and primitives — with light/dark theming, i18n support, and accessibility built in.
+This monorepo contains the publishable library (`@laczynski/lui`), a live documentation showcase, and the tooling used to build, test, and ship both. The library provides 60+ standalone Angular components — layout, forms, data display, overlays, and primitives — with light/dark theming, i18n support, and accessibility built in.
 
 Visual styling is inspired by [Fluent 2](https://fluent2.microsoft.design/) design principles. This is an independent project and not an official Microsoft product.
 
@@ -14,7 +14,7 @@ Visual styling is inspired by [Fluent 2](https://fluent2.microsoft.design/) desi
 
 | Path | Description |
 | ---- | ----------- |
-| [`packages/ui`](packages/ui) | Publishable component library (`@laczynski/ui`) |
+| [`packages/lui`](packages/lui) | Publishable component library (`@laczynski/lui`) |
 | [`apps/showcase`](apps/showcase) | Documentation site with live examples and API reference |
 | [`apps/starter`](apps/starter) | Sample application shell |
 | [`public`](public) | Static assets and generated docs copied into the showcase build |
@@ -24,13 +24,13 @@ Visual styling is inspired by [Fluent 2](https://fluent2.microsoft.design/) desi
 ## Use the library
 
 ```bash
-npm install @laczynski/ui
+npm install @laczynski/lui
 ```
 
 Requires Angular `^22.1.0`, Angular CDK `^22.1.0`, and Node.js `22.22.3+` (Node 24 LTS recommended for development).
 
 ```typescript
-import { ButtonComponent } from '@laczynski/ui';
+import { ButtonComponent } from '@laczynski/lui';
 ```
 
 Full setup, styling, and per-component usage: [Getting started](https://ui.laczynski.dev/docs/getting-started).
@@ -38,8 +38,8 @@ Full setup, styling, and per-component usage: [Getting started](https://ui.laczy
 ## Develop locally
 
 ```bash
-git clone https://github.com/laczynski/Ui.git
-cd Ui
+git clone https://github.com/Laczynski/Lui.git
+cd Lui
 npm install
 npm start
 ```
@@ -51,7 +51,7 @@ npm start
 | Command | Description |
 | ------- | ----------- |
 | `npm start` | Watch library + serve showcase |
-| `npm run build:lib` | Build `@laczynski/ui` to `dist/ui` |
+| `npm run build:lib` | Build `@laczynski/lui` to `dist/lui` |
 | `npm run build` | Production build of the showcase |
 | `npm test` | Run library unit tests |
 | `npm run lint` | ESLint across the workspace |
@@ -70,7 +70,7 @@ npm start
 
 **Layout & navigation** — accordion, breadcrumb, carousel, drawer, nav, scroll container, splitter, tabs, toolbar, tree.
 
-**Data & feedback** — badge, card, data grid, empty/error/loading states, message bar, pagination, progress bar, rating, skeleton, spinner, tag, timeline, toast, tooltip.
+**Data & feedback** — badge, card, empty/error/loading states, message bar, pagination, progress bar, rating, skeleton, spinner, tag, timeline, toast, tooltip.
 
 **Forms & input** — checkbox, color, date, datetime, date range, select, email, file, number, password, radio, search, slider, stepper, switch, text, textarea, tel, time, TOTP, URL, week.
 
@@ -80,7 +80,7 @@ npm start
 
 ## Disclaimer
 
-@laczynski/ui is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Fluent, Fluent UI, and Microsoft are trademarks of Microsoft Corporation. See [`docs/legal-notice.md`](docs/legal-notice.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+@laczynski/lui is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Fluent, Fluent UI, and Microsoft are trademarks of Microsoft Corporation. See [`docs/legal-notice.md`](docs/legal-notice.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## License
 

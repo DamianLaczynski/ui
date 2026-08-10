@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent } from 'ui';
+import { ButtonComponent } from 'lui';
 
 @Component({
   selector: 'app-button-states-example',

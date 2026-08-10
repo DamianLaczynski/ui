@@ -3,7 +3,7 @@
   "title": "Avatar",
   "description": "Compact identity surface: photo, initials, generated initials from a full name, or a named icon. Variant and appearance align with theme tokens; size and shape tune density for lists versus profile headers.",
   "intro": "Supply `image` when you have a URL, `initials` for explicit letters, or `name` to derive up to two characters. Without those, set `icon` or accept the default person glyph. `loading` swaps content for a spinner while `ariaLabel` or `name` feeds the required accessible name on the `img` role host.",
-  "importCode": "import { AvatarComponent } from 'ui';",
+  "importCode": "import { AvatarComponent } from 'lui';",
   "containerClass": "avatar-doc",
   "snippets": {
     "basicCode": "avatar-basic-demo.ts",

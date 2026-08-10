@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, TotpComponent } from 'ui';
+import { ButtonComponent, TotpComponent } from 'lui';
 
 @Component({
   selector: 'app-totp-verification-panel-demo',

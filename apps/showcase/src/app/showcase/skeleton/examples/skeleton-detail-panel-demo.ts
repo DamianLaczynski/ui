@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, SkeletonComponent } from 'ui';
+import { ButtonComponent, SkeletonComponent } from 'lui';
 
 @Component({
   selector: 'app-skeleton-detail-panel-example',

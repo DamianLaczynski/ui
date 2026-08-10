@@ -3,7 +3,7 @@
   "title": "Switch",
   "description": "Switch is a binary control for immediate on and off decisions such as notifications, feature flags, and account preferences. Use it for settings that take effect as a single boolean choice rather than multi-step selection.",
   "intro": "Switch builds on the shared field foundation, so it supports labels, helper and error text, validation hooks, disabled and readonly states, and Angular forms integration. It keeps the interaction model close to a native checkbox while presenting a design-system toggle surface.",
-  "importCode": "import { SwitchComponent } from 'ui';",
+  "importCode": "import { SwitchComponent } from 'lui';",
   "containerClass": "switch-doc",
   "snippets": {
     "basicCode": "switch-basic-demo.ts",

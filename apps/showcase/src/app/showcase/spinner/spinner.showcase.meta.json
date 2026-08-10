@@ -3,7 +3,7 @@
   "title": "Spinner",
   "description": "Indeterminate progress: compact SVG ring with semantic color, extended size scale, and optional caption placement for inline buttons or centered shells.",
   "intro": "Use `labelPosition=\"none\"` for icon-only chrome and set `ariaLabel` to describe the wait. Turn on `label` with a position when the spinner substitutes for a block of content. `variant` and `size` follow the same tokens as buttons so loading states stay visually aligned with surrounding actions.",
-  "importCode": "import { SpinnerComponent } from 'ui';",
+  "importCode": "import { SpinnerComponent } from 'lui';",
   "containerClass": "spinner-doc",
   "snippets": {
     "basicCode": "spinner-basic-demo.ts",

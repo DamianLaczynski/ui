@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, CardComponent, TimePickerComponent } from 'ui';
+import { ButtonComponent, CardComponent, TimePickerComponent } from 'lui';
 
 @Component({
   selector: 'app-time-picker-inline-schedule-demo',

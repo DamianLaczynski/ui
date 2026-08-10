@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ErrorStateComponent, type QuickAction } from 'ui';
+import { ErrorStateComponent, type QuickAction } from 'lui';
 
 @Component({
   selector: 'app-error-state-actions-demo',

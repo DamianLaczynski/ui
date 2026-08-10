@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, LoadingStateComponent, MessageBarComponent, TextComponent } from 'ui';
+import { ButtonComponent, LoadingStateComponent, MessageBarComponent, TextComponent } from 'lui';
 
 @Component({
   selector: 'app-loading-state-panel-layout-demo',

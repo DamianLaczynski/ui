@@ -15,8 +15,8 @@
       "@layout/*": ["./src/app/layout/*"],
       "@styles/*": ["./src/styles/*"],
       "@environments/*": ["./src/environments/*"],
-      "ui": ["../../packages/ui/src/public-api.ts"],
-      "ui/ngx-translate": ["../../packages/ui/ngx-translate/public-api.ts"]
+      "lui": ["../../packages/lui/src/public-api.ts"],
+      "lui/ngx-translate": ["../../packages/lui/ngx-translate/public-api.ts"]
     }
   },
   "files": ["src/main.ts"],

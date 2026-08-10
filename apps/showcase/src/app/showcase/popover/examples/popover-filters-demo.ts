@@ -1,6 +1,6 @@
 import { Component, TemplateRef, signal, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, DividerComponent, PopoverDirective, SwitchComponent } from 'ui';
+import { ButtonComponent, DividerComponent, PopoverDirective, SwitchComponent } from 'lui';
 
 type FilterKey = 'open' | 'waiting' | 'escalated' | 'mine';
 

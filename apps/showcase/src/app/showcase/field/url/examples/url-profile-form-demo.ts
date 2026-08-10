@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ButtonComponent, UrlComponent } from 'ui';
+import { ButtonComponent, UrlComponent } from 'lui';
 
 @Component({
   selector: 'app-url-profile-form-demo',

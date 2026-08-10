@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, TemplateRef, signal, viewChild, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, TreeNodeComponent, type TreeNode } from 'ui';
+import { ButtonComponent, TreeNodeComponent, type TreeNode } from 'lui';
 
 @Component({
   selector: 'app-tree-node-quick-actions-demo',

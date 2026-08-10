@@ -3,7 +3,7 @@
   "title": "Time",
   "description": "Time is a form field for hour and minute selection. It uses a connected time-picker overlay on desktop and can fall back to a native time input on mobile.",
   "intro": "Use `ui-time` when users need one exact time within an already known day. It works well for standups, support handoffs, call scheduling, opening hours, and other workflows where time matters but a full date-time value would be too heavy.",
-  "importCode": "import { TimeComponent } from 'ui';",
+  "importCode": "import { TimeComponent } from 'lui';",
   "containerClass": "time-doc",
   "snippets": {
     "basicCode": "time-basic-demo.ts",

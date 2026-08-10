@@ -8,7 +8,7 @@ import {
   Step,
   StepperComponent,
   TextComponent,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-stepper-onboarding-wizard-example',

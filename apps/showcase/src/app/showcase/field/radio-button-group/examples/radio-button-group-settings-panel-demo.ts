@@ -1,6 +1,6 @@
 import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RadioButtonGroupComponent } from 'ui';
+import { RadioButtonGroupComponent } from 'lui';
 
 @Component({
   selector: 'app-radio-button-group-settings-panel-demo',

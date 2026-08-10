@@ -1,5 +1,5 @@
 import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, DrawerComponent, QuickAction } from 'ui';
+import { ButtonComponent, DrawerComponent, QuickAction } from 'lui';
 
 @Component({
   selector: 'app-drawer-types-example',

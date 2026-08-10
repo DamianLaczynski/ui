@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, input, signal, Type, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ButtonComponent, IconComponent } from 'ui';
+import { ButtonComponent, IconComponent } from 'lui';
 import { ShowcaseComponent } from '../../landing-showcase-components';
 import {
   LANDING_SURFACE_INPUTS_PLACEMENT,

@@ -24,7 +24,7 @@
             "tsConfig": "apps/showcase/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "stylePreprocessorOptions": {
-              "includePaths": ["packages/ui/src/lib/scss"]
+              "includePaths": ["packages/lui/src/lib/scss"]
             },
             "assets": [
               {
@@ -37,7 +37,7 @@
                 "output": "assets/icons"
               }
             ],
-            "styles": ["packages/ui/src/lib/scss/main.scss", "apps/showcase/src/scss/main.scss"],
+            "styles": ["packages/lui/src/lib/scss/main.scss", "apps/showcase/src/scss/main.scss"],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +83,7 @@
           "builder": "@angular/build:unit-test",
           "options": {
             "tsConfig": "apps/showcase/tsconfig.spec.json",
-            "setupFiles": ["packages/ui/src/test-setup.ts"]
+            "setupFiles": ["packages/lui/src/test-setup.ts"]
           }
         },
         "lint": {
@@ -94,20 +94,20 @@
         }
       }
     },
-    "ui": {
+    "lui": {
       "projectType": "library",
-      "root": "packages/ui",
-      "sourceRoot": "packages/ui/src",
+      "root": "packages/lui",
+      "sourceRoot": "packages/lui/src",
       "prefix": "ui",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "packages/ui/tsconfig.lib.prod.json"
+              "tsConfig": "packages/lui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "packages/ui/tsconfig.lib.json"
+              "tsConfig": "packages/lui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -115,14 +115,14 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "packages/ui/tsconfig.spec.json",
-            "setupFiles": ["packages/ui/src/test-setup.ts"]
+            "tsConfig": "packages/lui/tsconfig.spec.json",
+            "setupFiles": ["packages/lui/src/test-setup.ts"]
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["packages/ui/**/*.ts", "packages/ui/**/*.html"]
+            "lintFilePatterns": ["packages/lui/**/*.ts", "packages/lui/**/*.html"]
           }
         }
       }

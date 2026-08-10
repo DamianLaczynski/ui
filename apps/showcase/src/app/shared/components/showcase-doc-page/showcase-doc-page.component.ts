@@ -2,7 +2,7 @@ import { NgComponentOutlet } from '@angular/common';
 import { Component, computed, inject, input, signal, ChangeDetectionStrategy } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { toObservable } from '@angular/core/rxjs-interop';
-import { Tab, TableOfContentComponent, TabsComponent } from 'ui';
+import { Tab, TableOfContentComponent, TabsComponent } from 'lui';
 import { ShowcaseDocAssetService } from '@shared/services/showcase-doc-asset.service';
 import { highlightTypeScript } from '@shared/utils/showcase/code-highlight.util';
 import { switchMap } from 'rxjs/operators';

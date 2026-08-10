@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, TemplateRef, signal, viewChild, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, NavComponent, type NavNode } from 'ui';
+import { ButtonComponent, NavComponent, type NavNode } from 'lui';
 
 @Component({
   selector: 'app-nav-quick-actions-demo',

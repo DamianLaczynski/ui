@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { LoadingStateComponent } from 'ui';
+import { LoadingStateComponent } from 'lui';
 
 @Component({
   selector: 'app-loading-state-messaging-demo',

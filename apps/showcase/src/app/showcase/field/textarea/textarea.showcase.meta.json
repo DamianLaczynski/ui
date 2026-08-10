@@ -3,7 +3,7 @@
   "title": "Textarea",
   "description": "Textarea is a field-specialized wrapper around the shared multiline input foundation. It supports configurable rows, shared field variants and sizes, and the same validation and state model as the rest of the field family.",
   "intro": "Use `ui-textarea` for notes, comments, descriptions, summaries, and any input that needs more vertical room than a single-line field. It inherits the shared field API for labels, help text, size, variant, readonly, disabled, and validation messaging while exposing multiline-specific sizing through `rows`.",
-  "importCode": "import { TextareaComponent } from 'ui';",
+  "importCode": "import { TextareaComponent } from 'lui';",
   "containerClass": "textarea-doc",
   "snippets": {
     "basicCode": "textarea-basic-demo.ts",

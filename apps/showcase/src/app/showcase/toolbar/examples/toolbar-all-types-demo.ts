@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, ToolbarComponent, type ToolbarItem } from 'ui';
+import { BadgeComponent, ToolbarComponent, type ToolbarItem } from 'lui';
 
 @Component({
   selector: 'app-toolbar-all-types-demo',

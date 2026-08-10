@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, MonthComponent } from 'ui';
+import { ButtonComponent, MonthComponent } from 'lui';
 
 @Component({
   selector: 'app-month-basic-demo',

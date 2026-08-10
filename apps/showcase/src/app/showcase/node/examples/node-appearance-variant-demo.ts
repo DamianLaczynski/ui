@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { NodeComponent, type Node } from 'ui';
+import { NodeComponent, type Node } from 'lui';
 
 @Component({
   selector: 'app-node-appearance-variant-demo',

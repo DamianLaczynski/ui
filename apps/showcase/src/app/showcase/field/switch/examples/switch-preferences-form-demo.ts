@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { SwitchComponent } from 'ui';
+import { SwitchComponent } from 'lui';
 
 @Component({
   selector: 'app-switch-preferences-form-example',

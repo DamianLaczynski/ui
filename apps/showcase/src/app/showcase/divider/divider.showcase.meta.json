@@ -3,7 +3,7 @@
   "title": "Divider",
   "description": "Divider separates content into clearer groups without adding heavy visual chrome. Use it to split sections, inline actions, or alternative paths such as auth options and toolbar groups.",
   "intro": "Divider renders a semantic separator with horizontal or vertical orientation, optional text, and configurable text alignment. It should support layout comprehension quietly rather than become a visual focal point.",
-  "importCode": "import { DividerComponent } from 'ui';",
+  "importCode": "import { DividerComponent } from 'lui';",
   "containerClass": "divider-doc",
   "snippets": {
     "basicCode": "divider-basic-demo.ts",

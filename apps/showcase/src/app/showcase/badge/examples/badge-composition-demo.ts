@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent } from 'ui';
+import { BadgeComponent } from 'lui';
 
 @Component({
   selector: 'app-badge-composition-demo',

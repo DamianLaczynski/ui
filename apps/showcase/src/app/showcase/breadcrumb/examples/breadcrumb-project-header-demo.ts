@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BreadcrumbComponent, ButtonComponent, type Breadcrumb } from 'ui';
+import { BreadcrumbComponent, ButtonComponent, type Breadcrumb } from 'lui';
 
 @Component({
   selector: 'app-breadcrumb-project-header-example',

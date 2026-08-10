@@ -3,7 +3,7 @@
   "title": "Tooltip",
   "description": "Tooltip shows short contextual help on hover or focus without taking permanent space in the layout. Use it for clarifications, control hints, and lightweight metadata, not for essential instructions users must always read.",
   "intro": "Tooltip is exposed as a standalone directive applied to an existing trigger element. It supports placement, size, show delay, optional arrow rendering, disabled mode, and an accessibility relationship that can behave as a description or as the element label.",
-  "importCode": "import { TooltipDirective } from 'ui';",
+  "importCode": "import { TooltipDirective } from 'lui';",
   "containerClass": "tooltip-doc",
   "snippets": {
     "basicCode": "tooltip-basic-demo.ts",

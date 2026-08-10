@@ -3,7 +3,7 @@
   "title": "Scroll Container",
   "description": "Scroll Container renders progressively loaded lists with built-in infinite scrolling, optional node-based rows, custom templates, selection, load events, and programmatic control.",
   "intro": "Use `ui-scroll-container` for activity feeds, inboxes, logs, lists inside drawers, and any surface where users should be able to scroll through progressively loaded items without paging away.",
-  "importCode": "import { ScrollContainerComponent, type ScrollContainerDataSource } from 'ui';",
+  "importCode": "import { ScrollContainerComponent, type ScrollContainerDataSource } from 'lui';",
   "containerClass": "scroll-container-doc",
   "snippets": {
     "basicCode": "scroll-container-basic-demo.ts",

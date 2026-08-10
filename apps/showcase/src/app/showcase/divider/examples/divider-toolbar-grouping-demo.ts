@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, DividerComponent } from 'ui';
+import { ButtonComponent, DividerComponent } from 'lui';
 
 @Component({
   selector: 'app-divider-toolbar-grouping-example',

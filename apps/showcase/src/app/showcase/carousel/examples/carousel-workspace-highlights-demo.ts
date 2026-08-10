@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, CarouselComponent, CarouselItem } from 'ui';
+import { BadgeComponent, CarouselComponent, CarouselItem } from 'lui';
 
 @Component({
   selector: 'app-carousel-workspace-highlights-demo',

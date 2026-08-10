@@ -7,7 +7,7 @@ import {
   SearchComponent,
   type Node,
   type ScrollContainerDataSource,
-} from 'ui';
+} from 'lui';
 
 interface InboxItem {
   id: number;

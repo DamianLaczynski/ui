@@ -3,7 +3,7 @@
   "title": "Kbd",
   "description": "Kbd displays one keyboard key or token in a compact visual shell. It supports size and a lightweight filled appearance for shortcut documentation and inline guidance.",
   "intro": "Use `ui-kbd` to present keyboard keys inside help copy, shortcut lists, command hints, and documentation. It is not an interactive control by itself. Its job is to make keyboard tokens readable, scannable, and visually consistent.",
-  "importCode": "import { KbdComponent } from 'ui';",
+  "importCode": "import { KbdComponent } from 'lui';",
   "containerClass": "kbd-doc",
   "snippets": {
     "basicCode": "kbd-basic-demo.ts",

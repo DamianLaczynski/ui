@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, Step, StepperComponent } from 'ui';
+import { BadgeComponent, Step, StepperComponent } from 'lui';
 
 @Component({
   selector: 'app-stepper-vertical-example',

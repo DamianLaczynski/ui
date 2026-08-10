@@ -3,7 +3,7 @@
   "title": "Node",
   "description": "Node renders a single interactive row for navigation, metadata lists, compact explorers, and tree-like shells with selection, quick actions, custom content, and drag-drop hooks.",
   "intro": "Use `ui-node` when you need one reusable row primitive rather than a full tree or nav container. It works well for sidebars, result rows, explorer items, and any compact structure where icon, label, selection, and row actions need to stay aligned.",
-  "importCode": "import { NodeComponent, type Node } from 'ui';",
+  "importCode": "import { NodeComponent, type Node } from 'lui';",
   "containerClass": "node-doc",
   "snippets": {
     "basicCode": "node-basic-demo.ts",

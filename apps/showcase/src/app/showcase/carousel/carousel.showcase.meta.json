@@ -3,7 +3,7 @@
   "title": "Carousel",
   "description": "Carousel rotates through a bounded set of slides with shared navigation, indicators, and optional auto-play. It works best for a small number of hero messages, workspace highlights, or richer card-like slides that need more room than a compact list item.",
   "intro": "Use carousel when each slide deserves focused attention and users benefit from comparing a small sequence of items. It supports image slides, custom templates, manual navigation, indicators, looping, and auto-play with hover pause.",
-  "importCode": "import { CarouselComponent } from 'ui';",
+  "importCode": "import { CarouselComponent } from 'lui';",
   "containerClass": "carousel-doc",
   "snippets": {
     "basicCode": "carousel-basic-demo.ts",

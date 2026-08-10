@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, MessageBarComponent, TagComponent, TimeComponent } from 'ui';
+import { ButtonComponent, MessageBarComponent, TagComponent, TimeComponent } from 'lui';
 
 @Component({
   selector: 'app-time-scheduling-panel-demo',

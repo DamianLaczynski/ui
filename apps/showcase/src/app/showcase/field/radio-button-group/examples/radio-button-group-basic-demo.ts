@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RadioButtonGroupComponent, type RadioButtonItem } from 'ui';
+import { RadioButtonGroupComponent, type RadioButtonItem } from 'lui';
 
 @Component({
   selector: 'app-radio-button-group-basic-demo',

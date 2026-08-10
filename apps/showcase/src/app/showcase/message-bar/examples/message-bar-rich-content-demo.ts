@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, MessageBarComponent } from 'ui';
+import { ButtonComponent, MessageBarComponent } from 'lui';
 
 @Component({
   selector: 'app-message-bar-rich-content-example',

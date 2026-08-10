@@ -8,7 +8,7 @@ import {
   SwitchComponent,
   TagComponent,
   TextComponent,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-popover-share-demo',

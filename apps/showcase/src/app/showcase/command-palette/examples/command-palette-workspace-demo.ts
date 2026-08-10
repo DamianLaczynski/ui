@@ -4,7 +4,7 @@ import {
   KbdComponent,
   CommandPaletteComponent,
   type CommandPaletteItem,
-} from 'ui';
+} from 'lui';
 
 const WORKSPACE_ITEMS: Omit<CommandPaletteItem, 'action'>[] = [
   {

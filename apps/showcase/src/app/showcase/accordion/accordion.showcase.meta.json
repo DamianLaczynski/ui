@@ -3,7 +3,7 @@
   "title": "Accordion",
   "description": "Accordion reveals and hides related content under a compact header. Use it for FAQs, grouped settings, inspection panels, and places where users need progressive disclosure without leaving the current page.",
   "intro": "Accordion builds on the design-system `tree-node` header, so it inherits structured header chrome such as icons, chevron placement, selection indicators, quick actions, and tree-style expansion semantics. It is best for grouped content that should stay scannable when collapsed and readable when expanded.",
-  "importCode": "import { AccordionComponent } from 'ui';",
+  "importCode": "import { AccordionComponent } from 'lui';",
   "containerClass": "accordion-doc",
   "snippets": {
     "basicCode": "accordion-basic-demo.ts",

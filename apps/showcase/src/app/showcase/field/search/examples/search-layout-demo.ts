@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { SearchComponent } from 'ui';
+import { SearchComponent } from 'lui';
 
 @Component({
   selector: 'app-search-layout-demo',

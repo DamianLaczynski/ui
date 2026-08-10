@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
-import { NavComponent, type NavNode } from 'ui';
+import { NavComponent, type NavNode } from 'lui';
 
 @Component({
   selector: 'app-nav-content-template-demo',

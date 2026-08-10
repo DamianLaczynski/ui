@@ -3,7 +3,7 @@
   "title": "Email",
   "description": "Email is a field-specialized wrapper around the shared input foundation with native `type=\"email\"`, built-in clear affordance, and address-oriented defaults like email autocomplete. Use it for invites, contact points, billing addresses, and notification settings.",
   "intro": "Use `ui-email` when the value is specifically an email address and should benefit from native browser validation, mobile keyboard hints, and shared field behavior. It inherits the design-system field API for labels, help text, size, variant, readonly, disabled, and validation messaging.",
-  "importCode": "import { EmailComponent } from 'ui';",
+  "importCode": "import { EmailComponent } from 'lui';",
   "containerClass": "email-doc",
   "snippets": {
     "basicCode": "email-basic-demo.ts",

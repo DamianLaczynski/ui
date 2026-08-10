@@ -6,7 +6,7 @@ import {
   DateRangeComponent,
   MessageBarComponent,
   TagComponent,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-date-range-booking-panel-demo',

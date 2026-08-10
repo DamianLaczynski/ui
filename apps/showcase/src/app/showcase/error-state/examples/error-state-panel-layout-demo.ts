@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, ErrorStateComponent, TextComponent } from 'ui';
+import { ButtonComponent, ErrorStateComponent, TextComponent } from 'lui';
 
 @Component({
   selector: 'app-error-state-panel-layout-demo',

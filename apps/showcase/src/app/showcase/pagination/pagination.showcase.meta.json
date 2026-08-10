@@ -3,7 +3,7 @@
   "title": "Pagination",
   "description": "Pagination navigates paged datasets with previous and next controls, optional page-number windows, first and last jumps, range info, and page size selection. Use it when the UI intentionally slices a larger result set into stable pages.",
   "intro": "Pagination is best when users move through a known page model such as admin tables, search results, logs, and archives. This component supports compact prev and next navigation, numbered page windows with ellipsis compression, optional first and last jumps, and a page size selector powered by the shared select.",
-  "importCode": "import { PaginationComponent, type PaginationConfig } from 'ui';",
+  "importCode": "import { PaginationComponent, type PaginationConfig } from 'lui';",
   "containerClass": "pagination-doc",
   "snippets": {
     "basicCode": "pagination-basic-demo.ts",

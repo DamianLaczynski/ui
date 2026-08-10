@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, TextComponent } from 'ui';
+import { ButtonComponent, TextComponent } from 'lui';
 
 @Component({
   selector: 'app-text-profile-form-example',

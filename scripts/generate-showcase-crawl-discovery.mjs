@@ -139,14 +139,14 @@ function main() {
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Showcase crawl index — @laczynski/ui</title>
+  <title>Showcase crawl index — @laczynski/lui</title>
   <meta name="robots" content="index,follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="${escapeXml(crawlHref)}" />
 </head>
 <body>
 <main>
-<h1>@laczynski/ui showcase — URL index for crawlers</h1>
+<h1>@laczynski/lui showcase — URL index for crawlers</h1>
 <p>Plain HTML links to Angular routes (and Markdown mirrors under /docs).</p>
 <nav><ul>${pathnames.map(p => `<li><a href="${escapeAttr(p)}">${escapeText(p)}</a></li>`).join('')}</ul></nav>
 </main>

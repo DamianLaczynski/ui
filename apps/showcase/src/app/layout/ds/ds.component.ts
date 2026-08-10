@@ -15,9 +15,9 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { DsSidebarComponent } from './components/ds-sidebar/ds-sidebar.component';
 import { ThemeDrawerComponent } from './components/theme-drawer/theme-drawer.component';
-import { ButtonComponent, DrawerComponent } from 'ui';
+import { ButtonComponent, DrawerComponent } from 'lui';
 import { ThemeBuilderService } from '@shared/theme/theme-builder.service';
-import { IconComponent } from 'ui';
+import { IconComponent } from 'lui';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Subscription } from 'rxjs';
 import { ScrollService } from '@shared/scroll/scroll.service';
@@ -50,7 +50,7 @@ export class DsComponent implements OnInit, OnDestroy, AfterViewInit {
   readonly themeBuilder = inject(ThemeBuilderService);
 
   readonly version = environment.libraryVersion;
-  readonly githubUrl = 'https://github.com/laczynski/Ui';
+  readonly githubUrl = 'https://github.com/Laczynski/Lui';
   readonly npmUrl = 'https://www.npmjs.com/';
 
   isDarkMode = computed(() => this.themeService.$themeMode() === ThemeMode.Dark);

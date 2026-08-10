@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NumericRange, RangeComponent } from 'ui';
+import { NumericRange, RangeComponent } from 'lui';
 
 const dashedCardStyle =
   'padding:0.875rem 1rem;border:1px dashed var(--color-neutral-stroke-rest);border-radius:1rem;background:var(--color-neutral-background2-rest);min-width:14rem';

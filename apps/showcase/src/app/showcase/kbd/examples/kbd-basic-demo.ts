@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { KbdComponent } from 'ui';
+import { KbdComponent } from 'lui';
 
 @Component({
   selector: 'app-kbd-basic-demo',

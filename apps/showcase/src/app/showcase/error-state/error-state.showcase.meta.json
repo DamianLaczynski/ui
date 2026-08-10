@@ -3,7 +3,7 @@
   "title": "Error State",
   "description": "Error State communicates that a task or view failed and helps the user recover through clear explanation, optional iconography, actions, and custom follow-up content.",
   "intro": "Use `ui-error-state` for failed loads, missing resources, permission blocks, and similar broken flows where the user needs both context and a next step. The copy should explain the problem in human terms, not just restate a technical failure.",
-  "importCode": "import { ErrorStateComponent, type QuickAction } from 'ui';",
+  "importCode": "import { ErrorStateComponent, type QuickAction } from 'lui';",
   "containerClass": "error-state-doc",
   "snippets": {
     "basicCode": "error-state-basic-demo.ts",

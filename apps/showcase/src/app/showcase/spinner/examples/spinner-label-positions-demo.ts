@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ContentPosition, SpinnerComponent } from 'ui';
+import { ContentPosition, SpinnerComponent } from 'lui';
 
 @Component({
   selector: 'app-spinner-label-positions-example',

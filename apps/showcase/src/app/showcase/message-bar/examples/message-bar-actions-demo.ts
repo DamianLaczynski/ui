@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { MessageBarComponent, QuickAction } from 'ui';
+import { MessageBarComponent, QuickAction } from 'lui';
 
 @Component({
   selector: 'app-message-bar-actions-example',

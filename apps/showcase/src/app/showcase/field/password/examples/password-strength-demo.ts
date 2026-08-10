@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, PasswordComponent } from 'ui';
+import { ButtonComponent, PasswordComponent } from 'lui';
 
 @Component({
   selector: 'app-password-strength-demo',

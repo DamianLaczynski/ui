@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, TagComponent, TimelineComponent, TimelineItemComponent } from 'ui';
+import { ButtonComponent, TagComponent, TimelineComponent, TimelineItemComponent } from 'lui';
 
 @Component({
   selector: 'app-timeline-composition-demo',

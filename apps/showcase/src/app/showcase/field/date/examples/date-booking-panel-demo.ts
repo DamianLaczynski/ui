@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, DateComponent, MessageBarComponent, TagComponent } from 'ui';
+import { ButtonComponent, DateComponent, MessageBarComponent, TagComponent } from 'lui';
 
 @Component({
   selector: 'app-date-booking-panel-demo',

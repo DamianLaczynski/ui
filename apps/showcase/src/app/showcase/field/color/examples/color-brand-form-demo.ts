@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ColorComponent } from 'ui';
+import { ColorComponent } from 'lui';
 
 @Component({
   selector: 'app-color-brand-form-example',

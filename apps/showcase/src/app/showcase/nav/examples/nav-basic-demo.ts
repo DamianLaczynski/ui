@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { NavComponent, type NavNode } from 'ui';
+import { NavComponent, type NavNode } from 'lui';
 
 @Component({
   selector: 'app-nav-basic-demo',

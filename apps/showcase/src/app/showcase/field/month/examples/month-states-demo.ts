@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MonthComponent } from 'ui';
+import { MonthComponent } from 'lui';
 
 @Component({
   selector: 'app-month-states-demo',

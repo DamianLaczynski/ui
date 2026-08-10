@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, SelectComponent, type SelectItem } from 'ui';
+import { ButtonComponent, SelectComponent, type SelectItem } from 'lui';
 
 const channelItems: SelectItem[] = [
   { value: 'email', label: 'Email', icon: 'mail' },

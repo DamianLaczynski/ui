@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, NodeComponent, type Node } from 'ui';
+import { BadgeComponent, NodeComponent, type Node } from 'lui';
 
 @Component({
   selector: 'app-node-custom-content-demo',

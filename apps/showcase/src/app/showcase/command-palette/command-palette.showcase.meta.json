@@ -3,7 +3,7 @@
   "title": "Command Palette",
   "description": "Command Palette provides a searchable action launcher with grouped results, disabled items, keyword matching, empty-result messaging, and keyboard-oriented interaction.",
   "intro": "Use `ui-command-palette` for global command search, quick navigation, and action launching in dense workspaces. Good palettes reduce hunting through menus and sidebars by making intent searchable.",
-  "importCode": "import { CommandPaletteComponent, type CommandPaletteItem } from 'ui';",
+  "importCode": "import { CommandPaletteComponent, type CommandPaletteItem } from 'lui';",
   "containerClass": "command-palette-doc",
   "snippets": {
     "basicCode": "command-palette-basic-demo.ts",

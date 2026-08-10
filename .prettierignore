@@ -5,4 +5,4 @@ coverage
 package-lock.json
 *.min.js
 *.md
-packages/ui/src/lib/components/icon/generated
+packages/lui/src/lib/components/icon/generated

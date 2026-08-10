@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ToolbarComponent, type MenuItem, type ToolbarItem } from 'ui';
+import { ToolbarComponent, type MenuItem, type ToolbarItem } from 'lui';
 
 @Component({
   selector: 'app-toolbar-split-actions-demo',

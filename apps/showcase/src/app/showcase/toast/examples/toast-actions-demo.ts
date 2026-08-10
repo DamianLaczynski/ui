@@ -1,5 +1,5 @@
 import { Component, inject, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, ToastService } from 'ui';
+import { ButtonComponent, ToastService } from 'lui';
 
 @Component({
   selector: 'app-toast-actions-example',

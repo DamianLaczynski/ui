@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TelComponent } from 'ui';
+import { TelComponent } from 'lui';
 
 @Component({
   selector: 'app-tel-layout-demo',

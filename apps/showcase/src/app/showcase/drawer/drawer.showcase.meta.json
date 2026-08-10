@@ -3,7 +3,7 @@
   "title": "Drawer",
   "description": "Drawer reveals contextual panels from a screen edge without forcing full page navigation. Use it for side tasks, inspection, editing, and workflows that should stay connected to the current page.",
   "intro": "Drawer supports overlay and inline presentation, edge positioning, structured footer actions, modal versus non-modal behavior, and focus management. It is a better fit than a dialog when users need more room or should keep page context visible beside the panel.",
-  "importCode": "import { DrawerComponent } from 'ui';",
+  "importCode": "import { DrawerComponent } from 'lui';",
   "containerClass": "drawer-doc",
   "snippets": {
     "basicCode": "drawer-basic-demo.ts",

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, RatingComponent } from 'ui';
+import { ButtonComponent, RatingComponent } from 'lui';
 
 @Component({
   selector: 'app-rating-listing-snapshot-example',

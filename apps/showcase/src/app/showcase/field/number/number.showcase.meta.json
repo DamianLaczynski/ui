@@ -3,7 +3,7 @@
   "title": "Number",
   "description": "Number provides numeric text entry with min, max, and step constraints on top of the shared field system, making it suitable for quantities, pricing, bounded values, and small calculation flows.",
   "intro": "Use `ui-number` for quantities, currency-like inputs, percentages, rates, and other numeric values that benefit from browser-native number input behavior plus your shared field styling and validation patterns.",
-  "importCode": "import { NumberComponent } from 'ui';",
+  "importCode": "import { NumberComponent } from 'lui';",
   "containerClass": "number-doc",
   "snippets": {
     "basicCode": "number-basic-demo.ts",

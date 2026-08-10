@@ -1,5 +1,5 @@
 import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, ToastService } from 'ui';
+import { ButtonComponent, ToastService } from 'lui';
 
 @Component({
   selector: 'app-toast-sticky-example',

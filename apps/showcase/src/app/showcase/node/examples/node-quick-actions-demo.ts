@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, MenuComponent, NodeComponent, type MenuItem, type Node } from 'ui';
+import { ButtonComponent, MenuComponent, NodeComponent, type MenuItem, type Node } from 'lui';
 
 @Component({
   selector: 'app-node-quick-actions-demo',

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, DatetimeComponent } from 'ui';
+import { ButtonComponent, DatetimeComponent } from 'lui';
 
 @Component({
   selector: 'app-datetime-basic-demo',

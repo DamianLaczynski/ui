@@ -1,8 +1,8 @@
 import { Component, computed, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, UrlSegment } from '@angular/router';
-import { NavComponent, NavNode } from 'ui';
+import { NavComponent, NavNode } from 'lui';
 import { filter } from 'rxjs/operators';
-import { SearchComponent } from 'ui';
+import { SearchComponent } from 'lui';
 import { FormsModule } from '@angular/forms';
 
 @Component({

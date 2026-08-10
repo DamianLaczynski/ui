@@ -3,7 +3,7 @@
   "title": "Time Picker",
   "description": "Time Picker is a standalone wheel-based selector for hours and minutes. It supports 24 hour and 12 hour presentation, minute step intervals, size variants, inline layout, labels, and disabled state.",
   "intro": "Use `ui-time-picker` when you need the time selection primitive directly, outside of the shared field wrapper. It works well in drawers, scheduling panels, compact operational rows, and custom overlays where a full `ui-time` field would add unnecessary chrome.",
-  "importCode": "import { TimePickerComponent } from 'ui';",
+  "importCode": "import { TimePickerComponent } from 'lui';",
   "containerClass": "time-picker-doc",
   "snippets": {
     "basicCode": "time-picker-basic-demo.ts",

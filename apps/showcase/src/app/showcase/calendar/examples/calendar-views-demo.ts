@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { CalendarComponent, CalendarDay, CalendarView } from 'ui';
+import { CalendarComponent, CalendarDay, CalendarView } from 'lui';
 
 @Component({
   selector: 'app-calendar-views-demo',

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { KbdComponent, MessageBarComponent, TagComponent } from 'ui';
+import { KbdComponent, MessageBarComponent, TagComponent } from 'lui';
 
 @Component({
   selector: 'app-kbd-command-help-demo',

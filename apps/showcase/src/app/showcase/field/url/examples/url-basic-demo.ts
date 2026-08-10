@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UrlComponent } from 'ui';
+import { UrlComponent } from 'lui';
 
 @Component({
   selector: 'app-url-basic-demo',

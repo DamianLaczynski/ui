@@ -14,8 +14,8 @@ When you add one: ground it in the component API or inherited standards — not 
 
 | Layer | Owns | Does not own |
 | ----- | ---- | ------------ |
-| Library unit (`packages/ui`) | Component logic, signal computations, state transitions, ARIA attribute binding | Showcase layout, routing, doc rendering |
-| Showcase unit (`apps/showcase`) | Doc page wiring, demo component behavior | Library internals already tested in `packages/ui` |
+| Library unit (`packages/lui`) | Component logic, signal computations, state transitions, ARIA attribute binding | Showcase layout, routing, doc rendering |
+| Showcase unit (`apps/showcase`) | Doc page wiring, demo component behavior | Library internals already tested in `packages/lui` |
 
 Colocate specs as `*.spec.ts` next to the source file.
 

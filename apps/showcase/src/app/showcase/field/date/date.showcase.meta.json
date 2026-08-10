@@ -3,7 +3,7 @@
   "title": "Date",
   "description": "Date is a form field for single-day selection. It uses a calendar overlay on desktop and can fall back to a native date input on mobile.",
   "intro": "Use `ui-date` when users need one exact day rather than a month, week, or date-time value. It works well for booking, deadlines, confirmations, and review workflows where the day matters but the time does not.",
-  "importCode": "import { DateComponent } from 'ui';",
+  "importCode": "import { DateComponent } from 'lui';",
   "containerClass": "date-doc",
   "snippets": {
     "basicCode": "date-basic-demo.ts",

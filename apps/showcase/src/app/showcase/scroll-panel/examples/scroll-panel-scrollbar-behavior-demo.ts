@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ScrollPanelComponent } from 'ui';
+import { ScrollPanelComponent } from 'lui';
 
 @Component({
   selector: 'app-scroll-panel-scrollbar-behavior-demo',

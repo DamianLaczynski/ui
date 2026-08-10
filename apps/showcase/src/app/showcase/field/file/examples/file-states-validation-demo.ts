@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, FileComponent } from 'ui';
+import { ButtonComponent, FileComponent } from 'lui';
 
 @Component({
   selector: 'app-file-states-validation-demo',

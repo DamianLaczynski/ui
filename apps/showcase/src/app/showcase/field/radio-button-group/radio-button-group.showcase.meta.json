@@ -3,7 +3,7 @@
   "title": "Radio Button Group",
   "description": "Radio Button Group renders a small single-choice set as button-like options on a unified segmented surface with support for orientation, icons, semantic variants, and per-option disabled state.",
   "intro": "Use `ui-radio-button-group` when users need to choose exactly one option from a small set and a button-like segmented presentation fits better than classic radios. It works well for view switches, density controls, mode selectors, and compact settings choices.",
-  "importCode": "import { RadioButtonGroupComponent, type RadioButtonItem } from 'ui';",
+  "importCode": "import { RadioButtonGroupComponent, type RadioButtonItem } from 'lui';",
   "containerClass": "radio-button-group-doc",
   "snippets": {
     "basicCode": "radio-button-group-basic-demo.ts",

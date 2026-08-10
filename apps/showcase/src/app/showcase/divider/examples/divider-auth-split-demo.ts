@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, DividerComponent, TextComponent } from 'ui';
+import { ButtonComponent, DividerComponent, TextComponent } from 'lui';
 
 @Component({
   selector: 'app-divider-auth-split-example',

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { delay, of } from 'rxjs';
-import { ScrollContainerComponent, type ScrollContainerDataSource } from 'ui';
+import { ScrollContainerComponent, type ScrollContainerDataSource } from 'lui';
 
 interface TemplateItem {
   id: number;

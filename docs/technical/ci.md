@@ -14,7 +14,7 @@ Triggers: push and pull request to `main`.
 | --- | ------------ | ---------- |
 | `lint` | `npm ci` → `npm run lint` | — |
 | `test` | `npm ci` → `npm run build:lib` → `ng test ui-showcase --watch=false` | — |
-| `test-lib` | `npm ci` → `npm run build:lib` → typecheck specs → `ng test ui --watch=false` | — |
+| `test-lib` | `npm ci` → `npm run build:lib` → typecheck specs → `ng test lui --watch=false` | — |
 | `build` | `npm ci` → `npm run build:lib` → `npm run build:ui-showcase` | `lint`, `test`, `test-lib` |
 
 All jobs use Node 24 with npm cache.
@@ -33,7 +33,7 @@ File: `.github/workflows/publish.yml`
 
 Triggers: push tags `v*`.
 
-Runs tests, builds the library, publishes `@laczynski/ui` to npmjs.com (OIDC + provenance), and creates a GitHub Release.
+Runs tests, builds the library, publishes `@laczynski/lui` to npmjs.com (OIDC + provenance) and GitHub Packages, and creates a GitHub Release.
 
 Details: [publishing.md](publishing.md).
 
@@ -61,7 +61,7 @@ npm run build
 | ---------- | ------------ | --- |
 | `lint` | ESLint or Prettier violation | `npm run lint:fix` and `npm run format` |
 | `test` | Showcase unit test failure | Fix spec in `apps/showcase/src/` |
-| `test-lib` | Library unit test or typecheck failure | Fix spec in `packages/ui/src/` |
+| `test-lib` | Library unit test or typecheck failure | Fix spec in `packages/lui/src/` |
 | `build` | Compilation or docs generation error | Check build output; run `npm run docs:build` separately |
 
 ## Pre-commit hooks

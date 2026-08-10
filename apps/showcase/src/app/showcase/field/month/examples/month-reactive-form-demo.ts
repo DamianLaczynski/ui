@@ -1,6 +1,6 @@
 import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, MessageBarComponent, MonthComponent } from 'ui';
+import { ButtonComponent, MessageBarComponent, MonthComponent } from 'lui';
 
 @Component({
   selector: 'app-month-reactive-form-demo',

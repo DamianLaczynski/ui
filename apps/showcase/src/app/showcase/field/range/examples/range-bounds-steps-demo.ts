@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NumericRange, RangeComponent } from 'ui';
+import { NumericRange, RangeComponent } from 'lui';
 
 @Component({
   selector: 'app-range-bounds-steps-demo',

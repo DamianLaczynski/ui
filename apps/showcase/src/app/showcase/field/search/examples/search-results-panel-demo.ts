@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, SearchComponent } from 'ui';
+import { ButtonComponent, SearchComponent } from 'lui';
 
 type SearchResult = {
   title: string;

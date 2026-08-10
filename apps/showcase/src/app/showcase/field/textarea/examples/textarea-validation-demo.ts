@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, TextareaComponent } from 'ui';
+import { ButtonComponent, TextareaComponent } from 'lui';
 
 @Component({
   selector: 'app-textarea-validation-demo',

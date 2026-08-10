@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { MenuItem, SpeedDialComponent } from 'ui';
+import { MenuItem, SpeedDialComponent } from 'lui';
 
 @Component({
   selector: 'app-speed-dial-linear-demo',

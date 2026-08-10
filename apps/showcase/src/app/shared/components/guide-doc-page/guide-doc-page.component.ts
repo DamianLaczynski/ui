@@ -1,6 +1,6 @@
 import { RouterLink } from '@angular/router';
 import { Component, computed, input, signal, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, ButtonComponent, TableOfContentComponent, type Variant } from 'ui';
+import { BadgeComponent, ButtonComponent, TableOfContentComponent, type Variant } from 'lui';
 import { highlightTypeScript } from '@shared/utils/showcase/code-highlight.util';
 import {
   GuideDocCardStatusTone,

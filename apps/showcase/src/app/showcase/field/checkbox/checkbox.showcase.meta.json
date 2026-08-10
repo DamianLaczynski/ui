@@ -3,7 +3,7 @@
   "title": "Checkbox",
   "description": "Checkbox is a multi-select binary control for consent, filters, permissions, and grouped option lists. Use it when users can select zero, one, or many independent items rather than making a mutually exclusive choice.",
   "intro": "Checkbox builds on the shared field foundation, so it supports labels, helper and error text, validation hooks, disabled and readonly states, and Angular forms integration. It also adds checkbox-specific shape options and an indeterminate state for partially selected groups.",
-  "importCode": "import { CheckboxComponent } from 'ui';",
+  "importCode": "import { CheckboxComponent } from 'lui';",
   "containerClass": "checkbox-doc",
   "snippets": {
     "basicCode": "checkbox-basic-demo.ts",

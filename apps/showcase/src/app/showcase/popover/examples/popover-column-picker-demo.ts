@@ -7,7 +7,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, PopoverDirective, SwitchComponent } from 'ui';
+import { ButtonComponent, PopoverDirective, SwitchComponent } from 'lui';
 
 type ColumnKey = 'region' | 'accounts' | 'mrr' | 'owner';
 

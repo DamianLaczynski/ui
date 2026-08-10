@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { CardComponent, EmptyStateComponent, type QuickAction } from 'ui';
+import { CardComponent, EmptyStateComponent, type QuickAction } from 'lui';
 
 @Component({
   selector: 'app-empty-state-actions-demo',

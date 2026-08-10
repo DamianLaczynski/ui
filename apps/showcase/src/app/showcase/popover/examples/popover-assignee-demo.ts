@@ -13,7 +13,7 @@ import {
   DividerComponent,
   PopoverDirective,
   SearchComponent,
-} from 'ui';
+} from 'lui';
 
 interface AssigneeOption {
   id: string;

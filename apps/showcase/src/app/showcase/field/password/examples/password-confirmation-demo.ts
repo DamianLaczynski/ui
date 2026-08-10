@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, PasswordComponent } from 'ui';
+import { ButtonComponent, PasswordComponent } from 'lui';
 
 @Component({
   selector: 'app-password-confirmation-demo',

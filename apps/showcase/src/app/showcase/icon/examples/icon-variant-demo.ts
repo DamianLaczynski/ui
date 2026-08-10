@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { IconComponent } from 'ui';
+import { IconComponent } from 'lui';
 
 @Component({
   selector: 'app-icon-variant-demo',

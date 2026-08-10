@@ -3,7 +3,7 @@
   "title": "Select",
   "description": "Select handles single and multi-select choices from predefined options. It supports searchable lists, clear actions, custom item templates, and shared field states for form and filter workflows.",
   "intro": "Select is appropriate when users choose from a bounded set rather than entering freeform text. It covers multi-select with comma-separated trigger text, client-side search, custom item presentation, and reactive forms integration without async data loading complexity.",
-  "importCode": "import { SelectComponent } from 'ui';",
+  "importCode": "import { SelectComponent } from 'lui';",
   "containerClass": "select-doc",
   "snippets": {
     "basicCode": "select-basic-demo.ts",

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { DividerComponent } from 'ui';
+import { DividerComponent } from 'lui';
 
 @Component({
   selector: 'app-divider-orientation-example',

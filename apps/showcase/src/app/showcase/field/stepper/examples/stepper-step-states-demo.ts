@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { Step, StepperComponent } from 'ui';
+import { Step, StepperComponent } from 'lui';
 
 @Component({
   selector: 'app-stepper-step-states-example',

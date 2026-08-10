@@ -6,7 +6,7 @@ import {
   CheckboxComponent,
   SwitchComponent,
   TextComponent,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-accordion-settings-form-example',

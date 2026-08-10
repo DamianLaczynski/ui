@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ContextMenuDirective, type MenuItem } from 'ui';
+import { ContextMenuDirective, type MenuItem } from 'lui';
 
 @Component({
   selector: 'app-context-menu-submenu-demo',

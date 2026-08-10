@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { SkeletonComponent } from 'ui';
+import { SkeletonComponent } from 'lui';
 
 @Component({
   selector: 'app-skeleton-card-shell-example',

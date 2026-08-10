@@ -37,7 +37,7 @@ import {
   QuickAction,
   WeekComponent,
   type Breadcrumb,
-} from 'ui';
+} from 'lui';
 import {
   LSP_BREADCRUMB_FULL,
   LSP_COMMAND_ITEMS_BASE,

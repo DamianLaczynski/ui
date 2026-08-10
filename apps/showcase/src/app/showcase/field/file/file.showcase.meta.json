@@ -3,7 +3,7 @@
   "title": "File",
   "description": "File wraps the shared field foundation around native file selection with inline and drag-and-drop area modes, built-in file lists, accept filters, and simple limits for count and size.",
   "intro": "Use `ui-file` when users need to attach documents, images, or bundles without building a custom upload shell. It supports compact inline selection, larger drop zones, selected-file lists, multiple uploads, and shared field inputs like label, help text, size, variant, readonly, disabled, and validation messaging.",
-  "importCode": "import { FileComponent } from 'ui';",
+  "importCode": "import { FileComponent } from 'lui';",
   "containerClass": "file-doc",
   "snippets": {
     "basicCode": "file-basic-demo.ts",

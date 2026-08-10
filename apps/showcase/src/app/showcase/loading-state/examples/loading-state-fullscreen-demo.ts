@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, LoadingStateComponent } from 'ui';
+import { ButtonComponent, LoadingStateComponent } from 'lui';
 
 @Component({
   selector: 'app-loading-state-fullscreen-demo',

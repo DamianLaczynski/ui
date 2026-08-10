@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, CardComponent, LoadingStateComponent } from 'ui';
+import { ButtonComponent, CardComponent, LoadingStateComponent } from 'lui';
 
 @Component({
   selector: 'app-loading-state-card-overlay-demo',

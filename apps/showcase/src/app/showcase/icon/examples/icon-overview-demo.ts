@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { IconComponent, IconName } from 'ui';
+import { IconComponent, IconName } from 'lui';
 
 type IconVariant = 'regular' | 'filled';
 type IconSize = 'small' | 'medium' | 'large';

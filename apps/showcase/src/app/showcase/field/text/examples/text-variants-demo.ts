@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TextComponent } from 'ui';
+import { TextComponent } from 'lui';
 
 @Component({
   selector: 'app-text-variants-example',

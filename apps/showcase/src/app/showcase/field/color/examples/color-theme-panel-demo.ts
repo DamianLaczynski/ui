@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, ColorComponent } from 'ui';
+import { ButtonComponent, ColorComponent } from 'lui';
 
 @Component({
   selector: 'app-color-theme-panel-example',

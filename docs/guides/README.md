@@ -17,7 +17,7 @@ Full layer index: [`docs/README.md`](../README.md). **Per-component showcase doc
 | Document | Read when you need to… |
 | -------- | ---------------------- |
 | [repo-map.md](repo-map.md) | Find where code lives and which layer owns what |
-| [component-guidelines.md](component-guidelines.md) | Build or change a component in `packages/ui` |
+| [component-guidelines.md](component-guidelines.md) | Build or change a component in `packages/lui` |
 | [showcase-guidelines.md](showcase-guidelines.md) | Add or update component documentation in the showcase |
 | [testing-guidelines.md](testing-guidelines.md) | Decide what to test and how |
 

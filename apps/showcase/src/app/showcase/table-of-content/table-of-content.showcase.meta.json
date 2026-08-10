@@ -3,7 +3,7 @@
   "title": "Table of Content",
   "description": "Table of Content scans a target container, builds hierarchical in-page navigation, tracks the active section, and supports sticky placement, heading filtering, and custom heading selectors.",
   "intro": "Use `ui-table-of-content` in documentation pages, long settings panels, knowledge content, or any reading surface where users benefit from quick in-page navigation. The real quality of the result depends more on content structure than on visual styling.",
-  "importCode": "import { TableOfContentComponent } from 'ui';",
+  "importCode": "import { TableOfContentComponent } from 'lui';",
   "containerClass": "table-of-content-doc",
   "snippets": {
     "basicCode": "table-of-content-basic-demo.ts",

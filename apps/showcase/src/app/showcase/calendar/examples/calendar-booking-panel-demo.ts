@@ -5,7 +5,7 @@ import {
   CalendarDay,
   MessageBarComponent,
   TagComponent,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-calendar-booking-panel-demo',

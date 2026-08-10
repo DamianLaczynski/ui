@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { IconComponent, Size } from 'ui';
+import { IconComponent, Size } from 'lui';
 
 const sizes: Array<{ size: Size; label: string }> = [
   { size: 'small', label: 'Small' },
