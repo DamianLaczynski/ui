@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [2.0.0-preview.8] - 2026-08-10
+
+### Changed
+
+- First CI publish of `@laczynski/lui` via trusted publishing (npmjs.com + GitHub Packages).
+
 ## [2.0.0-preview.7] - 2026-08-10
 
 ### Changed (breaking)
