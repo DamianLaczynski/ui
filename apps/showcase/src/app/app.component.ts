@@ -1,6 +1,6 @@
 import { Component, inject, computed, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ToastContainerComponent, IconComponent } from 'ui';
+import { ToastContainerComponent, IconComponent } from 'lui';
 import { ScrollService } from '@shared/scroll/scroll.service';
 
 @Component({

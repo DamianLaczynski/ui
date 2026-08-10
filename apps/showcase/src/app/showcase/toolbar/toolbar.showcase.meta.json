@@ -3,7 +3,7 @@
   "title": "Toolbar",
   "description": "Toolbar organizes actions into a compact row or column with support for grouping, toggles, split buttons, dividers, overflow, and mixed custom content.",
   "intro": "Use `ui-toolbar` for command rows, editor headers, file actions, and other compact action clusters. Keep the highest-frequency actions visible and separate unrelated groups clearly.",
-  "importCode": "import { ToolbarComponent, type ToolbarItem, type ToolbarGroup } from 'ui';",
+  "importCode": "import { ToolbarComponent, type ToolbarItem, type ToolbarGroup } from 'lui';",
   "containerClass": "toolbar-doc",
   "snippets": {
     "basicCode": "toolbar-basic-demo.ts",

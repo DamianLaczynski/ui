@@ -13,7 +13,7 @@
 | [technical-documentation-guide.md](technical-documentation-guide.md) | Rules for when to add or extend docs in this folder |
 | [ci.md](ci.md) | Understand GitHub Actions, reproduce CI locally, or debug a failing pipeline job |
 | [docs-generation.md](docs-generation.md) | How showcase docs are generated into `public/docs/` |
-| [publishing.md](publishing.md) | Publish `@laczynski/ui` to npm |
+| [publishing.md](publishing.md) | Publish `@laczynski/lui` to npm |
 | [github-releases.md](github-releases.md) | Create GitHub Release notes for each version |
 
 ## Start here by task

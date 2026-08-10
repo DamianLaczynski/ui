@@ -3,7 +3,7 @@
   "title": "Breadcrumb",
   "description": "Breadcrumb shows the current location inside a hierarchy and lets users jump back to earlier levels. Use it for deep structures such as settings areas, content libraries, project workspaces, and nested admin tools.",
   "intro": "Breadcrumb is a standalone navigation component driven by an array of items. It supports icons, semantic variant and appearance tokens, selected and disabled items, optional selection indicators, truncation for long labels, arrow-key focus mode, and overflow compression through an inline menu.",
-  "importCode": "import { BreadcrumbComponent } from 'ui';",
+  "importCode": "import { BreadcrumbComponent } from 'lui';",
   "containerClass": "breadcrumb-doc",
   "snippets": {
     "basicCode": "breadcrumb-basic-demo.ts",

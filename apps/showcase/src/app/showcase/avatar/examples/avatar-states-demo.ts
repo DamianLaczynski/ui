@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { AvatarComponent } from 'ui';
+import { AvatarComponent } from 'lui';
 
 @Component({
   selector: 'app-avatar-states-example',

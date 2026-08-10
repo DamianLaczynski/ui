@@ -3,7 +3,7 @@
   "title": "Skeleton",
   "description": "Skeleton provides lightweight loading placeholders for text, media, cards, and structured layouts. Use it to preserve layout and signal progress before real content arrives.",
   "intro": "Skeleton renders simple loading placeholders with shape, animation, dimensions, and optional custom radius. Build shells that match the final layout closely so loading feels stable rather than jumpy.",
-  "importCode": "import { SkeletonComponent } from 'ui';",
+  "importCode": "import { SkeletonComponent } from 'lui';",
   "containerClass": "skeleton-doc",
   "snippets": {
     "basicCode": "skeleton-basic-demo.ts",

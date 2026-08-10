@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, UrlComponent } from 'ui';
+import { ButtonComponent, UrlComponent } from 'lui';
 
 @Component({
   selector: 'app-url-link-panel-demo',

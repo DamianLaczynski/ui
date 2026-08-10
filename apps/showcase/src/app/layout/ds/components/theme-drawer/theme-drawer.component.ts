@@ -12,8 +12,8 @@ import {
 import { FormsModule } from '@angular/forms';
 import { ThemeBuilderService } from '@shared/theme/theme-builder.service';
 import { ThemeService, ThemeVariant } from '@shared/theme/theme.service';
-import { ColorComponent, SliderComponent, DrawerComponent, IconComponent } from 'ui';
-import type { DrawerType, QuickAction } from 'ui';
+import { ColorComponent, SliderComponent, DrawerComponent, IconComponent } from 'lui';
+import type { DrawerType, QuickAction } from 'lui';
 
 @Component({
   selector: 'app-theme-drawer',

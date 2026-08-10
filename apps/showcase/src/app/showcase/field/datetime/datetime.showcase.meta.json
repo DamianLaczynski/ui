@@ -3,7 +3,7 @@
   "title": "Datetime",
   "description": "Datetime combines date and time selection in a single field. It uses a calendar plus time picker on desktop and can fall back to a native datetime-local input on mobile.",
   "intro": "Use `ui-datetime` when users need one exact appointment or event moment rather than separate date and time fields. It works well for interviews, approvals, bookings, reminders, and any workflow where the final value needs both the day and the time.",
-  "importCode": "import { DatetimeComponent } from 'ui';",
+  "importCode": "import { DatetimeComponent } from 'lui';",
   "containerClass": "datetime-doc",
   "snippets": {
     "basicCode": "datetime-basic-demo.ts",

@@ -3,7 +3,7 @@
   "title": "Search",
   "description": "Search is a field-specialized wrapper around the shared input foundation with native `type=\"search\"`, built-in clear affordance, and an explicit search action inside the field chrome.",
   "intro": "Use `ui-search` for filtering lists, querying content, and compact toolbar search patterns. It inherits the shared field API for labels, help text, size, variant, readonly, disabled, and validation messaging while keeping the behavior aligned with native search inputs.",
-  "importCode": "import { SearchComponent } from 'ui';",
+  "importCode": "import { SearchComponent } from 'lui';",
   "containerClass": "search-doc",
   "snippets": {
     "basicCode": "search-basic-demo.ts",

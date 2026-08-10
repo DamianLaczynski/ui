@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CheckboxComponent } from 'ui';
+import { CheckboxComponent } from 'lui';
 
 @Component({
   selector: 'app-checkbox-label-positions-example',

@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ContextMenuDirective, type MenuItem, type MenuSection } from 'ui';
+import { ContextMenuDirective, type MenuItem, type MenuSection } from 'lui';
 
 interface WorkspaceRow {
   id: string;

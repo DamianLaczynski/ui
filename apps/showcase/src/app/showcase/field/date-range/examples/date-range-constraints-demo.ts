@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DateRange, DateRangeComponent } from 'ui';
+import { DateRange, DateRangeComponent } from 'lui';
 
 @Component({
   selector: 'app-date-range-constraints-demo',

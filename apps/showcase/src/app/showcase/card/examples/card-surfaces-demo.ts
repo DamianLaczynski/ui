@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { CardComponent } from 'ui';
+import { CardComponent } from 'lui';
 
 @Component({
   selector: 'app-card-surfaces-demo',

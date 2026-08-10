@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { EmailComponent } from 'ui';
+import { EmailComponent } from 'lui';
 
 @Component({
   selector: 'app-email-form-demo',

@@ -3,7 +3,7 @@
   "title": "Splitter",
   "description": "Splitter creates resizable horizontal or vertical panel layouts with draggable and keyboard-accessible gutters, size constraints, and support for nested shells.",
   "intro": "Use `ui-splitter` for editor shells, sidebars, inspector layouts, dashboard regions, and other work surfaces where users benefit from allocating more space to one region without leaving the current page.",
-  "importCode": "import { SplitterComponent, SplitterPanelDirective, type SplitterPanel, type SplitterResizeEvent } from 'ui';",
+  "importCode": "import { SplitterComponent, SplitterPanelDirective, type SplitterPanel, type SplitterResizeEvent } from 'lui';",
   "containerClass": "splitter-doc",
   "snippets": {
     "basicCode": "splitter-basic-demo.ts",

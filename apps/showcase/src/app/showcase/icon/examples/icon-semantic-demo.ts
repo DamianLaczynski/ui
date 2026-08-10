@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, ButtonComponent, IconComponent } from 'ui';
+import { BadgeComponent, ButtonComponent, IconComponent } from 'lui';
 
 @Component({
   selector: 'app-icon-semantic-demo',

@@ -3,7 +3,7 @@
   "title": "Tabs",
   "description": "Tabs provide compact local navigation between related views. They support semantic variants, appearances, sizes, shapes, horizontal or vertical orientation, closable items, controlled selection, and an optional overflow entry point.",
   "intro": "Use `ui-tabs` when users need to move between a small number of sibling sections inside the same page, panel, or drawer. The component focuses on the tablist itself, so the surrounding view is responsible for swapping the content that each tab represents.",
-  "importCode": "import { TabsComponent, type Tab } from 'ui';",
+  "importCode": "import { TabsComponent, type Tab } from 'lui';",
   "containerClass": "tabs-doc",
   "snippets": {
     "basicCode": "tabs-basic-demo.ts",

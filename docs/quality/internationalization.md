@@ -9,7 +9,7 @@ status: active
 
 ## Library i18n support
 
-The library provides translation helpers and tokens under `packages/ui/src/lib/i18n/`. Consumer applications load translations via `@ngx-translate/core`.
+The library provides translation helpers and tokens under `packages/lui/src/lib/i18n/`. Consumer applications load translations via `@ngx-translate/core`.
 
 Showcase guide: [i18n page](https://ui.laczynski.dev/docs/i18n) (source: `apps/showcase/src/app/pages/docs/i18n/`).
 
@@ -27,7 +27,7 @@ Showcase guide: [i18n page](https://ui.laczynski.dev/docs/i18n) (source: `apps/s
 
 ## Consumer responsibility
 
-Applications using `@laczynski/ui` are responsible for:
+Applications using `@laczynski/lui` are responsible for:
 
 - Loading translation files for their supported locales
 - Providing overrides for library default strings when needed

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, UrlComponent } from 'ui';
+import { ButtonComponent, UrlComponent } from 'lui';
 
 @Component({
   selector: 'app-url-validation-demo',

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, ButtonComponent, CarouselComponent, CarouselItem } from 'ui';
+import { BadgeComponent, ButtonComponent, CarouselComponent, CarouselItem } from 'lui';
 
 @Component({
   selector: 'app-carousel-custom-template-demo',

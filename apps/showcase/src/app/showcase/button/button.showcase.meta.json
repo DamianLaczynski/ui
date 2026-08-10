@@ -3,7 +3,7 @@
   "title": "Button",
   "description": "Button triggers user actions. It builds on the native button element with design-system theming, optional leading icons, loading and disabled feedback, and selectable patterns while staying accessible and form-friendly.",
   "intro": "Button triggers user actions. It extends the standard button element with icons, semantic variants and appearances, sizes and shapes, loading state, and optional selection models while staying grounded in shared theming.",
-  "importCode": "import { ButtonComponent } from 'ui';",
+  "importCode": "import { ButtonComponent } from 'lui';",
   "containerClass": "button-doc",
   "snippets": {
     "basicCode": "button-basic-demo.ts",

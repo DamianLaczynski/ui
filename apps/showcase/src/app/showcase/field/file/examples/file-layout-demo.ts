@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FileComponent } from 'ui';
+import { FileComponent } from 'lui';
 
 @Component({
   selector: 'app-file-layout-demo',

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent } from 'ui';
+import { ButtonComponent } from 'lui';
 
 @Component({
   selector: 'app-button-sizes-example',

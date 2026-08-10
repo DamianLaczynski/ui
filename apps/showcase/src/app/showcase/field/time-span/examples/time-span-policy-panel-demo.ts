@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, MessageBarComponent, TagComponent, TimeSpanComponent } from 'ui';
+import { ButtonComponent, MessageBarComponent, TagComponent, TimeSpanComponent } from 'lui';
 
 @Component({
   selector: 'app-time-span-policy-panel-demo',

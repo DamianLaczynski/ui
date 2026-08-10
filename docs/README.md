@@ -39,7 +39,7 @@ Implementation conventions and recipes. Start with [guides/README.md](guides/REA
 | -------- | ----------- |
 | [README.md](guides/README.md) | Entry point — when to read each guide |
 | [repo-map.md](guides/repo-map.md) | Where code lives and which layer owns what |
-| [component-guidelines.md](guides/component-guidelines.md) | How to build components in `packages/ui` |
+| [component-guidelines.md](guides/component-guidelines.md) | How to build components in `packages/lui` |
 | [showcase-guidelines.md](guides/showcase-guidelines.md) | How to document components in the showcase |
 | [testing-guidelines.md](guides/testing-guidelines.md) | Test layer ownership and conventions |
 
@@ -53,7 +53,7 @@ Run, configure, and troubleshoot the toolchain. Start with [technical/README.md]
 | [technical-documentation-guide.md](technical/technical-documentation-guide.md) | When to add or extend technical docs |
 | [ci.md](technical/ci.md) | GitHub Actions workflow and local reproduction |
 | [docs-generation.md](technical/docs-generation.md) | How showcase docs are generated into `public/docs/` |
-| [publishing.md](technical/publishing.md) | npm publish workflow for `@laczynski/ui` |
+| [publishing.md](technical/publishing.md) | npm publish workflow for `@laczynski/lui` |
 | [github-releases.md](technical/github-releases.md) | GitHub Release notes for each version |
 
 ## Documentation layers

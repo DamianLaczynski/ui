@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, SwitchComponent } from 'ui';
+import { ButtonComponent, SwitchComponent } from 'lui';
 
 @Component({
   selector: 'app-switch-helper-validation-example',

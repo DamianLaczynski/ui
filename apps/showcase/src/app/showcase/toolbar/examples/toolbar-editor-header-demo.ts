@@ -6,7 +6,7 @@ import {
   ToolbarComponent,
   type SelectItem,
   type ToolbarGroup,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-toolbar-editor-header-demo',

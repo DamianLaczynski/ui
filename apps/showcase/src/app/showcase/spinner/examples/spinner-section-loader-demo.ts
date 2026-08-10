@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { SpinnerComponent } from 'ui';
+import { SpinnerComponent } from 'lui';
 
 @Component({
   selector: 'app-spinner-section-loader-example',

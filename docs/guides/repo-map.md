@@ -4,7 +4,7 @@
 
 ## Top level
 
-- `packages/ui` — publishable Angular component library (`@laczynski/ui`).
+- `packages/lui` — publishable Angular component library (`@laczynski/lui`).
 - `apps/showcase` — documentation site (`ui-showcase` in `angular.json`).
 - `apps/starter` — sample app shell (not registered in `angular.json`).
 - `scripts/` — build-time generators.
@@ -13,13 +13,13 @@
 
 Root `package.json` defines npm scripts for build, test, lint, docs generation, and publish. See [`AGENTS.md`](../../AGENTS.md) for the full command list.
 
-## Library map (`packages/ui`)
+## Library map (`packages/lui`)
 
 ### Entry points
 
-- `packages/ui/src/public-api.ts` — every symbol consumers import from `@laczynski/ui`.
-- `packages/ui/src/lib/scss/main.scss` — design system styles (import in consumer apps).
-- `packages/ui/ng-package.json` — ng-packagr configuration.
+- `packages/lui/src/public-api.ts` — every symbol consumers import from `@laczynski/lui`.
+- `packages/lui/src/lib/scss/main.scss` — design system styles (import in consumer apps).
+- `packages/lui/ng-package.json` — ng-packagr configuration.
 
 ### `lib/` layout
 
@@ -48,7 +48,7 @@ Field inputs follow the same pattern under `components/field/<type>/`.
 
 ### Shared design types
 
-`packages/ui/src/lib/components/utils.ts` defines cross-component types:
+`packages/lui/src/lib/components/utils.ts` defines cross-component types:
 
 - `Variant` — semantic color (`primary`, `secondary`, `success`, `warning`, `danger`, `info`)
 - `Appearance` — surface style (`filled`, `tint`, `outline`, `subtle`, `transparent`)
@@ -59,9 +59,9 @@ Use these types instead of inventing per-component enums.
 
 ### SCSS
 
-- One BEM block per component: `packages/ui/src/lib/scss/components/_<name>.scss`
-- Registered in `packages/ui/src/lib/scss/main.scss`
-- Theme tokens in `packages/ui/src/lib/scss/utils/_variables.scss`
+- One BEM block per component: `packages/lui/src/lib/scss/components/_<name>.scss`
+- Registered in `packages/lui/src/lib/scss/main.scss`
+- Theme tokens in `packages/lui/src/lib/scss/utils/_variables.scss`
 
 ## Showcase map (`apps/showcase`)
 
@@ -97,7 +97,7 @@ Do not hand-edit generated files — change the showcase source and run `npm run
 
 | Layer | Location | Tooling |
 | ----- | -------- | ------- |
-| Library unit | `packages/ui/src/**/*.spec.ts` | Vitest via `ng test ui` |
+| Library unit | `packages/lui/src/**/*.spec.ts` | Vitest via `ng test lui` |
 | Showcase unit | `apps/showcase/src/**/*.spec.ts` | Vitest via `ng test ui-showcase` |
 
 ## CI map

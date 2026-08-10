@@ -1,4 +1,4 @@
-# @laczynski/ui
+# @laczynski/lui
 
 Enterprise-grade Angular components with a **Fluent-inspired** design language for modern applications.
 
@@ -11,7 +11,7 @@ Enterprise-grade Angular components with a **Fluent-inspired** design language f
 ## Install
 
 ```bash
-npm install @laczynski/ui
+npm install @laczynski/lui
 ```
 
 ## Documentation
@@ -34,12 +34,12 @@ Full guides, examples, and API details: [https://ui.laczynski.dev/](https://ui.l
 
 **API & state:** shared types and lightweight state helpers used across components.
 
-Import symbols from `@laczynski/ui` in your Angular application; see the docs for module setup and per-component usage.
+Import symbols from `@laczynski/lui` in your Angular application; see the docs for module setup and per-component usage.
 
 ## Disclaimer
 
-This package is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Icons use `@fluentui/svg-icons` (MIT). See the repository [`docs/legal-notice.md`](https://github.com/laczynski/Ui/blob/main/docs/legal-notice.md).
+This package is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Icons use `@fluentui/svg-icons` (MIT). See the repository [`docs/legal-notice.md`](https://github.com/Laczynski/Lui/blob/main/docs/legal-notice.md).
 
 ## License
 
-Published as **@laczynski/ui** under the [MIT License](https://opensource.org/licenses/MIT). Full text: [`LICENSE`](https://github.com/laczynski/Ui/blob/main/LICENSE) in the repository root.
+Published as **@laczynski/lui** under the [MIT License](https://opensource.org/licenses/MIT). Full text: [`LICENSE`](https://github.com/Laczynski/Lui/blob/main/LICENSE) in the repository root.

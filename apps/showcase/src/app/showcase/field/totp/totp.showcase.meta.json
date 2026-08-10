@@ -3,7 +3,7 @@
   "title": "TOTP",
   "description": "TOTP is a field-specialized multi-input verification component for one-time codes. It manages digit-level focus, paste handling, keyboard navigation, and configurable code length while following the shared field state model.",
   "intro": "Use `ui-totp` for two-factor authentication, device verification, SMS codes, and short PIN-style confirmation flows. It inherits the shared field API for labels, help text, size, variant, readonly, disabled, and validation messaging while adding grouped digit inputs and verification-specific interaction behavior.",
-  "importCode": "import { TotpComponent } from 'ui';",
+  "importCode": "import { TotpComponent } from 'lui';",
   "containerClass": "totp-doc",
   "snippets": {
     "basicCode": "totp-basic-demo.ts",

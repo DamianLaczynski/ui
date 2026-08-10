@@ -3,7 +3,7 @@
   "title": "Message Bar",
   "description": "Message Bar keeps important inline status visible in layout. Use it for confirmations, warnings, blockers, and contextual guidance that should remain present until the user acts or the state changes.",
   "intro": "Message Bar renders persistent inline feedback with semantic variants, multiple appearances, optional actions, dismiss support, and richer projected content. It fits places where a toast would disappear too quickly and a dialog would be too heavy.",
-  "importCode": "import { MessageBarComponent } from 'ui';",
+  "importCode": "import { MessageBarComponent } from 'lui';",
   "containerClass": "message-bar-doc",
   "snippets": {
     "basicCode": "message-bar-basic-demo.ts",

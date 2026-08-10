@@ -3,7 +3,7 @@
   "title": "Popover",
   "description": "Popover anchors compact, interactive panels to an existing trigger. Use it for filters, pickers, share sheets, and quick workflows that need more room than a tooltip but less weight than a dialog.",
   "intro": "Popover is exposed as a standalone directive on a trigger element. Pass an `ng-template` with the panel body, toggle it on click by default, and optionally control open state from the parent.",
-  "importCode": "import { PopoverDirective } from 'ui';",
+  "importCode": "import { PopoverDirective } from 'lui';",
   "containerClass": "popover-doc",
   "snippets": {
     "filtersCode": "popover-filters-demo.ts",

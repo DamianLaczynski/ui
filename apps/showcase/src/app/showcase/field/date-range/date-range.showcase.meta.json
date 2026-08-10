@@ -3,7 +3,7 @@
   "title": "Date Range",
   "description": "Date Range is a field for selecting start and end dates with a shared calendar surface, hover preview, and a single combined input value.",
   "intro": "Use `ui-date-range` when users need one continuous period instead of two loosely related dates. It fits booking, availability, campaigns, reporting windows, and travel flows where the start and end date belong to the same interaction.",
-  "importCode": "import { DateRangeComponent, type DateRange } from 'ui';",
+  "importCode": "import { DateRangeComponent, type DateRange } from 'lui';",
   "containerClass": "date-range-doc",
   "snippets": {
     "basicCode": "date-range-basic-demo.ts",

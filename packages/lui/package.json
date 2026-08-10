@@ -1,6 +1,6 @@
 {
-  "name": "@laczynski/ui",
-  "version": "2.0.0-preview.6",
+  "name": "@laczynski/lui",
+  "version": "2.0.0-preview.8",
   "description": "Enterprise-grade Angular components with a Fluent-inspired design language",
   "main": "./fesm2022/ui.mjs",
   "types": "./index.d.ts",
@@ -18,7 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/laczynski/Ui"
+    "url": "git+https://github.com/Laczynski/Lui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Laczynski/Lui/issues"
   },
   "homepage": "https://ui.laczynski.dev/",
   "publishConfig": {

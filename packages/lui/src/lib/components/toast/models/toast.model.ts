@@ -3,12 +3,7 @@ import { TemplateRef } from '@angular/core';
 import { Size, Variant, Appearance } from '../../utils';
 
 export type ToastPosition =
-  | 'top-left'
-  | 'top-center'
-  | 'top-right'
-  | 'bottom-left'
-  | 'bottom-center'
-  | 'bottom-right';
+  'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
 
 export interface ToastMessage {
   title: string;

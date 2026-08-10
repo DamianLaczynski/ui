@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, TimePickerComponent } from 'ui';
+import { ButtonComponent, TimePickerComponent } from 'lui';
 
 @Component({
   selector: 'app-time-picker-states-demo',

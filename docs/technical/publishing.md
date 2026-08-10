@@ -1,24 +1,26 @@
 # Publishing
 
-> Scope: releasing `@laczynski/ui` to npm.
+> Scope: releasing `@laczynski/lui` to npm.
 
 ## Registry
 
-| Package         | Registry                           |
-| --------------- | ---------------------------------- |
-| `@laczynski/ui` | [npmjs.com](https://www.npmjs.com) and [GitHub Packages](https://github.com/laczynski/Ui/packages) |
+| Package         | Primary registry                   | Secondary              |
+| --------------- | ---------------------------------- | ---------------------- |
+| `@laczynski/lui` | [npmjs.com](https://www.npmjs.com) | GitHub Packages (npm)  |
 
 Publish on tag push `v*` via [publish.yml](../../.github/workflows/publish.yml). The workflow uses npm trusted publishing / OIDC for npmjs.com and `GITHUB_TOKEN` for GitHub Packages.
+
+`repository` in `packages/lui/package.json` links the package to this repo on GitHub Packages.
 
 ## Where the version lives
 
 | Location                    | Field       |
 | --------------------------- | ----------- |
-| `packages/ui/package.json`  | `"version"` |
+| `packages/lui/package.json`  | `"version"` |
 
 ## Release checklist
 
-1. Bump `"version"` in `packages/ui/package.json`.
+1. Bump `"version"` in `packages/lui/package.json`.
 2. Update `CHANGELOG.md` (`## [x.y.z]` section).
 3. Verify locally:
 
@@ -32,11 +34,11 @@ Publish on tag push `v*` via [publish.yml](../../.github/workflows/publish.yml).
 4. Merge to `main`, then tag and push:
 
    ```bash
-   git tag v1.3.0
-   git push origin v1.3.0
+   git tag v2.0.0-preview.7
+   git push origin v2.0.0-preview.7
    ```
 
-   [publish.yml](../../.github/workflows/publish.yml) runs tests, builds the library, publishes to npmjs.com, and creates a GitHub Release (from `CHANGELOG.md`, or `.github/release-notes/vX.Y.Z.md` as fallback).
+   [publish.yml](../../.github/workflows/publish.yml) runs tests, builds the library, publishes to npmjs.com and GitHub Packages, and creates a GitHub Release (from `CHANGELOG.md`, or `.github/release-notes/vX.Y.Z.md` as fallback).
 
 Prerelease tags (`v*-*`) publish npm with dist-tag `preview`.
 
@@ -44,12 +46,12 @@ Prerelease tags (`v*-*`) publish npm with dist-tag `preview`.
 
 ### npm trusted publishing
 
-npmjs.com → `@laczynski/ui` → **Settings** → **Trusted Publisher** → **GitHub Actions**:
+npmjs.com → `@laczynski/lui` → **Settings** → **Trusted Publisher** → **GitHub Actions**:
 
 | Field                | Value              |
 | -------------------- | ------------------ |
-| Organization or user | `laczynski` |
-| Repository           | `Ui`                |
+| Organization or user | `laczynski`        |
+| Repository           | `Lui`              |
 | Workflow filename    | `publish.yml`      |
 | Environment          | *(leave empty)*    |
 
@@ -59,13 +61,36 @@ The package manifest explicitly targets `https://registry.npmjs.org/`; the relea
 
 ### GitHub repository settings
 
-Actions enabled; workflow permissions allow OIDC (`id-token: write` is set in the workflow).
+Actions enabled; workflow permissions allow `packages: write` and OIDC (`id-token: write` is set in the workflow).
 
 ## Build output
 
-- Source: `packages/ui/`
-- Build: `npm run build:lib` → `dist/ui/`
-- CI publishes from `dist/ui/` after build
+- Source: `packages/lui/`
+- Build: `npm run build:lib` → `dist/lui/`
+- CI publishes from `dist/lui/` after build
+
+## Consumer setup
+
+### npm (npmjs.com)
+
+```bash
+npm install @laczynski/lui
+```
+
+### npm (GitHub Packages)
+
+In `.npmrc`:
+
+```
+@laczynski:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=TOKEN
+```
+
+Token (classic) needs `read:packages` scope. In GitHub Actions on a consuming repo, use `GITHUB_TOKEN` with read access to the package.
+
+```bash
+npm install @laczynski/lui
+```
 
 ## Optional: local publish
 
@@ -73,7 +98,7 @@ Trusted publishing works in CI only:
 
 ```bash
 npm run build:lib
-cd dist/ui && npm publish --access public
+cd dist/lui && npm publish --access public
 ```
 
 For preview versions: add `--tag preview`.

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, MessageBarComponent, TagComponent, WeekComponent } from 'ui';
+import { ButtonComponent, MessageBarComponent, TagComponent, WeekComponent } from 'lui';
 
 @Component({
   selector: 'app-week-planning-panel-demo',

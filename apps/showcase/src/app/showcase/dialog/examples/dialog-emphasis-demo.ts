@@ -1,5 +1,5 @@
 import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, DialogComponent, QuickAction } from 'ui';
+import { ButtonComponent, DialogComponent, QuickAction } from 'lui';
 
 @Component({
   selector: 'app-dialog-emphasis-example',

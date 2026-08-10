@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TableOfContentComponent } from 'ui';
+import { TableOfContentComponent } from 'lui';
 
 @Component({
   selector: 'app-table-of-content-levels-demo',

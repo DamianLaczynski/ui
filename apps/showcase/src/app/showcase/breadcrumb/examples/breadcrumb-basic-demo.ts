@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { BreadcrumbComponent, type Breadcrumb } from 'ui';
+import { BreadcrumbComponent, type Breadcrumb } from 'lui';
 
 const FULL_PATH: Breadcrumb[] = [
   { id: 'home', label: 'Home', icon: 'home' },

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ButtonComponent, FileComponent } from 'ui';
+import { ButtonComponent, FileComponent } from 'lui';
 
 @Component({
   selector: 'app-file-form-demo',

@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-**@laczynski/ui** is an independent open-source project by Damian Łączyński. It is **not affiliated with, endorsed by, or sponsored by** Microsoft Corporation.
+**@laczynski/lui** is an independent open-source project by Damian Łączyński. It is **not affiliated with, endorsed by, or sponsored by** Microsoft Corporation.
 
 This library is **inspired by** the visual principles of Microsoft's [Fluent 2](https://fluent2.microsoft.design/) design language. It is not an official Microsoft or Fluent UI product.
 

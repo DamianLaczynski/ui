@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { CalendarComponent, CalendarDay } from 'ui';
+import { CalendarComponent, CalendarDay } from 'lui';
 
 @Component({
   selector: 'app-calendar-size-picker-demo',

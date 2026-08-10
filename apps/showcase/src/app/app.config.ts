@@ -5,7 +5,7 @@ import { registerLocaleData } from '@angular/common';
 import localeEn from '@angular/common/locales/en';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
-import { provideUiI18nWithNgxTranslate } from 'ui/ngx-translate';
+import { provideUiI18nWithNgxTranslate } from 'lui/ngx-translate';
 import { firstValueFrom } from 'rxjs';
 
 import { routes } from './app.routes';

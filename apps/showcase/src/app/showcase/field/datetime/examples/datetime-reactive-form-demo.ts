@@ -1,6 +1,6 @@
 import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, DatetimeComponent, MessageBarComponent } from 'ui';
+import { ButtonComponent, DatetimeComponent, MessageBarComponent } from 'lui';
 
 @Component({
   selector: 'app-datetime-reactive-form-demo',

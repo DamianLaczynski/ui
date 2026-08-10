@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { AvatarComponent, ButtonComponent } from 'ui';
+import { AvatarComponent, ButtonComponent } from 'lui';
 
 @Component({
   selector: 'app-avatar-profile-header-example',

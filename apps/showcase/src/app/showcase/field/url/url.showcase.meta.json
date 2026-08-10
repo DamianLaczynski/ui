@@ -3,7 +3,7 @@
   "title": "URL",
   "description": "URL is a field-specialized wrapper around the shared input foundation with native `type=\"url\"`, built-in clear affordance, and a link-oriented action icon.",
   "intro": "Use `ui-url` for website fields, profile links, source references, support pages, and any workflow that captures navigable destinations. It inherits the shared field API for labels, help text, size, variant, readonly, disabled, and validation messaging while using URL-friendly input semantics.",
-  "importCode": "import { UrlComponent } from 'ui';",
+  "importCode": "import { UrlComponent } from 'lui';",
   "containerClass": "url-doc",
   "snippets": {
     "basicCode": "url-basic-demo.ts",

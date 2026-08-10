@@ -1,5 +1,5 @@
 import { Component, computed, input, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, MenuComponent, MenuItem } from 'ui';
+import { ButtonComponent, MenuComponent, MenuItem } from 'lui';
 
 @Component({
   selector: 'app-showcase-doc-header',

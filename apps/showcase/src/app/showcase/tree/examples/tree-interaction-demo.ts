@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TreeComponent, type TreeNode } from 'ui';
+import { TreeComponent, type TreeNode } from 'lui';
 
 @Component({
   selector: 'app-tree-interaction-demo',

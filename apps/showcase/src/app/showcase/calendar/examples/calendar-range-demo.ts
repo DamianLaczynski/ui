@@ -1,5 +1,5 @@
 import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, CalendarComponent, CalendarDay } from 'ui';
+import { ButtonComponent, CalendarComponent, CalendarDay } from 'lui';
 
 @Component({
   selector: 'app-calendar-range-demo',

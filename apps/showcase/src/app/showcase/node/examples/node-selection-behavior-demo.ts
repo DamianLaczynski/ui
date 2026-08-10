@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, NodeComponent, type Node } from 'ui';
+import { ButtonComponent, NodeComponent, type Node } from 'lui';
 
 @Component({
   selector: 'app-node-selection-behavior-demo',

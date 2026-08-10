@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, ToastComponent } from 'ui';
+import { ButtonComponent, ToastComponent } from 'lui';
 
 @Component({
   selector: 'app-toast-sizes-example',

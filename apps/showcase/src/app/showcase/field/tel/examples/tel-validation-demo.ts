@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, TelComponent } from 'ui';
+import { ButtonComponent, TelComponent } from 'lui';
 
 @Component({
   selector: 'app-tel-validation-demo',

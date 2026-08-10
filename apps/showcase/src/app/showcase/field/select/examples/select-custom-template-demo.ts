@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IconComponent, SelectComponent, type SelectItem } from 'ui';
+import { IconComponent, SelectComponent, type SelectItem } from 'lui';
 
 type EnvironmentItem = SelectItem & {
   data: {

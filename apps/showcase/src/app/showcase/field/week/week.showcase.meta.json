@@ -3,7 +3,7 @@
   "title": "Week",
   "description": "Week is a form field for ISO week selection. It supports display formats for date range, week and year, or raw ISO value, plus min and max constraints and a desktop picker panel.",
   "intro": "Use `ui-week` when planning, reporting, or scheduling is organized by ISO week instead of a specific date. It is stronger than a plain text field because it can present a week list, enforce valid ISO week values, and keep the chosen week readable in a user-facing format.",
-  "importCode": "import { WeekComponent, type WeekDisplayFormat } from 'ui';",
+  "importCode": "import { WeekComponent, type WeekDisplayFormat } from 'lui';",
   "containerClass": "week-doc",
   "snippets": {
     "basicCode": "week-basic-demo.ts",

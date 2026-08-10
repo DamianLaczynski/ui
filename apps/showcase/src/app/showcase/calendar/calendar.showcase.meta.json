@@ -3,7 +3,7 @@
   "title": "Calendar",
   "description": "Calendar renders days, months, and years views for single-date picking, range flows, and constrained scheduling surfaces with previous and next navigation.",
   "intro": "Use `ui-calendar` when users need a visible calendar surface instead of a compact field. It works for booking, review scheduling, availability picking, and range selection where the month context matters and the user benefits from seeing adjacent days.",
-  "importCode": "import { CalendarComponent, type CalendarDay, type CalendarView } from 'ui';",
+  "importCode": "import { CalendarComponent, type CalendarDay, type CalendarView } from 'lui';",
   "containerClass": "calendar-doc",
   "snippets": {
     "basicCode": "calendar-basic-demo.ts",

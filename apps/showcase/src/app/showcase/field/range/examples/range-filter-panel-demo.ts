@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NumericRange, RangeComponent, CheckboxComponent, ButtonComponent } from 'ui';
+import { NumericRange, RangeComponent, CheckboxComponent, ButtonComponent } from 'lui';
 
 @Component({
   selector: 'app-range-filter-panel-demo',

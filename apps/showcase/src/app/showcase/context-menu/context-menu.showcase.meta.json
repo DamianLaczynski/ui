@@ -3,7 +3,7 @@
   "title": "Context Menu",
   "description": "Context menu opens a menu surface at the pointer on right-click. It reuses the same menu list model, keyboard behavior, and submenu flows as ui-menu for consistent command surfaces.",
   "intro": "Apply `uiContextMenu` to any host element and pass `uiContextMenuItems` or `uiContextMenuSections`. The directive anchors the overlay to the cursor, closes on outside interaction or Escape, and emits the selected action through `contextMenuItemClick`.",
-  "importCode": "import { ContextMenuDirective, type MenuItem, type MenuSection } from 'ui';",
+  "importCode": "import { ContextMenuDirective, type MenuItem, type MenuSection } from 'lui';",
   "containerClass": "context-menu-doc",
   "snippets": {
     "basicCode": "context-menu-basic-demo.ts",

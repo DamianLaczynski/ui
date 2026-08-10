@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, Step, StepperComponent } from 'ui';
+import { ButtonComponent, Step, StepperComponent } from 'lui';
 
 @Component({
   selector: 'app-stepper-linear-progress-example',

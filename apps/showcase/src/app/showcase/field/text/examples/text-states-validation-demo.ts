@@ -12,7 +12,7 @@ import {
   TextComponent,
   getValidationErrorMessage,
   shouldShowValidationError,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-text-states-validation-example',

@@ -1,5 +1,5 @@
 import { Component, computed, input, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent } from 'ui';
+import { ButtonComponent } from 'lui';
 import { highlightTypeScript } from '@shared/utils/showcase/code-highlight.util';
 
 @Component({

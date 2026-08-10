@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, TooltipDirective } from 'ui';
+import { ButtonComponent, TooltipDirective } from 'lui';
 
 @Component({
   selector: 'app-tooltip-relationship-example',

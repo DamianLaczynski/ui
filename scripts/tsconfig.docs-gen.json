@@ -13,8 +13,8 @@
       "@layout/*": ["apps/showcase/src/app/layout/*"],
       "@showcase/*": ["apps/showcase/src/app/showcase/*"],
       "@environments/*": ["apps/showcase/src/environments/*"],
-      "ui": ["packages/ui/src/public-api.ts"],
-      "ui/ngx-translate": ["packages/ui/ngx-translate/public-api.ts"]
+      "ui": ["packages/lui/src/public-api.ts"],
+      "lui/ngx-translate": ["packages/lui/ngx-translate/public-api.ts"]
     }
   },
   "include": [

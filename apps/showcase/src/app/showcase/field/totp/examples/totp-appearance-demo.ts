@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TotpComponent } from 'ui';
+import { TotpComponent } from 'lui';
 
 @Component({
   selector: 'app-totp-appearance-demo',

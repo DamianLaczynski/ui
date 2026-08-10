@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ExtendedSize, SpinnerComponent, Variant } from 'ui';
+import { ExtendedSize, SpinnerComponent, Variant } from 'lui';
 
 @Component({
   selector: 'app-spinner-semantics-example',

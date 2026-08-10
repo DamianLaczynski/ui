@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TimeComponent } from 'ui';
+import { TimeComponent } from 'lui';
 
 @Component({
   selector: 'app-time-size-variant-demo',

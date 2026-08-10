@@ -1,5 +1,5 @@
 import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
-import { PaginationComponent, PaginationConfig } from 'ui';
+import { PaginationComponent, PaginationConfig } from 'lui';
 
 @Component({
   selector: 'app-pagination-first-last-example',

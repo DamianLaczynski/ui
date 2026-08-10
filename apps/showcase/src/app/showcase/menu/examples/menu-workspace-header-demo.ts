@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, MenuComponent, SearchComponent, type MenuItem } from 'ui';
+import { ButtonComponent, MenuComponent, SearchComponent, type MenuItem } from 'lui';
 
 @Component({
   selector: 'app-menu-workspace-header-demo',

@@ -3,7 +3,7 @@
   "title": "Loading State",
   "description": "Loading State communicates ongoing work during asynchronous operations. It supports inline loading, richer messaging, overlay modes, fullscreen blocking states, and projected custom content.",
   "intro": "Use `ui-loading-state` when users need feedback that work is in progress. Choose the lightest pattern that still explains the delay: inline when content is not yet present, overlay when existing content is being refreshed, and fullscreen only for blocking transitions.",
-  "importCode": "import { LoadingStateComponent } from 'ui';",
+  "importCode": "import { LoadingStateComponent } from 'lui';",
   "containerClass": "loading-state-doc",
   "snippets": {
     "basicCode": "loading-state-basic-demo.ts",

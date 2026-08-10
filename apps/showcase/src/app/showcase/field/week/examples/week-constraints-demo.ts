@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { WeekComponent } from 'ui';
+import { WeekComponent } from 'lui';
 
 @Component({
   selector: 'app-week-constraints-demo',

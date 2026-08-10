@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, SelectComponent, type SelectItem } from 'ui';
+import { ButtonComponent, SelectComponent, type SelectItem } from 'lui';
 
 const ownerItems: SelectItem[] = [
   { value: 'ava', label: 'Ava Lopez' },

@@ -3,7 +3,7 @@
   "title": "Rating",
   "description": "Star control for collecting or displaying a score on a fixed scale. Use it for reviews, satisfaction steps, and read-only aggregates such as catalog averages.",
   "intro": "Bind `value` and listen to `valueChange`, cap the scale with `max`, toggle `readOnly` when the score is informational, and use `showValue` when the numeric ratio should stay visible beside the stars. `ariaLabel` and the two formatter inputs localize copy without reimplementing the control.",
-  "importCode": "import { RatingComponent } from 'ui';",
+  "importCode": "import { RatingComponent } from 'lui';",
   "containerClass": "rating-doc",
   "snippets": {
     "basicCode": "rating-basic-demo.ts",

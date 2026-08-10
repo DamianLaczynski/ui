@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, TreeNodeComponent, type TreeNode } from 'ui';
+import { ButtonComponent, TreeNodeComponent, type TreeNode } from 'lui';
 
 @Component({
   selector: 'app-tree-node-drag-drop-demo',

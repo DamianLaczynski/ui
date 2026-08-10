@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { RatingComponent } from 'ui';
+import { RatingComponent } from 'lui';
 
 @Component({
   selector: 'app-rating-basic-example',

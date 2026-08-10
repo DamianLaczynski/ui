@@ -1,6 +1,6 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, CardComponent, CardOnSelectionChangeEvent, CheckboxComponent } from 'ui';
+import { ButtonComponent, CardComponent, CardOnSelectionChangeEvent, CheckboxComponent } from 'lui';
 
 @Component({
   selector: 'app-card-selection-demo',

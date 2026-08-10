@@ -3,7 +3,7 @@
   "title": "Color Picker",
   "description": "Color Picker lets users enter or pick a color value for themes, brand tokens, charts, and visual customization settings. Use it when a plain text field is too error-prone and users benefit from a visual picker plus format-aware output.",
   "intro": "Color Picker builds on the shared field system, so it supports labels, helper and error text, validation hooks, disabled and readonly states, and Angular forms integration. It adds color-specific features such as HEX, RGB, and HSL output, alpha control, an optional eye dropper, a connected picker panel, and native color input fallback on mobile.",
-  "importCode": "import { ColorComponent } from 'ui';",
+  "importCode": "import { ColorComponent } from 'lui';",
   "containerClass": "color-doc",
   "snippets": {
     "basicCode": "color-basic-demo.ts",

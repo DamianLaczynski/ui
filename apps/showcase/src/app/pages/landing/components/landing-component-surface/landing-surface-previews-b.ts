@@ -58,7 +58,7 @@ import {
   PopoverDirective,
   TimelineComponent,
   type TimelineItem,
-} from 'ui';
+} from 'lui';
 import { LSP_SPEED_DIAL_ITEMS } from './landing-surface-previews.shared';
 
 interface LspScrollRow {

@@ -3,7 +3,7 @@
   "title": "Tree Node",
   "description": "Tree Node renders a single hierarchical row with optional nested children, chevrons, selection indicators, custom content, quick actions, and drop targets.",
   "intro": "Use `ui-tree-node` when you need one expandable branch or want fine-grained control over recursive rows. For full collections of root nodes, use `ui-tree` instead.",
-  "importCode": "import { TreeNodeComponent, type TreeNode } from 'ui';",
+  "importCode": "import { TreeNodeComponent, type TreeNode } from 'lui';",
   "containerClass": "tree-node-doc",
   "snippets": {
     "basicCode": "tree-node-basic-demo.ts",

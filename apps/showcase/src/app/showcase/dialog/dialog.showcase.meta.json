@@ -3,7 +3,7 @@
   "title": "Dialog",
   "description": "Dialog presents blocking decisions, focused forms, and high-attention flows above the page. Use it when the user must respond before returning to the underlying context.",
   "intro": "Dialog renders a modal surface with focus trapping, closable or static backdrop behavior, configurable sizing, fullscreen mode, and structured actions. It works best for decisions, confirmations, and short task flows that should temporarily interrupt the page.",
-  "importCode": "import { DialogComponent } from 'ui';",
+  "importCode": "import { DialogComponent } from 'lui';",
   "containerClass": "dialog-doc",
   "snippets": {
     "basicCode": "dialog-basic-demo.ts",

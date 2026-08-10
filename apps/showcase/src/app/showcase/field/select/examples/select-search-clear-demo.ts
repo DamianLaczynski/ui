@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SelectComponent, type SelectItem } from 'ui';
+import { SelectComponent, type SelectItem } from 'lui';
 
 const countryItems: SelectItem[] = [
   { value: 'pl', label: 'Poland' },

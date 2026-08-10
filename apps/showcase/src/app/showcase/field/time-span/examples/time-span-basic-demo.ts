@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, TimeSpanComponent } from 'ui';
+import { ButtonComponent, TimeSpanComponent } from 'lui';
 
 @Component({
   selector: 'app-time-span-basic-demo',

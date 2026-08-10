@@ -3,7 +3,7 @@
   "title": "Tree",
   "description": "Tree displays hierarchical content with expandable nodes, selection, custom row content, quick actions, and drag-and-drop reordering.",
   "intro": "Use `ui-tree` for file explorers, content maps, structured settings, and other places where parent-child relationships matter. Keep the hierarchy meaningful and make the active branch easy to scan.",
-  "importCode": "import { TreeComponent, type TreeNode } from 'ui';",
+  "importCode": "import { TreeComponent, type TreeNode } from 'lui';",
   "containerClass": "tree-doc",
   "snippets": {
     "basicCode": "tree-basic-demo.ts",

@@ -1,6 +1,6 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ButtonComponent, RatingComponent, TextareaComponent } from 'ui';
+import { ButtonComponent, RatingComponent, TextareaComponent } from 'lui';
 
 @Component({
   selector: 'app-rating-review-feedback-example',

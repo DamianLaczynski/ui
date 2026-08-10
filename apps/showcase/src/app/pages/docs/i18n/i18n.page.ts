@@ -5,7 +5,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
-import { provideUiI18nWithNgxTranslate } from 'ui/ngx-translate';
+import { provideUiI18nWithNgxTranslate } from 'lui/ngx-translate';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -42,7 +42,7 @@ const translationJsonCode = `{
 }`;
 
 const customAdapterCode = `import { makeEnvironmentProviders } from '@angular/core';
-import { provideUiI18n, UI_TRANSLATE_FN } from 'ui';
+import { provideUiI18n, UI_TRANSLATE_FN } from 'lui';
 import { MyTranslationService } from './my-translation.service';
 
 export function provideUiI18nWithCustomService() {

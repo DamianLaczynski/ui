@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, SliderComponent, SwitchComponent } from 'ui';
+import { ButtonComponent, SliderComponent, SwitchComponent } from 'lui';
 
 @Component({
   selector: 'app-switch-notification-panel-example',

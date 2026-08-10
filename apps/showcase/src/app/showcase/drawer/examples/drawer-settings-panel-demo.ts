@@ -1,6 +1,6 @@
 import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, DrawerComponent, QuickAction, SwitchComponent, TextComponent } from 'ui';
+import { ButtonComponent, DrawerComponent, QuickAction, SwitchComponent, TextComponent } from 'lui';
 
 @Component({
   selector: 'app-drawer-settings-panel-example',

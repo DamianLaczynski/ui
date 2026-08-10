@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TextareaComponent } from 'ui';
+import { TextareaComponent } from 'lui';
 
 @Component({
   selector: 'app-textarea-basic-demo',

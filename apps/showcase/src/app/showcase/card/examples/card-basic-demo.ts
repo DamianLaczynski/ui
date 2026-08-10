@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, CardComponent, BadgeComponent } from 'ui';
+import { ButtonComponent, CardComponent, BadgeComponent } from 'lui';
 
 @Component({
   selector: 'app-card-basic-demo',

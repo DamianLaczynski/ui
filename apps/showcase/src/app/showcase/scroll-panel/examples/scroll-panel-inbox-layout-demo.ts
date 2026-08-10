@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { MessageBarComponent, ScrollPanelComponent, SearchComponent } from 'ui';
+import { MessageBarComponent, ScrollPanelComponent, SearchComponent } from 'lui';
 
 @Component({
   selector: 'app-scroll-panel-inbox-layout-demo',

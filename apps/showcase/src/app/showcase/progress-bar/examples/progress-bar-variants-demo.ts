@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ProgressBarComponent } from 'ui';
+import { ProgressBarComponent } from 'lui';
 
 @Component({
   selector: 'app-progress-bar-variants-example',

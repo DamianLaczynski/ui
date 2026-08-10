@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { AccordionComponent } from 'ui';
+import { AccordionComponent } from 'lui';
 
 @Component({
   selector: 'app-accordion-indicators-example',

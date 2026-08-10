@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, CommandPaletteComponent, type CommandPaletteItem } from 'ui';
+import { ButtonComponent, CommandPaletteComponent, type CommandPaletteItem } from 'lui';
 
 const GROUPED_ITEMS: CommandPaletteItem[] = [
   {

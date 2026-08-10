@@ -1,6 +1,6 @@
 # Component guidelines
 
-> **L3 — Implementation.** Scope: conventions for building components in `packages/ui`.
+> **L3 — Implementation.** Scope: conventions for building components in `packages/lui`.
 >
 > **Visual design and shared behavior:** [`design-standards.md`](../standards/design-standards.md) and [`component-behaviors.md`](../standards/component-behaviors.md) (L1). This file covers _how_ to implement in Angular.
 
@@ -12,16 +12,16 @@ For dev server, lint, format, and test commands, see [`AGENTS.md`](../../AGENTS.
 
 ## Creating a new component
 
-1. Create folder: `packages/ui/src/lib/components/<name>/`
+1. Create folder: `packages/lui/src/lib/components/<name>/`
 2. Add `<name>.component.ts` with `selector: 'ui-<name>'`, `ChangeDetectionStrategy.OnPush`, standalone `imports`
 3. Add template and optional spec
 4. Add `index.ts` barrel export
-5. Add SCSS block: `packages/ui/src/lib/scss/components/_<name>.scss`, register in `main.scss`
-6. Export from `packages/ui/src/public-api.ts`
+5. Add SCSS block: `packages/lui/src/lib/scss/components/_<name>.scss`, register in `main.scss`
+6. Export from `packages/lui/src/public-api.ts`
 7. Add showcase documentation (see [showcase-guidelines.md](showcase-guidelines.md))
 8. Run `npm run docs:build`
 
-Field inputs go under `packages/ui/src/lib/components/field/<type>/` and follow the same pattern.
+Field inputs go under `packages/lui/src/lib/components/field/<type>/` and follow the same pattern.
 
 ## Component rules
 

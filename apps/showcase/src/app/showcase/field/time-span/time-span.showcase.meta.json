@@ -3,7 +3,7 @@
   "title": "Time Span",
   "description": "Time Span is a field for editable durations. It lets users compose an ISO 8601 duration string through enabled time units like days, hours, minutes, or months.",
   "intro": "Use `ui-time-span` when users need a reusable duration rather than a calendar date or a single time of day. It fits retention policies, token expiration, SLA settings, reminder delays, and any workflow where the stored value is a duration such as `PT1H30M`.",
-  "importCode": "import { TimeSpanComponent, type TimeSpanValue } from 'ui';",
+  "importCode": "import { TimeSpanComponent, type TimeSpanValue } from 'lui';",
   "containerClass": "time-span-doc",
   "snippets": {
     "basicCode": "time-span-basic-demo.ts",

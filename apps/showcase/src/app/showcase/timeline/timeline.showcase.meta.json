@@ -3,7 +3,7 @@
   "title": "Timeline",
   "description": "Timeline displays chronological activity, audit events, and process updates along a vertical or horizontal axis with semantic markers, timestamps, and optional custom content.",
   "intro": "Use `ui-timeline` with an `items` array for data-driven feeds, or compose `ui-timeline-item` children when a row needs tags, buttons, or richer custom content. Each item supports title, timestamp, meta, description, icon markers, variants, and a pending state.",
-  "importCode": "import { TimelineComponent, TimelineItemComponent, type TimelineItem } from 'ui';",
+  "importCode": "import { TimelineComponent, TimelineItemComponent, type TimelineItem } from 'lui';",
   "containerClass": "timeline-doc",
   "snippets": {
     "basicCode": "timeline-basic-demo.ts",

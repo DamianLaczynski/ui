@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, ErrorStateComponent } from 'ui';
+import { ButtonComponent, ErrorStateComponent } from 'lui';
 
 @Component({
   selector: 'app-error-state-custom-content-demo',

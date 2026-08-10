@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { CardComponent, EmptyStateComponent } from 'ui';
+import { CardComponent, EmptyStateComponent } from 'lui';
 
 @Component({
   selector: 'app-empty-state-scenarios-demo',

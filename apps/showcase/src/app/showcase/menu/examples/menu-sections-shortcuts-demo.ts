@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, MenuListComponent, type MenuItem, type MenuSection } from 'ui';
+import { ButtonComponent, MenuListComponent, type MenuItem, type MenuSection } from 'lui';
 
 @Component({
   selector: 'app-menu-sections-shortcuts-demo',

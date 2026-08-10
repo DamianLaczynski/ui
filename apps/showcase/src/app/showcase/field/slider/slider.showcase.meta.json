@@ -3,7 +3,7 @@
   "title": "Slider",
   "description": "Slider lets users choose a numeric value within a range through direct manipulation. Use it for volume, thresholds, scales, and any setting where scrubbing is more natural than typing.",
   "intro": "Slider builds on the shared field system, so it supports labels, helper and error text, validation, disabled and readonly states, plus slider-specific features such as min/max ranges, step markers, vertical orientation, and formatted value text.",
-  "importCode": "import { SliderComponent } from 'ui';",
+  "importCode": "import { SliderComponent } from 'lui';",
   "containerClass": "slider-doc",
   "snippets": {
     "basicCode": "slider-basic-demo.ts",

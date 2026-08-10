@@ -1,10 +1,28 @@
 # Changelog
 
-All notable changes to **@laczynski/ui** and this monorepo are documented here.
+All notable changes to **@laczynski/lui** and this monorepo are documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.0.0-preview.8] - 2026-08-10
+
+### Changed
+
+- First CI publish of `@laczynski/lui` via trusted publishing (npmjs.com + GitHub Packages).
+
+## [2.0.0-preview.7] - 2026-08-10
+
+### Changed (breaking)
+
+- npm package renamed from `@laczynski/ui` to `@laczynski/lui`; library source moved to `packages/lui`.
+
+### Changed
+
+- **Documentation** — server-driven grids now reference `@laczynski/datagrid-ui` (`<dg-ui-data-grid>`) instead of QueryGrid.
+- **Publishing** — npm OIDC publish aligned with DataGrid workflow; `repository` URL uses `git+https://github.com/Laczynski/Lui.git` for provenance.
+- **Publishing** — trusted publisher repository updated from `Ui` to `Lui`.
 
 ### Added
 
@@ -15,7 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
-- **Angular** — upgraded the workspace, build tooling, CDK, and `@laczynski/ui` peer dependencies to Angular 22.1.
+- **Angular** — upgraded the workspace, build tooling, CDK, and `@laczynski/lui` peer dependencies to Angular 22.1.
 - **Documentation** — updated both README files with Angular 22, CDK 22, and Node.js requirements.
 - **CI** — upgraded validation and Pages deployment workflows to Node 24, required by Angular CLI 22.
 - **Publishing** — aligned package repository metadata with the GitHub repository for npm provenance verification.
@@ -186,13 +204,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
-- Updated package documentation and styles for `@laczynski/ui` branding.
+- Updated package documentation and styles for `@laczynski/lui` branding.
 
 ## [1.0.0] - 2026-04-02
 
 ### Added
 
-- Initial public release of **@laczynski/ui** — enterprise-grade Angular component library based on Fluent 2.
+- Initial public release of **@laczynski/lui** — enterprise-grade Angular component library based on Fluent 2.
 - **60+ components** across layout, data display, forms, overlays, and primitives.
 - **Showcase** documentation site with interactive examples, API reference, and guide pages.
 - **i18n** support via `@ngx-translate/core` integration and translation helpers.
@@ -206,7 +224,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
-- Renamed monorepo from `angular-ui` to `laczynski-ui`; package published as `@laczynski/ui`.
+- Renamed monorepo from `angular-ui` to `laczynski-ui`; package published as `@laczynski/lui`.
 - **Button** — `toggle` input renamed to `selectable`.
 - **Tag** — `readonly` replaced with `selectable`; improved accessibility.
 - Field inputs — `variant` renamed to `inputVariant` for consistency.

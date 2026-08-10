@@ -3,7 +3,7 @@
   "title": "Month",
   "description": "Month is a form field for month and year selection. It stores an ISO month value while presenting a desktop month picker or native mobile month input.",
   "intro": "Use `ui-month` when users need to work with monthly periods rather than exact dates. It fits billing cycles, reporting, budget planning, and recurring schedules where the month matters but the day does not.",
-  "importCode": "import { MonthComponent } from 'ui';",
+  "importCode": "import { MonthComponent } from 'lui';",
   "containerClass": "month-doc",
   "snippets": {
     "basicCode": "month-basic-demo.ts",

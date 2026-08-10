@@ -22,9 +22,9 @@ Both themes must render correctly for every component. Review changes in the sho
 
 | Layer | Location |
 | ----- | -------- |
-| Variables | `packages/ui/src/lib/scss/utils/_variables.scss` |
-| Theme overrides | `packages/ui/src/lib/scss/utils/` (theme-specific files) |
-| Component blocks | `packages/ui/src/lib/scss/components/_*.scss` |
+| Variables | `packages/lui/src/lib/scss/utils/_variables.scss` |
+| Theme overrides | `packages/lui/src/lib/scss/utils/` (theme-specific files) |
+| Component blocks | `packages/lui/src/lib/scss/components/_*.scss` |
 
 Components use BEM modifiers for variants, appearances, sizes, and states:
 
@@ -44,7 +44,7 @@ Components use BEM modifiers for variants, appearances, sizes, and states:
 Consumers import the library styles:
 
 ```scss
-@use '@laczynski/ui/scss/main';
+@use '@laczynski/lui/scss/main';
 ```
 
 Theme switching is the consumer's responsibility — the library provides the token system and both theme variants.

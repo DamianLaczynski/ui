@@ -3,7 +3,7 @@
   "title": "Tel",
   "description": "Tel is a field-specialized wrapper around the shared input foundation with native `type=\"tel\"`, built-in clear affordance, and a phone-oriented action icon.",
   "intro": "Use `ui-tel` for customer contact fields, support callbacks, escalation paths, and any workflow that captures phone numbers. It inherits the shared field API for labels, help text, size, variant, readonly, disabled, and validation messaging while using telephone-friendly input semantics.",
-  "importCode": "import { TelComponent } from 'ui';",
+  "importCode": "import { TelComponent } from 'lui';",
   "containerClass": "tel-doc",
   "snippets": {
     "basicCode": "tel-basic-demo.ts",

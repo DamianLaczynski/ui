@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { UrlComponent } from 'ui';
+import { UrlComponent } from 'lui';
 
 @Component({
   selector: 'app-url-layout-demo',

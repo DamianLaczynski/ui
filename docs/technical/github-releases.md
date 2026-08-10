@@ -1,6 +1,6 @@
 # GitHub Releases
 
-> Scope: GitHub Release notes for `@laczynski/ui` tags.
+> Scope: GitHub Release notes for `@laczynski/lui` tags.
 
 Every published version gets a **GitHub Release** when you push a `v*` tag. [publish.yml](../../.github/workflows/publish.yml) creates it after npm publish.
 
@@ -14,7 +14,7 @@ When preparing a release:
 
 1. Update `CHANGELOG.md` (`[Unreleased]` → `[X.Y.Z] - YYYY-MM-DD`).
 2. Optionally keep `.github/release-notes/vX.Y.Z.md` in sync for backfill tooling.
-3. Bump `packages/ui/package.json` version to match the tag.
+3. Bump `packages/lui/package.json` version to match the tag.
 4. Merge to `main`, push tag: `git tag vX.Y.Z && git push origin vX.Y.Z`.
 
 ## Backfill missing releases

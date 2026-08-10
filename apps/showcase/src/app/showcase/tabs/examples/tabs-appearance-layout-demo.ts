@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TabsComponent, type Tab } from 'ui';
+import { TabsComponent, type Tab } from 'lui';
 
 const tabs: Tab[] = [
   { id: 'files', label: 'Files' },

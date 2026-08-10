@@ -3,7 +3,7 @@
   "title": "Card",
   "description": "Card groups related content, metadata, and actions inside one bounded surface. It supports preview media, header and footer slots, selection, focus modes, and floating actions so the same primitive can cover dashboards, catalogs, and workspace lists.",
   "intro": "Use card when several pieces of related information should stay together as one scanable unit. Good cards have a clear hierarchy, concise actions, and only enough chrome to separate one record from another. Prefer focused layouts over generic content dumping.",
-  "importCode": "import { CardComponent } from 'ui';",
+  "importCode": "import { CardComponent } from 'lui';",
   "containerClass": "card-doc",
   "snippets": {
     "basicCode": "card-basic-demo.ts",

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TotpComponent } from 'ui';
+import { TotpComponent } from 'lui';
 
 @Component({
   selector: 'app-totp-basic-demo',

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent, SearchComponent } from 'ui';
+import { ButtonComponent, SearchComponent } from 'lui';
 
 @Component({
   selector: 'app-search-validation-demo',

@@ -3,7 +3,7 @@ import { GuideDocPageConfig } from '@shared/components/guide-doc-page/guide-doc-
 export const GETTING_STARTED_PAGE_CONFIG: GuideDocPageConfig = {
   title: 'Getting Started',
   description:
-    'Build a production-ready @laczynski/ui flow in minutes. This guide gives you the fastest path from installation to your first shipped screen.',
+    'Build a production-ready @laczynski/lui flow in minutes. This guide gives you the fastest path from installation to your first shipped screen.',
   containerClass: 'getting-started-doc',
   markdownAssetPath: '/docs/getting-started.md',
   sections: [
@@ -42,7 +42,7 @@ export const GETTING_STARTED_PAGE_CONFIG: GuideDocPageConfig = {
               description:
                 'Include library styles once in angular.json so every component gets consistent tokens.',
               code: `"styles": [
-  "node_modules/@laczynski/ui/src/lib/scss/main.scss",
+  "node_modules/@laczynski/lui/src/lib/scss/main.scss",
   "src/styles.scss"
 ]`,
             },
@@ -52,7 +52,7 @@ export const GETTING_STARTED_PAGE_CONFIG: GuideDocPageConfig = {
               title: 'Import only what you use',
               description:
                 'Use standalone imports in your feature component to keep bundles lean and code explicit.',
-              code: `import { ButtonComponent } from 'ui';
+              code: `import { ButtonComponent } from 'lui';
 
 @Component({
   selector: 'app-example',
@@ -98,7 +98,7 @@ export class ExampleComponent {}`,
         {
           type: 'note',
           content:
-            '@laczynski/ui is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Fluent, Fluent UI, and Microsoft are trademarks of Microsoft Corporation. Icons use @fluentui/svg-icons (MIT License).',
+            '@laczynski/lui is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. Visual styling is inspired by Fluent 2 design principles. Fluent, Fluent UI, and Microsoft are trademarks of Microsoft Corporation. Icons use @fluentui/svg-icons (MIT License).',
         },
       ],
     },
@@ -124,7 +124,7 @@ export class ExampleComponent {}`,
             {
               id: 'roadmap',
               title: 'Roadmap',
-              description: 'Current priorities and upcoming milestones for @laczynski/ui.',
+              description: 'Current priorities and upcoming milestones for @laczynski/lui.',
               routerLink: '/docs/roadmap',
             },
           ],

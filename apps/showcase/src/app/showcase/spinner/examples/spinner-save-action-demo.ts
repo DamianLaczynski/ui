@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, SpinnerComponent } from 'ui';
+import { ButtonComponent, SpinnerComponent } from 'lui';
 
 @Component({
   selector: 'app-spinner-save-action-example',

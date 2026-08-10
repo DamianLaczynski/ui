@@ -3,7 +3,7 @@
   "title": "Stepper",
   "description": "Guided flows with numbered or icon indicators, optional descriptions, horizontal or vertical rails, and linear gating so users finish prerequisites before jumping ahead.",
   "intro": "Drive the UI with `activeStepIndex` and `(stepChange)`. Set `linear` when steps must be completed in order, and mutate each `Step`’s `completed`, `error`, `warning`, or `disabled` flags to mirror validation. Use `showDescriptions` for subtitled milestones and `orientation=\"vertical\"` beside a detail pane.",
-  "importCode": "import { StepperComponent, type Step } from 'ui';",
+  "importCode": "import { StepperComponent, type Step } from 'lui';",
   "containerClass": "stepper-doc",
   "snippets": {
     "basicCode": "stepper-basic-demo.ts",

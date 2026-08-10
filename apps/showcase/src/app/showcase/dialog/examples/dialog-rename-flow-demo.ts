@@ -1,6 +1,6 @@
 import { Component, model, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent, DialogComponent, QuickAction, TextComponent } from 'ui';
+import { ButtonComponent, DialogComponent, QuickAction, TextComponent } from 'lui';
 
 @Component({
   selector: 'app-dialog-rename-flow-example',

@@ -1,5 +1,5 @@
 import { Component, signal, viewChild, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, ScrollPanelComponent } from 'ui';
+import { ButtonComponent, ScrollPanelComponent } from 'lui';
 
 @Component({
   selector: 'app-scroll-panel-programmatic-demo',

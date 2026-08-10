@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ColorComponent } from 'ui';
+import { ColorComponent } from 'lui';
 
 @Component({
   selector: 'app-color-formats-example',

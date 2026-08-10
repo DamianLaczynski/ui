@@ -6,7 +6,7 @@ import {
   RadioButtonGroupComponent,
   type PopoverPosition,
   type RadioButtonItem,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-popover-placement-demo',

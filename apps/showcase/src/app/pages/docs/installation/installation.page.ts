@@ -2,14 +2,14 @@ import { GuideDocPageConfig } from '@shared/components/guide-doc-page/guide-doc-
 
 const iconSpriteAssetJson = `{
   "glob": "**/*",
-  "input": "node_modules/@laczynski/ui/assets/icons",
+  "input": "node_modules/@laczynski/lui/assets/icons",
   "output": "/assets/icons"
 }`;
 
 export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
   title: 'Installation',
   description:
-    'End-to-end setup for @laczynski/ui, from package install to first successful render.',
+    'End-to-end setup for @laczynski/lui, from package install to first successful render.',
   containerClass: 'installation-doc',
   markdownAssetPath: '/docs/installation.md',
   sections: [
@@ -39,7 +39,7 @@ export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
               id: 'npm',
               eyebrow: 'npm',
               title: 'Package install',
-              code: 'npm install @laczynski/ui',
+              code: 'npm install @laczynski/lui',
             },
           ],
         },
@@ -48,12 +48,12 @@ export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
     {
       id: 'register-styles',
       title: 'Register styles',
-      description: 'Add @laczynski/ui styles before your app styles in `angular.json`.',
+      description: 'Add @laczynski/lui styles before your app styles in `angular.json`.',
       blocks: [
         {
           type: 'code',
           code: `"styles": [
-  "node_modules/@laczynski/ui/src/lib/scss/main.scss",
+  "node_modules/@laczynski/lui/src/lib/scss/main.scss",
   "src/styles.scss"
 ]`,
         },
@@ -63,7 +63,7 @@ export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
       id: 'icon-sprite-npm-consumers',
       title: 'Icon sprite (npm consumers)',
       description:
-        '`ui-icon` resolves the SVG sprite at `/assets/icons/sprite.svg`. The library ships that file under `node_modules/@laczynski/ui/assets/icons/`; copy it into your app bundle so the URL matches at runtime.',
+        '`ui-icon` resolves the SVG sprite at `/assets/icons/sprite.svg`. The library ships that file under `node_modules/@laczynski/lui/assets/icons/`; copy it into your app bundle so the URL matches at runtime.',
       blocks: [
         {
           type: 'paragraph',
@@ -108,7 +108,7 @@ export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
         {
           type: 'note',
           content:
-            '@laczynski/ui is an independent open-source project and is not affiliated with Microsoft Corporation. Fluent and Microsoft are trademarks of Microsoft Corporation.',
+            '@laczynski/lui is an independent open-source project and is not affiliated with Microsoft Corporation. Fluent and Microsoft are trademarks of Microsoft Corporation.',
         },
       ],
     },
@@ -134,7 +134,7 @@ export const INSTALLATION_PAGE_CONFIG: GuideDocPageConfig = {
             {
               id: 'roadmap',
               title: 'Roadmap',
-              description: 'Current priorities and upcoming milestones for @laczynski/ui.',
+              description: 'Current priorities and upcoming milestones for @laczynski/lui.',
               routerLink: '/docs/roadmap',
             },
           ],

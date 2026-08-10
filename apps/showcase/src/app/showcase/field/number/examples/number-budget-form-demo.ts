@@ -1,6 +1,6 @@
 import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { NumberComponent } from 'ui';
+import { NumberComponent } from 'lui';
 
 @Component({
   selector: 'app-number-budget-form-demo',

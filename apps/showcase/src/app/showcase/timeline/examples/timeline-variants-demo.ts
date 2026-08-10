@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TimelineComponent, type TimelineItem } from 'ui';
+import { TimelineComponent, type TimelineItem } from 'lui';
 
 @Component({
   selector: 'app-timeline-variants-demo',

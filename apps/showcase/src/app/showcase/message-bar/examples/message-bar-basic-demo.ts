@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { MessageBarComponent } from 'ui';
+import { MessageBarComponent } from 'lui';
 
 @Component({
   selector: 'app-message-bar-basic-example',

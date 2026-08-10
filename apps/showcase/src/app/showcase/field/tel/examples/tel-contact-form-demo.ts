@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ButtonComponent, TelComponent } from 'ui';
+import { ButtonComponent, TelComponent } from 'lui';
 
 @Component({
   selector: 'app-tel-contact-form-demo',

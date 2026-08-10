@@ -5,7 +5,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { ThemeMode, ThemeService } from '@shared/theme/theme.service';
 import { ThemeBuilderService } from '@shared/theme/theme-builder.service';
-import { BadgeComponent, ButtonComponent, IconComponent, type Variant } from 'ui';
+import { BadgeComponent, ButtonComponent, IconComponent, type Variant } from 'lui';
 import { environment } from '@environments/environment';
 import { LandingComponentSurfaceComponent } from './components/landing-component-surface/landing-component-surface.component';
 import { ThemeDrawerComponent } from '../../layout/ds/components/theme-drawer/theme-drawer.component';
@@ -46,7 +46,7 @@ export class LandingComponent {
 
   readonly version = environment.libraryVersion;
   readonly currentYear = new Date().getFullYear();
-  readonly githubUrl = 'https://github.com/laczynski/Ui';
+  readonly githubUrl = 'https://github.com/Laczynski/Lui';
   readonly npmUrl = 'https://www.npmjs.com/';
   readonly roadmapPreview: RoadmapPreviewItem[] = [
     {

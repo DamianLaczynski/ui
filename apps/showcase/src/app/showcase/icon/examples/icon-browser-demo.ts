@@ -16,7 +16,7 @@ import {
   IconName,
   SearchComponent,
   Size,
-} from 'ui';
+} from 'lui';
 
 const ICON_BROWSER_BATCH_SIZE = 120;
 const variants = ['regular', 'filled'] as const;

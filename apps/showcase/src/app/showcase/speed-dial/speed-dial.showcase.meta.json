@@ -3,7 +3,7 @@
   "title": "Speed Dial",
   "description": "Speed Dial is a floating action trigger that reveals a compact set of related actions in linear, radial, or arc layouts. Use it when the UI needs a persistent shortcut cluster without permanently dedicating space to every action.",
   "intro": "Speed Dial works best for high-value secondary actions that should stay nearby but hidden until needed. It supports linear, circle, semi-circle, and quarter-circle layouts, optional masking, idle close behavior, tooltip labels, and coordination so only one dial stays open at a time.",
-  "importCode": "import { SpeedDialComponent, type MenuItem } from 'ui';",
+  "importCode": "import { SpeedDialComponent, type MenuItem } from 'lui';",
   "containerClass": "speed-dial-doc",
   "snippets": {
     "linearCode": "speed-dial-linear-demo.ts",

@@ -5,7 +5,7 @@ import {
   SplitterPanelDirective,
   type SplitterPanel,
   type SplitterResizeEvent,
-} from 'ui';
+} from 'lui';
 
 @Component({
   selector: 'app-splitter-keyboard-demo',

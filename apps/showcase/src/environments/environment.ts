@@ -1,5 +1,5 @@
 import monorepoPackage from '../../../../package.json';
-import uiPackage from '../../../../packages/ui/package.json';
+import uiPackage from '../../../../packages/lui/package.json';
 
 export const environment = {
   production: false,
@@ -7,5 +7,5 @@ export const environment = {
   appVersion: monorepoPackage.version,
   libraryVersion: uiPackage.version,
   apiUrl: 'http://localhost:5000',
-  githubRepoUrl: 'https://github.com/laczynski/Ui/',
+  githubRepoUrl: 'https://github.com/Laczynski/Lui/',
 };

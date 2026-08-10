@@ -1,4 +1,4 @@
-import { IconName } from 'ui';
+import { IconName } from 'lui';
 
 export interface ShowcaseComponent {
   id: string;

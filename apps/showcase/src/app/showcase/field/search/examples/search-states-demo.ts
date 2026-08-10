@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SearchComponent } from 'ui';
+import { SearchComponent } from 'lui';
 
 @Component({
   selector: 'app-search-states-demo',

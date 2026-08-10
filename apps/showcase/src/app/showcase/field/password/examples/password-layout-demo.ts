@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { PasswordComponent } from 'ui';
+import { PasswordComponent } from 'lui';
 
 @Component({
   selector: 'app-password-layout-demo',

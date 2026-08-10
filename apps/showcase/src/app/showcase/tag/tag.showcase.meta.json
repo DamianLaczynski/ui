@@ -3,7 +3,7 @@
   "title": "Tag",
   "description": "Tag renders compact labels for metadata, status, selection chips, and removable tokens. It supports semantic variants, appearances, optional icons, secondary text, selectable state, and dismiss actions.",
   "intro": "Use `ui-tag` for short labels that add context without taking much space: status chips, filter tokens, categories, owner metadata, or removable selections. Tags can be purely informational, selectable like filter chips, or dismissible like lightweight tokens.",
-  "importCode": "import { TagComponent } from 'ui';",
+  "importCode": "import { TagComponent } from 'lui';",
   "containerClass": "tag-doc",
   "snippets": {
     "basicCode": "tag-basic-demo.ts",

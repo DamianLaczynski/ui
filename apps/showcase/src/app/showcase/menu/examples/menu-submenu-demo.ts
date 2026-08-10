@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, MenuComponent, type MenuItem } from 'ui';
+import { ButtonComponent, MenuComponent, type MenuItem } from 'lui';
 
 @Component({
   selector: 'app-menu-submenu-demo',

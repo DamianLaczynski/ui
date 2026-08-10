@@ -129,7 +129,7 @@ All field components under `components/field/` share these conventions:
 
 **Rules:**
 
-- Server-driven tabular data: use [@query-grid/ui](https://github.com/damianlaczynski/QueryGrid) (`<qg-ui-data-grid>`) — not part of this library.
+- Server-driven tabular data: use [@laczynski/datagrid-ui](https://github.com/Laczynski/DataGrid) (`<dg-ui-data-grid>`) — not part of this library.
 - Pagination defaults to page size options consistent with the design system.
 - Loading indicator appears in the data area, not over the entire page chrome.
 

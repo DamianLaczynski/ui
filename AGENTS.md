@@ -4,7 +4,7 @@
 
 ## Repository shape
 
-- `packages/ui` — publishable Angular component library (`@laczynski/ui`), Fluent-inspired design language.
+- `packages/lui` — publishable Angular component library (`@laczynski/lui`), Fluent-inspired design language.
 - `apps/showcase` — documentation site and live component examples (`ui-showcase`).
 - `apps/starter` — sample application shell (not registered in `angular.json`).
 - `scripts/` — build-time generators (docs Markdown, icon sprite, sitemap).
@@ -40,20 +40,20 @@
 
 ### Publish
 
-- Publish: push a `v*` tag after bumping `packages/ui/package.json` — see `docs/technical/publishing.md` (CI publishes to npm + creates GitHub Release).
+- Publish: push a `v*` tag after bumping `packages/lui/package.json` — see `docs/technical/publishing.md` (CI publishes to npmjs.com + GitHub Packages and creates GitHub Release).
 - Local publish fallback: `npm run publish:lib` (after `npm run build:lib`).
 
 `docs:build`, `icons:build`, and `showcase:crawl-discovery` run automatically via `prestart` / `prebuild` hooks.
 
 ## Repo navigation rules
 
-### Library (`packages/ui`)
+### Library (`packages/lui`)
 
-- Public API: `packages/ui/src/public-api.ts` — every exported symbol must be listed here.
-- Components: `packages/ui/src/lib/components/<name>/` with `*.component.ts`, template, optional spec, and `index.ts`.
-- Styles: `packages/ui/src/lib/scss/` — 7-1 SCSS architecture; one `_<component>.scss` per component block.
-- Shared types: `packages/ui/src/lib/components/utils.ts` (`Variant`, `Appearance`, `Size`, `Shape`, etc.).
-- Field inputs: `packages/ui/src/lib/components/field/<type>/`.
+- Public API: `packages/lui/src/public-api.ts` — every exported symbol must be listed here.
+- Components: `packages/lui/src/lib/components/<name>/` with `*.component.ts`, template, optional spec, and `index.ts`.
+- Styles: `packages/lui/src/lib/scss/` — 7-1 SCSS architecture; one `_<component>.scss` per component block.
+- Shared types: `packages/lui/src/lib/components/utils.ts` (`Variant`, `Appearance`, `Size`, `Shape`, etc.).
+- Field inputs: `packages/lui/src/lib/components/field/<type>/`.
 - Selector prefix: `ui-*` for components, `ui*` camelCase for directives.
 
 ### Showcase (`apps/showcase`)
@@ -67,7 +67,7 @@
 
 - `public/docs/components/*.md` — generated from showcase meta files.
 - `public/llms.txt`, `public/llms-full.txt` — LLM discovery index.
-- `packages/ui/src/lib/components/icon/generated/` — generated icon sprite and types.
+- `packages/lui/src/lib/components/icon/generated/` — generated icon sprite and types.
 
 ## Documentation layers
 
@@ -83,7 +83,7 @@ Three layers — see `docs/README.md`:
 
 ## Change coupling checklist
 
-- If you prepare a release, update `CHANGELOG.md`, bump `packages/ui/package.json`, push the tag — see `docs/technical/publishing.md`.
+- If you prepare a release, update `CHANGELOG.md`, bump `packages/lui/package.json`, push the tag — see `docs/technical/publishing.md`.
 - If you add or change a public component API, update `public-api.ts`, showcase meta, examples, and run `npm run docs:build`.
 - If you change shared types (`Variant`, `Appearance`, etc.), check all components that consume them.
 - If you change SCSS tokens or theme variables, check light/dark rendering in showcase.

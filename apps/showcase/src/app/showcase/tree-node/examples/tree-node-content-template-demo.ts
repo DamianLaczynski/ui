@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
-import { BadgeComponent, TreeNodeComponent, type TreeNode } from 'ui';
+import { BadgeComponent, TreeNodeComponent, type TreeNode } from 'lui';
 
 interface FileTreeNode extends TreeNode<FileTreeNode> {
   data?: {

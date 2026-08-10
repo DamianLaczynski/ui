@@ -3,7 +3,7 @@
   "title": "Toast",
   "description": "Transient feedback for confirmations, status, and errors. Compose inline with ToastComponent for demos and documentation, or push notifications through ToastService while ToastContainerComponent anchors stacks to a screen corner.",
   "intro": "Transient feedback for confirmations, warnings, and errors. Use `ToastComponent` for inline previews and layouts, and pair `ToastService` with `ToastContainerComponent` for stacked notifications from application logic.",
-  "importCode": "import { ToastComponent, ToastContainerComponent, ToastService } from 'ui';",
+  "importCode": "import { ToastComponent, ToastContainerComponent, ToastService } from 'lui';",
   "containerClass": "toast-doc",
   "snippets": {
     "serviceCode": "toast-service-demo.ts",

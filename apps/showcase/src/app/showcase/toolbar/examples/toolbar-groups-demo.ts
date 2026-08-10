@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ToolbarComponent, type ToolbarGroup } from 'ui';
+import { ToolbarComponent, type ToolbarGroup } from 'lui';
 
 @Component({
   selector: 'app-toolbar-groups-demo',

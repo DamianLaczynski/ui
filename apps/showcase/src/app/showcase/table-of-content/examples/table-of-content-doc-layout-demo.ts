@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { DividerComponent, MessageBarComponent, TableOfContentComponent } from 'ui';
+import { DividerComponent, MessageBarComponent, TableOfContentComponent } from 'lui';
 
 @Component({
   selector: 'app-table-of-content-doc-layout-demo',

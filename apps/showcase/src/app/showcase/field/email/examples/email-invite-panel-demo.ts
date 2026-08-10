@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BadgeComponent, ButtonComponent, EmailComponent } from 'ui';
+import { BadgeComponent, ButtonComponent, EmailComponent } from 'lui';
 
 @Component({
   selector: 'app-email-invite-panel-demo',

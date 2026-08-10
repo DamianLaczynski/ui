@@ -1,5 +1,5 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ButtonComponent, CardComponent } from 'ui';
+import { ButtonComponent, CardComponent } from 'lui';
 
 @Component({
   selector: 'app-card-floating-actions-demo',

@@ -3,7 +3,7 @@
   "title": "Progress Bar",
   "description": "Progress Bar visualizes completion for uploads, processing, quotas, and multi-step work. Use determinate mode when you know the percentage and indeterminate mode when work is active but duration is unknown.",
   "intro": "Progress Bar renders a compact linear indicator with semantic variants, three sizes, and determinate or indeterminate behavior. Pair it with nearby text so users understand what is progressing and what happens next.",
-  "importCode": "import { ProgressBarComponent } from 'ui';",
+  "importCode": "import { ProgressBarComponent } from 'lui';",
   "containerClass": "progress-bar-doc",
   "snippets": {
     "basicCode": "progress-bar-basic-demo.ts",
